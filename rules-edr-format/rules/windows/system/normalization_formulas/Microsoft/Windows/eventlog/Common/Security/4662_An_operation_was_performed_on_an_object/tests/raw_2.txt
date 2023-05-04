@@ -1,0 +1,88 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-Security-Auditing",
+        "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+      },
+      "EventID": "4662",
+      "Version": "0",
+      "Level": "0",
+      "Task": "14080",
+      "Opcode": "0",
+      "Keywords": "0x8010000000000000",
+      "TimeCreated": {
+        "SystemTime": "2016-11-29T07:38:04.132Z"
+      },
+      "EventRecordID": "76860",
+      "Correlation": null,
+      "Execution": {
+        "ProcessID": "600",
+        "ThreadID": "3368"
+      },
+      "Channel": "Security",
+      "Computer": "2008x64SP2-DC.AD2008.ru",
+      "Security": null
+    },
+    "EventData": {
+      "Data": [
+        {
+          "Name": "SubjectUserSid",
+          "text": "S-1-5-21-4008570321-86894156-3171180482-500"
+        },
+        {
+          "Name": "SubjectUserName",
+          "text": "administrator"
+        },
+        {
+          "Name": "SubjectDomainName",
+          "text": "AD2008"
+        },
+        {
+          "Name": "SubjectLogonId",
+          "text": "0x8c5d75"
+        },
+        {
+          "Name": "ObjectServer",
+          "text": "DS"
+        },
+        {
+          "Name": "ObjectType",
+          "text": "%{bf967aba-0de6-11d0-a285-00aa003049e2}"
+        },
+        {
+          "Name": "ObjectName",
+          "text": "%{5fea3363-907b-4cb7-ba69-409c481d2b99}"
+        },
+        {
+          "Name": "OperationType",
+          "text": "Object Access"
+        },
+        {
+          "Name": "HandleId",
+          "text": "0x0"
+        },
+        {
+          "Name": "AccessList",
+          "text": "%%1537"
+        },
+        {
+          "Name": "AccessMask",
+          "text": "0x10000"
+        },
+        {
+          "Name": "Properties",
+          "text": "---\n\t{bf967aba-0de6-11d0-a285-00aa003049e2}"
+        },
+        {
+          "Name": "AdditionalInfo",
+          "text": "-"
+        },
+        {
+          "Name": "AdditionalInfo2"
+        }
+      ]
+    }
+  }
+}

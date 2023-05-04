@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4697_A_service_was_installed_in_the_system
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} установил службу {object.name} на узле {event_src.host}'

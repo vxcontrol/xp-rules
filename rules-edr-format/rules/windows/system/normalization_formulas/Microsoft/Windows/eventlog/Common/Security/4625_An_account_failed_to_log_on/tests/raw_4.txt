@@ -1,0 +1,115 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4625",
+			"Version": "0",
+			"Level": "0",
+			"Task": "12544",
+			"Opcode": "0",
+			"Keywords": "0x8010000000000000",
+			"TimeCreated": {
+				"SystemTime": "2017-08-26T23:00:15.108927400Z"
+			},
+			"EventRecordID": "122282052",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "680",
+				"ThreadID": "13800"
+			},
+			"Channel": "Security",
+			"Computer": "MSK-DC01.corp.tnk-bp.ru",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "S-1-5-18",
+				"Name": "SubjectUserSid"
+			},
+			{
+				"text": "MSK-DC01$",
+				"Name": "SubjectUserName"
+			},
+			{
+				"text": "CORP",
+				"Name": "SubjectDomainName"
+			},
+			{
+				"text": "0x3e7",
+				"Name": "SubjectLogonId"
+			},
+			{
+				"text": "S-1-0-0",
+				"Name": "TargetUserSid"
+			},
+			{
+				"text": "HPSIM007",
+				"Name": "TargetUserName"
+			},
+			{
+				"text": "CORP",
+				"Name": "TargetDomainName"
+			},
+			{
+				"text": "0xc000006d",
+				"Name": "Status"
+			},
+			{
+				"text": "%%2313",
+				"Name": "FailureReason"
+			},
+			{
+				"text": "0xc0000064",
+				"Name": "SubStatus"
+			},
+			{
+				"text": "4",
+				"Name": "LogonType"
+			},
+			{
+				"text": "Advapi ",
+				"Name": "LogonProcessName"
+			},
+			{
+				"text": "Negotiate",
+				"Name": "AuthenticationPackageName"
+			},
+			{
+				"text": "MSK-DC01",
+				"Name": "WorkstationName"
+			},
+			{
+				"text": "-",
+				"Name": "TransmittedServices"
+			},
+			{
+				"text": "-",
+				"Name": "LmPackageName"
+			},
+			{
+				"text": "0",
+				"Name": "KeyLength"
+			},
+			{
+				"text": "0x1e0",
+				"Name": "ProcessId"
+			},
+			{
+				"text": "C:\\Windows\\System32\\svchost.exe",
+				"Name": "ProcessName"
+			},
+			{
+				"text": "-",
+				"Name": "IpAddress"
+			},
+			{
+				"text": "-",
+				"Name": "IpPort"
+			}]
+		}
+	}
+}

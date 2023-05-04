@@ -1,0 +1,11 @@
+{
+    "eventid": "568",
+    "items": {
+        "USER_AVC": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='avc:  denied  { status } for auid=1000 uid=0 gid=0 cmdline=\"systemctl list-units\" scontext=system_u:object_r:unlabeled_t:s0 tcontext=system_u:system_r:init_t:s0 tclass=system exe=\"/usr/lib/systemd/systemd\" sauid=0 hostname=? addr=? terminal=?' UID=\"root\" AUID=\"unset\" AUID=\"jr\" UID=\"root\" GID=\"root\""
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1475497645",
+    "timestampfractional": "110"
+}

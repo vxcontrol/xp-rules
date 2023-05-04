@@ -1,0 +1,22 @@
+Description: 'Управление учетными записями пользователей'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_login_ongoing
+      EventDescription: 'Учетная запись пользователя {subject.account.name} прошла проверку на актуальность при входе пользователя в систему на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_login_failure
+      EventDescription: 'Не удалось проверить учетную запись пользователя {subject.account.name} на актуальность при входе пользователя в систему на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_escalate_ongoing
+      EventDescription: 'Учетная запись пользователя {object.account.name} прошла проверку на актуальность при повышении привилегий на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_escalate_failure
+      EventDescription: 'Не удалось проверить учетную запись пользователя {object.account.name} на актуальность при повышении привилегий на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_success
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} изменил атрибуты группы "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_failure
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} не смог изменить атрибуты группы "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_ongoing
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} изменяет атрибуты группы "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_success_null
+      EventDescription: 'Пользователь с ID {subject.account.id} изменил атрибуты группы "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_failure_null
+      EventDescription: 'Пользователь с ID {subject.account.id} не смог изменить атрибуты группы "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_acct_modify_ongoing_null
+      EventDescription: 'Пользователь с ID {subject.account.id} изменяет атрибуты группы "{object.name}" на узле {event_src.host}'

@@ -1,0 +1,4 @@
+Description: 'A computer account was created'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4741_A_computer_account_was_created
+      EventDescription: 'The user {subject.domain}\{subject.name} created a computer account on host {event_src.hostname}'

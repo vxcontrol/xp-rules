@@ -1,0 +1,48 @@
+EVENTLOG = 'EventID="4778"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "start"
+object = "session"
+status = "success"
+
+subject.account.name = lower($Data["AccountName"])
+subject.account.domain = lower($Data["AccountDomain"])
+subject.account.session_id = maybe_number16($Data["LogonID"])
+
+object.name = $Data["SessionName"]
+
+if find_substr($Data["ClientName"], '.') != null then
+    src.fqdn = lower($Data["ClientName"])
+    src.hostname = lower(substr($Data["ClientName"], 0, find_substr($Data["ClientName"], '.')))
+else
+    src.hostname = lower($Data["ClientName"])
+endif
+
+if (maybe_ipv4($Data["ClientAddress"]) != null) || (maybe_ipv6($Data["ClientAddress"]) != null) then
+    src.ip = $Data["ClientAddress"]
+endif
+
+datafield1 = maybe_number16($Data["LogonID"])   
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+# Windows logs this event when a user reconnects to a disconnected terminal server (aka Remote Desktop)
+# session as opposed to a fresh logon which is reflected by event 4624.
+# This event is also logged when a user returns to an existing logon session via Fast User Switching.
+
+id = "PT_Microsoft_Windows_eventlog_4778_A_session_was_reconnected_to_a_Window_Station"
+

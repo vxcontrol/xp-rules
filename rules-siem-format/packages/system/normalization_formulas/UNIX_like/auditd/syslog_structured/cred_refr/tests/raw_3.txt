@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598352995",
+    "timestampfractional": "840",
+    "eventid": "2301",
+    "items": {
+        "CRED_REFR": [
+            "pid=2194 uid=0 auid=1000 ses=5 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

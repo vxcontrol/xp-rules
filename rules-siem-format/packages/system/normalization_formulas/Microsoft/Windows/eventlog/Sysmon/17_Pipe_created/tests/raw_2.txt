@@ -1,0 +1,67 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Sysmon",
+				"Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+			},
+			"EventID": "17",
+			"Version": "1",
+			"Level": "4",
+			"Task": "17",
+			"Opcode": "0",
+			"Keywords": "0x8000000000000000",
+			"TimeCreated": {
+				"SystemTime": "2022-11-23T12:54:45.5222180Z"
+			},
+			"EventRecordID": "3600372",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "3432",
+				"ThreadID": "4692"
+			},
+			"Channel": "Microsoft-Windows-Sysmon/Operational",
+			"Computer": "COMP-2977.energy.stf",
+			"Security": {
+				"UserID": "S-1-5-18"
+			}
+		},
+		"EventData": {
+			"Data": [
+				{
+					"text": "-",
+					"Name": "RuleName"
+				},
+				{
+					"text": "CreatePipe",
+					"Name": "EventType"
+				},
+				{
+					"text": "2022-11-23 12:54:45.518",
+					"Name": "UtcTime"
+				},
+				{
+					"text": "{95235a7e-1813-637e-6332-000000001b00}",
+					"Name": "ProcessGuid"
+				},
+				{
+					"text": "15648",
+					"Name": "ProcessId"
+				},
+				{
+					"text": "\\PSHost.133136816837047181.15648.DefaultAppDomain.rundll32",
+					"Name": "PipeName"
+				},
+				{
+					"text": "C:\\WINDOWS\\system32\\rundll32.exe",
+					"Name": "Image"
+				},
+				{
+					"text": "energy\\l_murphy",
+					"Name": "User"
+				}
+			]
+		}
+	}
+}

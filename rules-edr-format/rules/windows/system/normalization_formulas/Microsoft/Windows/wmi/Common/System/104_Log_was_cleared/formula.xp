@@ -1,0 +1,35 @@
+!JSON = "EventCode=104"
+!COND = $Logfile == "System" and $SourceName == "Microsoft-Windows-Eventlog"
+
+subject = "account"
+action = "clean"
+object = "log"
+status = "success"
+
+subject.account.name = lower($InsertionStrings[0])
+subject.account.domain = lower($InsertionStrings[1])
+
+object.name = $InsertionStrings[2]
+if $InsertionStrings[3] != "" then
+    object.property = "backup path"
+    object.value = $InsertionStrings[3]
+endif
+
+time = $TimeGenerated
+msgid = $EventCode
+
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Logfile
+if find_substr($ComputerName, '.') != null then
+    event_src.fqdn = lower($ComputerName)
+    event_src.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    event_src.hostname = lower($ComputerName)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_wmi_Common_System_104_Log_was_cleared"
+

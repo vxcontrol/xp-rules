@@ -1,0 +1,8 @@
+Description: 'New process was created'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_behalf
+      EventDescription: 'The user {subject.account.name} on behalf of the user {object.account.name} created the new process "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_oneself
+      EventDescription: 'The user {subject.account.name} created the new process "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_nameless
+      EventDescription: 'The user created the new process "{object.name}" on host {event_src.host}'

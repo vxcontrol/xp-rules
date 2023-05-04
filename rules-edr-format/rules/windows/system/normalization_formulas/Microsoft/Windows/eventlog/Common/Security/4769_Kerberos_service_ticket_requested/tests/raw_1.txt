@@ -1,0 +1,77 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "TargetUserName",
+                    "text": "2008R2SP1-DC$@AD2008R2.RU"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "AD2008R2.RU"
+                },
+                {
+                    "Name": "ServiceName",
+                    "text": "2008R2SP1-DC$"
+                },
+                {
+                    "Name": "ServiceSid",
+                    "text": "S-1-5-21-1743380172-4235219263-347487665-1000"
+                },
+                {
+                    "Name": "TicketOptions",
+                    "text": "0x40810000"
+                },
+                {
+                    "Name": "TicketEncryptionType",
+                    "text": "0x12"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "::1"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "0"
+                },
+                {
+                    "Name": "Status",
+                    "text": "0x2"
+                },
+                {
+                    "Name": "LogonGuid",
+                    "text": "{7A090E47-D1AF-04B3-BAAC-09C0D332D842}"
+                },
+                {
+                    "Name": "TransmittedServices",
+                    "text": "-"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "2008R2SP1-DC.AD2008R2.ru",
+            "Correlation": null,
+            "EventID": "4769",
+            "EventRecordID": "9713",
+            "Execution": {
+                "ProcessID": "484",
+                "ThreadID": "3168"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "14337",
+            "TimeCreated": {
+                "SystemTime": "2015-09-01T10:31:28.685989500Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

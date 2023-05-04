@@ -1,0 +1,33 @@
+{
+  "Category": 14339,
+  "CategoryString": "-",
+  "ComputerName": "2012-DC.AD2012.ru",
+  "Data": null,
+  "EventCode": 4768,
+  "EventIdentifier": 4768,
+  "EventType": "4",
+  "InsertionStrings": [
+    "2012-EXC$",
+    "AD2012.RU",
+    "S-1-5-21-3725810923-1556733292-2669249330-4102",
+    "krbtgt",
+    "S-1-5-21-3725810923-1556733292-2669249330-502",
+    "0x40810010",
+    "0x0",
+    "0x12",
+    "2",
+    "::ffff:10.0.220.77",
+    "15397",
+    "",
+    "",
+    ""
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 798334,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2015-12-09 02:28:06",
+  "TimeWritten": "2015-12-09 02:28:06",
+  "Type": "Audit Success",
+  "User": null
+}

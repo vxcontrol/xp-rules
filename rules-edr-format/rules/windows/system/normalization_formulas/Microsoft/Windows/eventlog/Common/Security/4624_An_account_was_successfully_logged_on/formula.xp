@@ -1,0 +1,148 @@
+EVENTLOG = 'EventID="4624"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+if maybe_number16($Data["SubjectLogonId"]) <= 1000 then
+    subject = "account"
+    action = "login"
+    object = "system"
+
+    subject.account.id = $Data["TargetUserSid"]
+    subject.account.name = lower($Data["TargetUserName"])
+    subject.account.domain = lower($Data["TargetDomainName"])
+    subject.account.session_id = maybe_number16($Data["TargetLogonId"])
+
+    category.generic = "Operating System"
+    category.high = "Access Management"
+    category.low = "Communication"
+else
+    subject = "account"
+    action = "elevate"
+    object = "account"
+
+    subject.account.id = $Data["SubjectUserSid"]
+    subject.account.name = lower($Data["SubjectUserName"])
+    subject.account.domain = lower($Data["SubjectDomainName"])
+    subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+    if $Data["LogonType"] == "9" and $Data["TargetOutboundUserName"] != "-" then
+        object.account.name = lower($Data["TargetOutboundUserName"])
+        object.account.domain = lower($Data["TargetOutboundDomainName"])
+    else
+        object.account.id = $Data["TargetUserSid"]
+        object.account.name = lower($Data["TargetUserName"])
+        object.account.domain = lower($Data["TargetDomainName"])
+        object.account.session_id = maybe_number16($Data["TargetLogonId"])
+    endif
+
+    category.generic = "Account"
+    category.high = "Users And Rights Management"
+    category.low = "Manipulation"
+endif
+status = "success"
+
+#---- for local admin accounts
+
+if maybe_number16($Data["TargetLinkedLogonId"]) != null then
+    object.property = "session ID with ElevatedToken"
+    object.value = maybe_number16($Data["TargetLinkedLogonId"])
+endif
+
+if $Data["ElevatedToken"] != null then
+    if $Data["ElevatedToken"] == "%%1842" then
+        subject.account.privileges = "local administrator rights"
+    else
+        subject.account.privileges = "local user rights"
+    endif
+endif
+
+#---- end local admin accounts
+
+if $Data["ProcessName"] != '-' then
+    subject.process.fullpath = lower($Data["ProcessName"])
+    $process_path = csv(subject.process.fullpath, "\\", "")
+    subject.process.name = $process_path[length($process_path) - 1]
+    subject.process.path = strip(subject.process.fullpath, "", subject.process.name)
+    subject.process.id = maybe_number16($Data["ProcessId"])
+endif
+
+logon_type = $Data["LogonType"]  
+
+if (maybe_ipv4($Data["IpAddress"]) != null) || (maybe_ipv6($Data["IpAddress"]) != null) then
+    src.ip = $Data["IpAddress"]
+endif
+
+if (find_substr($Data["LogonProcessName"], "User32") == null
+    and find_substr($Data["LogonProcessName"], "Kerberos") == null
+    and find_substr($Data["LogonProcessName"], "ADVAPI") == null
+    and find_substr($Data["LogonProcessName"], "CHAP") == null
+    and in_list([3, 8, 10], logon_type))
+    or (in_list([2, 7, 11], logon_type)) then
+    $hostname = replace($Data["WorkstationName"],'','\\\\')
+endif
+
+if (maybe_ipv4($hostname) == null) and (maybe_ipv6($hostname) == null) then
+    if (logon_type != 7 or in_list(["127.0.0.1", "::1"], src.ip)) then
+        if find_substr(lower($Computer), lower($hostname)) == null then
+            if find_substr($hostname, '.') != null then
+                src.fqdn = lower($hostname)
+                src.hostname = lower(substr($hostname, 0, find_substr($hostname, '.')))
+            elif $hostname != "-" then
+                src.hostname = lower($hostname)
+            endif
+        endif
+    endif
+endif
+
+if $Data["IpPort"] != "-" then
+    src.port = $Data["IpPort"]
+endif
+
+if find_substr($Computer, '.') != null then
+    dst.fqdn = lower($Computer)
+    dst.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    dst.hostname = lower($Computer)
+endif
+
+datafield6 = switch $Data["LogonType"]                      
+    case "2" "Interactive"
+    case "3" "Network"
+    case "4" "Batch"
+    case "5" "Service"
+    case "7" "Unlock"
+    case "8" "NetworkCleartext"
+    case "9" "NewCredentials"
+    case "10" "RemoteInteractive"
+    case "11" "CachedInteractive"
+endswitch
+
+datafield9 = $Data["AuthenticationPackageName"]             
+
+if in_list([2, 7, 11], logon_type) then
+    logon_auth_method = "local"
+endif
+if in_list([3, 8, 10], logon_type) then
+    logon_auth_method = "remote"
+endif
+
+logon_service = $Data["LogonProcessName"]
+chain_id = strip($Correlation["ActivityID"], "{", "}")   
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on"
+

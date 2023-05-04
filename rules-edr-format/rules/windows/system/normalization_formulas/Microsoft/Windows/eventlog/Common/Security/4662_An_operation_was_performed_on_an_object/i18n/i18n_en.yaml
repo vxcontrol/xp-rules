@@ -1,0 +1,6 @@
+Description: 'Operation was performed on an object'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4662_An_operation_was_performed_on_an_object_status_success
+      EventDescription: 'The user {subject.name} accessed the Active Directory object {object.name} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4662_An_operation_was_performed_on_an_object_status_failure
+      EventDescription: 'The user {subject.name} could not access the Active Directory object {object.name} on host {event_src.host}'

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_user_end"
+      LocalizationId: PT_UNIX_like_auditd_syslog_user_end
+ObjectId: PT-NF-4355

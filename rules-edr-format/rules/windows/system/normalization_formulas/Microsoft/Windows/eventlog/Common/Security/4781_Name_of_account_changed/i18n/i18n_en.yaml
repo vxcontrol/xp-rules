@@ -1,0 +1,4 @@
+Description: 'The name of an account was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4781_Name_of_account_changed
+      EventDescription: 'The name of the user {object.name} was changed to "{object.new_value}" by the user {subject.name}'

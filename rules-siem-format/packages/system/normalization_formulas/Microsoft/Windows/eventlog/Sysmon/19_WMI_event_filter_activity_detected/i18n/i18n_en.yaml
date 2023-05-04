@@ -1,0 +1,4 @@
+Description: 'WMI event filter activity detected'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_19_WMI_event_filter_activity_detected
+      EventDescription: 'WMI event filter activity is detected on host {event_src.host}'

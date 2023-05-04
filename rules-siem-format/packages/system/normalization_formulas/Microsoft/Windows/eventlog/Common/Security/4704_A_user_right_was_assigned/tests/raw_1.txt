@@ -1,0 +1,57 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-18"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "WIN-Q00000000AT$"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x3e7"
+                },
+                {
+                    "Name": "TargetSid",
+                    "text": "S-1-5-21-1900000110-3000000022-2000000008-1105"
+                },
+                {
+                    "Name": "PrivilegeList",
+                    "text": "SeLockMemoryPrivilege"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q00000000AT.test.local",
+            "Correlation": null,
+            "EventID": "4704",
+            "EventRecordID": "35229",
+            "Execution": {
+                "ProcessID": "536",
+                "ThreadID": "580"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10070",
+            "TimeCreated": {
+                "SystemTime": "2014-09-22T13:33:36.451675300Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

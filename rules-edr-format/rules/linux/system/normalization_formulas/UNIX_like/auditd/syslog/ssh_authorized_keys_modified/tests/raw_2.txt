@@ -1,0 +1,1 @@
+Jul 26 18:24:05 deb7lablocal audispd: node=deb7lablocal type=SYSCALL msg=audit(1469546645.188:49): arch=c000003e syscall=2 success=yes exit=3 a0=2524e88 a1=441 a2=1b6 a3=8 items=1 ppid=3573 pid=3575 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=18 comm="bash" exe="/bin/bash" key="fileaud_ssh_authkeys_/root/.ssh/authorized_keys"

@@ -1,0 +1,76 @@
+EVENTLOG = 'EventID="4738"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "modify"
+object = "account"
+status = "success"
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+subject.account.privileges = if $Data["PrivilegeList"] != "-" then replace($Data["PrivilegeList"], ", ", "\n\t\t\t") else null endif
+
+object.account.name = lower($Data["TargetUserName"])
+object.account.domain = lower($Data["TargetDomainName"])
+object.account.id = $Data["TargetSid"]
+object.account.group = if $Data["PrimaryGroupId"] != "-" then $Data["PrimaryGroupId"] else null endif
+
+if $Data["UserAccountControl"] != null or $Data["UserAccountControl"] != "-" then
+    $decoded_uac = []
+    if find_substr($Data["UserAccountControl"],"%%2089") != null then
+        $decoded_uac = append($decoded_uac, "Don't expire password: enabled")
+    endif
+    if find_substr($Data["UserAccountControl"], "%%2057") != null then
+        $decoded_uac = append($decoded_uac, "Don't expire password: disabled")
+    endif
+    if find_substr($Data["UserAccountControl"], "%%2050") != null then
+        $decoded_uac = append($decoded_uac, "Password not required: disabled")
+    endif
+    if find_substr($Data["UserAccountControl"], "%%2082") != null then
+        $decoded_uac = append($decoded_uac, "Password not required: enabled")
+    endif
+    if find_substr($Data["UserAccountControl"],"%%2080") != null then
+        $decoded_uac = append($decoded_uac, "Account disable: enabled")
+    endif
+    if find_substr($Data["UserAccountControl"],"%%2048") != null then
+        $decoded_uac = append($decoded_uac, "Account disable: disabled")
+    endif
+
+    object.property = "user account control"
+    object.new_value = join($decoded_uac, "|")
+endif
+
+if $Data["AccountExpires"] != "-" and $Data["AccountExpires"] != "%%1794" then
+    datafield3 = $Data["AccountExpires"]    # account expiration date
+elif $Data["AccountExpires"] == "%%1794" then
+    datafield3 = "account expires never"
+endif
+
+datafield4 = if $Data["PasswordLastSet"] != "-" then $Data["PasswordLastSet"] else null endif  # account password changed at (date and time)
+datafield5 = if $Data["LogonHours"] != "-" then $Data["LogonHours"] else null endif            # new logon hours
+datafield8 = if $Data["UserPrincipalName"] != "-" then $Data["UserPrincipalName"] else null endif  # logon name in RFC 822
+datafield9 = if $Data["SidHistory"] != "-" then $Data["SidHistory"] else null endif            # old SID of the user object
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "low"
+
+category.generic = "Account"
+category.high = "Users And Rights Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed"
+

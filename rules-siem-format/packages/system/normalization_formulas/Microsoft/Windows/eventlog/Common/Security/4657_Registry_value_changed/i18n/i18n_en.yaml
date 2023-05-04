@@ -1,0 +1,6 @@
+Description: 'Registry value was changed on host'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4657_Registry_value_changed_status_success
+      EventDescription: 'The user {subject.name} changed the value of the registry key on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4657_Registry_value_changed_status_failure
+      EventDescription: 'The user {subject.name} failed to change the value of the registry key on host {event_src.host}'

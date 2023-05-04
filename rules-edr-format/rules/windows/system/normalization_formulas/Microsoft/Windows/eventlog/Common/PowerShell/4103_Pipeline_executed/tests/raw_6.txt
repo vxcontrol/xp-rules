@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-02-28T04:09:38.145716800Z"
+            },
+            "EventRecordID": "35629",
+            "Correlation": {
+                "ActivityID": "{fb79104c-ed24-0001-98b6-7cfb24edd501}"
+            },
+            "Execution": {
+                "ProcessID": "9788",
+                "ThreadID": "8256"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "iivanov.domainname.ru",
+            "Security": {
+                "UserID": "S-1-5-21-1023191730-727829927-3985050192-38786"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Важность = Informational\r\n        Имя узла = ConsoleHost\r\n        Версия узла = 5.1.18362.628\r\n        ИД узла = fe3436e6-0930-4349-80af-c856592845e2\r\n        Ведущее приложение = PowerShell.exe -noexit -command Set-Location -literalPath 'C:\\Users\\iivanov\\Documents\\Мои полученные файлы'\r\n        Версия модуля = 5.1.18362.628\r\n        ИД пространства выполнения = 6fe68e86-7c01-4ead-ab54-7c84ff40a1d4\r\n        ИД конвейера = 31\r\n        Имя команды = Get-Help\r\n        Тип команды = Cmdlet\r\n        Имя сценария = \r\n        Путь команды = \r\n        Порядковый номер = 54\r\n        Пользователь = domainname\\iivanov\r\n        Подключенный пользователь = \r\n        ИД оболочки = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Get-Help): \"Get-Help\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

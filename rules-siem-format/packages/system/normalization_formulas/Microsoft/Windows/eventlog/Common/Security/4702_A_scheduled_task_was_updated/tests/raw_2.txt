@@ -1,0 +1,59 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4702",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-02-06T10:44:04.016091400Z"
+            },
+            "EventRecordID": "27584215",
+            "Correlation": {
+                "ActivityID": "{4318F604-CB9D-0000-20F6-18439DCBD501}"
+            },
+            "Execution": {
+                "ProcessID": "756",
+                "ThreadID": "836"
+            },
+            "Channel": "Security",
+            "Computer": "WIN10_1",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-506420898-248497907-2261400522-1000",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "someuser",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WIN10_1",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x396676e",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\GoogleUpdateTaskMachineCore",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n <RegistrationInfo>\r\n <Author>WIN10_1\\someuser</Author>\r\n <Version>1.3.35.442</Version>\r\n <Description>Keeps your Google software up to date. If this task is disabled or stopped, your Google software will not be kept up to date, meaning security vulnerabilities that may arise cannot be fixed and features may not work. This task uninstalls itself when there is no Google software using it.</Description>\r\n <URI>\\GoogleUpdateTaskMachineCore</URI>\r\n </RegistrationInfo>\r\n <Triggers>\r\n <LogonTrigger>\r\n <Enabled>true</Enabled>\r\n </LogonTrigger>\r\n <CalendarTrigger>\r\n <StartBoundary>2020-02-05T17:20:33</StartBoundary>\r\n <Enabled>true</Enabled>\r\n <ScheduleByDay>\r\n <DaysInterval>1</DaysInterval>\r\n </ScheduleByDay>\r\n </CalendarTrigger>\r\n </Triggers>\r\n <Principals>\r\n <Principal id=\"Author\">\r\n <RunLevel>HighestAvailable</RunLevel>\r\n <UserId>S-1-5-18</UserId>\r\n </Principal>\r\n </Principals>\r\n <Settings>\r\n <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>\r\n <AllowHardTerminate>true</AllowHardTerminate>\r\n <StartWhenAvailable>true</StartWhenAvailable>\r\n <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n <IdleSettings>\r\n <StopOnIdleEnd>true</StopOnIdleEnd>\r\n <RestartOnIdle>false</RestartOnIdle>\r\n </IdleSettings>\r\n <AllowStartOnDemand>true</AllowStartOnDemand>\r\n <Enabled>true</Enabled>\r\n <Hidden>false</Hidden>\r\n <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n <WakeToRun>false</WakeToRun>\r\n <ExecutionTimeLimit>P3D</ExecutionTimeLimit>\r\n <Priority>7</Priority>\r\n </Settings>\r\n <Actions Context=\"Author\">\r\n <Exec>\r\n <Command>C:\\Program</Command>\r\n <Arguments>Files (x86)\\Google\\Update\\GoogleUpdate2.exe /c</Arguments>\r\n </Exec>\r\n </Actions>\r\n</Task>",
+                    "Name": "TaskContentNew"
+                }
+            ]
+        }
+    }
+}

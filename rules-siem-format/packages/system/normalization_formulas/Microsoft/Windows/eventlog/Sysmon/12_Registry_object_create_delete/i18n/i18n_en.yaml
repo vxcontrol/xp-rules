@@ -1,0 +1,6 @@
+Description: 'Registry object create or delete'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_create
+      EventDescription: 'The process "{datafield4}" created the object "{object.name}" in the registry on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_delete
+      EventDescription: 'The process "{datafield4}" deleted the object "{object.name}" in the registry on host {event_src.host}'

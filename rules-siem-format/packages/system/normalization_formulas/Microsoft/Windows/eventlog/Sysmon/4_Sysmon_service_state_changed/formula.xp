@@ -1,0 +1,38 @@
+EVENTLOG = 'EventID="4"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+if $Data["State"] == "Started" then
+   action = "start"
+else
+   action = "stop"
+endif
+object = "service"
+status = "success"
+
+object.name = "Sysmon"
+object.version = $Data["Version"]
+object.property = "SchemaVersion"
+object.value = $Data["SchemaVersion"]
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Service"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed"

@@ -1,0 +1,4 @@
+Description: 'User login on host'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_login
+      EventDescription: 'A user logged in to the system on host {event_src.host}'

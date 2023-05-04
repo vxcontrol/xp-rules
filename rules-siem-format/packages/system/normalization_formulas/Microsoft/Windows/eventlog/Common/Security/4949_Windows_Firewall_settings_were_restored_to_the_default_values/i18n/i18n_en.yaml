@@ -1,0 +1,4 @@
+Description: 'Windows Firewall settings were restored to defaults.'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4949_Windows_Firewall_settings_were_restored_to_the_default_values
+      EventDescription: 'Windows Firewall settings were restored to the default values on host {event_src.host}'

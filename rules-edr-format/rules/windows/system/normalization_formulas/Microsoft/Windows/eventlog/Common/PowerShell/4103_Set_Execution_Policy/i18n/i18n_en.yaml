@@ -1,0 +1,6 @@
+Description: 'The PowerShell execution policy is changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Set_Execution_Policy_success
+      EventDescription: 'The PowerShell execution policy is changed on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Set_Execution_Policy_failure
+      EventDescription: 'An attempt to modify the PowerShell execution policy failed on host {event_src.host}'

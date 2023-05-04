@@ -1,0 +1,45 @@
+!EVENTLOG = 'EventID="4104"'
+!COND = $Provider["Name"] == "Microsoft-Windows-PowerShell"
+        and $Channel == "Microsoft-Windows-PowerShell/Operational"
+        and find_substr($Data['ScriptBlockText'], "Set-StrictMode") != null
+        and find_substr($Data['ScriptBlockText'], "$_.") != null
+
+action = "modify"
+object = "configuration"
+status = "success"
+
+submessage('TEXT', 'script_block_parser', $Data['ScriptBlockText'])
+subformula "script_block_parser"
+    TEXT = '{LITERAL} Set-StrictMode {"-"$flag=WORD} {$flag_value=NUMBER?} {REST}'
+endsubformula
+
+object.type = "strict mode"
+if $flag == "Off" then
+    object.state = "off"
+else
+    object.state = "on"
+    object.property = "version"
+    object.value = $flag_value
+endif
+
+$temp = replace($Data["ScriptBlockText"], '', '[\r\n\t]')
+$temp = replace($temp, ' "', "\"")
+datafield5 = $temp  
+datafield10 = $Security["UserID"]  
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode"

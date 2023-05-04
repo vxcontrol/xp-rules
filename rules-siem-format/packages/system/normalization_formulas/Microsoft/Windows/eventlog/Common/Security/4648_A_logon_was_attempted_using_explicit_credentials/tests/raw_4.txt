@@ -1,0 +1,89 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4648",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2016-05-26T13:00:11.511481900Z"
+            },
+            "EventRecordID": "360623612",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "684",
+                "ThreadID": "29144"
+            },
+            "Channel": "Security",
+            "Computer": "srv-tsod-ex1.ilp.loc",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SRV-TSOD-EX1$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ILP",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "SRV-TSOD-EX1$",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "ILP.LOC",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "{DE8E9439-82BA-1479-2314-8A941F2A6D01}",
+                    "Name": "TargetLogonGuid"
+                },
+                {
+                    "text": "srv-sc-dpm1.ilp.loc",
+                    "Name": "TargetServerName"
+                },
+                {
+                    "text": "HOST/srv-sc-dpm1.ilp.loc",
+                    "Name": "TargetInfo"
+                },
+                {
+                    "text": "0x314",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "-",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "-",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

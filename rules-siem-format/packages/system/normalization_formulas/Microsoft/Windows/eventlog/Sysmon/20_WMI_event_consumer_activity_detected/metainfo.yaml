@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected
+ObjectId: PT-NF-4941

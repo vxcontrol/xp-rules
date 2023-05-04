@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed"
+        and action = "start"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_start
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed"
+        and action = "stop"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_stop
+ObjectId: PT-NF-2368

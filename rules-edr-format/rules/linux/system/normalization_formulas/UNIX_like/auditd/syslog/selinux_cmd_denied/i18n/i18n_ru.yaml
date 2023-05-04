@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_selinux_cmd_denied
+      EventDescription: 'Запрещен доступ к файлу {object.name} для процесса {subject.name} на узле {event_src.host}'

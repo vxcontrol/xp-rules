@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4729_A_member_was_removed_from_a_security_enabled_global_group"
+      LocalizationId: PT_Microsoft_Windows_wmi_4729_A_member_was_removed_from_a_security_enabled_global_group
+ObjectId: PT-NF-2572

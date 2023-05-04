@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed"
+        and subject.id != "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed"
+        and subject.id = "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed_nullses
+ObjectId: PT-NF-1876

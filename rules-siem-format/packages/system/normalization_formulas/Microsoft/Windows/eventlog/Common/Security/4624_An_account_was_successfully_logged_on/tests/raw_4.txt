@@ -1,0 +1,110 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4624",
+			"Version": "0",
+			"Level": "0",
+			"Task": "12544",
+			"Opcode": "0",
+			"Keywords": "0x8020000000000000",
+			"TimeCreated": {
+				"SystemTime": "2017-08-30T11:40:19.603302100Z"
+			},
+			"EventRecordID": "143959061",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "652",
+				"ThreadID": "2188"
+			},
+			"Channel": "Security",
+			"Computer": "DC2002.msk.rn.ru",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "S-1-5-18",
+				"Name": "SubjectUserSid"
+			},
+			{
+				"text": "DC2002$",
+				"Name": "SubjectUserName"
+			},
+			{
+				"text": "MSK",
+				"Name": "SubjectDomainName"
+			},
+			{
+				"text": "0x3e7",
+				"Name": "SubjectLogonId"
+			},
+			{
+				"text": "S-1-5-18",
+				"Name": "TargetUserSid"
+			},
+			{
+				"text": "SYSTEM",
+				"Name": "TargetUserName"
+			},
+			{
+				"text": "NT AUTHORITY",
+				"Name": "TargetDomainName"
+			},
+			{
+				"text": "0x3e7",
+				"Name": "TargetLogonId"
+			},
+			{
+				"text": "5",
+				"Name": "LogonType"
+			},
+			{
+				"text": "Advapi ",
+				"Name": "LogonProcessName"
+			},
+			{
+				"text": "Negotiate",
+				"Name": "AuthenticationPackageName"
+			},
+			{
+				"Name": "WorkstationName"
+			},
+			{
+				"text": "{C4AC475F-7913-0741-5359-01E1F66FE3B8}",
+				"Name": "LogonGuid"
+			},
+			{
+				"text": "-",
+				"Name": "TransmittedServices"
+			},
+			{
+				"text": "-",
+				"Name": "LmPackageName"
+			},
+			{
+				"text": "0",
+				"Name": "KeyLength"
+			},
+			{
+				"text": "0x284",
+				"Name": "ProcessId"
+			},
+			{
+				"text": "C:\\Windows\\System32\\services.exe",
+				"Name": "ProcessName"
+			},
+			{
+				"text": "-",
+				"Name": "IpAddress"
+			},
+			{
+				"text": "-",
+				"Name": "IpPort"
+			}]
+		}
+	}
+}

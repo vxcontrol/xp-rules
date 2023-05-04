@@ -1,0 +1,95 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5136",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14081",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-11-08T16:43:39.003262500Z"
+            },
+            "EventRecordID": "34176725",
+            "Correlation": {
+                "ActivityID": "{755AA416-E2FD-0002-2DA4-5A75FDE2D801}"
+            },
+            "Execution": {
+                "ProcessID": "672",
+                "ThreadID": "120"
+            },
+            "Channel": "Security",
+            "Computer": "DC01.plat.form",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "{4A9D4373-6C3E-4223-9DC6-E4542082B1BE}",
+                    "Name": "OpCorrelationID"
+                },
+                {
+                    "text": "-",
+                    "Name": "AppCorrelationID"
+                },
+                {
+                    "text": "S-1-5-21-1260549424-181218984-3392690056-1153",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "BSurkov_admin",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "plat",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x1612a646",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "plat.form",
+                    "Name": "DSName"
+                },
+                {
+                    "text": "%%14676",
+                    "Name": "DSType"
+                },
+                {
+                    "text": "cn=SMS-MP-LAB-SCCM.RF.PLAT.FORM,CN=System Management,CN=System,DC=plat,DC=form",
+                    "Name": "ObjectDN"
+                },
+                {
+                    "text": "{00B34AEE-0EA2-4CB9-B6EC-B9CDB5011F58}",
+                    "Name": "ObjectGUID"
+                },
+                {
+                    "text": "mSSMSManagementPoint",
+                    "Name": "ObjectClass"
+                },
+                {
+                    "text": "mSSMSCapabilities",
+                    "Name": "AttributeLDAPDisplayName"
+                },
+                {
+                    "text": "2.5.5.4",
+                    "Name": "AttributeSyntaxOID"
+                },
+                {
+                    "text": "<ClientOperationalSettings><Version>5.00.9078.1000</Version><SecurityConfiguration><SecurityModeMask>0</SecurityModeMask><SecurityModeMaskEx>224</SecurityModeMaskEx><HTTPPort>80</HTTPPort><HTTPSPort>443</HTTPSPort><CertificateStoreName></CertificateStoreName><CertificateIssuers></CertificateIssuers><CertificateSelectionCriteria></CertificateSelectionCriteria><CertificateSelectFirstFlag>1</CertificateSelectFirstFlag><PKICertOptions>1</PKICertOptions><SiteSigningCert>308202EE308201D6A0030201020210215F21EAF0DFFBBE418C2D97BFB4EAB9300D06092A864886F70D01010B05003016311430120603550403130B53697465205365727665723020170D3232303331363038303030305A180F32313232303232313038303030305A3016311430120603550403130B536974652053657276657230820122300D06092A864886F70D01010105000382010F003082010A0282010100E757937B71ACE9E6378AE98B10E75CD6D38713EB831F22379767A85A1782DA5F43DE73AC0848139203E901BED8174465DA6679276FB1B4B48A828EBB514EC4BD8CECAB3BB75B5FDE9865DD833261D03DAEBC72A0F4AD1AC64A36EA9801C1F799F299B41053857714",
+                    "Name": "AttributeValue"
+                },
+                {
+                    "text": "%%14675",
+                    "Name": "OperationType"
+                }
+            ]
+        }
+    }
+}

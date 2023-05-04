@@ -1,0 +1,11 @@
+{
+    "node": "192.168.233.133",
+    "timestamp": "1598394601",
+    "timestampfractional": "371",
+    "eventid": "188427",
+    "items": {
+        "CRED_DISP": [
+            "pid=63782 uid=0 auid=0 ses=75 msg='op=PAM:setcred grantors=pam_permit acct=\"root\" exe=\"/usr/sbin/cron\" hostname=? addr=? terminal=cron res=success' UID=\"root\" AUID=\"root\""
+        ]
+    }
+}

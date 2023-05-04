@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4608_Auditing_subsystem_initialized
+      EventDescription: 'Запуск системы на узле {event_src.host}: запущена подсистема аудита'

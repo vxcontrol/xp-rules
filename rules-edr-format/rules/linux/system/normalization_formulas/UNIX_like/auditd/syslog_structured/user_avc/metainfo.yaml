@@ -1,0 +1,17 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_user_avc" and action =
+        "modify" and object = "configuration"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_modify_configuration
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_user_avc" and subject
+        = "account" and action = "execute" and status = "success"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_account_execute_success
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_user_avc" and subject
+        = "account" and action = "execute" and status = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_account_execute_failure
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_user_avc" and subject
+        = "process" and action = "execute" and status = "success"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_process_execute_success
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_user_avc" and subject
+        = "process" and action = "execute" and status = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_process_execute_failure
+ObjectId: PT-NF-5543

@@ -1,0 +1,6 @@
+Description: 'Зашифрованная сессия'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_session_success
+      EventDescription: 'Параметры зашифрованной сессии {src.ip}:{src.port}->{dst.ip}:{dst.port} ({direction}) согласованы на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_session_failure
+      EventDescription: 'Не удалось согласовать параметры зашифрованной сессии {src.ip}:{src.port}->{dst.ip}:{dst.port} на узле {event_src.host}. Причина: {reason}.'

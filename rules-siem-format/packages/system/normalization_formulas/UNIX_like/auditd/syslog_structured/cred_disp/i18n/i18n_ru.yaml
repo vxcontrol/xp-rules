@@ -1,0 +1,10 @@
+Description: 'Отозваны учетные данные пользователя'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_disp_logout_success
+      EventDescription: 'Учетные данные пользователя {subject.account.name} отозваны при выходе пользователя из системы на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_disp_logout_failure
+      EventDescription: 'Не удалось отозвать учетные данные пользователя {subject.account.name} при выходе пользователя из системы на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_disp_deescalate_success
+      EventDescription: 'Учетные данные пользователя {subject.account.name} отозваны при понижении привилегий на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_disp_deescalate_failure
+      EventDescription: 'Не удалось отозвать учетные данные пользователя {subject.account.name} при понижении привилегий на узле {event_src.host}'

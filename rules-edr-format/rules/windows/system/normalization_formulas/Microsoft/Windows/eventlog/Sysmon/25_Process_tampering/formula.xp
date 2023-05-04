@@ -1,0 +1,59 @@
+EVENTLOG = 'EventID="25"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+action = "modify"
+object = "process"
+
+object.process.id = $Data["ProcessId"]
+$process_fullpath = lower($Data["Image"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "'")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+object.process.name = $process_name
+object.process.path = strip($process_fullpath, "", $process_name)
+object.process.fullpath = $process_fullpath
+object.process.guid = strip($Data['ProcessGuid'], '{', '}')
+
+$object_name_domain = csv($Data["User"], "\\", "'")
+if length($object_name_domain) > 1 then
+    object.account.domain = lower($object_name_domain[0])
+    object.account.name = lower($object_name_domain[1])
+    object.account.id = "synthetic:" + object.account.name
+    if object.account.domain != null then
+        object.account.id = object.account.id + "@" + object.account.domain
+    endif
+elif $Data["User"] != '-' then
+    object.account.id = $Data["User"]
+endif
+
+reason = $Data["Type"]
+
+if in_list(["image is locked for access"], lower(reason)) then
+    status = "failure"
+# "image is replaced", "image is deleted"
+else 
+    status = "success"
+endif
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Process"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_25_Process_tampering"
+

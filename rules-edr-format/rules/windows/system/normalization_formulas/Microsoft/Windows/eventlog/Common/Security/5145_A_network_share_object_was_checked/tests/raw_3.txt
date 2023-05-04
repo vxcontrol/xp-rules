@@ -1,0 +1,84 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5145",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12811",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-10-11T11:20:30.561003500Z"
+            },
+            "EventRecordID": "1832965",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "7640"
+            },
+            "Channel": "Security",
+            "Computer": "dc01-1.NewCo.hitb",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1028946041-3827956430-3322205331-1211",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "srv_mssql",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "NewCo",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x62059f3",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "172.19.61.14",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "50271",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\IPC$",
+                    "Name": "ShareName"
+                },
+                {
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "lsarpc",
+                    "Name": "RelativeTargetName"
+                },
+                {
+                    "text": "0x12019f",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%1538\r\n\t\t\t\t%%1541\r\n\t\t\t\t%%4416\r\n\t\t\t\t%%4417\r\n\t\t\t\t%%4418\r\n\t\t\t\t%%4419\r\n\t\t\t\t%%4420\r\n\t\t\t\t%%4423\r\n\t\t\t\t%%4424\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccessReason"
+                }
+            ]
+        }
+    }
+}

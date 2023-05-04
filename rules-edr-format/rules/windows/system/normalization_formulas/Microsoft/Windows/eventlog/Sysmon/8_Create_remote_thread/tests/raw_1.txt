@@ -1,0 +1,77 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "8",
+            "Version": "2",
+            "Level": "4",
+            "Task": "8",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2017-12-21T11:01:32.498312100Z"
+            },
+            "EventRecordID": "44703843",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "37328",
+                "ThreadID": "52352"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "hostname.domain.com",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "2017-12-21 11:01:32.498",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{684DA293-948C-5A3B-0300-0010825BE168}",
+                    "Name": "SourceProcessGuid"
+                },
+                {
+                    "text": "6396",
+                    "Name": "SourceProcessId"
+                },
+                {
+                    "text": "C:\\Shares\\Ltc\\Ltc\\Ltc-ADC\\Copypwd\\copypwd-exe\\CopyPwdSvc.exe",
+                    "Name": "SourceImage"
+                },
+                {
+                    "text": "{684DA293-FB38-5A2C-0000-0010FAA90000}",
+                    "Name": "TargetProcessGuid"
+                },
+                {
+                    "text": "608",
+                    "Name": "TargetProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\lsass.exe",
+                    "Name": "TargetImage"
+                },
+                {
+                    "text": "69612",
+                    "Name": "NewThreadId"
+                },
+                {
+                    "text": "0x00000000000F0434",
+                    "Name": "StartAddress"
+                },
+                {
+                    "Name": "StartModule"
+                },
+                {
+                    "Name": "StartFunction"
+                }
+            ]
+        }
+    }
+}

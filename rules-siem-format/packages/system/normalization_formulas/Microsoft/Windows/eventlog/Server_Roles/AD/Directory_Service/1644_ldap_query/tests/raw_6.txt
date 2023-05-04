@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-ActiveDirectory_DomainService",
+                "Guid": "{0e8478c5-3605-4e8c-8497-1e730c959516}",
+                "EventSourceName": "NTDS General"
+            },
+            "EventID": {
+                "text": "1644",
+                "Qualifiers": "16384"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "15",
+            "Opcode": "0",
+            "Keywords": "0x8080000000000000",
+            "TimeCreated": {
+                "SystemTime": "2023-03-22T09:20:10.078844400Z"
+            },
+            "EventRecordID": "26638956",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "712",
+                "ThreadID": "6352"
+            },
+            "Channel": "Directory Service",
+            "Computer": "DC01.rf.plat.form",
+            "Security": {
+                "UserID": "S-1-5-21-4032475495-70562145-410911341-1164"
+            }
+        },
+        "EventData": {
+            "Data": [
+                "RootDSE",
+                " ( |  (servicePrincipalName=TERMSRV/FILESHARE) ) ",
+                "1",
+                "1",
+                "NTDSAPI",
+                "subtree",
+                "servicePrincipalName,userPrincipalName,distinguishedName,objectGUID,objectSid",
+                null,
+                "idx_servicePrincipalName:1:N;",
+                "20",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "none",
+                "UNAVAILABLE"
+            ]
+        }
+    }
+}

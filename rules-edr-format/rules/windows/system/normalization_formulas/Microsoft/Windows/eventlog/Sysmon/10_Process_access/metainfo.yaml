@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_10_Process_access"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_10_Process_access
+ObjectId: PT-NF-4933

@@ -1,0 +1,118 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4625",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12546",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-03-29T08:37:49.620382900Z"
+            },
+            "EventRecordID": "220054476",
+            "Correlation": {
+                "ActivityID": "{0B27AEBF-3840-0007-72CA-270B4038D801}"
+            },
+            "Execution": {
+                "ProcessID": "824",
+                "ThreadID": "29208"
+            },
+            "Channel": "Security",
+            "Computer": "as3-rewx-99.domain.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-0-0",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "user@domain.com",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0xc0000234",
+                    "Name": "Status"
+                },
+                {
+                    "text": "%%2307",
+                    "Name": "FailureReason"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "SubStatus"
+                },
+                {
+                    "text": "3",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "NtLmSsp ",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "NTLM",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "DESKTOP",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "0",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "10.10.10.10",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "49416",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

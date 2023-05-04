@@ -1,0 +1,11 @@
+{
+    "eventid": "4884",
+    "items": {
+        "USER_CHAUTHTOK": [
+            "pid=1657 uid=0 auid=0 ses=2 subj==unconfined msg='op=PAM:chauthtok grantors=pam_permit acct=\"new_test_user\" exe=\"/usr/bin/passwd\" hostname=debian10siem addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575617483",
+    "timestampfractional": "259"
+}

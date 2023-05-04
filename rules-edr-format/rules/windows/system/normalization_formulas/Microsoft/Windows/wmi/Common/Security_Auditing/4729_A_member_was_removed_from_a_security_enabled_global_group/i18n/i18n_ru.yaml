@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4729_A_member_was_removed_from_a_security_enabled_global_group
+      EventDescription: 'Пользователь {subject.name} удалил участника из группы {object.name} типа {object.type} на узле {event_src.host}'

@@ -1,0 +1,23 @@
+{
+    "action": "info",
+    "datafield1": "S-1-5-21-1023191730-727829927-3985050192-502",
+    "datafield2": "AES256-CTS-HMAC-SHA1-96",
+    "datafield3": "anon",
+    "datafield4": "anonim.ru",
+    "datafield8": "0x10002",
+    "event_src.category": "AAA",
+    "event_src.fqdn": "dc0-dc0.anonim.ru",
+    "event_src.hostname": "dc0-dc0",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed",
+    "importance": "low",
+    "msgid": "4770",
+    "object": "service",
+    "object.name": "krbtgt",
+    "src.ip": "10.0.90.70",
+    "src.port": 55000,
+    "status": "success",
+    "time": "2021-02-02T14:17:43.763Z"
+}

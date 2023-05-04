@@ -1,0 +1,4 @@
+Description: 'A message is displayed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Out_Default
+      EventDescription: 'The PowerShell console on host {event_src.host} displayed a message'

@@ -1,0 +1,127 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+            },
+            "EventID": "1",
+            "Version": "5",
+            "Level": "4",
+            "Task": "1",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-12-01T07:24:17.0557059Z"
+            },
+            "EventRecordID": "15914956",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "11856",
+                "ThreadID": "17576"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "ssidorov-nb1.SOMEDOMAIN.ru",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2022-12-01 07:24:17.048",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{84e91f2e-56a1-6388-f732-020000003100}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "6092",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\drivers\\RivetNetworks\\Killer\\KAPS.exe",
+                    "Name": "Image"
+                },
+                {
+                    "text": "2.3.3314.0",
+                    "Name": "FileVersion"
+                },
+                {
+                    "text": "KillerAPS",
+                    "Name": "Description"
+                },
+                {
+                    "text": "KillerAPS",
+                    "Name": "Product"
+                },
+                {
+                    "text": "Rivet Networks LLC",
+                    "Name": "Company"
+                },
+                {
+                    "text": "KAPS.exe",
+                    "Name": "OriginalFileName"
+                },
+                {
+                    "text": "KAPS.exe -u",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "C:\\windows\\System32\\drivers\\RivetNetworks\\Killer\\",
+                    "Name": "CurrentDirectory"
+                },
+                {
+                    "text": "SOMEDOMAIN\\ssidorov",
+                    "Name": "User"
+                },
+                {
+                    "text": "{84e91f2e-3d1a-6388-3402-9f4502000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "0x2459f0234",
+                    "Name": "LogonId"
+                },
+                {
+                    "text": "3",
+                    "Name": "TerminalSessionId"
+                },
+                {
+                    "text": "Medium",
+                    "Name": "IntegrityLevel"
+                },
+                {
+                    "text": "MD5=807031A254911C7582365D0EB84B7463,SHA256=5FB3FA430E94AA9066E25A0792C5AF7C84EFC0497C9D4FF110253319F1BAFD0F,IMPHASH=55B104D16E1532E92783F26A77E3C4E9",
+                    "Name": "Hashes"
+                },
+                {
+                    "text": "{84e91f2e-310b-635d-8d00-000000003100}",
+                    "Name": "ParentProcessGuid"
+                },
+                {
+                    "text": "8296",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\drivers\\RivetNetworks\\Killer\\KAPS.exe",
+                    "Name": "ParentImage"
+                },
+                {
+                    "text": "\"KAPS.exe\"",
+                    "Name": "ParentCommandLine"
+                },
+                {
+                    "text": "NT AUTHORITY\\SYSTEM",
+                    "Name": "ParentUser"
+                }
+            ]
+        }
+    }
+}

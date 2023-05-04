@@ -1,0 +1,30 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-a0ba-3e0b0000c00d}"
+            },
+            "EventID": "4949",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10071",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-10-23T13:08:40.172Z"
+            },
+            "EventRecordID": "12638",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "600",
+                "ThreadID": "2968"
+            },
+            "Channel": "Security",
+            "Computer": "lab-dc-01.microsoft.lab",
+            "Security": null
+        },
+        "EventData": null
+    }
+}

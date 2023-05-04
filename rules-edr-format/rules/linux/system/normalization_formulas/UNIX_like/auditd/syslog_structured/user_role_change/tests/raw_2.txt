@@ -1,0 +1,11 @@
+{
+    "eventid": "320",
+    "items": {
+        "USER_ROLE_CHANGE": [
+            "pid=3461 uid=0 auid=1000 ses=2 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe=\"/usr/sbin/sshd\" hostname=192.168.206.1 addr=192.168.206.1 terminal=ssh res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602686496",
+    "timestampfractional": "004"
+}

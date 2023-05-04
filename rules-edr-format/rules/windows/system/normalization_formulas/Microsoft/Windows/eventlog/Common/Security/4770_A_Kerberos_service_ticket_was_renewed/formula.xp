@@ -1,0 +1,64 @@
+EVENTLOG = 'EventID="4770"'
+
+COND = lower($Channel)=="security" and $Provider["Name"] == "Microsoft-Windows-Security-Auditing"
+
+action = "info"
+object = "service"
+status = "success"
+
+if find_substr($Data["ServiceName"], "/") != null then
+    $servicename = csv($Data["ServiceName"], "/", "")
+    object.name = $servicename[0]
+    object.domain = $servicename[1]
+else
+    object.name = $Data["ServiceName"]
+endif
+
+$ip = strip($Data["IpAddress"], "::ffff:", "")
+if $ip == "::1" or $Data["IpPort"] == 0 or in_subnet($ip, "127.0.0.0/8") then
+    src.hostname = "localhost"
+    src.ip = $ip
+else
+    src.ip = $ip
+endif
+
+src.port = $Data["IpPort"]
+
+datafield1 = $Data["ServiceSid"]                          
+datafield2 = switch lower($Data["TicketEncryptionType"])  
+    case "0x1" "DES-CBC-CRC"
+    case "0x3" "DES-CBC-MD5"
+    case "0x11" "AES128-CTS-HMAC-SHA1-96"
+    case "0x12" "AES256-CTS-HMAC-SHA1-96"
+    case "0x17" "RC4-HMAC"
+    case "0x18" "RC4-HMAC-EX"
+endswitch
+
+
+if find_substr($Data["TargetUserName"], "@") != null then
+    $TargetUserName = csv(lower($Data["TargetUserName"]), "@", "")
+    datafield3 = lower($TargetUserName[0])
+    datafield4 = lower($TargetUserName[1])
+else
+    datafield3 = lower($Data["TargetUserName"])
+    datafield4 = lower($Data["TargetDomainName"])
+endif
+
+datafield8 = $Data["TicketOptions"]             
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "low"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed"

@@ -1,0 +1,71 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "UtcTime",
+                    "text": "2017-12-21 11:01:11.937"
+                },
+                {
+                    "Name": "ProcessGuid",
+                    "text": "{684DA293-FB38-5A2C-0000-0010FAA90000}"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "608"
+                },
+                {
+                    "Name": "Image",
+                    "text": "C:\\Windows\\System32\\lsass.exe"
+                },
+                {
+                    "Name": "ImageLoaded",
+                    "text": "C:\\Windows\\System32\\netapi32.dll"
+                },
+                {
+                    "Name": "Hashes",
+                    "text": "MD5=EEEA40F0EDB0A6E5359E539E15D0BC77,SHA256=BFCBF777239C29C6AC4BC5B59591308571647B7C7FDB5571903F7403DD241E8E"
+                },
+                {
+                    "Name": "Signed",
+                    "text": "true"
+                },
+                {
+                    "Name": "Signature",
+                    "text": "Microsoft Windows"
+                },
+                {
+                    "Name": "SignatureStatus",
+                    "text": "Valid"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "hostname.domain.com",
+            "Correlation": null,
+            "EventID": "7",
+            "EventRecordID": "44703023",
+            "Execution": {
+                "ProcessID": "37328",
+                "ThreadID": "61144"
+            },
+            "Keywords": "0x8000000000000000",
+            "Level": "4",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}",
+                "Name": "Microsoft-Windows-Sysmon"
+            },
+            "Security": {
+                "UserID": "S-1-5-18"
+            },
+            "Task": "7",
+            "TimeCreated": {
+                "SystemTime": "2017-12-21T11:01:12.186851700Z"
+            },
+            "Version": "3"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

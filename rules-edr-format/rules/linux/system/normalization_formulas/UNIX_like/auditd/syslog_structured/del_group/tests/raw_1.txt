@@ -1,0 +1,11 @@
+{
+    "eventid": "5566",
+    "items": {
+        "DEL_GROUP": [
+            "pid=1690 uid=0 auid=0 ses=2 subj==unconfined msg='op=removing group from /etc/group id=1001 exe=\"/usr/sbin/groupdel\" hostname=debian10siem addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"root\" ID=\"new_test_group\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575617742",
+    "timestampfractional": "866"
+}

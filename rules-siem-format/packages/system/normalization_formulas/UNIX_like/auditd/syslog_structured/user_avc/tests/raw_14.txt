@@ -1,0 +1,11 @@
+{
+    "eventid": "568",
+    "items": {
+        "USER_AVC": [
+            "pid=777 uid=103 auid=4294967295 ses=4294967295 msg='apparmor=\"ALLOWED\" operation=\"dbus_bind\"  bus=\"system\" name=\"org.freedesktop.sssd.infopipe\" mask=\"bind\" pid=7833 label=\"/usr/sbin/sssd\" exe=\"/usr/bin/dbus-daemon\" sauid=103 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "x0.cockpit.lan",
+    "timestamp": "1475497645",
+    "timestampfractional": "110"
+}

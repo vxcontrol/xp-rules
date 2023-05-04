@@ -1,0 +1,4 @@
+Description: 'Member was added to security enabled global group'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4728_A_member_was_added_to_a_security_enabled_global_group
+      EventDescription: 'The user {subject.name} added a member to the {object.type} group "{object.name}" on host {event_src.host}'

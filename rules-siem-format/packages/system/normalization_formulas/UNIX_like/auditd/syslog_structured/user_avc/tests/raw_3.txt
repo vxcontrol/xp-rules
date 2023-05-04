@@ -1,0 +1,11 @@
+{
+    "eventid": "1868",
+    "items": {
+        "USER_AVC": [
+            "pid=734 uid=81 auid=4294967295 ses=4294967295 subj=system_u:system_r:system_dbusd_t:s0-s0:c0.c1023 msg='avc:  received setenforce notice (enforcing=0)  exe=\"/usr/bin/dbus-daemon\" sauid=81 hostname=? addr=? terminal=?' UID=\"dbus\" AUID=\"unset\" SAUID=\"dbus\""
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1575627984",
+    "timestampfractional": "250"
+}

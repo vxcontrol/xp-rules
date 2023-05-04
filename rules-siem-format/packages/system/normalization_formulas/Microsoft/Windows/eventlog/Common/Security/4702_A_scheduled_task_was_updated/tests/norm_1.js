@@ -1,0 +1,23 @@
+{
+    "action": "modify",
+    "event_src.category": "Operating system",
+    "event_src.fqdn": "someone.acme.com",
+    "event_src.hostname": "someone",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4702_A_scheduled_task_was_updated",
+    "importance": "info",
+    "msgid": "4702",
+    "object": "task",
+    "object.fullpath": "\\Adobe Flash Player Updater",
+    "object.name": "Adobe Flash Player Updater",
+    "object.type": "Scheduled",
+    "status": "success",
+    "subject": "account",
+    "subject.account.domain": "acme",
+    "subject.account.id": "S-1-5-18",
+    "subject.account.name": "someone$",
+    "subject.account.session_id": "999",
+    "time": "2014-06-26T04:06:25.127Z"
+}

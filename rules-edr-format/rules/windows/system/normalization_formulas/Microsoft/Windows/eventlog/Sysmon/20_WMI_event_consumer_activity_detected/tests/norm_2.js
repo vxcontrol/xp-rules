@@ -1,0 +1,23 @@
+{
+    "action": "modify",
+    "event_src.category": "Other",
+    "event_src.fqdn": "server16.server16.int",
+    "event_src.hostname": "server16",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected",
+    "importance": "info",
+    "msgid": "20",
+    "object": "resource",
+    "object.name": "ServiceConsumer",
+    "object.state": "modified",
+    "object.storage.fullpath": "C:\\\\Log.log",
+    "object.storage.name": "Log.log",
+    "object.storage.path": "C:\\\\",
+    "object.type": "Log File",
+    "status": "success",
+    "subject": "account",
+    "subject.account.id": "S-1-5-21-1079404-3266665680-3315961750-128075",
+    "time": "2018-11-21T07:46:13.466Z"
+}

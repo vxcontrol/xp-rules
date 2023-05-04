@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_not_null
+      EventDescription: 'Пользователь с узла {src.host} выполнил LDAP-запрос на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_null
+      EventDescription: 'На узле {event_src.host} выполнен LDAP-запрос'

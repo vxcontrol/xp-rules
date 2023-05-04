@@ -1,0 +1,14 @@
+{
+    "eventid": "388",
+    "items": {
+        "USER_AUTH": [
+            "pid=2203 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct=\"test1\" exe=\"/usr/bin/su\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"jr\" AUID=\"jr\""
+        ],
+        "COMMENT": [
+            "[jr@centos] su test1 <- we are here"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1603183461",
+    "timestampfractional": "889"
+}

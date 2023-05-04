@@ -1,0 +1,38 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Eventlog",
+                "Guid": "{fc65ddd8-d6ef-4962-83d5-6e5cfe9ce148}"
+            },
+            "EventID": "1102",
+            "Version": "0",
+            "Level": "4",
+            "Task": "104",
+            "Opcode": "0",
+            "Keywords": "0x4020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-12-09T06:29:07.868894500Z"
+            },
+            "EventRecordID": "58637",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "700",
+                "ThreadID": "1876"
+            },
+            "Channel": "Security",
+            "Computer": "8p1x64-Soft",
+            "Security": null
+        },
+        "UserData": {
+            "LogFileCleared": {
+                "xmlns": "http://manifests.microsoft.com/win/2004/08/windows/eventlog",
+                "SubjectUserSid": "S-1-5-21-863499019-2066412432-665365160-500",
+                "SubjectUserName": "Administrator",
+                "SubjectDomainName": "8p1x64-Soft",
+                "SubjectLogonId": "0xa52480"
+            }
+        }
+    }
+}

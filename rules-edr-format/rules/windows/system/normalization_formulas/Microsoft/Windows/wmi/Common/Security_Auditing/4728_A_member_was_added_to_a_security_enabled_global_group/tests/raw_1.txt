@@ -1,0 +1,29 @@
+{
+  "Category": 10026,
+  "CategoryString": "-",
+  "ComputerName": "WIN-Q00000000AT.test.local",
+  "Data": null,
+  "EventCode": 4728,
+  "EventIdentifier": 4728,
+  "EventType": "4",
+  "InsertionStrings": [
+    "CN=Migrant,OU=Test,DC=test,DC=local",
+    "S-1-5-21-1900000110-3000000022-2000000008-1116",
+    "GS-group",
+    "TEST",
+    "S-1-5-21-1900000110-3000000022-2000000008-1118",
+    "S-1-5-21-1900000110-3000000022-2000000008-1000",
+    "admin",
+    "TEST",
+    "0x45a5f",
+    "-"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 40437,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2014-09-29 13:20:02",
+  "TimeWritten": "2014-09-29 13:20:02",
+  "Type": "Audit Success",
+  "User": null
+}

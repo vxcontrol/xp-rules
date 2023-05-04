@@ -1,0 +1,24 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "login" and subject.account.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "login" and subject.account.name = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_nameless
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "elevate" and subject.account.name != null and object.account.name
+        != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "elevate" and subject.account.name = null and object.account.name
+        != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_nameless
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "elevate" and subject.account.name != null and object.account.name
+        = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+        and action = "elevate" and subject.account.name = null and object.account.name
+        = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_nameless
+ObjectId: PT-NF-1821

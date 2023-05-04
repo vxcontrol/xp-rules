@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_18_Pipe_connected"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_18_Pipe_connected
+ObjectId: PT-NF-4939

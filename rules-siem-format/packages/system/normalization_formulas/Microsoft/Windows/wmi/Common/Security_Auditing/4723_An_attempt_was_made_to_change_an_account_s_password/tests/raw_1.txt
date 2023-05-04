@@ -1,0 +1,27 @@
+{
+  "Category": 10024,
+  "CategoryString": "-",
+  "ComputerName": "SOMEONE.acme.com",
+  "Data": null,
+  "EventCode": 4723,
+  "EventIdentifier": 4723,
+  "EventType": "5",
+  "InsertionStrings": [
+    "chu",
+    "SomeOne",
+    "S-1-5-21-3000000076-810000008-1900000808-1079",
+    "S-1-5-18",
+    "SOMEONE$",
+    "ACME",
+    "0x3e7",
+    "-"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 429162,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2013-10-14 12:48:57",
+  "TimeWritten": "2013-10-14 12:48:57",
+  "Type": "Audit Failure",
+  "User": null
+}

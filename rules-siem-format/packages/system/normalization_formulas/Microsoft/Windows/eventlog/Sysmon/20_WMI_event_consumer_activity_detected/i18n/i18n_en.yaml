@@ -1,0 +1,4 @@
+Description: 'WMI event consumer activity detected'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected
+      EventDescription: 'WMI event consumer activity is detected on host {event_src.host}'

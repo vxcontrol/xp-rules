@@ -1,0 +1,55 @@
+EVENTLOG = 'EventID="6"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+action = "open"
+object = "module"
+status = "success"
+
+$object_fullpath = lower($Data["ImageLoaded"])
+$object_fullpath_csv = csv($object_fullpath, "\\", "'")
+$object_name = $object_fullpath_csv[length($object_fullpath_csv) - 1]
+object.name = $object_name
+if strip($object_fullpath, "", $object_name) != '' then
+    object.path = strip($object_fullpath, "", $object_name)
+endif
+object.fullpath = $object_fullpath
+$temp_object_hash = keyvalue($Data["Hashes"], ",", "=")
+if $temp_object_hash["SHA256"] != null then
+    object.hash.sha256 = $temp_object_hash["SHA256"]
+endif
+if $temp_object_hash["MD5"] != null then
+    object.hash.md5 = $temp_object_hash["MD5"]
+endif
+if $temp_object_hash["SHA1"] != null then
+    object.hash.sha1 = $temp_object_hash["SHA1"]
+endif
+if $temp_object_hash["IMPHASH"] != null then
+    object.hash.imphash = $temp_object_hash["IMPHASH"]
+endif
+object.type = "driver"
+object.property = "signature status"
+if $Data["Signed"] == "true" then
+    object.value = $Data["SignatureStatus"]  + " | " + $Data["Signature"]
+else
+    object.value = "not signed"
+endif
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "medium"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded"
+

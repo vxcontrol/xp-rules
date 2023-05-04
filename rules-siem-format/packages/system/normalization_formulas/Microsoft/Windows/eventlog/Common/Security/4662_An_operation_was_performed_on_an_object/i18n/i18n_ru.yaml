@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4662_An_operation_was_performed_on_an_object_status_success
+      EventDescription: 'Пользователь {subject.name} обратился к объекту службы каталогов Active Directory {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4662_An_operation_was_performed_on_an_object_status_failure
+      EventDescription: 'Пользователь {subject.name} не смог обратиться к объекту службы каталогов Active Directory {object.name} на узле {event_src.host}'

@@ -1,0 +1,77 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-1912387110-3170147922-2054567208-1000"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "admin"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x43b7d"
+                },
+                {
+                    "Name": "ObjectType",
+                    "text": "File"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "192.168.171.130"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "62118"
+                },
+                {
+                    "Name": "ShareName",
+                    "text": "\\\\*\\SYSVOL"
+                },
+                {
+                    "Name": "ShareLocalPath",
+                    "text": "\\??\\C:\\Windows\\SYSVOL\\sysvol"
+                },
+                {
+                    "Name": "AccessMask",
+                    "text": "0x1"
+                },
+                {
+                    "Name": "AccessList",
+                    "text": "%%4416"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q4ONQJG2QAT.test.local",
+            "Correlation": null,
+            "EventID": "5140",
+            "EventRecordID": "35860",
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "80"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "12808",
+            "TimeCreated": {
+                "SystemTime": "2014-09-25T14:25:34.016424200Z"
+            },
+            "Version": "1"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

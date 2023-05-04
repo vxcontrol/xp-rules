@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_7045_New_Windows_Service
+      EventDescription: 'Новая служба "{object.name}" типа {object.type} создана на узле {event_src.host}'

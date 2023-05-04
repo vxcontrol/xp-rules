@@ -1,0 +1,69 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4697",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12289",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-05-07T05:27:44.816473200Z"
+            },
+            "EventRecordID": "339909",
+            "Correlation": {
+                "ActivityID": "{CEBDAA51-D327-0006-BFAA-BDCE27D3D301}"
+            },
+            "Execution": {
+                "ProcessID": "564",
+                "ThreadID": "2632"
+            },
+            "Channel": "Security",
+            "Computer": "PC.co.DOMAIN.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [{
+                "text": "S-1-5-21-3503238877-3003487241-1841632481-8976",
+                "Name": "SubjectUserSid"
+            },
+            {
+                "text": "snuser",
+                "Name": "SubjectUserName"
+            },
+            {
+                "text": "CO",
+                "Name": "SubjectDomainName"
+            },
+            {
+                "text": "0x7954d49e",
+                "Name": "SubjectLogonId"
+            },
+            {
+                "text": "SnInstAgent",
+                "Name": "ServiceName"
+            },
+            {
+                "text": "C:\\\\WINDOWS\\\\SecurityCode\\\\08_03_1406_00\\\\SnInstAgent64.exe",
+                "Name": "ServiceFileName"
+            },
+            {
+                "text": "0x10",
+                "Name": "ServiceType"
+            },
+            {
+                "text": "3",
+                "Name": "ServiceStartType"
+            },
+            {
+                "text": "LocalSystem",
+                "Name": "ServiceAccount"
+            }]
+        }
+    }
+}

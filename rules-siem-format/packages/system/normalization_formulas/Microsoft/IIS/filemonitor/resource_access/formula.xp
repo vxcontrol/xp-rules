@@ -1,0 +1,192 @@
+# 2016-09-02 03:04:58 W3SVC1 10.0.211.47 POST /cgi-bin/php %2D%64+%2D%6E 80 - 10.0.162.102 - 404 0 3
+# 2016-09-08 04:45:08 W3SVC1 WIN-DGE9HAU611L 10.0.208.137 POST /cgi-bin/php %2D%64+%2D%6E 80 - 10.0.162.100 HTTP/1.1 - - - 10.0.208.137 404 0 2 0
+# 2016-09-01 19:45:08 W3SVC1 WIN-2008R2-TEMP 10.0.211.27 POST /cgi-bin/php %2D%64+%2D%6E 80 - 10.0.162.102 HTTP/1.1 - - - 10.0.211.27 404 0 2 15
+# 2016-09-02 03:04:38 W3SVC1 10.0.211.47 PROPFIND /dav/ - 80 - 10.0.162.102 - 501 0 0
+# 2016-09-08 14:19:52 W3SVC1 127.0.0.1 GET /index.php - 80 - 127.0.0.1 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+5.2;+SV1;+.NET+CLR+1.1.4322;+.NET+CLR+2.0.50727) 500 0 0
+# 2016-09-10 13:35:56 W3SVC1 10.0.211.47 PROPFIND /dav/ - 80 - 10.0.162.100 - 401 2 2148074254
+# 2016-09-10 13:35:37 W3SVC1 10.0.211.47 GET / - 80 - 10.0.162.100 Mozilla/4.0+(compatible;+MSIE+6.0;+Windows+NT+7.0)+PTX 401 2 64
+# 2016-09-02 03:04:38 W3SVC1 10.0.211.47 POST /index.htm - 80 - 10.0.162.102 XenAPI/1.9 405 0 0
+# 2016-09-01 08:29:39 W3SVC1 WIN-2008R2-TEMP 10.0.211.27 PROPFIND /Tmp - 80 - 10.2.64.58 HTTP/1.1 Microsoft-WebDAV-MiniRedir/6.3.9600 - - 10.0.211.27 405 0 0 109
+
+TEXT = '{time=DATETIME} W3SVC{NUMBER} {event_src.hostname=HOSTNAME?} {event_src.ip=IPV4|event_src.ip=IPV6}
+        {object.value=STRING} {$path=STRING} {$params=STRING} {NUMBER} {$user_name=STRING} {$src_ip_raw=IPV4|$src_ip_raw=IPV6} {"%"NUMBER?}
+        {$user_agent1=STRING $os_g1=NUMBER $sub_status1=NUMBER NUMBER?}
+        {protocol=STRING $user_agent2=STRING $cookie=STRING $referer=STRING $vhost=STRING $os_g2=NUMBER $sub_status2=NUMBER NUMBER NUMBER?}
+        {$xff=STRING?}'
+
+$access_success = ["100", "101", "200", "201", "202", "203", "206", "302", "304"]  
+$access_failure = ["0", "301", "307", "308", "400", "401", "404", "403", "405", "406", "407", "408", "413", "415", "416", "417", "423", "431", "449", "451", "499", "500", "501", "502", "503", "504", "505", "507", "508", "509", "510", "511", "520", "521", "522", "523", "524", "525", "526"]  
+$importance_high = ["400", "401", "403", "405", "407", "408", "413", "415", "416", "417", "500", "501", "502", "503", "504", "507", "508"]  
+
+object.state = string(coalesce($os_g1, $os_g2))  
+
+if ($user_name != '-') then
+    subject = "account"
+    submessage("TEXT", "split", $user_name)  
+endif
+
+action = "access"
+object = "resource"
+
+if (in_list($access_success, object.state)) then
+    status = "success"
+elif (in_list($access_failure, object.state)) then
+    status = "failure"
+elif ((number(object.state) != null) and ((number(object.state) >= 100) and (number(object.state) < 300))) then
+    status = "success"
+elif ((number(object.state) != null) and ((number(object.state) >= 300) and (number(object.state) < 600))) then
+    status = "failure"
+else
+    drop  
+endif
+
+subformula 'split'
+    TEXT = '{$csv = CSV("\\\\","\'")}'
+    COND = find_substr($user_name, "\\") != null 
+    if ($csv[1] != null) then  
+        subject.account.name = $csv[1]
+        subject.account.domain = $csv[0]
+        subject.account.id = "synthetic:" + subject.account.name + "@" + subject.account.domain
+    endif
+endsubformula
+
+subformula 'split'
+    TEXT = '{$csv = CSV("@","\'")}'
+    COND = find_substr($user_name, "@") != null 
+    if ($csv[1] != null) then  
+        subject.account.name = $csv[0]
+        subject.account.domain = $csv[1]
+        subject.account.id = "synthetic:" + subject.account.name + "@" + subject.account.domain
+    else
+        subject.account.name = $csv[0]
+        subject.account.id = "synthetic:" + subject.account.name
+    endif
+endsubformula
+
+subformula 'split'  
+    TEXT = '{$name=STRING}' 
+    subject.account.name = $name    
+endsubformula
+
+object.property="method"
+
+object.path = lower($path)
+
+if ($params != '-') then
+    object.fullpath = lower($path + "?" + $params)  
+else
+    object.fullpath = lower($path)
+endif
+
+$path_csv = csv(object.path, "/", "")
+object.name = $path_csv[length($path_csv) - 1]
+
+$user_agent = coalesce($user_agent1, $user_agent2)  
+if $user_agent != '-' then
+    object.process.meta = $user_agent  
+endif
+
+if $vhost != null and $vhost != "-" then
+    $maybe_fqdn_port = csv($vhost, ":", "'")
+    if maybe_ipv4($maybe_fqdn_port[0]) != null or maybe_ipv6($maybe_fqdn_port[0]) != null then
+        dst.ip = $maybe_fqdn_port[0]
+    else
+        dst.fqdn = $maybe_fqdn_port[0]
+    endif
+    if length($maybe_fqdn_port) == 2 then
+        dst.port = $maybe_fqdn_port[1]
+    endif
+endif
+
+if ($xff != null) and (string($xff) != '-') then
+    datafield4 = $xff               
+    $splitted_xff = csv(replace($xff, ",", ",+"), ",", "'")
+    datafield5 = $splitted_xff[0]   
+endif
+
+if $src_ip_raw != dst.ip or datafield5 == null then
+    src.ip = $src_ip_raw
+elif $src_ip_raw == dst.ip and datafield5 != null then
+    if maybe_ipv4(datafield5) != null or maybe_ipv6(datafield5) != null then
+        src.ip = datafield5
+    else
+        $src_ip_port = csv(datafield5, ":", "'")
+        src.ip = $src_ip_port[0]
+        src.port = $src_ip_port[1]
+    endif
+endif
+
+if ($referer != '-') then
+    datafield2 = $referer  
+endif
+
+$sub_status = coalesce($sub_status1, $sub_status2)  
+if string($sub_status) != '-' then
+    datafield3 = $sub_status  
+endif
+
+if ($cookie != null) and (string($cookie) != '-') then
+    datafield6=$cookie              # cookie
+    $kv_cook = keyvalue($cookie, ";", "=", "'")
+    if $kv_cook["X-BackEndCookie"] != null then
+        $user = substr($kv_cook["X-BackEndCookie"], 0, find_substr($kv_cook["X-BackEndCookie"], "="))
+        if find_substr($user, "@") != null then
+            datafield7 = substr($user, 0, find_substr($user, "@"))  
+            datafield8 = upper(substr($user, find_substr($user, "@")+1, find_substr($user, ".")-(find_substr($user, "@")+1)))   
+        elif find_substr($user, "S-1") != null then
+            datafield7 = $user  
+        endif
+    endif
+endif
+
+datafield9 = $params    
+
+reason = switch object.state
+    case "100" "Continue"
+    case "101" "Switching Protocols"
+    case "200" "OK"
+    case "201" "Created"
+    case "202" "Accepted"
+    case "203" "Nonauthoritative information"
+    case "206" "Partial Content"
+    case "301" "Moved Permanently"
+    case "302" "Found"
+    case "304" "Not Modified"
+    case "307" "Temporary Redirect"
+    case "308" "Permanent Redirect"
+    case "403" "Forbidden"
+    case "404" "Not Found"
+    case "406" "Not Acceptable"
+    case "423" "Locked"
+    case "400" "Bad Request"
+    case "405" "Method Not Allowed"
+    case "408" "Request Timeout"
+    case "413" "Payload Too Large"
+    case "415" "Unsupported Media Type"
+    case "416" "Requested range not satisfiable"
+    case "417" "Execution failed"
+    case "431" "Request Header Fields Too Large"
+    case "401" "Unauthorized"
+    case "407" "Proxy Authentication Required"
+    case "500" "Internal Server Error"
+    case "501" "Not Implemented"
+    case "502" "Bad Gateway"
+    case "503" "Service Unavailable"
+    case "504" "Gateway Timeout"
+    case "505" "HTTP Version Not Supported"
+    case "507" "Insufficient Storage"
+    case "508" "Loop Detected"
+endswitch
+
+if (in_list($importance_high, object.state)) then
+    importance = "low"
+else
+    importance = "info"
+endif
+
+event_src.vendor = "microsoft"
+event_src.title = "internet_information_services"
+event_src.category = "Web server"
+
+id = "PT_Microsoft_IIS_filemonitor_resource_access"
+

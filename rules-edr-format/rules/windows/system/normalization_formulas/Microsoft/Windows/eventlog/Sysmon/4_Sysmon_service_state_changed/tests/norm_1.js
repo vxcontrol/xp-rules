@@ -1,0 +1,22 @@
+{
+    "action": "start",
+    "category.generic": "Service",
+    "category.high": "Availability Management",
+    "category.low": "Control",
+    "event_src.category": "Other",
+    "event_src.fqdn": "hostname.domain.com",
+    "event_src.hostname": "hostname",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed",
+    "importance": "info",
+    "msgid": "4",
+    "object": "service",
+    "object.name": "Sysmon",
+    "object.property": "SchemaVersion",
+    "object.value": "3.30",
+    "object.version": "6.03",
+    "status": "success",
+    "time": "2017-12-21T10:49:07.170Z"
+}

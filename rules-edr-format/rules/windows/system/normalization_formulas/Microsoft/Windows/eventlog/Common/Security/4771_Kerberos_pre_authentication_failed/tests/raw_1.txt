@@ -1,0 +1,74 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4771",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14339",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-09-25T07:49:54.611162200Z"
+            },
+            "EventRecordID": "3094821870",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "500",
+                "ThreadID": "4080"
+            },
+            "Channel": "Security",
+            "Computer": "DC1.domainname.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "username",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-14613",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "krbtgt/domainname",
+                    "Name": "ServiceName"
+                },
+                {
+                    "text": "0x40810010",
+                    "Name": "TicketOptions"
+                },
+                {
+                    "text": "0x18",
+                    "Name": "Status"
+                },
+                {
+                    "text": "2",
+                    "Name": "PreAuthType"
+                },
+                {
+                    "text": "::ffff:10.0.76.40",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "61495",
+                    "Name": "IpPort"
+                },
+                {
+                    "Name": "CertIssuerName"
+                },
+                {
+                    "Name": "CertSerialNumber"
+                },
+                {
+                    "Name": "CertThumbprint"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_9_Raw_access_read
+      EventDescription: 'Процесс {datafield4} выполняет операцию чтения с устройства {object.name} на узле {event_src.host}'

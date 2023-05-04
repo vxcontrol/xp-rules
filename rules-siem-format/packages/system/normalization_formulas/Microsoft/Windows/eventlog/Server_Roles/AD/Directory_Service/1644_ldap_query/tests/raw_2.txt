@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                "DC=ptlab,DC=ru",
+                " ( & (sAMAccountType=805306368) ) ",
+                "28",
+                "28",
+                "10.125.4.11:51180",
+                "subtree",
+                "[all]",
+                null,
+                "idx_sAMAccountType:28:N;",
+                "2879",
+                "0",
+                "0",
+                "0",
+                "0",
+                "16",
+                "none",
+                "PTLAB\\admin"
+            ]
+        },
+        "System": {
+            "Channel": "Directory Service",
+            "Computer": "s-ad-001.ptlab.ru",
+            "Correlation": null,
+            "EventID": {
+                "Qualifiers": "16384",
+                "text": "1644"
+            },
+            "EventRecordID": "35314",
+            "Execution": {
+                "ProcessID": "448",
+                "ThreadID": "3288"
+            },
+            "Keywords": "0x8080000000000000",
+            "Level": "4",
+            "Opcode": "0",
+            "Provider": {
+                "EventSourceName": "NTDS General",
+                "Guid": "{0e8478c5-3605-4e8c-8497-1e730c959516}",
+                "Name": "Microsoft-Windows-ActiveDirectory_DomainService"
+            },
+            "Security": {
+                "UserID": "S-1-5-21-1429952499-3518759572-2917866074-1109"
+            },
+            "Task": "15",
+            "TimeCreated": {
+                "SystemTime": "2018-02-28T09:23:10.517235900Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

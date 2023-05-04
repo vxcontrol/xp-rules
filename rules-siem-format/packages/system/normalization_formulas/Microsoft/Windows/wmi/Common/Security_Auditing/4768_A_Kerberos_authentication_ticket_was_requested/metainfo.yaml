@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "success"
+      LocalizationId: PT_Microsoft_Windows_wmi_4768_A_Kerberos_authentication_ticket_was_requested_status_success
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "failure"
+      LocalizationId: PT_Microsoft_Windows_wmi_4768_A_Kerberos_authentication_ticket_was_requested_status_failure
+ObjectId: PT-NF-2608

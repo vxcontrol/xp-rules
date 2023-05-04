@@ -1,0 +1,7 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_behalf
+      EventDescription: 'Пользователь {subject.account.name} от имени пользователя {object.account.name} создал новый процесс "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_oneself
+      EventDescription: 'Пользователь {subject.account.name} создал новый процесс "{object.name}" на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_nameless
+      EventDescription: 'Пользователь создал новый процесс "{object.name}" на узле {event_src.host}'

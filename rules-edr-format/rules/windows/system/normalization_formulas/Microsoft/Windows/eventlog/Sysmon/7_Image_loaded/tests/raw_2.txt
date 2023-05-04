@@ -1,0 +1,94 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "7",
+            "Version": "3",
+            "Level": "4",
+            "Task": "7",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-10-01T08:06:24.825987500Z"
+            },
+            "EventRecordID": "757564",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "2816",
+                "ThreadID": "3188"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2020-10-01 08:06:24.816",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{222467B7-8E00-5F75-0000-0010F415C304}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "1788",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\mrunner\\23\\Agent.23.0.2156\\ModuleRunner.exe",
+                    "Name": "Image"
+                },
+                {
+                    "text": "C:\\Windows\\SysWOW64\\rasadhlp.dll",
+                    "Name": "ImageLoaded"
+                },
+                {
+                    "text": "10.0.14393.0 (rs1_release.160715-1616)",
+                    "Name": "FileVersion"
+                },
+                {
+                    "text": "Remote Access AutoDial Helper",
+                    "Name": "Description"
+                },
+                {
+                    "text": "Microsoft® Windows® Operating System",
+                    "Name": "Product"
+                },
+                {
+                    "text": "Microsoft Corporation",
+                    "Name": "Company"
+                },
+                {
+                    "text": "rasadhlp.dll",
+                    "Name": "OriginalFileName"
+                },
+                {
+                    "text": "SHA256=44FD17A3EC95EC7D0F568E132A6793BEB7582A8B48E7EEEC6C958BD217CFCA6A",
+                    "Name": "Hashes"
+                },
+                {
+                    "text": "true",
+                    "Name": "Signed"
+                },
+                {
+                    "text": "Microsoft Windows",
+                    "Name": "Signature"
+                },
+                {
+                    "text": "Valid",
+                    "Name": "SignatureStatus"
+                }
+            ]
+        }
+    }
+}

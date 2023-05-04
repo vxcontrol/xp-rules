@@ -1,0 +1,13 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_name
+      EventDescription: 'Пользователю {subject.account.name} не удалось осуществить вход в систему на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_nameless
+      EventDescription: 'Пользователю не удалось осуществить вход в систему на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_name
+      EventDescription: 'Пользователю {subject.account.name} не удалось повысить свои привилегии до привилегий пользователя {object.account.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_nameless
+      EventDescription: 'Пользователю не удалось повысить свои привилегии до привилегий пользователя {object.account.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_name
+      EventDescription: 'Пользователю {subject.account.name} не удалось повысить свои привилегии на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_nameless
+      EventDescription: 'Пользователю не удалось повысить свои привилегии на узле {event_src.host}'

@@ -1,0 +1,109 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4700",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10004",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-08-19T10:31:22.698281200Z"
+            },
+            "EventRecordID": "1204444",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "532",
+                "ThreadID": "3732"
+            },
+            "Channel": "Security",
+            "Computer": "WIN7X64",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-2000000094-760000002-3800000323-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WIN7X64",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x2e54f",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\eventlog",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContent",
+                    "Task": {
+                        "version": "1.2",
+                        "xmlns": "http://schemas.microsoft.com/windows/2004/02/mit/task",
+                        "RegistrationInfo": {
+                            "Date": "2014-08-19T11:06:25.2627343",
+                            "Author": "WIN7X64\\Administrator"
+                        },
+                        "Triggers": {
+                            "CalendarTrigger": {
+                                "StartBoundary": "2014-08-19T11:05:53.1377343",
+                                "Enabled": "true",
+                                "ScheduleByWeek": {
+                                    "DaysOfWeek": {
+                                        "Sunday": null
+                                    },
+                                    "WeeksInterval": "1"
+                                }
+                            }
+                        },
+                        "Principals": {
+                            "Principal": {
+                                "id": "Author",
+                                "RunLevel": "HighestAvailable",
+                                "UserId": "S-1-5-18"
+                            }
+                        },
+                        "Settings": {
+                            "MultipleInstancesPolicy": "IgnoreNew",
+                            "DisallowStartIfOnBatteries": "false",
+                            "StopIfGoingOnBatteries": "true",
+                            "AllowHardTerminate": "true",
+                            "StartWhenAvailable": "false",
+                            "RunOnlyIfNetworkAvailable": "false",
+                            "IdleSettings": {
+                                "StopOnIdleEnd": "true",
+                                "RestartOnIdle": "false"
+                            },
+                            "AllowStartOnDemand": "true",
+                            "Enabled": "true",
+                            "Hidden": "false",
+                            "RunOnlyIfIdle": "false",
+                            "WakeToRun": "false",
+                            "ExecutionTimeLimit": "P3D",
+                            "Priority": "7"
+                        },
+                        "Actions": {
+                            "Context": "Author",
+                            "Exec": {
+                                "Command": "\"C:\\Program Files (x86)\\System Center\\SystemCenter Operations Manager 2007 R2 Admin Reskit\\MPEventAnalyzer\\x64\\MPEventAnalyzer.exe\"",
+                                "WorkingDirectory": "C:\\Program Files (x86)\\System Center\\SystemCenter Operations Manager 2007 R2 Admin Reskit\\MPEventAnalyzer\\x64"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

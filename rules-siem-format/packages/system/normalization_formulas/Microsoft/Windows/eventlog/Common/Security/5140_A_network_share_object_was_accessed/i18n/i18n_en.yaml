@@ -1,0 +1,10 @@
+Description: 'A directory service object was accessed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_success_name
+      EventDescription: 'The user {subject.account.name} accessed the directory service object "{object.fullpath}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_failure_name
+      EventDescription: 'The user {subject.account.name} failed to access the directory service object "{object.fullpath}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_success_id
+      EventDescription: 'The user with ID {subject.account.id} accessed the directory service object "{object.fullpath}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_failure_id
+      EventDescription: 'The user with ID {subject.account.id} failed to access the directory service object "{object.fullpath}" on host {event_src.host}'

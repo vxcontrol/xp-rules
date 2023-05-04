@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Out_Default"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Out_Default
+ObjectId: PT-NF-5642

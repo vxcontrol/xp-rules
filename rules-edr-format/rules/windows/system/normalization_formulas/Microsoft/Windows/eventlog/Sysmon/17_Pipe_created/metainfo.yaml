@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_17_Pipe_created"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_17_Pipe_created
+ObjectId: PT-NF-4938

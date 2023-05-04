@@ -1,0 +1,23 @@
+{
+    "action": "modify",
+    "event_src.category": "Other",
+    "event_src.fqdn": "rds.testlab.esc",
+    "event_src.hostname": "rds",
+    "event_src.rule": "-",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected",
+    "importance": "info",
+    "msgid": "20",
+    "object": "resource",
+    "object.name": "pt_CommandLineConsumerCreation_consumer",
+    "object.state": "created",
+    "object.storage.fullpath": "PT_WMI_subscriptions",
+    "object.storage.name": "PT_WMI_subscriptions",
+    "object.storage.path": "",
+    "object.type": "Event Log",
+    "status": "success",
+    "subject": "account",
+    "time": "2021-08-20T17:01:35.025Z"
+}

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4720_A_user_account_was_created"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4720_A_user_account_was_created
+ObjectId: PT-NF-1860

@@ -1,0 +1,11 @@
+{
+    "eventid": "2254",
+    "items": {
+        "DEL_USER": [
+            "pid=1491 uid=0 auid=0 ses=4 subj==unconfined msg='op=deleting user not found acct=\"user1\" exe=\"/usr/sbin/userdel\" hostname=debian10siem addr=? terminal=pts/0 res=failed' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575863824",
+    "timestampfractional": "676"
+}

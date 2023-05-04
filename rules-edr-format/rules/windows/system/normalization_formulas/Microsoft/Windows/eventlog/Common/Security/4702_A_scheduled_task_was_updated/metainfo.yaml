@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4702_A_scheduled_task_was_updated"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4702_A_scheduled_task_was_updated
+ObjectId: PT-NF-1848

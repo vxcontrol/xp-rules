@@ -1,0 +1,59 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Service Control Manager",
+                "Guid": "{50000001-a007-4005-800e-2000000000f4}",
+                "EventSourceName": "Service Control Manager"
+            },
+            "EventID": {
+                "text": "7045",
+                "Qualifiers": "16384"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "0",
+            "Opcode": "0",
+            "Keywords": "0x8080000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-11-11T09:56:25.195321100Z"
+            },
+            "EventRecordID": "107749",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "552",
+                "ThreadID": "6084"
+            },
+            "Channel": "System",
+            "Computer": "SOMEONE.acme.com",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "Microsoft Policy Platform Local Authority",
+                    "Name": "ServiceName"
+                },
+                {
+                    "text": "\"C:\\Program Files\\Microsoft Policy Platform\\policyHost.exe\" /service",
+                    "Name": "ImagePath"
+                },
+                {
+                    "text": "Slujba rejima polzovatelya",
+                    "Name": "ServiceType"
+                },
+                {
+                    "text": "Vruchnuyu",
+                    "Name": "StartType"
+                },
+                {
+                    "text": "LocalSystem",
+                    "Name": "AccountName"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4781",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13824",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-05-29T18:34:09.942975200Z"
+            },
+            "EventRecordID": "68",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "452",
+                "ThreadID": "492"
+            },
+            "Channel": "Security",
+            "Computer": "WIN-7TFTFAT5C5T",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "Network Configuration Operators",
+                    "Name": "OldTargetUserName"
+                },
+                {
+                    "text": "Network Configuration Operators",
+                    "Name": "NewTargetUserName"
+                },
+                {
+                    "text": "Builtin",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-32-556",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "WIN-7TFTFAT5C5T$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WORKGROUP",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                }
+            ]
+        }
+    }
+}

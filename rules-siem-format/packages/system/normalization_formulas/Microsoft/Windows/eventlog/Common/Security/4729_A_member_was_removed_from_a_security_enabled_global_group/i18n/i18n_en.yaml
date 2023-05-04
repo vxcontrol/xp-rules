@@ -1,0 +1,4 @@
+Description: 'Member was removed from the security enabled global group'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4729_A_member_was_removed_from_a_security_enabled_global_group
+      EventDescription: 'The user {subject.name} removed a member {object.value} from the {object.type} group "{object.name}" on host {event_src.host}'

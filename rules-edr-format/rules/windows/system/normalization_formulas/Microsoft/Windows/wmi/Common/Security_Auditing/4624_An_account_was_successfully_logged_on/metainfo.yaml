@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4624_An_account_was_successfully_logged_on"
+      LocalizationId: PT_Microsoft_Windows_wmi_4624_An_account_was_successfully_logged_on
+ObjectId: PT-NF-2527

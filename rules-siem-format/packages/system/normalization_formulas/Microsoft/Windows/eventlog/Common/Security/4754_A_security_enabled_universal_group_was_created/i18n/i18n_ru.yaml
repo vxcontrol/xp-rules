@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4754_A_security_enabled_universal_group_was_created
+      EventDescription: 'Пользователь {subject.name} создал группу {object.name} на узле {event_src.host}'

@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_23_Windows_successfully_uninstalled_the_following_update
+      EventDescription: 'Операционная система успешно удалила обновление {object.name} на узле {event_src.host}'

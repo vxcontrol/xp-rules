@@ -1,0 +1,40 @@
+EVENTLOG = 'EventID.text="7045"'
+!COND = $Channel=="System" and $Provider["Name"]=="Service Control Manager"
+
+subject = "account"
+action = "create"
+object = "service"
+status = "success"
+
+subject.account.id = $Security["UserID"]
+
+object.account.name = lower($Data["AccountName"])
+
+object.process.cmdline = $Data["ImagePath"]
+
+object.name = $Data["ServiceName"]
+object.type = $Data["ServiceType"]
+object.property = "start type"
+object.value = $Data["StartType"]
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID["text"]
+importance = "info"
+
+category.generic = "Service"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_7045_New_Windows_Service"
+

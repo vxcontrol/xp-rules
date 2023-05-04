@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5156",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12810",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-10-11T02:00:11.787262900Z"
+            },
+            "EventRecordID": "1725602",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "4252"
+            },
+            "Channel": "Security",
+            "Computer": "NewCo-DCprod-reserv.NewCo.hitb",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "624",
+                    "Name": "ProcessID"
+                },
+                {
+                    "text": "\\device\\harddiskvolume2\\windows\\system32\\lsass.exe",
+                    "Name": "Application"
+                },
+                {
+                    "text": "%%14592",
+                    "Name": "Direction"
+                },
+                {
+                    "text": "fe00::59cd:d0ec:3344:936a",
+                    "Name": "SourceAddress"
+                },
+                {
+                    "text": "61512",
+                    "Name": "SourcePort"
+                },
+                {
+                    "text": "fe00::590d:dcec:3344:936a",
+                    "Name": "DestAddress"
+                },
+                {
+                    "text": "49666",
+                    "Name": "DestPort"
+                },
+                {
+                    "text": "6",
+                    "Name": "Protocol"
+                },
+                {
+                    "text": "65786",
+                    "Name": "FilterRTID"
+                },
+                {
+                    "text": "%%14610",
+                    "Name": "LayerName"
+                },
+                {
+                    "text": "46",
+                    "Name": "LayerRTID"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "RemoteUserID"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "RemoteMachineID"
+                }
+            ]
+        }
+    }
+}

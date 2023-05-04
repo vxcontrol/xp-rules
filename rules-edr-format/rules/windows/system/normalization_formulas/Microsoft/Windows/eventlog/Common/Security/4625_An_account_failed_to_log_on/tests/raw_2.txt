@@ -1,0 +1,117 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-18"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "SOMEONE$"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "ACME"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x3e7"
+                },
+                {
+                    "Name": "TargetUserSid",
+                    "text": "S-1-0-0"
+                },
+                {
+                    "Name": "TargetUserName",
+                    "text": "SomeOne"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "ACME"
+                },
+                {
+                    "Name": "Status",
+                    "text": "0xc000006d"
+                },
+                {
+                    "Name": "FailureReason",
+                    "text": "%%2313"
+                },
+                {
+                    "Name": "SubStatus",
+                    "text": "0xc000006a"
+                },
+                {
+                    "Name": "LogonType",
+                    "text": "7"
+                },
+                {
+                    "Name": "LogonProcessName",
+                    "text": "User32 "
+                },
+                {
+                    "Name": "AuthenticationPackageName",
+                    "text": "Negotiate"
+                },
+                {
+                    "Name": "WorkstationName",
+                    "text": "SOMEONE"
+                },
+                {
+                    "Name": "TransmittedServices",
+                    "text": "-"
+                },
+                {
+                    "Name": "LmPackageName",
+                    "text": "-"
+                },
+                {
+                    "Name": "KeyLength",
+                    "text": "0"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "0x2c8"
+                },
+                {
+                    "Name": "ProcessName",
+                    "text": "C:\\Windows\\System32\\winlogon.exe"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "fe80::de5:f739:aaad:affc"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "0"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Correlation": null,
+            "EventID": "4625",
+            "EventRecordID": "431520",
+            "Execution": {
+                "ProcessID": "672",
+                "ThreadID": "744"
+            },
+            "Keywords": "0x8010000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "12544",
+            "TimeCreated": {
+                "SystemTime": "2013-10-22T04:46:12.001351600Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

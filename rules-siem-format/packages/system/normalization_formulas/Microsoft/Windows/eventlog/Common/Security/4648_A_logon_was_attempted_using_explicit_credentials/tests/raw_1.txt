@@ -1,0 +1,89 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-18"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "WIN-Q00000000AT$"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x3e7"
+                },
+                {
+                    "Name": "LogonGuid",
+                    "text": "{00000000-0000-0000-0000-000000000000}"
+                },
+                {
+                    "Name": "TargetUserName",
+                    "text": "admin"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "TargetLogonGuid",
+                    "text": "{95000006-A00F-7005-3007-700000000011}"
+                },
+                {
+                    "Name": "TargetServerName",
+                    "text": "localhost"
+                },
+                {
+                    "Name": "TargetInfo",
+                    "text": "localhost"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "0xac4"
+                },
+                {
+                    "Name": "ProcessName",
+                    "text": "C:\\Windows\\System32\\winlogon.exe"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "143.81.103.215"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "0"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q00000000AT.test.local",
+            "Correlation": null,
+            "EventID": "4648",
+            "EventRecordID": "1822",
+            "Execution": {
+                "ProcessID": "528",
+                "ThreadID": "2604"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10044",
+            "TimeCreated": {
+                "SystemTime": "2014-09-16T08:00:58.826279800Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

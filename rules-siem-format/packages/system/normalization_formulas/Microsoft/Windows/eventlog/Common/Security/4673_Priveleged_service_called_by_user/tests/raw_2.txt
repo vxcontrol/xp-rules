@@ -1,0 +1,69 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4673",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13056",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-07-17T19:50:49.653029400Z"
+            },
+            "EventRecordID": "17385482",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "524",
+                "ThreadID": "532"
+            },
+            "Channel": "Security",
+            "Computer": "comp1.domainname.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "comp1$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "domainname",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "NT Local Security Authority / Authentication Service",
+                    "Name": "ObjectServer"
+                },
+                {
+                    "text": "LsaRegisterLogonProcess()",
+                    "Name": "Service"
+                },
+                {
+                    "text": "SeTcbPrivilege",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "0x20c",
+                    "Name": "ProcessID"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\lsass.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

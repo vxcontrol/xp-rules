@@ -1,0 +1,55 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "6",
+            "Version": "3",
+            "Level": "4",
+            "Task": "6",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-11-21T06:48:26.035140600Z"
+            },
+            "EventRecordID": "2872",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "776",
+                "ThreadID": "5316"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [{
+                    "Name": "RuleName"
+                }, {
+                    "text": "2018-11-21 06:48:26.024",
+                    "Name": "UtcTime"
+                }, {
+                    "text": "C:\\Windows\\System32\\drivers\\usbport.sys",
+                    "Name": "ImageLoaded"
+                }, {
+                    "text": "SHA1=315AFF10CAC9A9DF43C6EBE4569D89C541B57C5B",
+                    "Name": "Hashes"
+                }, {
+                    "text": "true",
+                    "Name": "Signed"
+                }, {
+                    "text": "Microsoft Windows",
+                    "Name": "Signature"
+                }, {
+                    "text": "Valid",
+                    "Name": "SignatureStatus"
+                }
+            ]
+        }
+    }
+}

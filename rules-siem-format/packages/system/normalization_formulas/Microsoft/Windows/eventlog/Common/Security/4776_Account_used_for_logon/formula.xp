@@ -1,0 +1,83 @@
+EVENTLOG = 'EventID="4776"'
+
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "login"
+object = "system"
+
+if $Keywords == "0x8020000000000000" then
+    status = "success"
+elif $Keywords == "0x8010000000000000" then
+    status = "failure"
+endif
+
+if find_substr($Data["TargetUserName"],"@")!=null then
+   $dog_num = find_substr($Data["TargetUserName"],"@")
+   subject.account.name = lower(substr($Data["TargetUserName"], 0, $dog_num))
+   subject.account.domain = lower(substr($Data["TargetUserName"], $dog_num+1, length($Data["TargetUserName"])))
+else
+   subject.account.name=lower($Data["TargetUserName"])
+endif
+
+$workstation = strip($Data["Workstation"], "\\\\", "")
+if maybe_ipv4($workstation) != null or maybe_ipv6($workstation) != null then
+    src.ip = $workstation
+else
+    $hostname = $workstation
+endif
+
+if find_substr($hostname, '.') != null then
+    src.fqdn = lower($hostname)
+    src.hostname = lower(substr($hostname, 0, find_substr($hostname, '.')))
+else
+    src.hostname = lower($hostname)
+endif
+
+reason = lower($Data["Status"])
+datafield1 = switch reason
+    case "0xc0000064" "user name does not exist"
+    case "0xc000006a" "user name is correct but the password is wrong"
+    case "0xc0000234" "user is currently locked out"
+    case "0xc0000072" "account is currently disabled"
+    case "0xc000006f" "user tried to logon outside his day of week or time of day restrictions"
+    case "0xc0000070" "workstation restriction"
+    case "0xc0000192" "An attempt was made to logon, but the netlogon service was not started"
+    case "0xc0000193" "account expiration"
+    case "0xc0000071" "expired password"
+    case "0xc0000133" "clocks between DC and other computer too far out of sync"
+    case "0xc0000413" "The machine you are logging onto is protected by an authentication firewall. The specified account is not allowed to authenticate to the machine"
+    case "0xc0000224" "user is required to change password at next logon"
+    case "0xc0000225" "evidently a bug in Windows and not a risk"
+    case "0xc000015b" "the user has not been granted the requested logon type (aka logon right) at this machine"
+    case "0xc000006d" "this is either due to a bad username or authentication information"
+    case "0xc000006e" "unknown user name or bad password"
+    case "0xc000018c" "the logon request failed because the trust relationship between the primary domain and the trusted domain failed"
+    case "0xc000005e" "there are currently no logon servers available to service the logon request"
+    case "0xc00000dc" "indicates the Sam Server was in the wrong state to perform the desired operation"
+    case "0xc0000371" "the local account store does not contain secret material for the specified account"
+    case "0xc00002a1" "the specified directory service attribute or value does not exist"
+    case "0x0" "status OK"
+endswitch
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "low"
+
+category.generic = "Operating System"
+category.high = "Access Management"
+category.low = "Communication"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon"
+

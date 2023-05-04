@@ -1,0 +1,4 @@
+Description: 'User logout on host'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_end
+      EventDescription: 'User {subject.name} logged out from host {event_src.host}'

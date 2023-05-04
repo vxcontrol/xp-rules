@@ -1,0 +1,83 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-Security-Auditing",
+        "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+      },
+      "EventID": "4697",
+      "Version": "1",
+      "Level": "0",
+      "Task": "12289",
+      "Opcode": "0",
+      "Keywords": "0x8020000000000000",
+      "TimeCreated": {
+        "SystemTime": "2022-03-01T08:35:00.407159900Z"
+      },
+      "EventRecordID": "83985",
+      "Correlation": {
+        "ActivityID": "{dfe3da7b-2cf0-0000-72db-e3dff02cd801}"
+      },
+      "Execution": {
+        "ProcessID": "1524",
+        "ThreadID": "11696"
+      },
+      "Channel": "Security",
+      "Computer": "computername.dnssuffix.com",
+      "Security": null
+    },
+    "EventData": {
+      "Data": [
+        {
+          "text": "S-1-5-18",
+          "Name": "SubjectUserSid"
+        },
+        {
+          "text": "computername$",
+          "Name": "SubjectUserName"
+        },
+        {
+          "text": "DomainName",
+          "Name": "SubjectDomainName"
+        },
+        {
+          "text": "0x3e7",
+          "Name": "SubjectLogonId"
+        },
+        {
+          "text": "DevicesFlowUserSvc_1157ce15",
+          "Name": "ServiceName"
+        },
+        {
+          "text": "C:\\WINDOWS\\system32\\svchost.exe -k DevicesFlow",
+          "Name": "ServiceFileName"
+        },
+        {
+          "text": "0xe0",
+          "Name": "ServiceType"
+        },
+        {
+          "text": "3",
+          "Name": "ServiceStartType"
+        },
+        {
+          "text": "LocalSystem",
+          "Name": "ServiceAccount"
+        },
+        {
+          "text": "21392098230009913",
+          "Name": "ClientProcessStartKey"
+        },
+        {
+          "text": "3404",
+          "Name": "ClientProcessId"
+        },
+        {
+          "text": "1516",
+          "Name": "ParentProcessId"
+        }
+      ]
+    }
+  }
+}

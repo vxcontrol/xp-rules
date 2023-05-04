@@ -1,0 +1,10 @@
+Description: 'Назначен номер сеанса пользователя'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_ongoing_null
+      EventDescription: 'Сеанс с номером {subject.account.session_id} назначен пользователю с UID {subject.account.id} на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_failure_null
+      EventDescription: 'Не удалось назначить сеанс с номером {subject.account.session_id} пользователю с UID {subject.account.id} на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_ongoing
+      EventDescription: 'Сеанс с номером {subject.account.session_id} назначен пользователю {subject.account.name} с UID {subject.account.id} на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_failure
+      EventDescription: 'Не удалось назначить сеанс с номером {subject.account.session_id} пользователю {subject.account.name} с UID {subject.account.id} на узле {event_src.host}'

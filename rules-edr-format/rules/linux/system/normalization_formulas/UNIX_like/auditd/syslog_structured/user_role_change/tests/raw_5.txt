@@ -1,0 +1,14 @@
+{
+    "eventid": "532",
+    "items": {
+        "USER_ROLE_CHANGE": [
+            "pid=2394 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='newrole: old-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 new-context=unconfined_u:sysadm_r:sysadm_t:s0-s0:c0.c1023 exe=\"/usr/bin/newrole\" hostname=? addr=? terminal=/dev/pts/0 res=failed'"
+        ],
+        "COMMENT": [
+            "[jr(1000)]$ newrole -r sysadm_r"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1603442813",
+    "timestampfractional": "004"
+}

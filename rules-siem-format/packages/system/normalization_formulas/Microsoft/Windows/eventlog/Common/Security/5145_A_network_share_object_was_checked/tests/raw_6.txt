@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5145",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12811",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-08-31T07:37:53.947904900Z"
+            },
+            "EventRecordID": "7289617",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "7896"
+            },
+            "Channel": "Security",
+            "Computer": "Exchange.oldco.ptlab",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1630288417-946847275-962288545-2601",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "test_user",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "OLDCO",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x2c4c57e2",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "10.125.8.138",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "51587",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\Users",
+                    "Name": "ShareName"
+                },
+                {
+                    "text": "\\??\\C:\\Users",
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "\\",
+                    "Name": "RelativeTargetName"
+                },
+                {
+                    "text": "0x100080",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%1541\r\n\t\t\t\t%%4423\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "%%1541:\t%%1801\tD:(A;;0x1200a9;;;WD)\r\n\t\t\t\t%%4423:\t%%1801\tD:(A;;0x1200a9;;;WD)\r\n\t\t\t\t",
+                    "Name": "AccessReason"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eventid": "532",
+    "items": {
+        "USER_ROLE_CHANGE": [
+            "pid=683 uid=0 auid=1000 ses=1 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='pam: default-context=sysadm_u:sysadm_r:sysadm_t:s0-s0:c0.c1023 selected-context=sysadm_u:sysadm_r:sysadm_t:s0-s0:c0.c1023 exe=\"/usr/bin/login\" hostname=centos.local addr=? terminal=tty1 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1603452624",
+    "timestampfractional": "004"
+}

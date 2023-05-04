@@ -1,0 +1,71 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+            },
+            "EventID": "13",
+            "Version": "2",
+            "Level": "4",
+            "Task": "13",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-11-23T23:59:56.2617125Z"
+            },
+            "EventRecordID": "3880868",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "3580",
+                "ThreadID": "4668"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "COMP-5089.tube.stf",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "SetValue",
+                    "Name": "EventType"
+                },
+                {
+                    "text": "2022-11-23 23:59:56.246",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{e2abddde-13d5-637c-e10b-000000001a00}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "9880",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\WINDOWS\\Explorer.EXE",
+                    "Name": "Image"
+                },
+                {
+                    "text": "HKU\\S-1-5-21-215089694-3438683279-2836690124-1187\\Control Panel\\Desktop\\TranscodedImageCount",
+                    "Name": "TargetObject"
+                },
+                {
+                    "text": "DWORD (0x00000002)",
+                    "Name": "Details"
+                },
+                {
+                    "text": "tube\\L_Solomon",
+                    "Name": "User"
+                }
+            ]
+        }
+    }
+}

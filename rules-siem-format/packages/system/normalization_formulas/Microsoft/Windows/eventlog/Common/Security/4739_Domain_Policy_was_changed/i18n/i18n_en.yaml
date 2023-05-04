@@ -1,0 +1,4 @@
+Description: 'A Domain policy was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4739_Domain_Policy_was_changed
+      EventDescription: 'The user {subject.name} successfully modified the domain policy "{object.name}" on host {event_src.host}'

@@ -1,0 +1,11 @@
+{
+    "eventid": "6515",
+    "items": {
+        "SERVICE_START": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='unit=nginx comm=\"systemd\" exe=\"/usr/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575619157",
+    "timestampfractional": "812"
+}

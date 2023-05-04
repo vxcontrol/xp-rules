@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4661_The_handle_to_an_object_was_requested
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} запросил дескриптор объекта на узле {event_src.hostname}'

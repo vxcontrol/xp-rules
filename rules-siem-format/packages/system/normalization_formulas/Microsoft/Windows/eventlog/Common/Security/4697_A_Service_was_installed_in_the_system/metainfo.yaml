@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4697_A_service_was_installed_in_the_system"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4697_A_service_was_installed_in_the_system
+ObjectId: PT-NF-4673

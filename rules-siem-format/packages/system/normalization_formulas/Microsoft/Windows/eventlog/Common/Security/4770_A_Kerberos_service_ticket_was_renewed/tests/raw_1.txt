@@ -1,0 +1,65 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4770",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14337",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-12-09T09:34:58.473393800Z"
+            },
+            "EventRecordID": "811314",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "524",
+                "ThreadID": "2452"
+            },
+            "Channel": "Security",
+            "Computer": "2012-DC.AD2012.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "2012-EXC$@AD2012.RU",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "AD2012.RU",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "krbtgt",
+                    "Name": "ServiceName"
+                },
+                {
+                    "text": "S-1-5-21-3725810923-1556733292-2669249330-502",
+                    "Name": "ServiceSid"
+                },
+                {
+                    "text": "0x10002",
+                    "Name": "TicketOptions"
+                },
+                {
+                    "text": "0x12",
+                    "Name": "TicketEncryptionType"
+                },
+                {
+                    "text": "::ffff:10.0.220.77",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "17327",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

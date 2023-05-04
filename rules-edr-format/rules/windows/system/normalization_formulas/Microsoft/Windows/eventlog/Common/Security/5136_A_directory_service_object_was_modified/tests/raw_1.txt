@@ -1,0 +1,93 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "OpCorrelationID",
+                    "text": "{B2000009-2005-400A-8007-3000000000B9}"
+                },
+                {
+                    "Name": "AppCorrelationID",
+                    "text": "-"
+                },
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-2000000021-3900000077-690000019-1106"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "admin"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x8e99e"
+                },
+                {
+                    "Name": "DSName",
+                    "text": "test.local"
+                },
+                {
+                    "Name": "DSType",
+                    "text": "%%14676"
+                },
+                {
+                    "Name": "ObjectDN",
+                    "text": "CN=test,CN=Users,DC=test,DC=local"
+                },
+                {
+                    "Name": "ObjectGUID",
+                    "text": "{6000000A-200F-4005-B009-30000000005C}"
+                },
+                {
+                    "Name": "ObjectClass",
+                    "text": "user"
+                },
+                {
+                    "Name": "AttributeLDAPDisplayName",
+                    "text": "homePhone"
+                },
+                {
+                    "Name": "AttributeSyntaxOID",
+                    "text": "80.70.133.24"
+                },
+                {
+                    "Name": "AttributeValue",
+                    "text": "111-22-33"
+                },
+                {
+                    "Name": "OperationType",
+                    "text": "%%14674"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-J500000000Q.test.local",
+            "Correlation": null,
+            "EventID": "5136",
+            "EventRecordID": "229187",
+            "Execution": {
+                "ProcessID": "488",
+                "ThreadID": "2224"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10081",
+            "TimeCreated": {
+                "SystemTime": "2014-09-12T11:36:31.594357600Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

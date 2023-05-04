@@ -1,0 +1,1 @@
+2023-01-19 06:42:02 W3SVC34577 sfb 1.1.5.2 GET /abs/handler/0fe0efe.photo - 443 user@corp.com 10.3.5.5 HTTP/1.1 OC/16.0.10390.20024+(Skype+for+Business) - - sfb.corp.ru 200 0 0 74 -

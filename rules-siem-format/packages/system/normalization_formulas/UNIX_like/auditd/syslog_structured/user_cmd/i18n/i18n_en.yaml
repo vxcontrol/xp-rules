@@ -1,0 +1,6 @@
+Description: 'A command is executed'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_cmd_success
+      EventDescription: 'The user with ID {subject.account.id} executed the command on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_cmd_failure
+      EventDescription: 'The user with ID {subject.account.id} failed to execute the command on host {event_src.host}'

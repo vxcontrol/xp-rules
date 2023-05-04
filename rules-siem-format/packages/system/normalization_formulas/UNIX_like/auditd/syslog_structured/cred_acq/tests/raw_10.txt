@@ -1,0 +1,12 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1602834888",
+    "timestampfractional": "296",
+    "eventid": "991",
+    "items": {
+        "CRED_ACQ": [
+            "pid=2485 uid=1001 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct=\"test2\" exe=\"/usr/bin/sudo/su\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"test1\" AUID=\"jr\""
+        ],
+        "COMMENT": "[test1@centos]$ su test2"
+    }
+}

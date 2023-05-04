@@ -1,0 +1,47 @@
+EVENTLOG = 'EventID="4661"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "process"
+action = "create"
+object = "handle"
+if $Keywords == "0x8020000000000000" then
+    status = "success"
+elif $Keywords == "0x8010000000000000" then
+    status = "failure"
+endif
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.privileges = $Data["AccessList"]
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+$temp = csv($Data["ProcessName"], '\\', '')
+subject.process.id = maybe_number16($Data["ProcessId"])
+subject.process.name = $temp[length($temp)-1]
+subject.process.path = strip($Data["ProcessName"], '', subject.process.name)
+subject.process.fullpath = $Data["ProcessName"]
+
+object.type = $Data["ObjectType"]
+object.name = $Data["ObjectName"]
+object.id = $Data["HandleId"]
+
+datafield5 = $Data["AccessMask"]
+
+msgid = $EventID
+importance = "info"
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+event_src.category = "Operating system"
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+
+id = "PT_Microsoft_Windows_eventlog_4661_The_handle_to_an_object_was_requested"
+

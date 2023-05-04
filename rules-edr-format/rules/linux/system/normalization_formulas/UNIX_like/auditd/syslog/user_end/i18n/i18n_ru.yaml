@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_end
+      EventDescription: 'Пользователь {subject.name} осуществил выход из системы на узле {event_src.host}'

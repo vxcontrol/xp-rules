@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1597752001",
+    "timestampfractional": "995",
+    "eventid": "2167",
+    "items": {
+        "CRED_DISP": [
+            "pid=2489 uid=0 auid=0 ses=3 subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct=\"root\" exe=\"/usr/sbin/crond\" hostname=? addr=? terminal=cron res=success' UID=\"root\" AUID=\"root\""
+        ]
+    }
+}

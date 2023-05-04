@@ -1,0 +1,273 @@
+JSON = ''
+COND = (
+    $eventid != null and
+    $node != null and
+    $timestamp != null and
+    $items["USER_ACCT"] != null
+)
+
+$kv_main = keyvalue($items["USER_ACCT"][0], " ", "=", "'")
+$kv_msg = keyvalue($kv_main['msg'], ' ', '=', '"')
+
+if $kv_msg["exe"] != "?" then
+    $exe = strip($kv_msg["exe"], '"', '"')
+    if $exe == $kv_msg["exe"] then
+        $exe = hex_to_string($kv_msg["exe"])
+    endif
+    
+    $process_path_and_name = csv($exe, "/", "")
+    $process_fullpath = $exe
+    $process_name = $process_path_and_name[length($process_path_and_name) - 1]
+    $process_path = strip($exe, "", $process_name)
+endif
+
+if (($kv_main["auid"] != "4294967295") and ($process_name == "groupmod")) or ($process_name != "groupmod") then
+    subject = "account"
+endif
+
+if ($process_name == "groupmod") then
+    action = "modify"
+    object = "user_group"
+elif (in_list(["su", "sudo"], $process_name)) then
+    action = "elevate"
+    object = "account"
+else
+    action = "login"
+    object = "system"
+endif
+
+if ($process_name == "groupmod") then
+    if ($kv_msg["res"] == "success") and (find_substr($kv_msg["op"], "changing") != null) then
+        status = "ongoing"
+    elif ($kv_msg["res"] == "success") and (find_substr($kv_msg["op"], "modifying") != null) then
+        status = "success"
+    elif ($kv_msg["res"] == "failed") then
+        status = "failure"
+    endif
+elif ($kv_msg["res"] == "success") then
+    status = "ongoing"
+else
+    status = "failure"
+endif
+
+subformula "parse_op"
+    TEXT = 'changing {LITERAL+}; group {$group_name=LITERAL+}/{$group_id=NUMBER}'
+endsubformula
+
+subformula "parse_op"
+    TEXT = 'changing {LITERAL+}; group {$group_name=REST}'
+endsubformula
+
+subformula "parse_op"
+    TEXT = '{REST}'
+endsubformula
+
+$acct = strip($kv_msg["acct"], '"', '"')
+if $acct == $kv_msg["acct"] then
+    $acct = hex_to_string($kv_msg["acct"])
+endif
+
+$auid_list = csv(strip($kv_main["AUID"], '"', '"'), "@", "")
+$uid_list = csv(strip($kv_main["UID"], '"', '"'), "@", "")
+$id_list = csv(strip($kv_main["ID"], '"', '"'), "@", "")
+$acct_list = csv($acct, "@", "")
+
+if in_list(["su", "sudo"], $process_name) then
+    subject.account.id = $kv_main["uid"]
+    subject.account.name = $uid_list[0]
+    subject.account.domain = $uid_list[1]
+
+elif $process_name == "groupmod" then
+    subject.account.id = $kv_main["auid"]
+    subject.account.name = $auid_list[0]
+    subject.account.domain = $auid_list[1]
+    subject.account.privileges = $kv_main["uid"]
+
+else
+    if ($kv_msg["id"] != null) then
+        subject.account.id = $kv_msg["id"]
+        subject.account.name = $id_list[0]
+        subject.account.domain = $id_list[1]
+    else  
+        subject.account.name = $acct_list[0]
+        subject.account.domain = $acct_list[1]
+    endif
+endif
+
+if (action == "modify") then
+    subject.account.session_id = $kv_main["ses"]
+endif
+
+if ($kv_msg["res"] == "success") and in_list(["login", "elevate"], action) then
+    subject.state = "was-authorized"
+endif
+
+if ($process_name == "groupmod") then  # shadow-utils groupmod
+    $op_csv = csv($kv_msg['op'], ', ', '')
+
+    submessage("TEXT", "parse_op", $op_csv[0])
+
+    $property = ""
+    $value = ""
+    $new_value = ""
+    
+    if length($op_csv) > 1 then
+        switch substr($op_csv[1], 0, 7)
+            case "new nam"
+                $property = $property + " | name"
+                $value = $value + " | " + $group_name
+                $new_value = $new_value + " | " + strip($op_csv[1], "new name: ", "")
+            case "new gid"
+                $property = $property + " | id"
+                $value = $value + " | " + string($group_id)
+                $new_value = $new_value + " | " + strip($op_csv[1], "new gid: ", "")
+            case "new pas"
+                $property = $property + " | password"
+                $value = $value + " | <unknown>"
+                $new_value = $new_value + " | <unknown>"
+        endswitch
+
+        switch substr($op_csv[2], 0, 7)
+            case "new nam"
+                $property = $property + " | name"
+                $value = $value + " | " + $group_name
+                $new_value = $new_value + " | " + strip($op_csv[2], "new name: ", "")
+            case "new gid"
+                $property = $property + " | id"
+                $value = $value + " | " + string($group_id)
+                $new_value = $new_value + " | " + strip($op_csv[2], "new gid: ", "")
+            case "new pas"
+                $property = $property + " | password"
+                $value = $value + " | <unknown>"
+                $new_value = $new_value + " | <unknown>"
+        endswitch
+
+        switch substr($op_csv[3], 0, 7)
+            case "new nam"
+                $property = $property + " | name"
+                $value = $value + " | " + $group_name
+                $new_value = $new_value + " | " + strip($op_csv[3], "new name: ", "")
+            case "new gid"
+                $property = $property + " | id"
+                $value = $value + " | " + string($group_id)
+                $new_value = $new_value + " | " + strip($op_csv[3], "new gid: ", "")
+            case "new pas"
+                $property = $property + " | password"
+                $value = $value + " | <unknown>"
+                $new_value = $new_value + " | <unknown>"
+        endswitch
+    else
+        if $kv_msg["new_group"] != null then
+            $property = $property + " | name"
+            $value = $value + " | " + $kv_msg["grp"]
+            $new_value = $new_value + " | " + $kv_msg["new_group"]
+        endif
+        
+        if $kv_msg["new_gid"] != null then
+            $property = $property + " | id"
+            $value = $value + " | " + $kv_msg["gid"]
+            $new_value = $new_value + " | " + $kv_msg["new_gid"]
+        endif
+    endif
+    
+    object.name = coalesce($group_name, $kv_msg["grp"], $kv_msg["acct"])
+    object.id = coalesce($group_id, $kv_msg["gid"])
+
+    object.property = if $property != "" then strip($property, " | ", "") else null endif
+    object.value = if $value != "" then strip($value, " | ", "") else null endif
+    object.new_value = if $new_value != "" then strip($new_value, " | ", "") else null endif
+
+elif ($process_name == "su") then
+    object.account.name = $acct_list[0]
+    object.account.domain = $acct_list[1]
+endif
+
+if in_list(["su", "sudo", "groupmod"], $process_name) then
+    subject.process.fullpath = $process_fullpath
+    subject.process.name = $process_name
+    subject.process.path = $process_path
+    subject.process.id = $kv_main["pid"]
+else
+    object.process.fullpath = $process_fullpath
+    object.process.name = $process_name
+    object.process.path = $process_path
+    object.process.id = $kv_main["pid"]
+endif
+
+if action == "login" then
+    if $process_name == "sshd" then
+        logon_auth_method = "remote"
+        
+        if not in_list([$kv_msg["addr"], "?"], $kv_msg["hostname"]) then
+            src.hostname = $kv_msg["hostname"]
+        endif
+
+        if ($kv_msg["addr"] != "?") then
+            src.ip = $kv_msg["addr"]
+        endif
+    else
+        logon_auth_method = "local"
+    endif
+endif
+
+if $kv_msg["terminal"] != "?" then
+    logon_service = replace(strip($kv_msg["terminal"], "/dev/", ""), "", "/")
+endif
+
+chain_id = $eventid  # AuditD Event ID
+
+reason = $kv_msg["op"]
+
+time = epoch_to_datetime(number($timestamp))
+msgid = "USER_ACCT"
+importance = "low"
+
+if ($process_name == "groupmod") then
+    category.generic = "Group"
+    category.high = "Users And Rights Management"
+    category.low = "Manipulation"
+elif (in_list(["su", "sudo"], $process_name)) then
+    category.generic = "Account"
+    category.high = "Users And Rights Management"
+    category.low = "Manipulation"
+else
+    category.generic = "Operating System"
+    category.high = "Access Management"
+    category.low = "Communication"
+endif
+
+event_src.title = "unix_like"
+event_src.subsys = "auditd"
+event_src.category = "Operating system"
+
+if $node != "" then
+    if maybe_ipv4($node) != null or maybe_ipv6($node) != null then
+        if (in_subnet($node, "127.0.0.0/8") == False and $node != "::1") then
+            event_src.ip = $node
+            labels = "node_contains_ext_ip"
+            $dst_ip = $node
+        endif
+    else
+        $first_dot = find_substr($node, ".")
+        if $first_dot != null then
+            event_src.fqdn = $node
+            event_src.hostname = substr($node, 0, $first_dot)
+            $dst_fqdn = event_src.fqdn
+            $dst_hostname = event_src.hostname
+        else
+            event_src.hostname = $node
+            $dst_hostname = event_src.hostname
+        endif
+    endif
+else
+    event_src.ip = recv_ipv4
+endif
+
+if logon_auth_method == "remote" then
+    dst.ip = $dst_ip
+    dst.fqdn = $dst_fqdn
+    dst.hostname = $dst_hostname
+endif
+
+id = "PT_UNIX_like_auditd_syslog_structured_user_acct"
+

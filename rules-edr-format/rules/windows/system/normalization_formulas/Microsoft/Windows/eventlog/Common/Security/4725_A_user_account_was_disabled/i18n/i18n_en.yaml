@@ -1,0 +1,4 @@
+Description: 'User Account was disabled'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4725_A_user_account_was_disabled
+      EventDescription: 'The user {subject.name} disabled the account "{object.name}" on host {event_src.host}'

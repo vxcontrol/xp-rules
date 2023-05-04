@@ -1,0 +1,6 @@
+Description: 'The encrypted session'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_session_success
+      EventDescription: 'Parameters of encrypted session {src.ip}:{src.port}->{dst.ip}:{dst.port} ({direction}) are negotiated on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_session_failure
+      EventDescription: 'Failed to negotiate parameters of encrypted session {src.ip}:{src.port}->{dst.ip}:{dst.port} on host {event_src.host}. Reason: {reason}.'

@@ -1,0 +1,11 @@
+{
+    "eventid": "568",
+    "items": {
+        "USER_AVC": [
+            "pid=2581 uid=106 auid=4294967295 ses=4294967295 msg='apparmor=\"DENIED\" operation=\"dbus_signal\"  bus=\"system\" path=\"/org/freedesktop/NetworkManager/ActiveConnection/1\" interface=\"org.freedesktop.NetworkManager.Connection.Active\" member=\"PropertiesChanged\" name=\":1.12\" mask=\"receive\" pid=6223 label=\"snap.zoom-client.zoom-client\" peer_pid=2582 peer_label=\"unconfined\" exe=\"/usr/bin/dbus-daemon\" sauid=81 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1475497645",
+    "timestampfractional": "110"
+}

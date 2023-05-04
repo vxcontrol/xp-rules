@@ -1,0 +1,4 @@
+Description: 'Запущена команда PowerShell'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Command_executed
+      EventDescription: 'На узле {event_src.host} запущена команда PowerShell. Создание текста Scriptblock ({numfield1} из {numfield2}).'

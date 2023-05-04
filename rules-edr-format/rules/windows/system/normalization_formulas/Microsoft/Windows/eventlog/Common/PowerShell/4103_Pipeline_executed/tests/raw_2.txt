@@ -1,0 +1,48 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-PowerShell",
+        "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+      },
+      "EventID": "4103",
+      "Version": "1",
+      "Level": "4",
+      "Task": "106",
+      "Opcode": "20",
+      "Keywords": "0x0",
+      "TimeCreated": {
+        "SystemTime": "2019-03-18T08:31:35.032874900Z"
+      },
+      "EventRecordID": "946",
+      "Correlation": {
+        "ActivityID": "{E3A28636-DD64-0000-2387-A2E364DDD401}"
+      },
+      "Execution": {
+        "ProcessID": "2016",
+        "ThreadID": "412"
+      },
+      "Channel": "Microsoft-Windows-PowerShell/Operational",
+      "Computer": "wec.testlab.esc",
+      "Security": {
+        "UserID": "S-1-5-18"
+      }
+    },
+    "EventData": {
+      "Data": [
+        {
+          "text": "        Severity = Informational\r\n        Host Name = ConsoleHost\r\n        Host Version = 4.0\r\n        Host ID = 2ba8f4a2-224f-4b02-91db-f070d966b270\r\n        Host Application =  -ExecutionPolicy ByPass -File pt_wmi_subscription.ps1\r\n        Engine Version = 4.0\r\n        Runspace ID = c1bf7d91-b9ba-45fa-9d69-38e7daebe340\r\n        Pipeline ID = 1\r\n        Command Name = Write-Output\r\n        Command Type = Cmdlet\r\n        Script Name = \\\\testlab.esc\\sysvol\\testlab.esc\\Policies\\{8F6E66CF-836C-4258-8BB2-BF943EBEA445}\\Machine\\Scripts\\Startup\\pt_wmi_subscription.ps1\r\n        Command Path = \r\n        Sequence Number = 18\r\n        User = SYSTEM\r\n        Shell ID = Microsoft.PowerShell\r\n",
+          "Name": "ContextInfo"
+        },
+        {
+          "Name": "UserData"
+        },
+        {
+          "text": "CommandInvocation(Write-Output): \"Write-Output\"\r\nParameterBinding(Write-Output): name=\"InputObject\"; value=\"2019.03.18 11:31:35.3135 Instrumentation started\"\r\n",
+          "Name": "Payload"
+        }
+      ]
+    }
+  }
+}

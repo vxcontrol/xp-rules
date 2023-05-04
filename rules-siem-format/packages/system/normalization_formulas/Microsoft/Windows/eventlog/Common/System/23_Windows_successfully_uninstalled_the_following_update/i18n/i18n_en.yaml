@@ -1,0 +1,4 @@
+Description: 'Update uninstalled successfully'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_23_Windows_successfully_uninstalled_the_following_update
+      EventDescription: 'The operating system successfully uninstalled the update "{object.name}" on host {event_src.host}'

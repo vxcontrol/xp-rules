@@ -1,0 +1,26 @@
+{
+  "Category": 10024,
+  "CategoryString": "-",
+  "ComputerName": "SOMEONE.acme.com",
+  "Data": null,
+  "EventCode": 4724,
+  "EventIdentifier": 4724,
+  "EventType": "5",
+  "InsertionStrings": [
+    "",
+    "SomeOne",
+    "S-1-5-21-3000000076-810000008-1900000808-1073",
+    "S-1-5-21-1000000030-700000027-3900000002-14342",
+    "SomeOne",
+    "ACME",
+    "0x3205e"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 427116,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2013-10-10 11:25:07",
+  "TimeWritten": "2013-10-10 11:25:07",
+  "Type": "Audit Failure",
+  "User": null
+}

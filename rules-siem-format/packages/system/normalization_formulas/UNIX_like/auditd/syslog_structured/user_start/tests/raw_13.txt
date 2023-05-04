@@ -1,0 +1,11 @@
+{
+    "eventid": "46584515",
+    "timestampfractional": "355",
+    "timestamp": "1663162211",
+    "node": "10.10.8.15",
+    "items": {
+        "USER_START": [
+            "pid=917133 uid=1069 auid=4294967295 ses=4294967295 subj==unconfined msg='op=PAM:session_open grantors=pam_permit,pam_unix acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=? res=success' UID=\"openvpn\" AUID=\"unset\""
+        ]
+    }
+}

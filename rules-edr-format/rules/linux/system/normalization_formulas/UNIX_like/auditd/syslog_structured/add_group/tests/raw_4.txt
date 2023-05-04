@@ -1,0 +1,11 @@
+{
+    "eventid": "29208",
+    "items": {
+        "ADD_GROUP": [
+            "pid=3784 uid=0 auid=0 ses=77 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-group acct=\"gr\" exe=\"/usr/sbin/groupadd\" hostname=centos7full addr=? terminal=pts/0 res=failed' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1575895777",
+    "timestampfractional": "121"
+}

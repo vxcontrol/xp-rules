@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified" and
+        status = "success"
+      LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_success
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified" and
+        status = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_failure
+ObjectId: PT-NF-4349

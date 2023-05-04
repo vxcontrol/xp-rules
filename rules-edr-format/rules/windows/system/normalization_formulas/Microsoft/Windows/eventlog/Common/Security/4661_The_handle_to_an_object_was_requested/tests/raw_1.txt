@@ -1,0 +1,101 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4661",
+            "Version": "1",
+            "Level": "0",
+            "Task": "14080",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-09-24T10:18:52.953829300Z"
+            },
+            "EventRecordID": "3094148773",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "500",
+                "ThreadID": "508"
+            },
+            "Channel": "Security",
+            "Computer": "comp1.domainname.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-22263",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "username",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "domainname",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x7931e737",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "Security Account Manager",
+                    "Name": "ObjectServer"
+                },
+                {
+                    "text": "SAM_DOMAIN",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "DC=domainname,DC=ru",
+                    "Name": "ObjectName"
+                },
+                {
+                    "text": "0x6bdf222240",
+                    "Name": "HandleId"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "TransactionId"
+                },
+                {
+                    "text": "%%5400\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccessReason"
+                },
+                {
+                    "text": "0x100",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "---\r\n\t{bf967a90-0de6-11d0-a285-00aa003049e2}\r\n%%5400\r\n\t\t{280f369c-67c7-438e-ae98-1d46f3c6f541}\r\n",
+                    "Name": "Properties"
+                },
+                {
+                    "text": "0",
+                    "Name": "RestrictedSidCount"
+                },
+                {
+                    "text": "0x1f4",
+                    "Name": "ProcessID"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\lsass.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

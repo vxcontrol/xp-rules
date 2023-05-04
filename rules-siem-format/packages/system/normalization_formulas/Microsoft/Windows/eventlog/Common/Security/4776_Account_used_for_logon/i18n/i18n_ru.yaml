@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon_success
+      EventDescription: 'NTLM-аутентификация пользователя {subject.name}, запрошенная на узле {src.host}, прошла успешно на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon_failure
+      EventDescription: 'NTLM-аутентификация пользователя {subject.name}, запрошенная на узле {src.host}, завершилась с ошибкой на узле {event_src.host}'

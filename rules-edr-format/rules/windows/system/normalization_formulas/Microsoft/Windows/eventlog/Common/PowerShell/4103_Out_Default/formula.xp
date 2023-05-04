@@ -1,0 +1,46 @@
+!EVENTLOG = 'EventID="4103"'
+!COND = $Provider["Name"] == "Microsoft-Windows-PowerShell"
+        and $Channel == "Microsoft-Windows-PowerShell/Operational"
+        and (
+            find_substr($Data["ContextInfo"], "Command Name = \r\n") != null
+            or find_substr($Data["ContextInfo"], "Имя команды = \r\n") != null
+        )
+        and find_substr($Data['Payload'], "CommandInvocation(Out-Default)") == 0
+
+$kv = keyvalue($Data["ContextInfo"], "\r\n", "=")
+
+action = "info"
+object = "message"
+status = "success"
+
+$host_app = coalesce($kv["Host Application"], $kv["Ведущее приложение"])
+$host_app_path = csv($host_app, " ", '"')[0]
+$list_host_app_path_name = csv($host_app_path,'\\','"')
+$application = $list_host_app_path_name[length($list_host_app_path_name) - 1]  
+
+datafield1 = $Data["ContextInfo"]  
+datafield2 = $Data["Payload"]  
+datafield3 = strip($host_app_path, "", $application )  
+datafield4 = $application
+datafield6 = $Security["UserID"]
+datafield7 = coalesce($kv["Host ID"], $kv["ИД узла"])  
+datafield8 = coalesce($kv["Engine Version"], $kv["Версия модуля"])  
+datafield9 = coalesce($kv["Host Application"], $kv["Ведущее приложение"])
+datafield10 = coalesce($kv["User"], $kv["Пользователь"], $kv["Connected User"], $kv["Подключенный пользователь"])  
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Out_Default"

@@ -1,0 +1,27 @@
+# Windows successfully uninstalled the following update
+
+EVENTLOG = 'EventID="23"'
+!COND = $Channel=="System" and $Provider["Name"]=="Microsoft-Windows-WindowsUpdateClient"
+
+action = "uninstall"
+object = "update"
+status = "success"
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+	event_src.fqdn = lower($Computer)
+	event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+	event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+object.name = $Data["updateTitle"]
+
+id = "PT_Microsoft_Windows_eventlog_23_Windows_successfully_uninstalled_the_following_update"
+importance = "medium"

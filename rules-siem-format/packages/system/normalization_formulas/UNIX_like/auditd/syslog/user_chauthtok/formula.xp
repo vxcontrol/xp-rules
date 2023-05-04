@@ -1,0 +1,22 @@
+# Triggered when a user account attribute is modified.
+
+# <134>Oct 28 10:30:08 centos6 audispd: node=centos6 type=USER_CHAUTHTOK msg=audit(1446028208.085:909): user pid=1497 uid=0 auid=0 ses=3 subj=unconfined_u:unconfined_r:passwd_t:s0-s0:c0.c1023 msg='op=PAM:chauthtok acct="test123" exe="/usr/bin/passwd" hostname=? addr=? terminal=pts/0 res=success'
+# <14>Apr 10 11:36:04 localhost audispd: node=localhost.localdomain type=USER_CHAUTHTOK msg=audit(1491802564.860:793): pid=4772 uid=0 auid=1001 ses=2 subj=unconfined_u:unconfined_r:passwd_t:s0-s0:c0.c1023 msg='op=PAM:chauthtok grantors=pam_pwquality,pam_unix acct="mark_hunt" exe="/usr/bin/passwd" hostname=? addr=? terminal=pts/0 res=success'
+
+TEXT = '{"<"NUMBER">"?} {time=DATETIME} {event_src.ip=IPV4|event_src.ip=IPV6|event_src.hostname=HOSTNAME|"(none)"|}
+        audispd: node={HOSTNAME} type=USER_CHAUTHTOK msg={STRING} {"user"?} pid={NUMBER}
+        uid={NUMBER} auid={subject.id=NUMBER} ses={NUMBER} subj={STRING} msg={"\'"?}op=PAM:chauthtok {STRING?}
+        acct="{object.name=WORDDASH}" exe={STRING} hostname={"?"|IPV4|IPV6|src.hostname=HOSTNAME|}
+        addr={"?"|src.ip=IPV4|src.ip=IPV6|} terminal={STRING} res=success{"\'"?}'
+
+subject = "account"
+object = "account"
+action = "modify"
+status = "success"
+
+importance = "info"
+
+event_src.title = "unix_like"
+event_src.category = "Operating system"
+
+id = "PT_UNIX_like_auditd_syslog_user_chauthtok"

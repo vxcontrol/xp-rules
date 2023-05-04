@@ -1,0 +1,11 @@
+{
+    "eventid": "5142",
+    "items": {
+        "USER_CMD": [
+            "pid=2542 uid=0 auid=0 ses=17 subj==unconfined msg='cwd=\"/root\" cmd=\"su\" terminal=pts/1 res=success' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575869502",
+    "timestampfractional": "915"
+}

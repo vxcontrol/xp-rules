@@ -1,0 +1,4 @@
+Description: 'Pipe created'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_17_Pipe_created
+      EventDescription: 'A named pipe is created on host {event_src.host}'

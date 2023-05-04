@@ -1,0 +1,20 @@
+{
+    "action": "clean",
+    "event_src.category": "Operating system",
+    "event_src.hostname": "8p1x64-soft",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_1102_Audit_log_was_cleared",
+    "importance": "info",
+    "msgid": "1102",
+    "object": "log",
+    "object.name": "Security",
+    "status": "success",
+    "subject": "account",
+    "subject.account.domain": "8p1x64-soft",
+    "subject.account.id": "S-1-5-21-863499019-2066412432-665365160-500",
+    "subject.account.name": "administrator",
+    "subject.account.session_id": "10822784",
+    "time": "2015-12-09T06:29:07.868Z"
+}

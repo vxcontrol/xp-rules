@@ -1,0 +1,10 @@
+Description: 'Изменена роль SELinux'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_role_change_success
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} назначил роль SELinux для сессии терминала "{logon_service}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_role_change_failure
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} не смог назначить роль SELinux для сессии терминала "{logon_service}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_role_change_success_null
+      EventDescription: 'Пользователь с ID {subject.account.id} назначил роль SELinux для сессии терминала "{logon_service}" на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_role_change_failure_null
+      EventDescription: 'Пользователь с ID {subject.account.id} не смог назначить роль SELinux для сессии терминала "{logon_service}" на узле {event_src.host}'

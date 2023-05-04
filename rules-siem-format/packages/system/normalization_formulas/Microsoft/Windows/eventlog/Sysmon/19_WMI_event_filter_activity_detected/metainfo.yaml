@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_19_WMI_event_filter_activity_detected"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_19_WMI_event_filter_activity_detected
+ObjectId: PT-NF-4940

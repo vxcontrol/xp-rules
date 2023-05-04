@@ -1,0 +1,83 @@
+EVENTLOG = 'EventID="23"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+subject = "process"
+action = "remove"
+object = "file_object"
+status = "success"
+
+subject.process.id = $Data["ProcessId"]
+subject.process.guid = strip($Data['ProcessGuid'], '{', '}')
+
+$process_fullpath = lower($Data["Image"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "'")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+subject.process.name = $process_name
+subject.process.path = strip($process_fullpath, "", $process_name)
+subject.process.fullpath = $process_fullpath
+
+if find_substr($Data["User"], "\\") != null then
+    $subj_user = csv(lower($Data["User"]), "\\", "")
+    object.account.name = lower($subj_user[1])
+    object.account.domain = lower($subj_user[0])
+else
+    object.account.name = lower($Data["User"])
+endif
+
+$file_name_and_path = lower($Data["TargetFilename"])
+$file_name_and_path_csv = csv($file_name_and_path, "\\", "'")
+$object_name = $file_name_and_path_csv[length($file_name_and_path_csv) - 1]
+object.name = $object_name
+if strip($file_name_and_path, "", $object_name) != '' then
+    object.path = strip($file_name_and_path, "", $object_name)
+endif
+object.fullpath = $file_name_and_path
+
+$temp_object_hash = keyvalue($Data["Hashes"], ",", "=")
+if $temp_object_hash["SHA256"] != null then
+    object.hash.sha256 = $temp_object_hash["SHA256"]
+endif
+if $temp_object_hash["MD5"] != null then
+    object.hash.md5 = $temp_object_hash["MD5"]
+endif
+if $temp_object_hash["SHA1"] != null then
+    object.hash.sha1 = $temp_object_hash["SHA1"]
+endif
+if $temp_object_hash["IMPHASH"] != null then
+    object.hash.imphash = $temp_object_hash["IMPHASH"]
+endif
+
+if $Data["Archived"] == "true" then
+    object.state = "saved to disk"
+endif
+
+if $Data["IsExecutable"] == "true" then
+    object.type = "executable"
+endif
+
+object.property = "archived"
+object.value = $Data["Archived"]
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "File System Object"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete"
+

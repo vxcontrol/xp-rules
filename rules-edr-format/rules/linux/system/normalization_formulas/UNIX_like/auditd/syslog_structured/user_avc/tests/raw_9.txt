@@ -1,0 +1,11 @@
+{
+    "eventid": "26",
+    "items": {
+        "USER_AVC": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:systemd_t msg='avc:  denied  { disable } for auid=1000 uid=0 gid=0 path=\"/usr/lib/systemd/system/pcscd.socket\" cmdline=\"systemctl --no-reload disable pcscd.socket pcscd.service\" scontext=system_u:system_r:invalid_t tcontext=system_u:object_r:pcscd_unit_t tclass=service  exe=\"/usr/lib/systemd/systemd\" sauid=0 hostname=? addr=? terminal=?"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1475497685",
+    "timestampfractional": "110"
+}

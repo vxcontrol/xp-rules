@@ -1,0 +1,11 @@
+{
+    "eventid": "1049",
+    "items": {
+        "USER_CMD": [
+            "pid=2531 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd=\"/home/jr\" cmd=\"-bash\" terminal=pts/0 res=success' UID=\"jr\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834913",
+    "timestampfractional": "074"
+}

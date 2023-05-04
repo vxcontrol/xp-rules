@@ -1,0 +1,107 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+            },
+            "EventID": "3",
+            "Version": "5",
+            "Level": "4",
+            "Task": "3",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-09-07T06:16:56.105353600Z"
+            },
+            "EventRecordID": "47801610",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "3268",
+                "ThreadID": "4516"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "wec.aa.domain.com",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2021-09-07 06:17:16.326",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "9036",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "<unknown process>",
+                    "Name": "Image"
+                },
+                {
+                    "text": "-",
+                    "Name": "User"
+                },
+                {
+                    "text": "tcp",
+                    "Name": "Protocol"
+                },
+                {
+                    "text": "true",
+                    "Name": "Initiated"
+                },
+                {
+                    "text": "false",
+                    "Name": "SourceIsIpv6"
+                },
+                {
+                    "text": "10.11.11.11",
+                    "Name": "SourceIp"
+                },
+                {
+                    "text": "wec.aa.domain.com",
+                    "Name": "SourceHostname"
+                },
+                {
+                    "text": "51644",
+                    "Name": "SourcePort"
+                },
+                {
+                    "text": "-",
+                    "Name": "SourcePortName"
+                },
+                {
+                    "text": "false",
+                    "Name": "DestinationIsIpv6"
+                },
+                {
+                    "text": "10.11.22.222",
+                    "Name": "DestinationIp"
+                },
+                {
+                    "text": "dc.dd.domain.com",
+                    "Name": "DestinationHostname"
+                },
+                {
+                    "text": "389",
+                    "Name": "DestinationPort"
+                },
+                {
+                    "text": "ldap",
+                    "Name": "DestinationPortName"
+                }
+            ]
+        }
+    }
+}

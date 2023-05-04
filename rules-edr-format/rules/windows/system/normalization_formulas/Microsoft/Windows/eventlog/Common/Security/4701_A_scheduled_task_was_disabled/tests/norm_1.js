@@ -1,0 +1,22 @@
+{
+    "action": "disable",
+    "event_src.category": "Operating system",
+    "event_src.hostname": "win7x64",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4701_A_scheduled_task_was_disabled",
+    "importance": "info",
+    "msgid": "4701",
+    "object": "task",
+    "object.fullpath": "\\eventlog",
+    "object.name": "eventlog",
+    "object.type": "Scheduled",
+    "status": "success",
+    "subject": "account",
+    "subject.account.domain": "win7x64",
+    "subject.account.id": "S-1-5-21-2000000094-760000002-3800000323-500",
+    "subject.account.name": "administrator",
+    "subject.account.session_id": "189775",
+    "time": "2014-08-19T10:29:43.635Z"
+}

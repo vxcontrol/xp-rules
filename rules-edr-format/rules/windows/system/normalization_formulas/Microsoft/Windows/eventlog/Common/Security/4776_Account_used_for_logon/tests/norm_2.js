@@ -1,0 +1,23 @@
+{
+    "action": "login",
+    "category.generic": "Operating System",
+    "category.high": "Access Management",
+    "category.low": "Communication",
+    "datafield1": "user name is correct but the password is wrong",
+    "event_src.category": "AAA",
+    "event_src.fqdn": "dc.acme.com",
+    "event_src.hostname": "dc",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon",
+    "importance": "low",
+    "msgid": "4776",
+    "object": "system",
+    "reason": "0xc000006a",
+    "src.ip": "10.60.80.100",
+    "status": "failure",
+    "subject": "account",
+    "subject.account.name": "test_siem11",
+    "time": "2017-03-20T15:11:57.540Z"
+}

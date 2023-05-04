@@ -1,0 +1,4 @@
+Description: 'Process initiated reboot or shutdown system'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_6005_Eventlog_service_started
+      EventDescription: 'Eventlog service started on host {event_src.host}'

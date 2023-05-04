@@ -1,0 +1,93 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4688",
+            "Version": "2",
+            "Level": "0",
+            "Task": "13312",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-04-29T07:13:07.266258100Z"
+            },
+            "EventRecordID": "439762",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "704"
+            },
+            "Channel": "Security",
+            "Computer": "server16.server16.int",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SERVER16$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SERVER160",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "0x105c",
+                    "Name": "NewProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\rundll32.exe",
+                    "Name": "NewProcessName"
+                },
+                {
+                    "text": "%%1938",
+                    "Name": "TokenElevationType"
+                },
+                {
+                    "text": "0x143c",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "\"C:\\Windows\\system32\\RunDll32.exe\" C:\\Windows\\System32\\SHELL32.dll,RunAsNewUser_RunDLL Local\\{4ddb9f3f-700c-4bd6-9fc0-eaf85c01d25b}.00000ddc",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "S-1-5-21-3500636268-2529342812-1271244175-1103",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "a1",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "SERVER160",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0xf61bf4",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "C:\\Windows\\explorer.exe",
+                    "Name": "ParentProcessName"
+                },
+                {
+                    "text": "S-1-16-8192",
+                    "Name": "MandatoryLabel"
+                }
+            ]
+        }
+    }
+}

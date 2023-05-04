@@ -1,0 +1,49 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4776",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14336",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-12-06T22:14:33.562209100Z"
+            },
+            "EventRecordID": "15407556",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "792",
+                "ThreadID": "860"
+            },
+            "Channel": "Security",
+            "Computer": "USERNAME.domain.net",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0",
+                    "Name": "PackageName"
+                },
+                {
+                    "text": "DZPScaner",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "DC1-MP-01",
+                    "Name": "Workstation"
+                },
+                {
+                    "text": "0xc000006f",
+                    "Name": "Status"
+                }
+            ]
+        }
+    }
+}

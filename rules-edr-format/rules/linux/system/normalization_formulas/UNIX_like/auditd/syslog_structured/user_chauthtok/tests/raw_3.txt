@@ -1,0 +1,11 @@
+{
+    "eventid": "880",
+    "items": {
+        "USER_CHAUTHTOK": [
+            "pid=2432 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:passwd_t:s0-s0:c0.c1023 msg='op=PAM:chauthtok grantors=pam_pwquality,pam_unix acct=\"test1\" exe=\"/usr/bin/passwd\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834838",
+    "timestampfractional": "674"
+}

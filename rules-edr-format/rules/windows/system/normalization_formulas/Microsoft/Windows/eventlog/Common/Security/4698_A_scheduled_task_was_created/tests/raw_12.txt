@@ -1,0 +1,79 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4698",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-07-22T11:07:04.7154481Z"
+            },
+            "EventRecordID": "22646",
+            "Correlation": {
+                "ActivityID": "{4fb99b62-9de5-0002-c19b-b94fe59dd801}"
+            },
+            "Execution": {
+                "ProcessID": "872",
+                "ThreadID": "904"
+            },
+            "Channel": "Security",
+            "Computer": "NB-R914VKNL.somedomain.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "NB-R914VKNL$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SOMEDOMAIN",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\MicrosoftEdgeShadowStackRollbackTask",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Version>1.0.0.0</Version>\r\n    <Description>This task will toggle CET settings for Edge if a compatibility issue is discovered.</Description>\r\n    <URI>\\MicrosoftEdgeShadowStackRollbackTask</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <EventTrigger id=\"Edge CET Crash\">\r\n      <Enabled>true</Enabled>\r\n      <Subscription>&lt;QueryList&gt;            &lt;Query Id = \"0\" Path = \"Microsoft-Windows-Security-Mitigations/KernelMode\" &gt;                &lt;Select Path = \"Microsoft-Windows-Security-Mitigations/KernelMode\"&gt;                    *[System[Provider[@Name = 'Microsoft-Windows-Security-Mitigations']                    and EventID = 26 and Level = 2]]                &lt;/Select&gt;            &lt;/Query&gt;        &lt;/QueryList&gt;</Subscription>\r\n      <ValueQueries>\r\n        <Value name=\"ProcessPath\">Event/EventData/Data[@Name=\"ProcessPath\"]</Value>\r\n      </ValueQueries>\r\n    </EventTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>HighestAvailable</RunLevel>\r\n      <LogonType>InteractiveToken</LogonType>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\103.0.1264.62\\Installer\\setup.exe</Command>\r\n      <Arguments>--handle-crash=\"$(ProcessPath)\"</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+                    "Name": "TaskContent"
+                },
+                {
+                    "text": "7881299347898615",
+                    "Name": "ClientProcessStartKey"
+                },
+                {
+                    "text": "11076",
+                    "Name": "ClientProcessId"
+                },
+                {
+                    "text": "11040",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "0",
+                    "Name": "RpcCallClientLocality"
+                },
+                {
+                    "text": "NB-R914VKNL.somedomain.ru",
+                    "Name": "FQDN"
+                }
+            ]
+        }
+    }
+}

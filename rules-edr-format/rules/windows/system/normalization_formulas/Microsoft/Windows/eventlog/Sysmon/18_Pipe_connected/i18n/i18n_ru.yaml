@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_18_Pipe_connected
+      EventDescription: 'Именованный канал присоединен на узле {event_src.host}'

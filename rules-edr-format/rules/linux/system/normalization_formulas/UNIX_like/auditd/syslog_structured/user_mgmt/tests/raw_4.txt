@@ -1,0 +1,11 @@
+{
+    "eventid": "1055",
+    "items": {
+        "USER_MGMT": [
+            "pid=2248 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=deleting-home-directory id=1002 exe=\"/usr/sbin/userdel\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"jr\" ID=\"unknown(1002)\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1603097643",
+    "timestampfractional": "038"
+}

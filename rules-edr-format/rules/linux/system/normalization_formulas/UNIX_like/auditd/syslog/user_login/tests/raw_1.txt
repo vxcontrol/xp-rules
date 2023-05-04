@@ -1,0 +1,1 @@
+<134>Oct 28 08:48:43 centos6 audispd: node=centos6 type=USER_LOGIN msg=audit(1446022123.797:97): user pid=1187 uid=0 auid=502 ses=2 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=login id=502 exe="/usr/sbin/sshd" hostname=192.168.56.1 addr=192.168.56.1 terminal=/dev/pts/0 res=success'

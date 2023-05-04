@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-02-12T07:47:20.129485200Z"
+            },
+            "EventRecordID": "29842",
+            "Correlation": {
+                "ActivityID": "{714d16ac-e170-0001-fc91-4d7170e1d501}"
+            },
+            "Execution": {
+                "ProcessID": "5316",
+                "ThreadID": "6260"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "iivanov.domainname.ru",
+            "Security": {
+                "UserID": "S-1-5-21-1023191730-727829927-3985050192-38786"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Важность = Informational\r\n        Имя узла = ConsoleHost\r\n        Версия узла = 5.1.18362.145\r\n        ИД узла = e2e8271a-668a-443f-b002-9ca100efdba7\r\n        Ведущее приложение = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n        Версия модуля = 5.1.18362.145\r\n        ИД пространства выполнения = 47992669-c895-4744-bf9d-5bbad5d0f48a\r\n        ИД конвейера = 109\r\n        Имя команды = Out-Default\r\n        Тип команды = Cmdlet\r\n        Имя сценария = \r\n        Путь команды = \r\n        Порядковый номер = 185\r\n        Пользователь = domainname\\iivanov\r\n        Подключенный пользователь = \r\n        ИД оболочки = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Out-Default): \"Out-Default\"\r\nCommandInvocation(Out-String): \"Out-String\"\r\nParameterBinding(Out-Default): имя=\"InputObject\"; значение=\"lasdfkjghdfkjgnm\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

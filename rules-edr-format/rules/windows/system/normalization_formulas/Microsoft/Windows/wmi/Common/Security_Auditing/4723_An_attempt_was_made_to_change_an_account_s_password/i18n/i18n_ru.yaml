@@ -1,0 +1,9 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_success
+      EventDescription: 'Изменен пароль учетной записи {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_failure
+      EventDescription: 'Неудачная попытка изменения пароля учетной записи {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_success
+      EventDescription: 'Процесс, использующий нулевой сеанс, изменил пароль учетной записи {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_failure
+      EventDescription: 'Процесс, использующий нулевой сеанс, предпринял неудачную попытку изменения пароля учетной записи {object.name} на узле {event_src.host}'

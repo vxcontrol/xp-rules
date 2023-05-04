@@ -1,0 +1,14 @@
+Description: 'A user failed to log in'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_name
+      EventDescription: 'The user {subject.account.name} failed to log in to the system on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_login_subject_nameless
+      EventDescription: 'A user failed to log in to the system on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_name
+      EventDescription: 'The user {subject.account.name} failed to escalate prvileges to the user {object.account.name} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_subject_nameless
+      EventDescription: 'A user failed to escalate prvileges to the user {object.account.name} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_name
+      EventDescription: 'The user {subject.account.name} failed to escalate prvileges on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on_escalate_object_nameless
+      EventDescription: 'A user failed to escalate prvileges on host {event_src.host}'

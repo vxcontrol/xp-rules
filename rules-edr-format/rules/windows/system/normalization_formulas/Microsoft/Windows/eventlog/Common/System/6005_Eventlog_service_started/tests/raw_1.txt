@@ -1,0 +1,34 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "EventLog"
+            },
+            "EventID": {
+                "text": "6005",
+                "Qualifiers": "32768"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "0",
+            "Opcode": "0",
+            "Keywords": "0x80000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-07-17T11:50:22.6378454Z"
+            },
+            "EventRecordID": "36164",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "0",
+                "ThreadID": "0"
+            },
+            "Channel": "System",
+            "Computer": "somehost.somedomain.org",
+            "Security": null
+        },
+        "EventData": {
+            "Binary": "E5070700060011000B00320016007D020000000000000000"
+        }
+    }
+}

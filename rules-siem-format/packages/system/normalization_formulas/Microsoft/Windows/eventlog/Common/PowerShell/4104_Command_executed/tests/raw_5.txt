@@ -1,0 +1,57 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4104",
+            "Version": "1",
+            "Level": "5",
+            "Task": "2",
+            "Opcode": "15",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2019-07-03T10:41:10.900556200Z"
+            },
+            "EventRecordID": "4432626",
+            "Correlation": {
+                "ActivityID": "{AE5F0247-30DD-0000-5E1F-5FAEDD30D501}"
+            },
+            "Execution": {
+                "ProcessID": "6400",
+                "ThreadID": "7096"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "WIN1",
+            "Security": {
+                "UserID": "S-1-5-21-506420898-248497907-2261400522-1000"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "1",
+                    "Name": "MessageNumber"
+                },
+                {
+                    "text": "1",
+                    "Name": "MessageTotal"
+                },
+                {
+                    "text": "# Copyright Â© 2008, Microsoft Corporation. All rights reserved.\r\n\r\ntrap {break}\r\n\r\n# Include common library\r\n. .\\CL_Utility.ps1\r\n\r\nImport-LocalizedData -BindingVariable localizationString -FileName CL_LocalizationData\r\n\r\n# Troubleshooting WER queue\r\nWrite-DiagProgress -Activity $localizationString.CheckWERQueue\r\n\r\n[double]$freeSpace = Get-FreeSpace\r\n[double]$percentage = Get-Percentage\r\n[string]$userReportPath = Get-UserReportPath\r\n[string]$machineReportPath = Get-MachineReportPath\r\n\r\n[double]$userReportSize = Get-FolderSize $userReportPath\r\n[double]$machineReportSize = Get-FolderSize $machineReportPath\r\n[double]$totalSize = Format-DiskSpaceMB ($userReportSize + $machineReportSize)\r\n\r\n# Reporting\r\n$systemDrive = Get-SystemDriveInfo\r\nif($systemDrive -ne $null) {\r\n    $systemDrive | Select-Object -Property @{Name=$localizationString.driveName;Expression={$_.DeviceID}},@{Name=$localizationString.FreeSpace;Expression={(Format-DiskSpaceGB $_.FreeSpace) + \"GB\"}},@{Name=$localizationString.totalSpace;Expression={(Format-DiskSpaceGB $_.Size) + \"GB\"}} | ConvertTo-Xml | Update-DiagReport -id SystemDriveInfo -Name $localizationString.systemDriveInfo_name -Description $localizationString.systemDriveInfo_description -rid \"RC_WERQueue\"\r\n}\r\n\r\n@{Name=$userReportPath;Space=$userReportSize} | Select-Object -Property @{Name=$localizationString.userReportPath;Expression={$_.Name}},@{Name=$localizationString.userReportSpace;Expression={(Format-DiskSpaceMB $_.Space) + \"MB\"}} | ConvertTo-Xml | Update-DiagReport -id UserReprotInfo -Name $localizationString.UserReportInfo_name -Description $localizationString.UserReportInfo_description -rid \"RC_WERQueue\"\r\n\r\n@{Name=$machineReportPath;Space=$machineReportSize} | Select-Object -Property @{Name=$localizationString.MachineReportPath;Expression={$_.Name}},@{Name=$localizationString.MachineReportSpace;Expression={(Format-DiskSpaceMB $_.Space) + \"MB\"}} | ConvertTo-Xml | Update-DiagReport -id AdminReprotInfo -Name $localizationString.MachineReportInfo_name -Description $localizationString.MachineReportInfo_description -rid \"RC_WERQueue\"\r\n\r\nif((($freeSpace + $userReportSize) -gt 0) -and ($percentage -ge 0)) {\r\n    if(($userReportSize / ($freeSpace + $userReportSize)) * 100 -gt $percentage) {\r\n        Update-Diagrootcause -ID \"RC_WERQueue\" -Detected $true -Parameter @{'UnwantedSpace'=(Format-DiskSpaceMB $totalSize)}\r\n        return\r\n    }\r\n}\r\n\r\nif((($freeSpace + $machineReportSize) -gt 0) -and ($percentage -ge 0)) {\r\n    if(($machineReportSize / ($freeSpace + $machineReportSize) * 100 -gt $percentage)) {\r\n        Update-DiagRootcause -ID \"RC_WERQueue\" -Detected $true -Parameter @{'UnwantedSpace'=(Format-DiskSpaceMB $totalSize)}\r\n        return\r\n    }\r\n}\r\n\r\nUpdate-DiagRootcause -ID \"RC_WERQueue\" -Detected $false -Parameter @{'UnwantedSpace'=(Format-DiskSpaceMB $totalSize)}\r\n",
+                    "Name": "ScriptBlockText"
+                },
+                {
+                    "text": "9ff13488-8576-4dbb-85c0-88aed29a6c03",
+                    "Name": "ScriptBlockId"
+                },
+                {
+                    "text": "C:\\WINDOWS\\TEMP\\SDIAG_30d67e29-b404-4326-9ad5-bfa4cb519a60\\TS_WERQueue.ps1",
+                    "Name": "Path"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5157",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12810",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-12-30T11:01:25.667231000Z"
+            },
+            "EventRecordID": "53557",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "80"
+            },
+            "Channel": "Security",
+            "Computer": "8p1x64-Soft",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "4",
+                    "Name": "ProcessID"
+                },
+                {
+                    "text": "System",
+                    "Name": "Application"
+                },
+                {
+                    "text": "%%14592",
+                    "Name": "Direction"
+                },
+                {
+                    "text": "10.0.223.255",
+                    "Name": "SourceAddress"
+                },
+                {
+                    "text": "137",
+                    "Name": "SourcePort"
+                },
+                {
+                    "text": "10.0.209.41",
+                    "Name": "DestAddress"
+                },
+                {
+                    "text": "137",
+                    "Name": "DestPort"
+                },
+                {
+                    "text": "17",
+                    "Name": "Protocol"
+                },
+                {
+                    "text": "65796",
+                    "Name": "FilterRTID"
+                },
+                {
+                    "text": "%%14610",
+                    "Name": "LayerName"
+                },
+                {
+                    "text": "44",
+                    "Name": "LayerRTID"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "RemoteUserID"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "RemoteMachineID"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eventid": "348",
+    "items": {
+        "USER_END": [
+            "pid=1835 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix acct=\"gdm\" exe=\"/usr/libexec/gdm-session-worker\" hostname=? addr=? terminal=:0 res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602686505",
+    "timestampfractional": "553"
+}

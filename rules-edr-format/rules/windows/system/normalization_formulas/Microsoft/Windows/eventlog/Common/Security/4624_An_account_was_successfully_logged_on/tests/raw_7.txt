@@ -1,0 +1,143 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4624",
+            "Version": "2",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-04-03T09:10:59.515488600Z"
+            },
+            "EventRecordID": "41058755",
+            "Correlation": {
+                "ActivityID": "{B277B989-E9FB-0000-A8B9-77B2FBE9D401}"
+            },
+            "Execution": {
+                "ProcessID": "744",
+                "ThreadID": "852"
+            },
+            "Channel": "Security",
+            "Computer": "WIN1.PTSEC.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-0-0",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-5-21-506420898-248497907-2261400522-1000",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "someuser",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "WIN1",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x1ab68a",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "3",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "NtLmSsp ",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "NTLM",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "-",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "NTLM V2",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "0",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "172.16.11.212",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "38318",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "%%1833",
+                    "Name": "ImpersonationLevel"
+                },
+                {
+                    "text": "-",
+                    "Name": "RestrictedAdminMode"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetOutboundUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetOutboundDomainName"
+                },
+                {
+                    "text": "%%1843",
+                    "Name": "VirtualAccount"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "TargetLinkedLogonId"
+                },
+                {
+                    "text": "%%1842",
+                    "Name": "ElevatedToken"
+                }
+            ]
+        }
+    }
+}

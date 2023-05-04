@@ -1,0 +1,9 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null_src
+      EventDescription: 'Пользователь {subject.name} попытался войти в систему на узле {dst.host}, используя явно указанные учетные данные {object.name}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null_src
+      EventDescription: 'Пользователь попытался войти в систему на узле {dst.host}, используя явно указанные учетные данные {object.name}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null
+      EventDescription: 'Пользователь {subject.name} попытался войти в систему на узле {event_src.host}, используя явно указанные учетные данные {object.name}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null
+      EventDescription: 'Пользователь попытался войти в систему на узле {event_src.host}, используя явно указанные учетные данные {object.name}'

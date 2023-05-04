@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_6005_Eventlog_service_started"
+      LocalizationId: PT_Microsoft_Windows_eventlog_6005_Eventlog_service_started
+ObjectId: PT-NF-6483

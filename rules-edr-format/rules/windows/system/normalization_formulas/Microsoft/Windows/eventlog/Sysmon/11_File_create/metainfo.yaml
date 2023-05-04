@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_11_File_create"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_11_File_create
+ObjectId: PT-NF-2364

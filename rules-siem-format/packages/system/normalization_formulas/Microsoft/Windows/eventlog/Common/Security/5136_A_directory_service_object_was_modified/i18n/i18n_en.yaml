@@ -1,0 +1,4 @@
+Description: 'A directory service object was modified'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5136_A_directory_service_object_was_modified
+      EventDescription: 'The user {subject.name} modified the directory service object on host {event_src.host}'

@@ -1,0 +1,139 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4738",
+			"Version": "0",
+			"Level": "0",
+			"Task": "13824",
+			"Opcode": "0",
+			"Keywords": "0x8020000000000000",
+			"TimeCreated": {
+				"SystemTime": "2015-05-20T11:32:39.516425400Z"
+			},
+			"EventRecordID": "384",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "540",
+				"ThreadID": "1076"
+			},
+			"Channel": "Security",
+			"Computer": "win8apt",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "-",
+				"Name": "Dummy"
+			},
+			{
+				"text": "user",
+				"Name": "TargetUserName"
+			},
+			{
+				"text": "win8apt",
+				"Name": "TargetDomainName"
+			},
+			{
+				"text": "S-1-5-21-1696497901-2464395969-3216509008-1003",
+				"Name": "TargetSid"
+			},
+			{
+				"text": "S-1-5-21-1696497901-2464395969-3216509008-1002",
+				"Name": "SubjectUserSid"
+			},
+			{
+				"text": "ivanov",
+				"Name": "SubjectUserName"
+			},
+			{
+				"text": "win8apt",
+				"Name": "SubjectDomainName"
+			},
+			{
+				"text": "0x2ef059",
+				"Name": "SubjectLogonId"
+			},
+			{
+				"text": "-",
+				"Name": "PrivilegeList"
+			},
+			{
+				"text": "user",
+				"Name": "SamAccountName"
+			},
+			{
+				"text": "user",
+				"Name": "DisplayName"
+			},
+			{
+				"text": "-",
+				"Name": "UserPrincipalName"
+			},
+			{
+				"text": "%%1793",
+				"Name": "HomeDirectory"
+			},
+			{
+				"text": "%%1793",
+				"Name": "HomePath"
+			},
+			{
+				"text": "%%1793",
+				"Name": "ScriptPath"
+			},
+			{
+				"text": "%%1793",
+				"Name": "ProfilePath"
+			},
+			{
+				"text": "%%1793",
+				"Name": "UserWorkstations"
+			},
+			{
+				"text": "5/20/2015 4:32:39 AM",
+				"Name": "PasswordLastSet"
+			},
+			{
+				"text": "%%1794",
+				"Name": "AccountExpires"
+			},
+			{
+				"text": "513",
+				"Name": "PrimaryGroupId"
+			},
+			{
+				"text": "-",
+				"Name": "AllowedToDelegateTo"
+			},
+			{
+				"text": "0x15",
+				"Name": "OldUacValue"
+			},
+			{
+				"text": "0x10",
+				"Name": "NewUacValue"
+			},
+			{
+				"text": "\n\t\t%%2048\n\t\t%%2057",
+				"Name": "UserAccountControl"
+			},
+			{
+				"text": "-",
+				"Name": "UserParameters"
+			},
+			{
+				"text": "-",
+				"Name": "SidHistory"
+			},
+			{
+				"text": "%%1797",
+				"Name": "LogonHours"
+			}]
+		}
+	}
+}

@@ -1,0 +1,86 @@
+EVENTLOG = 'EventID="4688"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "start"
+object = "process"
+status = "success"
+
+subject.account.name = if $Data["SubjectUserName"] != "-" then lower($Data["SubjectUserName"]) else null endif
+subject.account.domain = if $Data["SubjectDomainName"] != "-" then lower($Data["SubjectDomainName"]) else null endif
+subject.account.id = if $Data["SubjectUserSid"] != "S-1-0-0" then $Data["SubjectUserSid"] else null endif
+if subject.account.id == null and subject.account.name != null then
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+endif
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+subject.account.privileges = switch $Data["TokenElevationType"]
+    case "%%1936" "TokenElevationTypeDefault"
+    case "%%1937" "TokenElevationTypeFull"
+    case "%%1938" "TokenElevationTypeLimited"
+endswitch
+
+if string(maybe_number16($Data["TargetLogonId"])) != "0" and $Data["TargetLogonId"] != null then
+    object.account.name = if $Data["TargetUserName"] != "-" then lower($Data["TargetUserName"]) else null endif
+    object.account.domain = if $Data["TargetDomainName"] != "-" then lower($Data["TargetDomainName"]) else null endif
+    object.account.id = if $Data["TargetUserSid"] != "S-1-0-0" then $Data["TargetUserSid"] else null endif
+    if object.account.id == null and object.account.name != null then
+        object.account.id = "synthetic:" + object.account.name
+        if object.account.domain != null then
+            object.account.id = object.account.id + "@" + object.account.domain
+        endif
+    endif
+    object.account.session_id = maybe_number16($Data["TargetLogonId"])
+else
+    object.account.name = subject.account.name
+    object.account.domain = subject.account.domain
+    object.account.id = subject.account.id
+    object.account.session_id = subject.account.session_id
+endif
+
+object.process.id = maybe_number16($Data["NewProcessId"])
+object.process.fullpath = lower($Data["NewProcessName"])
+$process_path = csv(object.process.fullpath, "\\", "")
+object.process.name = $process_path[length($process_path) - 1]
+object.process.path = strip(object.process.fullpath, "", object.process.name)
+object.process.cmdline = $Data['CommandLine']
+
+object.process.parent.id = maybe_number16($Data["ProcessId"])
+object.process.parent.fullpath = lower($Data["ParentProcessName"])
+$process_parent_path = csv(object.process.parent.fullpath, "\\", "")
+object.process.parent.name = $process_parent_path[length($process_parent_path) - 1]
+object.process.parent.path = strip(object.process.parent.fullpath, "", object.process.parent.name)
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Process"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created"
+
+if subject.account.name != null and object.account.name != null and subject.account.name != object.account.name then
+    subject.state = "on behalf" 
+elif subject.account.name != null and object.account.name != null and subject.account.name == object.account.name then
+    subject.state = "on behalf of oneself" 
+elif subject.account.name != null and object.account.name == null then
+    subject.state = "on behalf of oneself" 
+elif subject.account.name == null then
+    subject.state = "nameless" 
+endif
+

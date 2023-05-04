@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1602686530",
+    "timestampfractional": "371",
+    "eventid": "784",
+    "items": {
+        "CRED_DISP": [
+            "pid=2130 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix,pam_gnome_keyring acct=\"jr\" exe=\"/usr/libexec/gdm-session-worker\" hostname=? addr=? terminal=:0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

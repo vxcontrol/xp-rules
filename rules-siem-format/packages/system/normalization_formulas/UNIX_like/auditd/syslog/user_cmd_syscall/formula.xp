@@ -1,0 +1,39 @@
+# Triggered when a daemon executed a command
+
+# Jun 14 15:19:02 ubntserv12locallab audispd: node=ubntserv12locallab type=SYSCALL msg=audit(1465906742.934:288): arch=c000003e syscall=59 success=yes exit=0 a0=b7be68 a1=b798c8 a2=b76c08 a3=7ffc32d984a0 items=2 ppid=6072 pid=6075 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts0 ses=179 comm="less" exe="/bin/less" key="user_exec"
+# Jun 14 09:23:53 localhost audispd: node=localhost.localdomain type=SYSCALL msg=audit(1465907033.610:106): arch=c000003e syscall=59 success=yes exit=0 a0=1b6e990 a1=1b6e3c0 a2=1b6b920 a3=7fffd6f4b340 items=2 ppid=1553 pid=1564 auid=500 uid=500 gid=500 euid=500 suid=500 fsuid=500 egid=500 sgid=500 fsgid=500 tty=pts0 ses=2 comm="less" exe="/usr/bin/less" subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 key="user_exec"
+# 2016-06-14T15:38:40.872596+03:00 linux-cb0u audispd: node=linux-cb0u type=SYSCALL msg=audit(1465907920.868:539): arch=c000003e syscall=59 success=yes exit=0 a0=10cfce0 a1=11527e0 a2=1210210 a3=7fffe29c8620 items=2 ppid=1504 pid=1542 auid=1001 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="less" exe="/usr/bin/less" key="user_exec"
+
+TEXT = '{"<"NUMBER">"?}{":"?} {time=DATETIME?}
+        {event_src.ip=IPV4|event_src.ip=IPV6|event_src.hostname=HOSTNAME|"(none)"|} audispd{":"?}
+        node={HOSTNAME} type=SYSCALL msg=audit({WORD}.{WORD}:{datafield1=WORD}): arch={WORDDASH} syscall={NUMBER}
+        success={$status=WORD} exit={NUMBER} a0={WORDDASH} a1={WORDDASH} a2={WORDDASH} a3={WORDDASH}
+        items={NUMBER} ppid={NUMBER} pid={NUMBER} auid={subject.account.id=NUMBER} uid={NUMBER} gid={NUMBER}
+        euid={NUMBER} suid={NUMBER} fsuid={NUMBER} egid={NUMBER} sgid={NUMBER} fsgid={NUMBER}
+        tty={STRING} ses={NUMBER} comm={$cmd=STRING} exe={STRING} {"subj="?}{STRING?} key="user_exec"'
+
+subject = "account"
+action = "execute"
+object = "command"
+
+object.value = strip($cmd, '"', '"')
+
+if $status == "yes" then
+    status = "success"
+else
+    status = "failure"
+endif
+
+# datafield1 - audit message ID
+
+importance = "info"
+
+category.generic = "Command"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.title = "unix_like"
+event_src.category = "Operating system"
+
+id = "PT_UNIX_like_auditd_syslog_user_cmd_syscall"
+

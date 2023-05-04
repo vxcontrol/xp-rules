@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_cred_acq" and action =
+        "login" and status = "ongoing"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_ongoing
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_cred_acq" and action =
+        "login" and status = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_failure
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_cred_acq" and action =
+        "elevate" and status = "ongoing"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_ongoing
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_cred_acq" and action =
+        "elevate" and status = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_failure
+ObjectId: PT-NF-6102

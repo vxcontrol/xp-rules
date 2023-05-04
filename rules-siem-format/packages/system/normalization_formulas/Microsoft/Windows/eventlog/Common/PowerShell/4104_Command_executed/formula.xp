@@ -1,0 +1,60 @@
+!EVENTLOG = 'EventID="4104"'
+!COND = $Provider["Name"] == "Microsoft-Windows-PowerShell"
+        and $Channel == "Microsoft-Windows-PowerShell/Operational"
+        and $Data['ScriptBlockText'] != "prompt"
+        and $Data['ScriptBlockText'] != "$global:?"
+        and (
+            find_substr($Data['ScriptBlockText'], "Set-StrictMode") == null
+            or (
+                find_substr($Data['ScriptBlockText'], "$_.") == null
+                and find_substr($Data['ScriptBlockText'], "Set-StrictMode") != null
+            )
+        )
+
+subject = "account"
+action = "execute"
+object = "command"
+status = "success"
+
+subject.account.id = $Security["UserID"]
+
+object.account.id = subject.account.id
+
+object.id = $Data["ScriptBlockId"]
+$object_path_name = csv($Data["Path"],'\\','"')
+object.name = $object_path_name[length($object_path_name) - 1]  
+object.path = strip($Data["Path"], "", object.name)
+object.fullpath = $Data["Path"]
+
+$commandline = replace($Data["ScriptBlockText"], '', '[\r\n\t]')
+$commandline = replace($commandline, '"', "\"")
+
+object.value = $commandline
+object.process.cmdline = $commandline
+
+object.process.id = $Execution["ProcessID"]
+
+numfield1 = $Data["MessageNumber"]  
+numfield2 = $Data["MessageTotal"]   
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Command"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Command_executed"
+

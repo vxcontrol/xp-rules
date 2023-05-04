@@ -1,0 +1,1 @@
+2016-07-26T19:04:35.989307+03:00 linux-cb0u audispd: node=linux-cb0u type=SYSCALL msg=audit(1469549075.984:82): arch=c000003e syscall=2 success=yes exit=3 a0=1b767a0 a1=241 a2=1b6 a3=20 items=3 ppid=1276 pid=1331 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=2 comm="bash" exe="/bin/bash" key="fileaud_ssh_authkeys_/root/.ssh/authorized_keys"

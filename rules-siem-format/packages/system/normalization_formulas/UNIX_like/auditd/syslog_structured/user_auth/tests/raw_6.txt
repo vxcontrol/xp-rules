@@ -1,0 +1,11 @@
+{
+    "eventid": "12921",
+    "items": {
+        "USER_AUTH": [
+            "pid=5764 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='op=PAM:authentication grantors=pam_permit,pam_gnome_keyring acct=\"root\" exe=\"/usr/sbin/lightdm\" hostname=? addr=? terminal=:0 res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575984019",
+    "timestampfractional": "828"
+}

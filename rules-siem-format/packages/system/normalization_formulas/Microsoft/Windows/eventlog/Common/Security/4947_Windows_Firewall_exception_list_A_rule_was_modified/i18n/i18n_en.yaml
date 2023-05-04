@@ -1,0 +1,4 @@
+Description: 'A rule was modified to Windows Firewall exceptions list.'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4947_Windows_Firewall_exception_list_A_rule_was_modified
+      EventDescription: 'A change has been made to the Windows Firewall exception list. The rule "{object.name}" was modified on host {event_src.host}'

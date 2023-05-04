@@ -1,0 +1,88 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-2000000021-3900000077-690000019-1106"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "admin"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x8e99e"
+                },
+                {
+                    "Name": "ObjectServer",
+                    "text": "DS"
+                },
+                {
+                    "Name": "ObjectType",
+                    "text": "%{b00000ba-0006-1000-a005-0011111111e2}"
+                },
+                {
+                    "Name": "ObjectName",
+                    "text": "%{600000ca-200f-4005-b009-31000000005c}"
+                },
+                {
+                    "Name": "OperationType",
+                    "text": "Object Access"
+                },
+                {
+                    "Name": "HandleId",
+                    "text": "0x0"
+                },
+                {
+                    "Name": "AccessList",
+                    "text": "%%7684"
+                },
+                {
+                    "Name": "AccessMask",
+                    "text": "0x10"
+                },
+                {
+                    "Name": "Properties",
+                    "text": "%%7684\n\t\t{700000b1-3008-400f-a002-4f111111119e}\n\t\t{3000009f-f008-4008-9000-811111111182}\n\t\t{b00000ba-0006-1000-a005-0011111111e2}\n\t"
+                },
+                {
+                    "Name": "AdditionalInfo",
+                    "text": "-"
+                },
+                {
+                    "Name": "AdditionalInfo2"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-J500000000Q.test.local",
+            "Correlation": null,
+            "EventID": "4662",
+            "EventRecordID": "229133",
+            "Execution": {
+                "ProcessID": "488",
+                "ThreadID": "2600"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10080",
+            "TimeCreated": {
+                "SystemTime": "2014-09-12T11:18:56.301078300Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

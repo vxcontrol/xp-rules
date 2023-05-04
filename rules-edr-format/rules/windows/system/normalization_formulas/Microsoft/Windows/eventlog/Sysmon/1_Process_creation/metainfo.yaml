@@ -1,0 +1,11 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation" and
+        subject.account.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation" and
+        subject.account.name = null and subject.account.id != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_id
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation" and
+        subject.account.name = null and subject.account.id = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_no_id_no_name
+ObjectId: PT-NF-2366

@@ -1,0 +1,81 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4703",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13317",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-01-29T09:08:36.821280200Z"
+            },
+            "EventRecordID": "556838612",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "4224"
+            },
+            "Channel": "Security",
+            "Computer": "server.corp.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SERVER$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "CORP",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "GrandAdmin",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "CORP",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x1e81a5",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "0x3f4",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "SeAssignPrimaryTokenPrivilege\r\n\t\t\tSeIncreaseQuotaPrivilege\r\n\t\t\tSeSecurityPrivilege\r\n\t\t\tSeTakeOwnershipPrivilege\r\n\t\t\tSeLoadDriverPrivilege\r\n\t\t\tSeSystemtimePrivilege\r\n\t\t\tSeBackupPrivilege\r\n\t\t\tSeRestorePrivilege\r\n\t\t\tSeShutdownPrivilege\r\n\t\t\tSeSystemEnvironmentPrivilege\r\n\t\t\tSeUndockPrivilege\r\n\t\t\tSeManageVolumePrivilege",
+                    "Name": "EnabledPrivilegeList"
+                },
+                {
+                    "text": "-",
+                    "Name": "DisabledPrivilegeList"
+                }
+            ]
+        }
+    }
+}

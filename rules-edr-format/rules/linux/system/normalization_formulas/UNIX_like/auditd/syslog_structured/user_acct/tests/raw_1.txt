@@ -1,0 +1,11 @@
+{
+    "eventid": "9866",
+    "items": {
+        "USER_ACCT": [
+            "pid=2158 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct=\"jr\" exe=\"/usr/libexec/gdm-session-worker\" hostname=centos.local addr=? terminal=/dev/tty1 res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "pewpew-pc",
+    "timestamp": "1558213868",
+    "timestampfractional": "297"
+}

@@ -1,0 +1,4 @@
+Description: 'Registry branch change'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_13_Registry_value_changed
+      EventDescription: 'The process {datafield4} changed the value of a registry key on host {event_src.host}'

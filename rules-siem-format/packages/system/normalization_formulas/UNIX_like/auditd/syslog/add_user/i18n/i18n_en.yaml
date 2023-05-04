@@ -1,0 +1,4 @@
+Description: 'A new user account was created on host'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_add_user
+      EventDescription: 'The user with UID {subject.id} created the user account with UID {object.id} on host {event_src.host}'

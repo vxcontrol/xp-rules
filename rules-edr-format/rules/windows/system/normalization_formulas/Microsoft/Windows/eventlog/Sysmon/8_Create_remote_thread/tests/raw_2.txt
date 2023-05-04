@@ -1,0 +1,82 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "8",
+            "Version": "2",
+            "Level": "4",
+            "Task": "8",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-10-07T11:19:17.846614200Z"
+            },
+            "EventRecordID": "1074",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "1280",
+                "ThreadID": "1844"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "AGENT.local",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2019-10-07 11:19:17.846",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{28D95069-1F18-5D9B-0000-001027120100}",
+                    "Name": "SourceProcessGuid"
+                },
+                {
+                    "text": "852",
+                    "Name": "SourceProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "SourceImage"
+                },
+                {
+                    "text": "{28D95069-1F1B-5D9B-0000-0010CA8C0100}",
+                    "Name": "TargetProcessGuid"
+                },
+                {
+                    "text": "1280",
+                    "Name": "TargetProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\sysmon.exe",
+                    "Name": "TargetImage"
+                },
+                {
+                    "text": "2612",
+                    "Name": "NewThreadId"
+                },
+                {
+                    "text": "0x0000000077015B70",
+                    "Name": "StartAddress"
+                },
+                {
+                    "text": "C:\\Windows\\SYSTEM32\\ntdll.dll",
+                    "Name": "StartModule"
+                },
+                {
+                    "text": "EtwpNotificationThread",
+                    "Name": "StartFunction"
+                }
+            ]
+        }
+    }
+}

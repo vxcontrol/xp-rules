@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1597750880",
+    "timestampfractional": "838",
+    "eventid": "1806",
+    "items": {
+        "LOGIN": [
+            "pid=2172 uid=0 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=1 res=1 UID=\"root\" OLD-AUID=\"unset\" AUID=\"jr\""
+        ]
+    }
+}

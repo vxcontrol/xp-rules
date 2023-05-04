@@ -1,0 +1,357 @@
+EVENTLOG = 'EventID="22"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+action = "info"
+object = "request"
+
+if $Data["QueryStatus"] == "0" then
+    status = "success"
+else
+    status = "failure"
+endif
+
+subject.process.id = $Data["ProcessId"]
+$name_and_path = lower($Data["Image"])
+$name_and_path_csv = csv($name_and_path, "\\", "'")
+$name = $name_and_path_csv[length($name_and_path_csv) - 1]
+subject.process.name = $name
+subject.process.path = strip($name_and_path, "", $name)
+subject.process.fullpath = $name_and_path
+
+$subject_name_domain = csv($Data["User"], "\\", "'")
+if length($subject_name_domain) > 1 then
+    subject.account.domain = lower($subject_name_domain[0])
+    subject.account.name = lower($subject_name_domain[1])
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+elif $Data["User"] != '-' then
+    subject.account.id = $Data["User"]
+endif
+
+object.type = "DNS"
+object.query = $Data["QueryName"]
+
+if $Data["QueryResults"] != "-" then
+    object.property = "query results"
+    object.value = strip($Data["QueryResults"], "::ffff:", ";")
+    
+    if find_substr($Data["QueryResults"], "type: 1 ") != null then
+        $resource_records = append($resource_records, "A")
+    endif
+    if find_substr($Data["QueryResults"], "type: 2 ") != null then
+        $resource_records = append($resource_records, "NS")
+    endif
+    if find_substr($Data["QueryResults"], "type: 5 ") != null then
+        $resource_records = append($resource_records, "CNAME")
+    endif
+    if find_substr($Data["QueryResults"], "type: 6 ") != null then
+        $resource_records = append($resource_records, "SOA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 12 ") != null then
+        $resource_records = append($resource_records, "PTR")
+    endif
+    if find_substr($Data["QueryResults"], "type: 13 ") != null then
+        $resource_records = append($resource_records, "HINFO")
+    endif
+    if find_substr($Data["QueryResults"], "type: 15 ") != null then
+        $resource_records = append($resource_records, "MX")
+    endif
+    if find_substr($Data["QueryResults"], "type: 16 ") != null then
+        $resource_records = append($resource_records, "TXT")
+    endif
+    if find_substr($Data["QueryResults"], "type: 17 ") != null then
+        $resource_records = append($resource_records, "RP")
+    endif
+    if find_substr($Data["QueryResults"], "type: 18 ") != null then
+        $resource_records = append($resource_records, "AFSDB")
+    endif
+    if find_substr($Data["QueryResults"], "type: 24 ") != null then
+        $resource_records = append($resource_records, "SIG")
+    endif
+    if find_substr($Data["QueryResults"], "type: 25 ") != null then
+        $resource_records = append($resource_records, "KEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 28 ") != null then
+        $resource_records = append($resource_records, "AAAA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 29 ") != null then
+        $resource_records = append($resource_records, "LOC")
+    endif
+    if find_substr($Data["QueryResults"], "type: 33 ") != null then
+        $resource_records = append($resource_records, "SRV")
+    endif
+    if find_substr($Data["QueryResults"], "type: 35 ") != null then
+        $resource_records = append($resource_records, "NAPTR")
+    endif
+    if find_substr($Data["QueryResults"], "type: 36 ") != null then
+        $resource_records = append($resource_records, "KX")
+    endif
+    if find_substr($Data["QueryResults"], "type: 37 ") != null then
+        $resource_records = append($resource_records, "CERT")
+    endif
+    if find_substr($Data["QueryResults"], "type: 39 ") != null then
+        $resource_records = append($resource_records, "DNAME")
+    endif
+    if find_substr($Data["QueryResults"], "type: 41 ") != null then
+        $resource_records = append($resource_records, "OPT")
+    endif
+    if find_substr($Data["QueryResults"], "type: 42 ") != null then
+        $resource_records = append($resource_records, "APL")
+    endif
+    if find_substr($Data["QueryResults"], "type: 43 ") != null then
+        $resource_records = append($resource_records, "DS")
+    endif
+    if find_substr($Data["QueryResults"], "type: 44 ") != null then
+        $resource_records = append($resource_records, "SSHFP")
+    endif
+    if find_substr($Data["QueryResults"], "type: 45 ") != null then
+        $resource_records = append($resource_records, "IPSECKEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 46 ") != null then
+        $resource_records = append($resource_records, "RRSIG")
+    endif
+    if find_substr($Data["QueryResults"], "type: 47 ") != null then
+        $resource_records = append($resource_records, "NSEC")
+    endif
+    if find_substr($Data["QueryResults"], "type: 48 ") != null then
+        $resource_records = append($resource_records, "DNSKEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 49 ") != null then
+        $resource_records = append($resource_records, "DHCID")
+    endif
+    if find_substr($Data["QueryResults"], "type: 50 ") != null then
+        $resource_records = append($resource_records, "NSEC3")
+    endif
+    if find_substr($Data["QueryResults"], "type: 51 ") != null then
+        $resource_records = append($resource_records, "NSEC3PARAM")
+    endif
+    if find_substr($Data["QueryResults"], "type: 52 ") != null then
+        $resource_records = append($resource_records, "TLSA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 53 ") != null then
+        $resource_records = append($resource_records, "SMIMEA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 55 ") != null then
+        $resource_records = append($resource_records, "HIP")
+    endif
+    if find_substr($Data["QueryResults"], "type: 59 ") != null then
+        $resource_records = append($resource_records, "CDS")
+    endif
+    if find_substr($Data["QueryResults"], "type: 60 ") != null then
+        $resource_records = append($resource_records, "CDNSKEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 61 ") != null then
+        $resource_records = append($resource_records, "OPENPGPKEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 62 ") != null then
+        $resource_records = append($resource_records, "CSYNC")
+    endif
+    if find_substr($Data["QueryResults"], "type: 63 ") != null then
+        $resource_records = append($resource_records, "ZONEMD")
+    endif
+    if find_substr($Data["QueryResults"], "type: 64 ") != null then
+        $resource_records = append($resource_records, "SVCB")
+    endif
+    if find_substr($Data["QueryResults"], "type: 65 ") != null then
+        $resource_records = append($resource_records, "HTTPS")
+    endif
+    if find_substr($Data["QueryResults"], "type: 108 ") != null then
+        $resource_records = append($resource_records, "EUI48")
+    endif
+    if find_substr($Data["QueryResults"], "type: 109 ") != null then
+        $resource_records = append($resource_records, "EUI64")
+    endif
+    if find_substr($Data["QueryResults"], "type: 249 ") != null then
+        $resource_records = append($resource_records, "TKEY")
+    endif
+    if find_substr($Data["QueryResults"], "type: 250 ") != null then
+        $resource_records = append($resource_records, "TSIG")
+    endif
+    if find_substr($Data["QueryResults"], "type: 251 ") != null then
+        $resource_records = append($resource_records, "IXFR")
+    endif
+    if find_substr($Data["QueryResults"], "type: 252 ") != null then
+        $resource_records = append($resource_records, "AXFR")
+    endif
+    if find_substr($Data["QueryResults"], "type: 256 ") != null then
+        $resource_records = append($resource_records, "URI")
+    endif
+    if find_substr($Data["QueryResults"], "type: 257 ") != null then
+        $resource_records = append($resource_records, "CAA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 32768 ") != null then
+        $resource_records = append($resource_records, "TA")
+    endif
+    if find_substr($Data["QueryResults"], "type: 32769 ") != null then
+        $resource_records = append($resource_records, "DLV")
+    endif
+endif
+datafield5 = join($resource_records, "|")           
+
+datafield7 = strip($Data['ProcessGuid'], '{', '}')  
+
+reason = switch $Data["QueryStatus"]
+    case "123" "The filename, directory name, or volume label syntax is incorrect"
+    case "1214" "The format of the specified network name is invalid"
+    case "1223" "The operation was canceled by the user"
+    case "1225" "The remote computer refused the network connection"
+    case "1232" "The network location cannot be reached"
+    case "1460" "This operation returned because the timeout period expired"
+    case "4312" "The object identifier does not represent a valid object"
+    case "9001" "DNS server unable to interpret format"
+    case "9002" "DNS server failure"
+    case "9003" "DNS name does not exist"
+    case "9004" "DNS request not supported by name server"
+    case "9005" "DNS operation refused"
+    case "9006" "DNS name that ought not exist, does exist"
+    case "9007" "DNS RR set that ought not exist, does exist"
+    case "9008" "DNS RR set that ought to exist, does not exist"
+    case "9009" "DNS server not authoritative for zone"
+    case "9010" "DNS name in update or prereq is not in zone"
+    case "9016" "DNS signature failed to verify"
+    case "9017" "DNS bad key"
+    case "9018" "DNS signature validity expired"
+    case "9101" "Only the DNS server acting as the key master for the zone may perform this operation"
+    case "9102" "This operation is not allowed on a zone that is signed or has signing keys"
+    case "9103" "NSEC3 is not compatible with the RSA-SHA-1 algorithm. Choose a different algorithm or use NSEC"
+    case "9104" "The zone does not have enough signing keys. There must be at least one key signing key and at least one zone signing key"
+    case "9105" "The specified algorithm is not supported"
+    case "9106" "The specified key size is  not supported"
+    case "9107" "One or more of the signing keys for a zone are not accessible to the DNS server. Zone signing will notbe operational until this error is resolved"
+    case "9108" "The specified key storage provider does not support DPAPI++ data protection. Zone signing will not be operational until this error is resolved"
+    case "9109" "An unexpected DPAPI++ error was encountered. Zone signing will not be operational until this error is resolved"
+    case "9110" "An unexpected crypto error was encountered. Zone signing may not be operational until this error is resolved"
+    case "9111" "The DNS server encountered a signing key with an unknown version. Zone signing will not beoperational until this error is resolved"
+    case "9112" "The specified key service provider cannot be opened by the DNS server"
+    case "9113" "The DNS server cannot accept any more signing keys with the specified algorithm and KSK flag value for this zone"
+    case "9114" "The specified rollover period is invalid"
+    case "9115" "The specified initial rollover offset is invalid"
+    case "9116" "The specified signing key is already in process of rolling over keys"
+    case "9117" "The specified signing key does not have a standby key to revoke"
+    case "9118" "This operation is not allowed on a zone signing key"
+    case "9119" "This operation is not allowed on an active signing key"
+    case "9120" "The specified signing key is already queued for rollover"
+    case "9121" "This operation is not allowed on an unsigned zone"
+    case "9122" "This operation could not be completed because the DNS server listed as the current key master for thiszone is down or misconfigured. Resolve the problem on the current key master for this zone or use anotherDNS server to seize the key master role"
+    case "9123" "The specified signature validity period is invalid"
+    case "9124" "The specified NSEC3 iteration count is higher than allowed by the minimum key length used in the zone"
+    case "9125" "This operation could not be completed because the DNS server has been configured with DNSSEC features disabled. Enable DNSSEC on the DNS server"
+    case "9126" "This operation could not be completed because the XML stream received is empty or syntactically invalid"
+    case "9127" "This operation completed, but no trust anchors were added because all of the trust anchors received were either invalid, unsupported, expired, or would not become valid in less than 30 days"
+    case "9128" "The specified signing key is not waiting for parental DS update"
+    case "9129" "Hash collision detected during NSEC3 signing. Specify a different user-provided salt, or use a randomly generated salt, and attempt to sign the zone again"
+    case "9130" "NSEC is  not compatible with the NSEC3-RSA-SHA-1 algorithm. Choose a different algorithm or use NSEC3"
+    case "9501" "No records found for given DNS query"
+    case "9502" "Bad DNS packet"
+    case "9503" "No DNS packet"
+    case "9504" "DNS error, check rcode"
+    case "9505" "Unsecured DNS packet"
+    case "9506" "DNS query request is pending"
+    case "9551" "Invalid DNS type"
+    case "9552" "Invalid IP address"
+    case "9553" "Invalid property"
+    case "9554" "Try DNS operation again later"
+    case "9555" "Record for given name and type is not unique"
+    case "9556" "DNS name does not comply with RFC specifications"
+    case "9557" "DNS name is a fully-qualified DNS name"
+    case "9558" "DNS name is dotted (multi-label)"
+    case "9559" "DNS name is a single-part name"
+    case "9560" "DNS name contains an invalid character"
+    case "9561" "DNS name is entirely numeric"
+    case "9562" "The operation requested is not permitted on a DNS root server"
+    case "9563" "The record could not be created because this part of the DNS namespace has been delegated to another server"
+    case "9564" "The DNS server could not find a set of root hints"
+    case "9565" "The DNS server found root hints but they were not consistent across all adapters"
+    case "9566" "The specified value is too small for this parameter"
+    case "9567" "The specified value is too large for this parameter"
+    case "9568" "This operation is not allowed while the DNS server is  loading zones in the background. Please try again later"
+    case "9569" "The operation requested is not permitted on against a DNS server running on a read-only DC"
+    case "9570" "No data is allowed to exist underneath a DNAME record"
+    case "9571" "This operation requires credentials delegation"
+    case "9572" "Name resolution policy table has been corrupted. DNS resolution will fail until it is fixed. Contact your network administrator"
+    case "9601" "DNS zone does not exist"
+    case "9602" "DNS zone information not available"
+    case "9603" "Invalid operation for DNS zone"
+    case "9604" "Invalid DNS zone configuration"
+    case "9605" "DNS zone has no start of authority record"
+    case "9606" "DNS zone has no Name Server record"
+    case "9607" "DNS zone is locked"
+    case "9608" "DNS zone creation failed"
+    case "9609" "DNS zone already exists"
+    case "9610" "DNS automatic zone already exists"
+    case "9611" "Invalid DNS zone type"
+    case "9612" "Secondary DNS zone requires master IP address"
+    case "9613" "DNS zone not secondary"
+    case "9614" "Need secondary IP address"
+    case "9615" "WINS initialization failed"
+    case "9616" "Need WINS servers"
+    case "9617" "NBTSTAT initialization call failed"
+    case "9618" "Invalid delete of start of authority"
+    case "9619" "A conditional forwarding zone already exists for that name"
+    case "9620" "This zone must be configured with one or more master DNS server IP addresses"
+    case "9621" "The operation cannot be performed because this zone is shut down"
+    case "9622" "This operation cannot be performed because the zone is currently being signed. Please try again later"
+    case "9651" "Primary DNS zone requires datafile"
+    case "9652" "Invalid datafile name for DNS zone"
+    case "9653" "Failed to open datafile for DNS zone"
+    case "9654" "Failed to write datafile for DNS zone"
+    case "9655" "Failure while reading datafile for DNS zone"
+    case "9701" "DNS record does not exist"
+    case "9702" "DNS record format error"
+    case "9703" "Node creation failure in DNS"
+    case "9704" "Unknown DNS record type"
+    case "9705" "DNS record timed out"
+    case "9706" "Name not in DNS zone"
+    case "9707" "CNAME loop detected"
+    case "9708" "Node is a CNAME DNS record"
+    case "9709" "A CNAME record already exists for given name"
+    case "9710" "Record only at DNS zone root"
+    case "9711" "DNS record already exists"
+    case "9712" "Secondary DNS zone data error"
+    case "9713" "Could not create DNS cache data"
+    case "9714" "DNS name does not exist"
+    case "9715" "Could not create pointer record"
+    case "9716" "DNS domain was undeleted"
+    case "9717" "The directory service is unavailable"
+    case "9718" "DNS zone already exists in the directory service"
+    case "9719" "DNS server not creating or reading the boot file for the directory service integrated DNS zone"
+    case "9720" "Node is a DNAME DNS record"
+    case "9721" "A DNAME record already exists for given name"
+    case "9722" "An alias loop has been detected with either CNAME or DNAME records"
+    case "9751" "DNS AXFR (zone transfer) complete"
+    case "9752" "DNS zone transfer failed"
+    case "9753" "Added local WINS server"
+    case "9801" "Secure update call needs to continue update request"
+    case "9851" "TCP/IP network protocol not installed"
+    case "9852" "No DNS servers configured for local system"
+    case "9901" "The specified directory partition does not exist"
+    case "9902" "The specified directory partition already exists"
+    case "9903" "This DNS server is not enlisted in the specified directory partition"
+    case "9904" "This DNS server is already enlisted in the specified directory partition"
+    case "9905" "The directory partition is not available at this time. Please wait a few minutes and try again"
+    case "9906" "The operation failed because the domain naming master FSMO role could not be reached. The domain controller holding the domain naming master FSMO role is down or unable to service the request or is not running Windows Server 2003 or later"
+    case "10057" "A request to send or receive data was disallowed because the socket is not connected and (when sending on a datagram socket using a sendto call) no address was supplied"
+    case "10060" "A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond"
+endswitch
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_22_DNS_query"
+

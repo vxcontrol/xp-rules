@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4778_A_session_was_reconnected_to_a_Window_Station"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4778_A_session_was_reconnected_to_a_Window_Station
+ObjectId: PT-NF-1910

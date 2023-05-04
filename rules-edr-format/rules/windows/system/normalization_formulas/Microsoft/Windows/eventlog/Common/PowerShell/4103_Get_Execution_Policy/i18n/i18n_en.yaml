@@ -1,0 +1,4 @@
+Description: 'The PowerShell execution policy is checked'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Get_Execution_Policy
+      EventDescription: 'The PowerShell execution policy is checked on host {event_src.host}'

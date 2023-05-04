@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed
+ObjectId: PT-NF-1906

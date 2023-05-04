@@ -1,0 +1,49 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-PowerShell",
+        "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+      },
+      "EventID": "4103",
+      "Version": "1",
+      "Level": "4",
+      "Task": "106",
+      "Opcode": "20",
+      "Keywords": "0x0",
+      "TimeCreated": {
+        "SystemTime": "2019-03-11T16:08:50.794943900Z"
+      },
+      "EventRecordID": "357",
+      "Correlation": {
+        "ActivityID": "{A5FF33B9-D824-0000-6236-FFA524D8D401}"
+      },
+      "Execution": {
+        "ProcessID": "1936",
+        "ThreadID": "1904"
+      },
+      "Channel": "Microsoft-Windows-PowerShell/Operational",
+      "Computer": "wec.testlab.esc",
+      "Security": {
+        "UserID": "S-1-5-18"
+      }
+    },
+    "EventData": {
+      "Data": [
+        {
+          "text": "        Severity = Informational\r\n        Host Name = ConsoleHost\r\n        Host Version = 4.0\r\n        Host ID = 19f1fa5c-bb12-4aea-8745-5663f1c28792\r\n        Host Application =  -ExecutionPolicy ByPass -File pt_wmi_subscription.ps1\r\n        Engine Version = 4.0\r\n        Runspace ID = e44daf31-ad63-41eb-b3c9-670bc9dc8d58\r\n        Pipeline ID = 1\r\n        Command Name = Get-Date\r\n        Command Type = Cmdlet\r\n        Script Name = \\\\testlab.esc\\sysvol\\testlab.esc\\Policies\\{8F6E66CF-836C-4258-8BB2-BF943EBEA445}\\Machine\\Scripts\\Startup\\pt_wmi_subscription.ps1\r\n        Command Path = \r\n        Sequence Number = 64\r\n        User = TESTLAB\\SYSTEM\r\n        Shell ID = Microsoft.PowerShell\r\n",
+          "Name": "ContextInfo"
+        },
+        {
+          "Name": "UserData"
+        },
+        
+        {
+          "text": "CommandInvocation(Get-Date): \"Get-Date\"\r\nParameterBinding(Get-Date): name=\"Format\"; value=\"yyyy.MM.dd HH:mm:ss.ms\"\r\n",
+          "Name": "Payload"
+        }
+      ]
+    }
+  }
+}

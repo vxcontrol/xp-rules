@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed"
+        and datafield2 != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed_config_file
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed"
+        and datafield2 = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed_command
+ObjectId: PT-NF-4937

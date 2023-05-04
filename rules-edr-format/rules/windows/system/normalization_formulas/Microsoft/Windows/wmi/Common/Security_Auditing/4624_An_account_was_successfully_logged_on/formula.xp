@@ -1,0 +1,122 @@
+!JSON = "EventCode=4624"
+!COND = $Logfile=="Security" and $SourceName=="Microsoft-Windows-Security-Auditing"
+
+if maybe_number16($InsertionStrings[3]) <= 1000 then
+    subject = "account"
+    action = "login"
+    object = "system"
+
+    subject.account.id = $InsertionStrings[4]
+    subject.account.name = lower($InsertionStrings[5])
+    subject.account.domain = lower($InsertionStrings[6])
+    subject.account.session_id = maybe_number16($InsertionStrings[7])
+
+    category.generic = "Operating System"
+    category.high = "Access Management"
+    category.low = "Communication"
+else
+    subject = "account"
+    action = "elevate"
+    object = "account"
+
+    subject.account.id = $InsertionStrings[0]
+    subject.account.name = lower($InsertionStrings[1])
+    subject.account.domain = lower($InsertionStrings[2])
+    subject.account.session_id = maybe_number16($InsertionStrings[3])
+
+    if $Data["LogonType"] == "9" and $InsertionStrings[22] != "-" then
+        object.account.name = lower($InsertionStrings[22])
+        object.account.domain = lower($InsertionStrings[22])
+    else
+        object.account.id = $InsertionStrings[4]
+        object.account.name = lower($InsertionStrings[5])
+        object.account.domain = lower($InsertionStrings[6])
+        object.account.session_id = maybe_number16($InsertionStrings[7])
+    endif
+
+    category.generic = "Account"
+    category.high = "Users And Rights Management"
+    category.low = "Manipulation"
+endif
+status = "success"
+
+if $InsertionStrings[17] != '-' then
+    subject.process.fullpath = lower($InsertionStrings[17])
+    $process_path = csv(subject.process.fullpath, "\\", "")
+    subject.process.name = $process_path[length($process_path) - 1]
+    subject.process.path = strip(subject.process.fullpath, "", subject.process.name)
+    subject.process.id = maybe_number16($InsertionStrings[16])
+endif
+
+logon_type = $InsertionStrings[8]  
+
+if (maybe_ipv4($InsertionStrings[18]) != null) || (maybe_ipv6($InsertionStrings[18]) != null) then
+    src.ip = $InsertionStrings[18]
+endif
+
+if (find_substr($InsertionStrings[9], "User32") == null
+    and find_substr($InsertionStrings[9], "Kerberos") == null
+    and find_substr($InsertionStrings[9], "ADVAPI") == null
+    and find_substr($InsertionStrings[9], "CHAP") == null
+    and in_list([3, 8, 10], logon_type))
+    or (in_list([2, 7, 11], logon_type)) then
+    $hostname = replace($InsertionStrings[11],'','\\\\')
+endif
+
+if (maybe_ipv4($hostname) == null) and (maybe_ipv6($hostname) == null) then
+    if find_substr($hostname, '.') != null then
+        src.fqdn = lower($hostname)
+        src.hostname = lower(substr($hostname, 0, find_substr($hostname, '.')))
+    elif $hostname != "-" then
+        src.hostname = lower($hostname)
+    endif
+endif
+
+if $InsertionStrings[19] != "-" then
+    src.port = $InsertionStrings[19]
+endif
+
+if find_substr($ComputerName, '.') != null then
+    dst.fqdn = lower($ComputerName)
+    dst.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    dst.hostname = lower($ComputerName)
+endif
+
+datafield6 = switch $InsertionStrings[8]            
+    case "2" "Interactive"
+    case "3" "Network"
+    case "4" "Batch"
+    case "5" "Service"
+    case "7" "Unlock"
+    case "8" "NetworkCleartext"
+    case "9" "NewCredentials"
+    case "10" "RemoteInteractive"
+    case "11" "CachedInteractive"
+endswitch
+
+datafield9 = $InsertionStrings[10]                  
+
+if in_list([2, 7, 11], logon_type) then
+    logon_auth_method = "local"
+endif
+if in_list([3, 8, 10], logon_type) then
+    logon_auth_method = "remote"
+endif
+
+logon_service = $InsertionStrings[9]
+chain_id = strip($InsertionStrings[12], "{", "}")   
+
+time = $TimeGenerated
+msgid = $EventIdentifier
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Logfile
+event_src.fqdn = lower(dst.fqdn)
+event_src.hostname = lower(dst.hostname)
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_wmi_4624_An_account_was_successfully_logged_on"
+

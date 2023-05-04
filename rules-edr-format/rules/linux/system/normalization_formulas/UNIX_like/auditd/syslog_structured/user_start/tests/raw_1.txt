@@ -1,0 +1,11 @@
+{
+    "eventid": "8582",
+    "items": {
+        "USER_START": [
+            "pid=19275 uid=0 auid=1000 ses=111 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct=\"vmuser\" exe=\"/usr/sbin/sshd\" hostname=192.168.126.131 addr=192.168.126.131 terminal=ssh res=success'"
+        ]
+    },
+    "node": "pewpew-pc",
+    "timestamp": "1558181819",
+    "timestampfractional": "035"
+}

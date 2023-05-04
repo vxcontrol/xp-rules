@@ -1,0 +1,71 @@
+EVENTLOG = 'EventID.text="1644"'
+COND =  $Channel == "Directory Service" and
+        $Provider["Name"] == "Microsoft-Windows-ActiveDirectory_DomainService"
+
+subject = "account"
+action = "execute"
+object = "request"
+status = "success"
+
+subject.account.id = $Security["UserID"]
+if $Data[16] != null and lower($Data[16]) != "unavailable" then
+    if find_substr($Data[16], "\\") != null then
+        $domain_user = csv($Data[16], "\\", "'")
+        subject.account.domain = lower($domain_user[0])
+        subject.account.name = lower($domain_user[1])
+    elif find_substr($Data[16], "@") != null then
+        $domain_user = csv($Data[16], "@", "'")
+        subject.account.domain = lower($domain_user[1])
+        subject.account.name = lower($domain_user[0])
+    elif find_substr($Data[16], "=") != null then
+        subject.account.dn = lower($Data[16])
+        $kv_dn = keyvalue(subject.account.dn, ",", "=")
+        subject.account.name = $kv_dn["cn"]
+    else
+        subject.account.name = lower($Data[16])
+    endif
+endif
+
+object.account.id = subject.account.id
+object.account.name = subject.account.name
+object.account.domain = subject.account.domain
+
+object.process.id = $Execution['ProcessID']
+
+object.query = $Data[1]
+object.property = "returned entries"
+object.value = $Data[6]
+
+if find_substr($Data[4], ":") != null then
+    submessage("TEXT", "ip_port", $Data[4])
+else
+    logon_service = $Data[4]
+endif
+
+subformula "ip_port"
+    TEXT = '{src.ip=IPV4}:{src.port=NUMBER}'
+endsubformula
+
+subformula "ip_port"
+    TEXT = '[{src.ip=IPV6}]:{src.port=NUMBER}'
+endsubformula
+
+datafield4 = $Data[0]  # starting node
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID["text"]
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Directory service"
+
+id = "PT_Microsoft_Windows_eventlog_1644_ldap_query"
+

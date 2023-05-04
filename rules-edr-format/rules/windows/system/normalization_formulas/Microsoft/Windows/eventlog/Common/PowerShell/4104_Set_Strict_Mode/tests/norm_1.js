@@ -1,0 +1,21 @@
+{
+    "action": "modify",
+    "datafield10": "S-1-5-21-3500636268-2529342812-1271244175-500",
+    "datafield5": "{ Set-StrictMode -Version 1.0; $_.PSMessageDetails }",
+    "event_src.category": "Operating system",
+    "event_src.fqdn": "server16.server16.int",
+    "event_src.hostname": "server16",
+    "event_src.subsys": "Microsoft-Windows-PowerShell/Operational",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode",
+    "importance": "info",
+    "msgid": "4104",
+    "object": "configuration",
+    "object.property": "version",
+    "object.state": "on",
+    "object.type": "strict mode",
+    "object.value": "1",
+    "status": "success",
+    "time": "2020-01-09T10:27:07.569Z"
+}

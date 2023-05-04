@@ -1,0 +1,77 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5140",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12808",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-08-09T18:43:27.728637300Z"
+            },
+            "EventRecordID": "902425116",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "333068"
+            },
+            "Channel": "Security",
+            "Computer": "AA1-BC-09.domain.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1012345670-712345627-3123456782-32015",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x1c371791c",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "10.0.48.83",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "50841",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\ADMIN$",
+                    "Name": "ShareName"
+                },
+                {
+                    "text": "\\??\\C:\\Windows",
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "0x1",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%4416\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4738",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13824",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-04-05T11:59:53.9293509Z"
+            },
+            "EventRecordID": "1524985",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "636",
+                "ThreadID": "3184"
+            },
+            "Channel": "Security",
+            "Computer": "dd01.do.main",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "Dummy"
+                },
+                {
+                    "text": "test",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "do",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-724199514-2317188125-124239892-1210",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-21-724199514-2317188125-124239892-1131",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "USer",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "domain",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x10eaa4fc",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "-",
+                    "Name": "SamAccountName"
+                },
+                {
+                    "text": "-",
+                    "Name": "DisplayName"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserPrincipalName"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomeDirectory"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ScriptPath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProfilePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserWorkstations"
+                },
+                {
+                    "text": "-",
+                    "Name": "PasswordLastSet"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccountExpires"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrimaryGroupId"
+                },
+                {
+                    "text": "-",
+                    "Name": "AllowedToDelegateTo"
+                },
+                {
+                    "text": "0x15",
+                    "Name": "OldUacValue"
+                },
+                {
+                    "text": "0x11",
+                    "Name": "NewUacValue"
+                },
+                {
+                    "text": "\\r\\n\\t\\t%%2050",
+                    "Name": "UserAccountControl"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserParameters"
+                },
+                {
+                    "text": "-",
+                    "Name": "SidHistory"
+                },
+                {
+                    "text": "-",
+                    "Name": "LogonHours"
+                }
+            ]
+        }
+    }
+}

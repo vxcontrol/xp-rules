@@ -1,0 +1,4 @@
+Description: 'Вывод сообщения'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Out_Default
+      EventDescription: 'Консоль PowerShell на узле {event_src.host} вывела сообщение'

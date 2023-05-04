@@ -1,0 +1,4 @@
+Description: 'his event is logged when LSASS.EXE starts'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4608_Auditing_subsystem_initialized
+      EventDescription: 'Starting the system on host {event_src.host}: audit subsystem is initialized'

@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_start
+      EventDescription: 'Служба Sysmon запущена на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_stop
+      EventDescription: 'Служба Sysmon остановлена на узле {event_src.host}'

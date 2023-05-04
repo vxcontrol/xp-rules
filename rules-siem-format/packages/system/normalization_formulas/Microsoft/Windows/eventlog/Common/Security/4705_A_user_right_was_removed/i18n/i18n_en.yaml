@@ -1,0 +1,4 @@
+Description: 'A right was removed from user account'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4705_A_user_right_was_removed
+      EventDescription: 'The user right "{object.value}" was removed from a user on host {event_src.host}'

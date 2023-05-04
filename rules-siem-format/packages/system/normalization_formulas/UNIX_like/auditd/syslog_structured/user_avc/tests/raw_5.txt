@@ -1,0 +1,11 @@
+{
+    "eventid": "1675435",
+    "items": {
+        "USER_AVC": [
+            "pid=1759 uid=102 auid=4294967295 ses=4294967295 msg='apparmor=\"DENIED\" operation=\"dbus_method_call\" bus=\"system\" path=\"/\" interface=\"org.freedesktop.DBus.Peer\" member=\"Ping\" mask=\"send\" name=\"org.freedesktop.Avahi\" pid=3965241 label=\"snap.shairport-sync.shairport-sync\" peer_pid=2184133 peer_label=\"avahi-daemon\" exe=\"/usr/bin/dbus-daemon\" sauid=102 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1589774287",
+    "timestampfractional": "110"
+}

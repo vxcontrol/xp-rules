@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4771_Kerberos_pre_authentication_failed"
+      LocalizationId: PT_Microsoft_Windows_wmi_4771_Kerberos_pre_authentication_failed
+ObjectId: PT-NF-2611

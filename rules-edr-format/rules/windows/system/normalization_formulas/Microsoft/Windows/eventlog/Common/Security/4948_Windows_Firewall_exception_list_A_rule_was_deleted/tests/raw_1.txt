@@ -1,0 +1,45 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4948",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10071",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-10-08T10:12:00.609036200Z"
+            },
+            "EventRecordID": "426181",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "660",
+                "ThreadID": "3664"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "Domain",
+                    "Name": "ProfileChanged"
+                },
+                {
+                    "text": "{62000009-7007-4005-900C-30000000005E}",
+                    "Name": "RuleId"
+                },
+                {
+                    "text": "Teamviewer Remote Control Service",
+                    "Name": "RuleName"
+                }
+            ]
+        }
+    }
+}

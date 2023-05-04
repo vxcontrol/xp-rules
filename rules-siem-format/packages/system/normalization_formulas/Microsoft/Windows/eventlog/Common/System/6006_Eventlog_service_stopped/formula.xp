@@ -1,0 +1,29 @@
+EVENTLOG = 'EventID.text="6006"'
+COND = $Channel=="System" and $Provider["Name"] == "EventLog"
+
+action = "stop"
+object = "service"
+status = "success"
+
+object.name = "Eventlog"
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID["text"]
+importance = "info"
+
+category.generic = "Service"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_6006_Eventlog_service_stopped"

@@ -1,0 +1,238 @@
+EVENTLOG = 'EventID="4625"'
+
+COND = lower($Channel)=="security" and $Provider["Name"] == "Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+
+if maybe_number16($Data["SubjectLogonId"]) <= 1000 then
+    action = "login"
+    object = "system"
+
+    if find_substr($Data["TargetUserName"], "@") != null then
+        $lower_TargetUserName = csv(lower($Data["TargetUserName"]), "@", "")
+        subject.account.name = $lower_TargetUserName[0]
+        subject.account.domain = $lower_TargetUserName[1]
+    else
+        subject.account.name = if $Data["TargetUserName"] != "-" then lower($Data["TargetUserName"]) else null endif
+        subject.account.domain = if $Data["TargetDomainName"] != "-" then lower($Data["TargetDomainName"]) else null endif
+    endif
+    subject.account.id = if $Data["TargetUserSid"] != "S-1-0-0" then $Data["TargetUserSid"] else null endif
+    if subject.account.id == null and subject.account.name != null then
+        subject.account.id = "synthetic:" + subject.account.name
+        if subject.account.domain != null then
+            subject.account.id = subject.account.id + "@" + subject.account.domain
+        endif
+    endif
+    subject.account.session_id = maybe_number16($Data["TargetLogonId"])
+
+    category.generic = "Operating System"
+    category.high = "Access Management"
+    category.low = "Communication"
+else
+    action = "elevate"
+    object = "account"
+
+    subject.account.name = if $Data["SubjectUserName"] != "-" then lower($Data["SubjectUserName"]) else null endif
+    subject.account.domain = if $Data["SubjectDomainName"] != "-" then lower($Data["SubjectDomainName"]) else null endif
+    subject.account.id = if $Data["SubjectUserSid"] != "S-1-0-0" then $Data["SubjectUserSid"] else null endif
+    if subject.account.id == null and subject.account.name != null then
+        subject.account.id = "synthetic:" + subject.account.name
+        if subject.account.domain != null then
+            subject.account.id = subject.account.id + "@" + subject.account.domain
+        endif
+    endif
+    subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+    if find_substr($Data["TargetUserName"], "@") != null then
+        $lower_TargetUserName = csv(lower($Data["TargetUserName"]), "@", "")
+        object.account.name = $lower_TargetUserName[0]
+        object.account.domain = $lower_TargetUserName[1]
+    else
+        object.account.name = if $Data["TargetUserName"] != "-" then lower($Data["TargetUserName"]) else null endif
+        object.account.domain = if $Data["TargetDomainName"] != "-" then lower($Data["TargetDomainName"]) else null endif
+    endif
+    object.account.id = if $Data["TargetUserSid"] != "S-1-0-0" then $Data["TargetUserSid"] else null endif
+    if object.account.id == null and object.account.name != null then
+        object.account.id = "synthetic:" + object.account.name
+        if object.account.domain != null then
+            object.account.id = object.account.id + "@" + object.account.domain
+        endif
+    endif
+    object.account.session_id = maybe_number16($Data["TargetLogonId"])
+
+    category.generic = "Account"
+    category.high = "Users And Rights Management"
+    category.low = "Manipulation"
+endif
+
+status = "failure"
+
+if $Data["ProcessName"] != '-' then
+    $process_path = csv($Data["ProcessName"], "\\", "")
+    subject.process.name = $process_path[length($process_path) - 1]
+    subject.process.path = strip($Data["ProcessName"], "", subject.process.name)
+    subject.process.fullpath = $Data["ProcessName"]
+    subject.process.id = maybe_number16($Data["ProcessId"])
+endif
+
+src.ip = strip($Data["IpAddress"], "::ffff:", "")
+src.port = $Data["IpPort"]
+
+$hostname = strip($Data["WorkstationName"], '\\\\', '\\\\')
+if (maybe_ipv4($hostname) == null) and (maybe_ipv6($hostname) == null) then
+    if find_substr($hostname, '.') != null then
+        src.fqdn = lower($hostname)
+        src.hostname = lower(substr($hostname, 0, find_substr($hostname, '.')))
+    elif $hostname != "-" then
+        src.hostname = lower($hostname)
+    endif
+endif
+
+if find_substr($Computer, '.') != null then
+    dst.fqdn = lower($Computer)
+    dst.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    dst.hostname = lower($Computer)
+endif
+
+logon_service = $Data["LogonProcessName"]
+logon_type = $Data["LogonType"]
+if in_list([2, 7, 11], logon_type) then
+    logon_auth_method = "local"
+endif
+if in_list([3, 8, 10], logon_type) then
+    logon_auth_method = "remote"
+endif
+
+datafield6 = switch $Data["LogonType"]                   
+    case "2" "Interactive"
+    case "3" "Network"
+    case "4" "Batch"
+    case "5" "Service"
+    case "7" "Unlock"
+    case "8" "NetworkCleartext"
+    case "9" "NewCredentials"
+    case "10" "RemoteInteractive"
+    case "11" "CachedInteractive"
+endswitch
+
+$temp_status = lower($Data["Status"])
+$st_reason = switch $temp_status
+    case "0xc0000064" "user name does not exist"
+    case "0xc000006a" "user name is correct but the password is wrong"
+    case "0xc0000234" "user is currently locked out"
+    case "0xc0000072" "account is currently disabled"
+    case "0xc000006f" "user tried to logon outside his day of week or time of day restrictions"
+    case "0xc0000070" "workstation restriction"
+    case "0xc0000192" "An attempt was made to logon but the netlogon service was not started"
+    case "0xc0000193" "account expiration"
+    case "0xc0000071" "expired password"
+    case "0xc0000133" "clocks between DC and other computer too far out of sync"
+    case "0xc0000413" "The machine you are logging onto is protected by an authentication firewall. The specified account is not allowed to authenticate to the machine"
+    case "0xc0000224" "user is required to change password at next logon"
+    case "0xc0000225" "evidently a bug in Windows and not a risk"
+    case "0xc000015b" "the user has not been granted the requested logon type (aka logon right) at this machine"
+    case "0xc000006d" "this is either due to a bad username or authentication information"
+    case "0xc000006e" "unknown user name or bad password"
+    case "0xc000018c" "the logon request failed because the trust relationship between the primary domain and the trusted domain failed"
+    case "0xc000005e" "there are currently no logon servers available to service the logon request"
+    case "0xc00000dc" "indicates the Sam Server was in the wrong state to perform the desired operation"
+    case "0xc00002ee" "an error occurred during Logon"
+    case "0x80090325" "the certificate chain was issued by an trust anchor (ca) that is not trusted"
+    case "0xc0000321" "the kerberos protocol encountered an error while validating the KDC certificate during smart card logon"
+    case "0xc00002fa" "smart card logon is required and was not used"
+    case "0xc0000022" "a process has requested access to an object but has not been granted those access rights"
+    case "0xc0000017" "not enough virtual memory or paging file quota is available to complete the specified operation"
+    case "0xc0000380" "an incorrect PIN was presented to the smart card"
+    case "0x80090308" "the token supplied to the function is invalid"
+    case "0x80090302" "the function requested is not supported"
+    case "0x8009030e" "no credentials are available in the security package"
+    case "0xc000010b" "indicates an invalid value has been provided for the logontype requested"
+    case "0xc000018d" "the logon request failed because the trust relationship between this workstation and the primary domain failed"
+    case "0x80090317" "the context has expired and can no longer be used"
+    case "0xc000018b" "on applicable Windows Server releases the SAM database does not have a computer account for this workstation trust relationship"
+    case "0x80090310" "the message supplied for verification is out of sequence"
+    case "0xc0000008" "an invalid HANDLE was specified"
+    case "0xc000038b" "The revocation status of the smart card certificate that is used for authentication could not be determined"
+    case "0xc0000384" "the requested key container does not exist on the smart card"
+    case "0xc00000fe" "a specified authentication package is unknown"
+    case "0xc0000062" "the name provided is not a properly formed account name"
+    case "0xc00002a1" "the specified directory service attribute or value does not exist"
+    case "0xc003000c" "the stub received bad data"
+    case "0xc0000381" "the smart card is blocked"
+    case "0xc000035b" "The client's supplied SSPI channel bindings were incorrect"
+    case "0xc000040c" "The revocation status of the domain controller certificate used for smart card authentication could not be determined"
+    case "0x0" "status OK"
+endswitch
+
+$temp_substatus = lower($Data["SubStatus"])
+$sub_reason = switch $temp_substatus
+    case "0xc0000064" "user name does not exist"
+    case "0xc000006a" "user name is correct but the password is wrong"
+    case "0xc0000234" "user is currently locked out"
+    case "0xc0000072" "account is currently disabled"
+    case "0xc000006f" "user tried to logon outside his day of week or time of day restrictions"
+    case "0xc0000070" "workstation restriction"
+    case "0xc0000192" "An attempt was made to logon but the netlogon service was not started"
+    case "0xc0000193" "account expiration"
+    case "0xc0000071" "expired password"
+    case "0xc0000133" "clocks between DC and other computer too far out of sync"
+    case "0xc0000413" "The machine you are logging onto is protected by an authentication firewall. The specified account is not allowed to authenticate to the machine"
+    case "0xc0000224" "user is required to change password at next logon"
+    case "0xc0000225" "evidently a bug in Windows and not a risk"
+    case "0xc000015b" "the user has not been granted the requested logon type (aka logon right) at this machine"
+    case "0xc000006d" "this is either due to a bad username or authentication information"
+    case "0xc000006e" "unknown user name or bad password"
+    case "0xc000018c" "the logon request failed because the trust relationship between the primary domain and the trusted domain failed"
+    case "0xc000005e" "there are currently no logon servers available to service the logon request"
+    case "0xc00000dc" "indicates the Sam Server was in the wrong state to perform the desired operation"
+    case "0xc00002ee" "an error occurred during Logon"
+    case "0x80090325" "the certificate chain was issued by an trust anchor (ca) that is not trusted"
+    case "0xc0000321" "the kerberos protocol encountered an error while validating the KDC certificate during smart card logon"
+    case "0xc00002fa" "smart card logon is required and was not used"
+    case "0xc0000022" "a process has requested access to an object but has not been granted those access rights"
+    case "0xc0000017" "not enough virtual memory or paging file quota is available to complete the specified operation"
+    case "0xc0000380" "an incorrect PIN was presented to the smart card"
+    case "0x80090308" "the token supplied to the function is invalid"
+    case "0x80090302" "the function requested is not supported"
+    case "0x8009030e" "no credentials are available in the security package"
+    case "0xc000010b" "indicates an invalid value has been provided for the logontype requested"
+    case "0xc000018d" "the logon request failed because the trust relationship between this workstation and the primary domain failed"
+    case "0x80090317" "the context has expired and can no longer be used"
+    case "0xc000018b" "on applicable Windows Server releases the SAM database does not have a computer account for this workstation trust relationship"
+    case "0x80090310" "the message supplied for verification is out of sequence"
+    case "0xc0000008" "an invalid HANDLE was specified"
+    case "0xc000038b" "The revocation status of the smart card certificate that is used for authentication could not be determined"
+    case "0xc0000384" "the requested key container does not exist on the smart card"
+    case "0xc00000fe" "a specified authentication package is unknown"
+    case "0xc0000062" "the name provided is not a properly formed account name"
+    case "0xc00002a1" "the specified directory service attribute or value does not exist"
+    case "0xc003000c" "the stub received bad data"
+    case "0xc0000381" "the smart card is blocked"
+    case "0xc000035b" "The client's supplied SSPI channel bindings were incorrect"
+    case "0xc000040c" "The revocation status of the domain controller certificate used for smart card authentication could not be determined"
+    case "0x0" "status OK"
+endswitch
+
+if $st_reason != null and $sub_reason != null then
+    datafield7 = $st_reason + ', ' + $sub_reason         
+endif
+
+datafield9 = $Data["AuthenticationPackageName"]          
+
+chain_id = strip($Correlation["ActivityID"], "{", "}")
+reason = $Data["FailureReason"] + "," + $Data["SubStatus"]
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "low"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+event_src.fqdn = lower(dst.fqdn)
+event_src.hostname = lower(dst.hostname)
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_eventlog_4625_An_account_failed_to_log_on"
+

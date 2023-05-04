@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_7_Image_loaded"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_7_Image_loaded
+ObjectId: PT-NF-2370

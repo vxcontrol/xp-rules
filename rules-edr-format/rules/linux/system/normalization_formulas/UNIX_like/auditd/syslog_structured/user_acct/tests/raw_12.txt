@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1608656143",
+    "timestampfractional": "905",
+    "eventid": "11685",
+    "items": {
+        "USER_ACCT": [
+            "pid=4357 uid=0 auid=1000 ses=2 msg='op=modifying group acct=\"test111\" exe=\"/usr/sbin/groupmod\" hostname=jr-virtual-machine addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

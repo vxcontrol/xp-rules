@@ -1,0 +1,4 @@
+Description: 'Выполнен конвейер PowerShell'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_pipeline_executed
+      EventDescription: 'На узле {event_src.host} выполнен конвейер PowerShell'

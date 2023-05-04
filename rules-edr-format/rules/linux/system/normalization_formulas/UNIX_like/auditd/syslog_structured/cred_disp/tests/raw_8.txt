@@ -1,0 +1,15 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1602834865",
+    "timestampfractional": "371",
+    "eventid": "918",
+    "items": {
+        "CRED_DISP": [
+            "pid=2388 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ],
+        "COMMENT": [
+            "[jr@centos]$ sudo -i",
+            "[root@centos]# exit <- we are here"
+        ]
+    }
+}

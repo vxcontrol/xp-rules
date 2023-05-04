@@ -1,0 +1,59 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+            },
+            "EventID": "22",
+            "Version": "5",
+            "Level": "4",
+            "Task": "22",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-03-05T01:26:39.9573077Z"
+            },
+            "EventRecordID": "342806",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "17572",
+                "ThreadID": "17164"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "pc.anon.ru",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [{
+                    "text": "-",
+                    "Name": "RuleName"
+                }, {
+                    "text": "2021-03-05 01:26:37.990",
+                    "Name": "UtcTime"
+                }, {
+                    "text": "{12f7ec4b-8876-6041-1454-000000000400}",
+                    "Name": "ProcessGuid"
+                }, {
+                    "text": "10076",
+                    "Name": "ProcessId"
+                }, {
+                    "text": "anon.ru",
+                    "Name": "QueryName"
+                }, {
+                    "text": "0",
+                    "Name": "QueryStatus"
+                }, {
+                    "text": "87.250.250.240;type: 2 ns2.anon.ru;type: 2 ns1.anon.ru;type: 6 ns1.anon.ru;type: 15 ;type: 16 716ba339f3371a4e5fc0d72edfa3a3b7ebb45b9824bfacec9aac9ebc9263a42d;type: 16 _globalsign-domain-verification=dHoe580bPQ-lfi_vh-BEIwB4NAtUwURIzrzsivByVL;type: 16 v=spf1 redirect=_spf.anon.ru;2a02:6b1::2:212;91.118.114.1;213.180.190.2;",
+                    "Name": "QueryResults"
+                }, {
+                    "text": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                    "Name": "Image"
+                }
+            ]
+        }
+    }
+}

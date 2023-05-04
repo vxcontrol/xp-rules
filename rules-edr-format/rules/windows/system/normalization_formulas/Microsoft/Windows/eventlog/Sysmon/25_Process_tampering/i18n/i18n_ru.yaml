@@ -1,0 +1,4 @@
+Description: 'Вмешательство в процесс'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_25_Process_tampering
+      EventDescription: 'Обнаружено вмешательство в процесс с PID {object.id} на узле {event_src.host}. Причина: {reason}.'

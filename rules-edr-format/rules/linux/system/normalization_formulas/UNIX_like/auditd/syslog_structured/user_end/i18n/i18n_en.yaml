@@ -1,0 +1,14 @@
+Description: 'A user ended a session'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_logout_success
+      EventDescription: 'The user {subject.account.name} ended a session when logging out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_logout_failure
+      EventDescription: 'The user {subject.account.name} failed to end a session when logging out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_logout_success_null
+      EventDescription: 'The user with ID {subject.account.id} ended a session when logging out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_logout_failure_null
+      EventDescription: 'The user with ID {subject.account.id} failed to end a session when logging out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_deescalate_success
+      EventDescription: 'The user {subject.account.name} ended a privileged session on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_end_deescalate_failure
+      EventDescription: 'The user {subject.account.name} failed to end a privileged session on host {event_src.host}'

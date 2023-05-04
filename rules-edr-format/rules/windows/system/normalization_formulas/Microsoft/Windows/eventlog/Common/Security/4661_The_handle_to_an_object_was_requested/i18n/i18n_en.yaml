@@ -1,0 +1,6 @@
+Description: 'The handle to an object was requested'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4661_The_handle_to_an_object_was_requested_status_success
+      EventDescription: 'The user {subject.domain}\{subject.name} requested the handle to an object on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4661_The_handle_to_an_object_was_requested_status_failure
+      EventDescription: 'The user {subject.domain}\{subject.name} could not request the handle to an object on host {event_src.host}'

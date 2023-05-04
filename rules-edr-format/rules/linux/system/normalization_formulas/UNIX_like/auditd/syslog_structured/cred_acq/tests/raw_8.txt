@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598352935",
+    "timestampfractional": "296",
+    "eventid": "1784",
+    "items": {
+        "CRED_ACQ": [
+            "pid=1946 uid=0 auid=1000 ses=3 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct=\"jr\" exe=\"/usr/sbin/sshd\" hostname=192.168.206.1 addr=192.168.206.1 terminal=ssh res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

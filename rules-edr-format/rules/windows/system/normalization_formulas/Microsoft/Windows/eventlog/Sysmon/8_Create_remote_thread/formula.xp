@@ -1,0 +1,97 @@
+EVENTLOG = 'EventID="8"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+subject = "process"
+action = "start"
+object = "thread"
+status = "success"
+
+subject.process.id = $Data["SourceProcessId"]
+$process_fullpath = lower($Data["SourceImage"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "'")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+subject.process.name = $process_name
+if strip($process_fullpath, "", $process_name) != '' then
+    subject.process.path = strip($process_fullpath, "", $process_name)
+endif
+subject.process.fullpath = $process_fullpath
+subject.process.guid = strip($Data["SourceProcessGuid"], "{", "}")
+
+$subject_name_domain = csv($Data["SourceUser"], "\\", "'")
+if length($subject_name_domain) > 1 then
+    subject.account.domain = lower($subject_name_domain[0])
+    subject.account.name = lower($subject_name_domain[1])
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+elif $Data["SourceUser"] != '-' then
+    subject.account.id = $Data["SourceUser"]
+endif
+
+object.process.id = $Data["TargetProcessId"]
+$object_process_fullpath = lower($Data["TargetImage"])
+$object_process_fullpath_csv = csv($object_process_fullpath, "\\", "'")
+$object_process_name = $object_process_fullpath_csv[length($object_process_fullpath_csv) - 1]
+object.process.name = $object_process_name
+if strip($object_process_fullpath, "", $object_process_name) != '' then
+    object.process.path = strip($object_process_fullpath, "", $object_process_name)
+endif
+object.process.fullpath = $object_process_fullpath
+object.process.guid = strip($Data["TargetProcessGuid"], "{", "}")
+
+$object_name_domain = csv($Data["TargetUser"], "\\", "'")
+if length($object_name_domain) > 1 then
+    object.account.domain = lower($object_name_domain[0])
+    object.account.name = lower($object_name_domain[1])
+    object.account.id = "synthetic:" + object.account.name
+    if object.account.domain != null then
+        object.account.id = object.account.id + "@" + object.account.domain
+    endif
+elif $Data["TargetUser"] != '-' then
+    object.account.id = $Data["TargetUser"]
+endif
+
+object.id = $Data["NewThreadId"]
+
+if $Data["StartModule"] != null then
+    $module_name_and_path = lower($Data["StartModule"])
+    $module_name_and_path_csv = csv($Data["StartModule"], "\\", "'")
+    $module_name = $module_name_and_path_csv[length($module_name_and_path_csv) - 1]
+    object.name = $module_name
+    if strip($module_name_and_path, "", $module_name) != '' then
+        object.path = strip($module_name_and_path, "", $module_name)
+    endif
+    object.fullpath = $module_name_and_path
+endif
+
+if $Data["StartFunction"] != null then
+    object.property = "start function"
+    object.value = $Data["StartFunction"]
+endif
+
+datafield6 = $Data["StartAddress"]  
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "low"
+
+category.generic = "Thread"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_8_Create_remote_thread"
+

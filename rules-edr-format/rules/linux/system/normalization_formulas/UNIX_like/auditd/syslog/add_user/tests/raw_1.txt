@@ -1,0 +1,1 @@
+<134>Oct 28 10:00:54 centos6 audispd: node=centos6 type=ADD_USER msg=audit(1446026454.514:579): user pid=1340 uid=0 auid=0 ses=3 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=adding user id=503 exe="/usr/sbin/useradd" hostname=? addr=? terminal=pts/0 res=success'

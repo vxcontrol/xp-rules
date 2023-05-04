@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4739_Domain_Policy_was_changed
+      EventDescription: 'Пользователь {subject.name} изменил доменную политику {object.name} на узле {event_src.host}'

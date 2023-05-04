@@ -1,0 +1,11 @@
+{
+    "eventid": "2243",
+    "items": {
+        "ADD_USER": [
+            "pid=1483 uid=0 auid=0 ses=4 subj==unconfined msg='op=adding user acct=\"user\" exe=\"/usr/sbin/useradd\" hostname=debian10siem addr=? terminal=pts/0 res=failed' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575863818",
+    "timestampfractional": "292"
+}

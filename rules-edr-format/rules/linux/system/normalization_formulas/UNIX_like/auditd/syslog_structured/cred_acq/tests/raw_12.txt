@@ -1,0 +1,11 @@
+{
+    "node": "10.10.193.10",
+    "timestamp": "1665416945",
+    "timestampfractional": "244",
+    "eventid": "104979171",
+    "items": {
+        "CRED_ACQ": [
+            "pid=3134601 uid=0 auid=1702622305 ses=6346 subj==unconfined msg='op=PAM:setcred grantors=pam_permit acct=\"domain\\domuser\" exe=\"/usr/sbin/sshd\" hostname=10.0.76.87 addr=10.0.76.87 terminal=ssh res=success' UID=\"root\" AUID=\"domuser@domain\""
+        ]
+    }
+}

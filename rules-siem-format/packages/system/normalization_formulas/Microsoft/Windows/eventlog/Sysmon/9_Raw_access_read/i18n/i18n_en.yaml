@@ -1,0 +1,4 @@
+Description: 'Raw access read'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_9_Raw_access_read
+      EventDescription: 'The process {datafield4} is reading from the device {object.name} on host {event_src.host}'

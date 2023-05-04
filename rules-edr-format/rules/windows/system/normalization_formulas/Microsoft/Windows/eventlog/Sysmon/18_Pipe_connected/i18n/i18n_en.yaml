@@ -1,0 +1,4 @@
+Description: 'Pipe connected'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_18_Pipe_connected
+      EventDescription: 'A named pipe is connected on host {event_src.host}'

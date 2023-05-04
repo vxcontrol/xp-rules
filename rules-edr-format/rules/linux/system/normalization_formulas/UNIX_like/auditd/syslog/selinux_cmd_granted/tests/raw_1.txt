@@ -1,0 +1,1 @@
+<134>Oct 27 13:39:14 centos6 audispd: node=centos6 type=AVC msg=audit(1188833848.190:34): avc:  granted  { getattr } for  pid=4310 comm="ls" name="foo.pp" dev=sda5 ino=295171 scontext=user_u:system_r:unconfined_t:s0 tcontext=user_u:object_r:user_home_t:s0 tclass=filetclass=process

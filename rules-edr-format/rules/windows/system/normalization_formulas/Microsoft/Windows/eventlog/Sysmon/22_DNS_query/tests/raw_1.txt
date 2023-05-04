@@ -1,0 +1,76 @@
+{
+    "Event": {
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5000000F-C00A-43E0-BF0C-06F0000FFBD9}"
+            },
+            "EventID": "22",
+            "Version": "5",
+            "Level": "4",
+            "Task": "22",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-02-10T15:58:31.668472500Z"
+            },
+            "EventRecordID": "288554",
+            "Correlation": "",
+            "Execution": {
+                "ProcessID": "1244",
+                "ThreadID": "1164"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "fs.NaaCo.pwwwb",
+            "Security": {
+                "UserID": "S-1-1-11"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "RuleName"
+                },
+                {
+                    "Name": "UtcTime",
+                    "text": "2020-02-10 15:57:22.791"
+                },
+                {
+                    "Name": "ProcessGuid",
+                    "text": "{8FF00B45-7DA5-5E01-0000-0010B3E00003}"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "1240"
+                },
+                {
+                    "Name": "QueryName",
+                    "text": "dc03-5.NaaCo.pwwwb"
+                },
+                {
+                    "Name": "QueryStatus",
+                    "text": "0"
+                },
+                {
+                    "Name": "QueryResults",
+                    "text": "::ffff:10.125.6.201;"
+                },
+                {
+                    "Name": "Image",
+                    "text": "C:\\Windows\\system32\\wbem\\wmiprvse.exe"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Message": "Dns query:\nRuleName:\nUtcTime: 2020-02-10 15:57:22.791\nProcessGuid: {8FF00B45-7DA5-5E01-0000-0010B3E00003}\nProcessId: 1240\nQueryName: dc03-5.NaaCo.pwwwb\nQueryStatus: 0\nQueryResults: ::ffff:10.125.1.100;\nImage: C:\\Windows\\system32\\wbem\\wmiprvse.exe",
+            "Level": "Information",
+            "Task": "Dns query (rule: DnsQuery)",
+            "Opcode": "Info",
+            "Channel": "",
+            "Provider": "",
+            "Keywords": "",
+            "Culture": "en-US"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

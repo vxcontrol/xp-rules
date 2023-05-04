@@ -1,0 +1,11 @@
+{
+    "eventid": "646",
+    "items": {
+        "USER_MGMT": [
+            "pid=2367 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=pam_tally2 reset=0 id=1001 exe=\"/usr/sbin/pam_tally2\" hostname=? addr=? terminal=/dev/pts/0 res=success'"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834764",
+    "timestampfractional": "038"
+}

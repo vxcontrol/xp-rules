@@ -1,0 +1,6 @@
+Description: 'A service is stopped'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_success
+      EventDescription: 'The service "{object.name}" is stopped on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_failure
+      EventDescription: 'Failed to stop the service "{object.name}" on host {event_src.host}'

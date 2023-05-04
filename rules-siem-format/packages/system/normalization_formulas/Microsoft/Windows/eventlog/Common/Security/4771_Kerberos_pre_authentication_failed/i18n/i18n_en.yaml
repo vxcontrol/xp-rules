@@ -1,0 +1,4 @@
+Description: 'Kerberos pre-authentication failed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4771_Kerberos_pre_authentication_failed
+      EventDescription: 'Kerberos authentication of the user {subject.name} requested from host {src.host} is unsuccessful. The Kerberos service on host {event_src.host} failed to issue a ticket-granting ticket'

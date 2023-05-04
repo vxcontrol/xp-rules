@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4104",
+            "Version": "1",
+            "Level": "5",
+            "Task": "2",
+            "Opcode": "15",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-01-09T10:27:07.569063300Z"
+            },
+            "EventRecordID": "5970",
+            "Correlation": {
+                "ActivityID": "{67FFECC3-C6A6-0001-D43D-0068A6C6D501}"
+            },
+            "Execution": {
+                "ProcessID": "900",
+                "ThreadID": "3388"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-21-3500636268-2529342812-1271244175-500"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "1",
+                    "Name": "MessageNumber"
+                },
+                {
+                    "text": "1",
+                    "Name": "MessageTotal"
+                },
+                {
+                    "text": "{ Set-StrictMode -Version 1.0; $_.PSMessageDetails }",
+                    "Name": "ScriptBlockText"
+                },
+                {
+                    "text": "263d53d8-d5b3-4d3b-8a6f-c19138a6c1e0",
+                    "Name": "ScriptBlockId"
+                },
+                {
+                    "Name": "Path"
+                }
+            ]
+        }
+    }
+}

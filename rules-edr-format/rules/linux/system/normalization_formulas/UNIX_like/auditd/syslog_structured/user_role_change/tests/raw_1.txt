@@ -1,0 +1,11 @@
+{
+    "eventid": "320",
+    "items": {
+        "USER_ROLE_CHANGE": [
+            "pid=2130 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe=\"/usr/libexec/gdm-session-worker\" hostname=? addr=? terminal=:0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602686496",
+    "timestampfractional": "004"
+}

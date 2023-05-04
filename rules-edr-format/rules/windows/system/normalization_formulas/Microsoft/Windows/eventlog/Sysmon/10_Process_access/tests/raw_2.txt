@@ -1,0 +1,87 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "10",
+            "Version": "3",
+            "Level": "4",
+            "Task": "10",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-11-23T23:59:08.968015000Z"
+            },
+            "EventRecordID": "1344588",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "1748",
+                "ThreadID": "2548"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "OPERGASSTATION",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2022-11-23 23:59:08.968",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{921335DE-B3CC-637E-570B-000000003900}",
+                    "Name": "SourceProcessGUID"
+                },
+                {
+                    "text": "4412",
+                    "Name": "SourceProcessId"
+                },
+                {
+                    "text": "324",
+                    "Name": "SourceThreadId"
+                },
+                {
+                    "text": "C:\\DeltaV\\bin\\DVAM.exe",
+                    "Name": "SourceImage"
+                },
+                {
+                    "text": "{921335DE-C2D9-636C-0B00-000000003900}",
+                    "Name": "TargetProcessGUID"
+                },
+                {
+                    "text": "504",
+                    "Name": "TargetProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\system32\\lsass.exe",
+                    "Name": "TargetImage"
+                },
+                {
+                    "text": "0x1410",
+                    "Name": "GrantedAccess"
+                },
+                {
+                    "text": "C:\\Windows\\SYSTEM32\\ntdll.dll+69a0a|C:\\Windows\\SYSTEM32\\wow64.dll+14e9c|C:\\Windows\\SYSTEM32\\wow64.dll+d18f|C:\\Windows\\SYSTEM32\\wow64cpu.dll+2776|C:\\Windows\\SYSTEM32\\wow64.dll+d286|C:\\Windows\\SYSTEM32\\wow64.dll+c69e|C:\\Windows\\SYSTEM32\\ntdll.dll+34393|C:\\Windows\\SYSTEM32\\ntdll.dll+996e0|C:\\Windows\\SYSTEM32\\ntdll.dll+4373e|C:\\Windows\\SysWOW64\\ntdll.dll+1fc32(wow64)|C:\\Windows\\syswow64\\KERNELBASE.dll+f369(wow64)|C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll+23b64c(wow64)|C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll+1d45e2(wow64)|C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll+1d3d6d(wow64)|C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll+1d3ccd(wow64)|C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll+1d333e(wow64)|UNKNOWN(00000000001F325A)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+f066(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+1231a(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+7f03c(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+23e12(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+7f146(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+7f213(wow64)|C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll+164e40(wow64)",
+                    "Name": "CallTrace"
+                },
+                {
+                    "text": "OPERGASSTATION\\DeltaVAdmin",
+                    "Name": "SourceUser"
+                },
+                {
+                    "text": "NT AUTHORITY\\SYSTEM",
+                    "Name": "TargetUser"
+                }
+            ]
+        }
+    }
+}

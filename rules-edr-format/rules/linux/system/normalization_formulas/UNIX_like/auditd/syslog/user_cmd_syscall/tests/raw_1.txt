@@ -1,0 +1,1 @@
+Jun 14 15:19:02 ubntserv12locallab audispd: node=ubntserv12locallab type=SYSCALL msg=audit(1465906742.934:288): arch=c000003e syscall=59 success=yes exit=0 a0=b7be68 a1=b798c8 a2=b76c08 a3=7ffc32d984a0 items=2 ppid=6072 pid=6075 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts0 ses=179 comm="less" exe="/bin/less" key="user_exec"

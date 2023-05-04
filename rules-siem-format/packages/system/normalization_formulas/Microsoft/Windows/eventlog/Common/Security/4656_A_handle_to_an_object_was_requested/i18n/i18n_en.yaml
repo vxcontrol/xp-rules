@@ -1,0 +1,6 @@
+Description: 'A user was granted or denied access to an object'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4656_A_handle_to_an_object_was_requested_status_success
+      EventDescription: 'The user {subject.domain}\{subject.name} was granted access to the object "{object.fullpath}"'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4656_A_handle_to_an_object_was_requested_status_failure
+      EventDescription: 'The user {subject.domain}\{subject.name} was denied access to the object "{object.fullpath}"'

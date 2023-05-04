@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4949_Windows_Firewall_settings_were_restored_to_the_default_values"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4949_Windows_Firewall_settings_were_restored_to_the_default_values
+ObjectId: PT-NF-1954

@@ -1,0 +1,6 @@
+Description: 'A file is deleted'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_executable_file
+      EventDescription: 'The process {datafield4} deleted the executable file {object.name} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_not_executable_file
+      EventDescription: 'The process {datafield4} deleted the file {object.name} on host {event_src.host}'

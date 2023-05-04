@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_service_stop" and status
+        = "success"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_success
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_service_stop" and status
+        = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_failure
+ObjectId: PT-NF-5541

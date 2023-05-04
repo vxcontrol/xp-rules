@@ -1,0 +1,6 @@
+Description: 'Attempt to reset account password was made'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4724_An_attempt_was_made_to_reset_an_account_s_password_success
+      EventDescription: 'The user {subject.name} made a successful attempt to reset the password for {object.name} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4724_An_attempt_was_made_to_reset_an_account_s_password_failure
+      EventDescription: 'The user {subject.name} made an unsuccessful attempt to reset the password for {object.id} on host {event_src.host}'

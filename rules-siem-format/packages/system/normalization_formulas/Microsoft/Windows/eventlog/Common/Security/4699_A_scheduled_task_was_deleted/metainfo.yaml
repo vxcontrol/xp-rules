@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4699_A_scheduled_task_was_deleted"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4699_A_scheduled_task_was_deleted
+ObjectId: PT-NF-1845

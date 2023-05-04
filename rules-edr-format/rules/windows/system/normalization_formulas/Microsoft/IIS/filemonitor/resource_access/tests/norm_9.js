@@ -1,0 +1,23 @@
+{
+    "action": "access",
+    "datafield3": "0",
+    "datafield9": "-",
+    "event_src.category": "Web server",
+    "event_src.ip": "10.0.211.47",
+    "event_src.title": "internet_information_services",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_IIS_filemonitor_resource_access",
+    "importance": "low",
+    "object": "resource",
+    "object.fullpath": "/index.htm",
+    "object.name": "index.htm",
+    "object.path": "/index.htm",
+    "object.process.meta": "XenAPI/1.9",
+    "object.property": "method",
+    "object.state": "405",
+    "object.value": "POST",
+    "reason": "Method Not Allowed",
+    "src.ip": "10.0.162.102",
+    "status": "failure",
+    "time": "2016-09-02T03:04:38.000Z"
+}

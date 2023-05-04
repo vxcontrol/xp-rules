@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4756_A_member_was_added_to_a_security_enabled_universal_group"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4756_A_member_was_added_to_a_security_enabled_universal_group
+ObjectId: PT-NF-1894

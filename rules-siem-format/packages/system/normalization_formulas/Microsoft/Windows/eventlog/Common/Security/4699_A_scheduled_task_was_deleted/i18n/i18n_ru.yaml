@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4699_A_scheduled_task_was_deleted
+      EventDescription: 'Пользователь {subject.name} удалил запланированную задачу {object.name} на узле {event_src.host}'

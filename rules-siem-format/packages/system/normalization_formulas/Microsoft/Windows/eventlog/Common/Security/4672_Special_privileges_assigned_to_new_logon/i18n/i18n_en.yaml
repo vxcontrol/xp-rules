@@ -1,0 +1,4 @@
+Description: 'Privileges were assign to a new Logon'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4672_Special_privileges_assigned_to_new_logon
+      EventDescription: 'The user {subject.name} with the administrator equivalent special rights logged in to host {event_src.host}'

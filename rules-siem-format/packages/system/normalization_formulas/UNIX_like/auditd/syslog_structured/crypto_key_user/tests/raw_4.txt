@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1597750880",
+    "timestampfractional": "835",
+    "eventid": "1803",
+    "items": {
+        "CRYPTO_KEY_USER": [
+            "pid=2172 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=destroy kind=session fp=? direction=both spid=2173 suid=74 rport=64963 laddr=192.168.206.129 lport=22  exe=\"/usr/sbin/sshd\" hostname=? addr=192.168.206.1 terminal=? res=success' UID=\"root\" AUID=\"unset\" SUID=\"sshd\""
+        ]
+    }
+}

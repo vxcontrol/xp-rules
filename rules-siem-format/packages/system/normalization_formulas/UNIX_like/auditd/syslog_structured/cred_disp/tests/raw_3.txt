@@ -1,0 +1,12 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598384799",
+    "timestampfractional": "470",
+    "eventid": "5507",
+    "items": {
+        "CRED_DISP": [
+            "pid=2363 uid=0 auid=1000 ses=2 subj==unconfined msg='op=PAM:setcred grantors=pam_env,pam_gnome_keyring,pam_unix acct=\"jr\" exe=\"/usr/sbin/sshd\" hostname=192.168.206.1 addr=192.168.206.1 terminal=ssh res=success' UID=\"root\" AUID=\"jr\"",
+            "pid=2363 uid=0 auid=1000 ses=2 subj==unconfined msg='op=PAM:setcred grantors=pam_env,pam_gnome_keyring,pam_unix acct=\"jr\" exe=\"/usr/sbin/sshd\" hostname=192.168.206.1 addr=192.168.206.1 terminal=ssh res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

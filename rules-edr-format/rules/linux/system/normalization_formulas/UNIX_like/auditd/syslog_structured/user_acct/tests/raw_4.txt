@@ -1,0 +1,11 @@
+{
+    "eventid": "1685",
+    "items": {
+        "USER_ACCT": [
+            "pid=1735 uid=0 auid=1000 ses=2 msg='op=changing /etc/gshadow; group test1, new name: test11 acct=\"test1\" exe=\"/usr/sbin/groupmod\" hostname=jr-virtual-machine addr=? terminal=pts/0 res=success'"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1603376704",
+    "timestampfractional": "297"
+}

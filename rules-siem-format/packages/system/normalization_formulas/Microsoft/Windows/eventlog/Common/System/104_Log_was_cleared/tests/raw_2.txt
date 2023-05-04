@@ -1,0 +1,40 @@
+{
+    "Event": {
+        "System": {
+            "Channel": "System",
+            "Computer": "WIN-DGE9HAU611L",
+            "Correlation": null,
+            "EventID": "104",
+            "EventRecordID": "39664",
+            "Execution": {
+                "ProcessID": "864",
+                "ThreadID": "3652"
+            },
+            "Keywords": "0x8000000000000000",
+            "Level": "4",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{fc65ddd8-d6ef-4962-83d5-6e5cfe9ce148}",
+                "Name": "Microsoft-Windows-Eventlog"
+            },
+            "Security": {
+                "UserID": "S-1-5-21-2887173632-2580675388-2225781737-500"
+            },
+            "Task": "104",
+            "TimeCreated": {
+                "SystemTime": "2017-08-10T07:58:33.965419500Z"
+            },
+            "Version": "0"
+        },
+        "UserData": {
+            "LogFileCleared": {
+                "BackupPath": "\\\\WIN-DGE9HAU611L\\C$\\Users\\Administrator\\Desktop\\nomatter.evtx",
+                "Channel": "Application",
+                "SubjectDomainName": "WIN-DGE9HAU611L",
+                "SubjectUserName": "Administrator",
+                "xmlns": "http://manifests.microsoft.com/win/2004/08/windows/eventlog"
+            }
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

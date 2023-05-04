@@ -1,0 +1,4 @@
+Description: 'A computer account was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4742_A_computer_account_was_changed
+      EventDescription: 'The computer account "{object.name}" is changed in domain {object.domain} on host {event_src.hostname}'

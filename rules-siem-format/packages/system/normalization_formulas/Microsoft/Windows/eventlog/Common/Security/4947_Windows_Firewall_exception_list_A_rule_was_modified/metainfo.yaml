@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4947_Windows_Firewall_exception_list_A_rule_was_modified"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4947_Windows_Firewall_exception_list_A_rule_was_modified
+ObjectId: PT-NF-1952

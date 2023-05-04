@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_1644_ldap_query" and src.host
+        != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_not_null
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_1644_ldap_query" and src.host
+        = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_null
+ObjectId: PT-NF-2110

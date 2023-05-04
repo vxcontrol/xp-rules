@@ -1,0 +1,117 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "DomainPolicyChanged",
+                    "text": "Password Policy"
+                },
+                {
+                    "Name": "DomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "DomainSid",
+                    "text": "S-1-5-21-1900000110-3000000022-2000000008"
+                },
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-18"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "WIN-Q00000000AT$"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x3e7"
+                },
+                {
+                    "Name": "PrivilegeList",
+                    "text": "-"
+                },
+                {
+                    "Name": "MinPasswordAge",
+                    "text": "-"
+                },
+                {
+                    "Name": "MaxPasswordAge",
+                    "text": "-"
+                },
+                {
+                    "Name": "ForceLogoff",
+                    "text": "-"
+                },
+                {
+                    "Name": "LockoutThreshold",
+                    "text": "-"
+                },
+                {
+                    "Name": "LockoutObservationWindow",
+                    "text": "-"
+                },
+                {
+                    "Name": "LockoutDuration",
+                    "text": "-"
+                },
+                {
+                    "Name": "PasswordProperties",
+                    "text": "-"
+                },
+                {
+                    "Name": "MinPasswordLength",
+                    "text": "8"
+                },
+                {
+                    "Name": "PasswordHistoryLength",
+                    "text": "-"
+                },
+                {
+                    "Name": "MachineAccountQuota",
+                    "text": "-"
+                },
+                {
+                    "Name": "MixedDomainMode",
+                    "text": "-"
+                },
+                {
+                    "Name": "DomainBehaviorVersion",
+                    "text": "-"
+                },
+                {
+                    "Name": "OemInformation",
+                    "text": "-"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q00000000AT.test.local",
+            "Correlation": null,
+            "EventID": "4739",
+            "EventRecordID": "35211",
+            "Execution": {
+                "ProcessID": "536",
+                "ThreadID": "636"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10069",
+            "TimeCreated": {
+                "SystemTime": "2014-09-22T09:01:06.281357700Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

@@ -1,0 +1,145 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4741",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13825",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-09-24T11:32:01.395070900Z"
+            },
+            "EventRecordID": "3094189456",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "500",
+                "ThreadID": "14380"
+            },
+            "Channel": "Security",
+            "Computer": "dc1.domainname.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "comp1$",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "domainname",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-22842",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-20427",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "username",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "domainname",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x797e2913",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "comp1$",
+                    "Name": "SamAccountName"
+                },
+                {
+                    "text": "-",
+                    "Name": "DisplayName"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserPrincipalName"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomeDirectory"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ScriptPath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProfilePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserWorkstations"
+                },
+                {
+                    "text": "24.09.2015 14:32:01",
+                    "Name": "PasswordLastSet"
+                },
+                {
+                    "text": "%%1794",
+                    "Name": "AccountExpires"
+                },
+                {
+                    "text": "515",
+                    "Name": "PrimaryGroupId"
+                },
+                {
+                    "text": "-",
+                    "Name": "AllowedToDelegateTo"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "OldUacValue"
+                },
+                {
+                    "text": "0x80",
+                    "Name": "NewUacValue"
+                },
+                {
+                    "text": "\r\n\t\t%%2087",
+                    "Name": "UserAccountControl"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserParameters"
+                },
+                {
+                    "text": "-",
+                    "Name": "SidHistory"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "LogonHours"
+                },
+                {
+                    "text": "comp1.domainname.ru",
+                    "Name": "DnsHostName"
+                },
+                {
+                    "text": "\r\n\t\tHOST/comp1.domainname.ru\r\n\t\tRestrictedKrbHost/comp1.domainname.ru\r\n\t\tHOST/comp1\r\n\t\tRestrictedKrbHost/comp1",
+                    "Name": "ServicePrincipalNames"
+                }
+            ]
+        }
+    }
+}

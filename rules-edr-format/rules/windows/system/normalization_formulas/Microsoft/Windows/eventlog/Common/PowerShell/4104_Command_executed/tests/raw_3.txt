@@ -1,0 +1,57 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "MessageNumber",
+                    "text": "1"
+                },
+                {
+                    "Name": "MessageTotal",
+                    "text": "1"
+                },
+                {
+                    "Name": "ScriptBlockText",
+                    "text": "$acl = Get-ACL -Path 'C:\\New folder'\r\n$Rule=new-object System.Security.AccessControl.FileSystemAccessRule \"Everyone”, “FullControl\",\"ContainerInherit\", \"None\",\"allow\"\r\n$acl.AddAccessRule($Rule)\r\nSet-Acl -Path 'C:\\New folder' -AclObject $acl\r\n"
+                },
+                {
+                    "Name": "ScriptBlockId",
+                    "text": "c8fa1958-fe3b-4c5f-ba5d-da66c4dfe0ec"
+                },
+                {
+                    "Name": "Path",
+                    "text": "C:\\share\\scripts\\setacl.ps1"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "computername.dnssuffix.ru",
+            "Correlation": {
+                "ActivityID": "{02AC9C40-F800-0000-C1EC-BF5F9B1CD301}"
+            },
+            "EventID": "4104",
+            "EventRecordID": "35132",
+            "Execution": {
+                "ProcessID": "2232",
+                "ThreadID": "3048"
+            },
+            "Keywords": "0x0",
+            "Level": "5",
+            "Opcode": "15",
+            "Provider": {
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}",
+                "Name": "Microsoft-Windows-PowerShell"
+            },
+            "Security": {
+                "UserID": "S-1-5-21-3228627042-334194140-788599944-1000"
+            },
+            "Task": "2",
+            "TimeCreated": {
+                "SystemTime": "2017-08-27T19:12:01.997752000Z"
+            },
+            "Version": "1"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

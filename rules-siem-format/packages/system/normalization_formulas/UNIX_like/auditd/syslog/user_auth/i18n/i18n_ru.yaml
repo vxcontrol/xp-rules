@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_auth_success
+      EventDescription: 'Пользователь {subject.name} осуществил успешный вход в систему на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_auth_failed
+      EventDescription: 'Пользователь {subject.name} не смог осуществить вход в систему на узле {event_src.host}'

@@ -1,0 +1,46 @@
+EVENTLOG = 'EventID="19"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+subject = "account"
+action = "modify"
+object = "resource"
+status = "success"
+
+$subject_name_domain = csv($Data["User"], "\\", "'")
+if length($subject_name_domain) > 1 then
+    subject.account.domain = lower($subject_name_domain[0])
+    subject.account.name = lower($subject_name_domain[1])
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+elif $Data["User"] != '-' then
+    subject.account.id = $Data["User"]
+endif
+
+object.type = "event filter"
+object.path = strip($Data["EventNamespace"], '"', '"')
+object.name = strip($Data["Name"], '"', '"')
+object.fullpath = join([object.path, object.name], '\\')
+object.state = lower($Data["Operation"])
+object.query = strip($Data["Query"], '"', '"')
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_19_WMI_event_filter_activity_detected"
+

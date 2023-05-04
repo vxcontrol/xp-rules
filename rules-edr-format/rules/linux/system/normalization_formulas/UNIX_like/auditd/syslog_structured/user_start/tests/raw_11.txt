@@ -1,0 +1,14 @@
+{
+    "eventid": "434",
+    "items": {
+        "USER_START": [
+            "pid=927 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_systemd acct=\"gdm\" exe=\"/usr/lib/gdm3/gdm-session-worker\" hostname=jr-virtual-machine addr=? terminal=/dev/tty1 res=success' UID=\"root\" AUID=\"unset\""
+        ],
+        "COMMENT": [
+            "GNOME Desktop Manager Login Window (Ubuntu)"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834540",
+    "timestampfractional": "454"
+}

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4703_A_user_right_was_adjusted"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4703_A_user_right_was_adjusted
+ObjectId: PT-NF-5593

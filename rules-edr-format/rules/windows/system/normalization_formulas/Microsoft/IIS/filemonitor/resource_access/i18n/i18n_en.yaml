@@ -1,0 +1,6 @@
+Description: 'IIS events'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_IIS_filemonitor_resource_access_success
+      EventDescription: 'Access to resource {object.path} is granted on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_IIS_filemonitor_resource_access_failure
+      EventDescription: 'Failure to access a resource {object.path} on host {event_src.host}. Reason: {reason}'

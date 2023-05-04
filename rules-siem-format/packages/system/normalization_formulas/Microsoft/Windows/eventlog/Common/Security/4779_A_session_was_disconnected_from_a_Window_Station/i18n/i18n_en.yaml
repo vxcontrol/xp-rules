@@ -1,0 +1,4 @@
+Description: 'A session was disconnected from Windows Station'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4779_A_session_was_disconnected_from_a_Window_Station
+      EventDescription: 'The session "{object.name}" is disconnected from IP {src.ip}'

@@ -1,0 +1,33 @@
+EVENTLOG = 'EventID="1102"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Eventlog"
+
+subject = "account"
+action = "clean"
+object = "log"
+status = "success"
+
+subject.account.id = $UserData["LogFileCleared"]["SubjectUserSid"]
+subject.account.name = lower($UserData["LogFileCleared"]["SubjectUserName"])
+subject.account.domain = lower($UserData["LogFileCleared"]["SubjectDomainName"])
+subject.account.session_id = maybe_number16($UserData["LogFileCleared"]["SubjectLogonId"])
+
+object.name = "Security"
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+
+importance = "info"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+	event_src.fqdn = lower($Computer)
+	event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+	event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_1102_Audit_log_was_cleared"
+

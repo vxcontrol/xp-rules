@@ -1,0 +1,21 @@
+# <134>Oct 27 13:39:14 centos6 audispd: node=centos6 type=AVC msg=audit(1188833848.190:34): avc:  granted  { getattr } for  pid=4310 comm="ls" name="foo.pp" dev=sda5 ino=295171 scontext=user_u:system_r:unconfined_t:s0 tcontext=user_u:object_r:user_home_t:s0 tclass=filetclass=process
+
+TEXT = '{"<"NUMBER">"?} {time=DATETIME} {event_src.ip=IPV4|event_src.ip=IPV6|event_src.hostname=HOSTNAME|"(none)"|}
+    audispd: node={HOSTNAME} type=AVC msg={STRING} avc: granted {"{"} {object.state=WORDDASH} {"}"} for pid={subject.id=NUMBER}
+    comm={$sname=STRING} {"path="|"name="}{$oname=STRING} {datafield1=REST}'
+
+subject = "application"
+object = "file"
+action = "access"
+status = "success"
+
+subject.name = strip($sname, '\"', '\"')
+object.name = strip($oname, '\"', '\"')
+
+importance = "info"
+
+event_src.subsys = "selinux"
+event_src.title = "unix_like"
+event_src.category = "Operating system"
+
+id = "PT_UNIX_like_auditd_syslog_selinux_cmd_granted"

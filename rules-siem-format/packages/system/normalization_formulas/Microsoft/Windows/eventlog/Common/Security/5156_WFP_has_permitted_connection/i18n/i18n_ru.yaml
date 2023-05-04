@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5156_WFP_has_permitted_connection
+      EventDescription: 'Платформа фильтрации Windows разрешила подключение на узле {event_src.host}'

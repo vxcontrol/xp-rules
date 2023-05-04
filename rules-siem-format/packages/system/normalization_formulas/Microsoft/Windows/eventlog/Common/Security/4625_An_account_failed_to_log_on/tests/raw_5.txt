@@ -1,0 +1,97 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "xml:lang": "ru-RU",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4625",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-10-18T13:04:23.670359900Z"
+            },
+            "EventRecordID": "877856142",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "620",
+                "ThreadID": "652"
+            },
+            "Channel": "Security",
+            "Computer": "ab1-cd-11.domain.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [{
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                }, {
+                    "text": "AB1-CD-11$",
+                    "Name": "SubjectUserName"
+                }, {
+                    "text": "DOMAIN",
+                    "Name": "SubjectDomainName"
+                }, {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                }, {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                }, {
+                    "text": "user211",
+                    "Name": "TargetUserName"
+                }, {
+                    "text": "DOMAIN",
+                    "Name": "TargetDomainName"
+                }, {
+                    "text": "0xc000006d",
+                    "Name": "Status"
+                }, {
+                    "text": "%%2313",
+                    "Name": "FailureReason"
+                }, {
+                    "text": "0xc000006a",
+                    "Name": "SubStatus"
+                }, {
+                    "text": "3",
+                    "Name": "LogonType"
+                }, {
+                    "text": "CHAP",
+                    "Name": "LogonProcessName"
+                }, {
+                    "text": "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0",
+                    "Name": "AuthenticationPackageName"
+                }, {
+                    "text": "-",
+                    "Name": "WorkstationName"
+                }, {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                }, {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                }, {
+                    "text": "0",
+                    "Name": "KeyLength"
+                }, {
+                    "text": "0x4c8",
+                    "Name": "ProcessId"
+                }, {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                }, {
+                    "text": "-",
+                    "Name": "IpAddress"
+                }, {
+                    "text": "-",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

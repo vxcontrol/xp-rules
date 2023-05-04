@@ -1,0 +1,1 @@
+Jul 26 19:17:24 ubntsrv14locallab audispd: node=ubntsrv14locallab type=SYSCALL msg=audit(1469549844.189:89): arch=c000003e syscall=2 success=yes exit=3 a0=2156a88 a1=241 a2=1b6 a3=1f items=2 ppid=1405 pid=1431 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=1 comm="bash" exe="/bin/bash" key="fileaud_ssh_authkeys_/home/ops/.ssh/authorized_keys"

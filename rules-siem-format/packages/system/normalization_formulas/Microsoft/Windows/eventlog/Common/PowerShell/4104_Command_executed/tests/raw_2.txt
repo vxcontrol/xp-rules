@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "MessageNumber",
+                    "text": "1"
+                },
+                {
+                    "Name": "MessageTotal",
+                    "text": "1"
+                },
+                {
+                    "Name": "ScriptBlockText",
+                    "text": "\r\n\r\n\t$params = Get-Content $env:TEMP\\params.txt\r\n\t\"See which parameters PowerShell got: $params\"\r\n\t\r\n"
+                },
+                {
+                    "Name": "ScriptBlockId",
+                    "text": "ff471bbe-f1a0-45a1-94a3-acd78eb5fc1f"
+                },
+                {
+                    "Name": "Path"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "computername.dnssuffix.ru",
+            "Correlation": {
+                "ActivityID": "{02B07C40-F800-0000-4036-3F234317D301}"
+            },
+            "EventID": "4104",
+            "EventRecordID": "4160",
+            "Execution": {
+                "ProcessID": "2844",
+                "ThreadID": "2308"
+            },
+            "Keywords": "0x0",
+            "Level": "5",
+            "Opcode": "15",
+            "Provider": {
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}",
+                "Name": "Microsoft-Windows-PowerShell"
+            },
+            "Security": {
+                "UserID": "S-1-5-21-3228627042-334194140-788599944-1000"
+            },
+            "Task": "2",
+            "TimeCreated": {
+                "SystemTime": "2017-08-17T14:02:12.926048100Z"
+            },
+            "Version": "1"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

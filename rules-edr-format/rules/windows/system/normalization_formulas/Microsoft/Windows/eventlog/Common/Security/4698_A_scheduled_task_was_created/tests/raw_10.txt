@@ -1,0 +1,69 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4698",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-09-26T00:34:18.750952000Z"
+            },
+            "EventRecordID": "11756979",
+            "Correlation": {
+                "ActivityID": "{D53A0C1F-7401-0000-820C-3AD50174D501}"
+            },
+            "Execution": {
+                "ProcessID": "8",
+                "ThreadID": "1032"
+            },
+            "Channel": "Security",
+            "Computer": "comp_10.doma.in",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "User10",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "HOME10",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Office\\Office Automatic Updates 2.0",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Date>2017-08-05T12:13:18.0043321</Date>\r\n    <Author>Microsoft Office</Author>\r\n    <Description>This task ensures that your Microsoft Office installation can check for updates.</Description>\r\n    <URI>\\Microsoft\\Office\\Office Automatic Updates 2.0</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <CalendarTrigger>\r\n      <StartBoundary>2010-12-16T03:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n      <RandomDelay>PT12H</RandomDelay>\r\n      <ScheduleByWeek>\r\n        <DaysOfWeek>\r\n          <Sunday />\r\n          <Monday />\r\n          <Tuesday />\r\n          <Wednesday />\r\n          <Thursday />\r\n          <Friday />\r\n          <Saturday />\r\n        </DaysOfWeek>\r\n        <WeeksInterval>1</WeeksInterval>\r\n      </ScheduleByWeek>\r\n    </CalendarTrigger>\r\n    <LogonTrigger>\r\n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n      <Enabled>true</Enabled>\r\n      <Delay>PT5M</Delay>\r\n    </LogonTrigger>\r\n    <IdleTrigger>\r\n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n      <Enabled>true</Enabled>\r\n    </IdleTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>HighestAvailable</RunLevel>\r\n      <LogonType>InteractiveToken</LogonType>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>false</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n    <RestartOnFailure>\r\n      <Interval>PT30M</Interval>\r\n      <Count>3</Count>\r\n    </RestartOnFailure>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe</Command>\r\n      <Arguments>/frequentupdate SCHEDULEDTASK displaylevel=False</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+                    "Name": "TaskContent"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "A scheduled task was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tUser10\r\n\tAccount Domain:\t\tHOME10\r\n\tLogon ID:\t\t0x3E7\r\n\r\nTask Information:\r\n\tTask Name: \t\t\\Microsoft\\Office\\Office Automatic Updates 2.0\r\n\tTask Content: \t\t<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Date>2017-08-05T12:13:18.0043321</Date>\r\n    <Author>Microsoft Office</Author>\r\n    <Description>This task ensures that your Microsoft Office installation can check for updates.</Description>\r\n    <URI>\\Microsoft\\Office\\Office Automatic Updates 2.0</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <CalendarTrigger>\r\n      <StartBoundary>2010-12-16T03:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n      <RandomDelay>PT12H</RandomDelay>\r\n      <ScheduleByWeek>\r\n        <DaysOfWeek>\r\n          <Sunday />\r\n          <Monday />\r\n          <Tuesday />\r\n          <Wednesday />\r\n          <Thursday />\r\n          <Friday />\r\n          <Saturday />\r\n        </DaysOfWeek>\r\n        <WeeksInterval>1</WeeksInterval>\r\n      </ScheduleByWeek>\r\n    </CalendarTrigger>\r\n    <LogonTrigger>\r\n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n      <Enabled>true</Enabled>\r\n      <Delay>PT5M</Delay>\r\n    </LogonTrigger>\r\n    <IdleTrigger>\r\n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n      <Enabled>true</Enabled>\r\n    </IdleTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>HighestAvailable</RunLevel>\r\n      <LogonType>InteractiveToken</LogonType>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <StopOnIdleEnd>false</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n    <RestartOnFailure>\r\n      <Interval>PT30M</Interval>\r\n      <Count>3</Count>\r\n    </RestartOnFailure>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>C:\\Program Files\\Common Files\\Microsoft Shared\\ClickToRun\\OfficeC2RClient.exe</Command>\r\n      <Arguments>/frequentupdate SCHEDULEDTASK displaylevel=False</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+            "Level": null,
+            "Task": "Other Object Access Events",
+            "Opcode": null,
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": null
+        }
+    }
+}

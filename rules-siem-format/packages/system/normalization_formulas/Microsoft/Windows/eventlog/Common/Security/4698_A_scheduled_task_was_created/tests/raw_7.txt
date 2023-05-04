@@ -1,0 +1,71 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4698",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-10-01T09:24:18.239358100Z"
+            },
+            "EventRecordID": "3311217",
+            "Correlation": {
+                "ActivityID": "{90D316D1-777C-0003-3E17-D3907C77D501}"
+            },
+            "Execution": {
+                "ProcessID": "852",
+                "ThreadID": "440"
+            },
+            "Channel": "Security",
+            "Computer": "comp_7.doma.in",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "User7",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "HOME7",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Windows\\UpdateOrchestrator\\AC Power Download",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.4\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\Microsoft\\Windows\\UpdateOrchestrator\\AC Power Download</URI>\r\n    <SecurityDescriptor>D:P(A;;FA;;;SY)(A;;FRFX;;;LS)(A;;FRFX;;;BA)</SecurityDescriptor>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <WnfStateChangeTrigger>\r\n      <Enabled>true</Enabled>\r\n      <StateName>7508BCA3380C960C</StateName>\r\n      <Data>01000000</Data>\r\n      <DataOffset>0</DataOffset>\r\n    </WnfStateChangeTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>\r\n    <UseUnifiedSchedulingEngine>false</UseUnifiedSchedulingEngine>\r\n    <WakeToRun>true</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>%systemroot%\\system32\\usoclient.exe</Command>\r\n      <Arguments>StartDownload</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n</Task>",
+                    "Name": "TaskContent"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "A scheduled task was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tUser7\r\n\tAccount Domain:\t\tHOME7\r\n\tLogon ID:\t\t0x3E7\r\n\r\nTask Information:\r\n\tTask Name: \t\t\\Microsoft\\Windows\\UpdateOrchestrator\\AC Power Download\r\n\tTask Content: \t\t<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.4\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\Microsoft\\Windows\\UpdateOrchestrator\\AC Power Download</URI>\r\n    <SecurityDescriptor>D:P(A;;FA;;;SY)(A;;FRFX;;;LS)(A;;FRFX;;;BA)</SecurityDescriptor>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <WnfStateChangeTrigger>\r\n      <Enabled>true</Enabled>\r\n      <StateName>7508BCA3380C960C</StateName>\r\n      <Data>01000000</Data>\r\n      <DataOffset>0</DataOffset>\r\n    </WnfStateChangeTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>\r\n    <UseUnifiedSchedulingEngine>false</UseUnifiedSchedulingEngine>\r\n    <WakeToRun>true</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>%systemroot%\\system32\\usoclient.exe</Command>\r\n      <Arguments>StartDownload</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n</Task>",
+            "Level": "Information",
+            "Task": "Other Object Access Events",
+            "Opcode": "Info",
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": {
+                "Keyword": "Audit Success"
+            }
+        }
+    }
+}

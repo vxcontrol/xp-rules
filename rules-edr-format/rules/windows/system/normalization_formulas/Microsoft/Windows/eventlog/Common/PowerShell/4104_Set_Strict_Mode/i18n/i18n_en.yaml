@@ -1,0 +1,6 @@
+Description: 'An attempt to change strict mode'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode_On
+      EventDescription: 'The system on host {event_src.host} is trying to change strict mode to version {object.value}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode_Off
+      EventDescription: 'The system on host {event_src.host} is trying to disable strict mode'

@@ -1,0 +1,40 @@
+!JSON = "EventCode=4729"
+!COND = $Logfile=="Security" and $SourceName=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "modify"
+object = "user_group"
+status = "success"
+
+subject.id = $InsertionStrings[5]
+subject.name = lower($InsertionStrings[6])
+subject.domain = lower($InsertionStrings[7])
+
+object.id = $InsertionStrings[4]
+object.name = $InsertionStrings[2]
+object.type = "Security-enabled global"
+object.domain = lower($InsertionStrings[3])
+object.property = "account"
+object.value = substr($InsertionStrings[0], 3, find_substr($InsertionStrings[0], ',') - 3)
+object.state = "A member was removed"
+
+datafield1 = $InsertionStrings[1]   # account id
+datafield2 = $InsertionStrings[0]   # account info
+
+msgid = $EventIdentifier
+time = $TimeGenerated
+
+importance = "medium"
+
+if find_substr($ComputerName, '.') != null then
+    event_src.fqdn = lower($ComputerName)
+    event_src.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    event_src.hostname = lower($ComputerName)
+endif
+event_src.subsys = $Logfile
+event_src.category = "Directory service"
+event_src.title = "windows"
+event_src.vendor = "microsoft"
+
+id = "PT_Microsoft_Windows_wmi_4729_A_member_was_removed_from_a_security_enabled_global_group"

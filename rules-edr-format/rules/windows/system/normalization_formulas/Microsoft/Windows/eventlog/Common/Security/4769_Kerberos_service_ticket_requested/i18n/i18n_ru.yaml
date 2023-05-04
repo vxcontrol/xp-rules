@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4769_Kerberos_service_ticket_requested_status_success
+      EventDescription: 'На узле {event_src.host} службой Kerberos выдан сеансовый билет (TGS) для учетной записи {subject.name}, запрошенный с узла {src.host}, для получения доступа к сервису {datafield3}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4769_Kerberos_service_ticket_requested_status_failure
+      EventDescription: 'Службе Kerberos на узле {event_src.host} не удалось выдать сеансовый билет (TGS) для учетной записи {subject.name}, запрошенный с узла {src.host}, для получения доступа к сервису {datafield3}'

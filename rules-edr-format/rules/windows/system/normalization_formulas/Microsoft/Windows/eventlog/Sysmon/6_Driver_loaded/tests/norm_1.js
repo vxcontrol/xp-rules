@@ -1,0 +1,22 @@
+{
+    "action": "open",
+    "event_src.category": "Other",
+    "event_src.fqdn": "server16.server16.int",
+    "event_src.hostname": "server16",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded",
+    "importance": "medium",
+    "msgid": "6",
+    "object": "module",
+    "object.fullpath": "c:\\windows\\system32\\drivers\\usbport.sys",
+    "object.hash.sha1": "315AFF10CAC9A9DF43C6EBE4569D89C541B57C5B",
+    "object.name": "usbport.sys",
+    "object.path": "c:\\windows\\system32\\drivers\\",
+    "object.property": "signature status",
+    "object.type": "driver",
+    "object.value": "Valid | Microsoft Windows",
+    "status": "success",
+    "time": "2018-11-21T06:48:26.024Z"
+}

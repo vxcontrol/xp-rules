@@ -1,0 +1,93 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4688",
+            "Version": "2",
+            "Level": "0",
+            "Task": "13312",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-09-08T06:06:18.245241100Z"
+            },
+            "EventRecordID": "29951730",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "9444"
+            },
+            "Channel": "Security",
+            "Computer": "wec.xx.domain.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-20",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "WEC$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "xxdomain",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e4",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "0x1974",
+                    "Name": "NewProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\cmd.exe",
+                    "Name": "NewProcessName"
+                },
+                {
+                    "text": "%%1936",
+                    "Name": "TokenElevationType"
+                },
+                {
+                    "text": "0x1140",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "cmd.exe /c winrm get winrm/config/winrs >C:\\Windows\\TEMP\\2f8d8f32457d622bce40de0f199cd4cab74bd439.stdout 2>C:\\Windows\\TEMP\\2f8d8f32457d622bce40de0f199cd4cab74bd439.stderr & echo %ERRORLEVEL% >C:\\Windows\\TEMP\\2f8d8f32457d622bce40de0f199cd4cab74bd439.errorlevel",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "WEC$",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "xxdomain",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+                    "Name": "ParentProcessName"
+                },
+                {
+                    "text": "S-1-16-16384",
+                    "Name": "MandatoryLabel"
+                }
+            ]
+        }
+    }
+}

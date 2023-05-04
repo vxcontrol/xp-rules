@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4724_An_attempt_was_made_to_reset_an_account_s_password_success
+      EventDescription: 'Пользователь {subject.name} сменил пароль для учетной записи {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4724_An_attempt_was_made_to_reset_an_account_s_password_failure
+      EventDescription: 'Пользователю {subject.name} не удалось сменить пароль для учетной записи {object.id} на узле {event_src.host}'

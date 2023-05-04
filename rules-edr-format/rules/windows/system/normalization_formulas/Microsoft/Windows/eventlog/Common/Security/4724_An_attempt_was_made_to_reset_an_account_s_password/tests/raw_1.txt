@@ -1,0 +1,60 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4724",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10024",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-10-10T11:25:07.544961200Z"
+            },
+            "EventRecordID": "427116",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "716",
+                "ThreadID": "816"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "SomeOne",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-3000000076-810000008-1900000808-1073",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-21-1000000030-700000027-3900000002-14342",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SomeOne",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ACME",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3205e",
+                    "Name": "SubjectLogonId"
+                }
+            ]
+        }
+    }
+}

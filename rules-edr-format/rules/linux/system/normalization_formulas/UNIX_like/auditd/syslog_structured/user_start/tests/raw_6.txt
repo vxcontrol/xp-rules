@@ -1,0 +1,15 @@
+{
+    "eventid": "434",
+    "items": {
+        "USER_START": [
+            "pid=2242 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ],
+        "COMMENT": [
+            "[jr@centos]$ su test1",
+            "[test1@centos]$ sudo -i  <- we are here"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834540",
+    "timestampfractional": "454"
+}

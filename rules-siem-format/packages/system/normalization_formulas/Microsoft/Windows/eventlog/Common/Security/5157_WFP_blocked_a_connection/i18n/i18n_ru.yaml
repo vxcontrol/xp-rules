@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5157_WFP_blocked_a_connection
+      EventDescription: 'Платформа фильтрации Windows заблокировала подключение на узле {event_src.host}'

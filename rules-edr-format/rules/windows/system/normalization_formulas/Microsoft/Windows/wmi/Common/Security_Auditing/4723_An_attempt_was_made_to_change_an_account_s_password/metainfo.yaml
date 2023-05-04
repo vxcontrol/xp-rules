@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password"
+        and status = "success" and subject.id != "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_success
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password"
+        and status = "failure" and subject.id != "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_failure
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password"
+        and status = "success" and subject.id = "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_success
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password"
+        and status = "failure" and subject.id = "S-1-5-7"
+      LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_failure
+ObjectId: PT-NF-2566

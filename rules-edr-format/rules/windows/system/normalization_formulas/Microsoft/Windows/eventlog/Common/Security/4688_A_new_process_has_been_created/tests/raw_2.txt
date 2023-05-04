@@ -1,0 +1,92 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-25618"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "alalaev"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "COMPANY"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x19cd8d6"
+                },
+                {
+                    "Name": "NewProcessId",
+                    "text": "0x144"
+                },
+                {
+                    "Name": "NewProcessName",
+                    "text": "C:\\Program Files\\Vivaldi\\Application\\vivaldi.exe"
+                },
+                {
+                    "Name": "TokenElevationType",
+                    "text": "%%1938"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "0x11c8"
+                },
+                {
+                    "Name": "CommandLine"
+                },
+                {
+                    "Name": "TargetUserSid",
+                    "text": "S-1-0-0"
+                },
+                {
+                    "Name": "TargetUserName",
+                    "text": "-"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "-"
+                },
+                {
+                    "Name": "TargetLogonId",
+                    "text": "0x0"
+                },
+                {
+                    "Name": "ParentProcessName",
+                    "text": "C:\\Windows\\explorer.exe"
+                },
+                {
+                    "Name": "MandatoryLabel",
+                    "text": "S-1-16-8192"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "campucter.company.ru",
+            "Correlation": null,
+            "EventID": "4688",
+            "EventRecordID": "231467",
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "8388"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "13312",
+            "TimeCreated": {
+                "SystemTime": "2017-08-10T10:53:45.823636100Z"
+            },
+            "Version": "2"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

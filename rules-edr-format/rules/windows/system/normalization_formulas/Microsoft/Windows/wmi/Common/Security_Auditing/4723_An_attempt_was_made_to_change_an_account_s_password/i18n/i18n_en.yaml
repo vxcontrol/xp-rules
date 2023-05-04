@@ -1,0 +1,10 @@
+Description: 'Attempt to change Account Password was made'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_success
+      EventDescription: 'The password for the account "{object.name}" is changed on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_failure
+      EventDescription: 'A failed attempt is made to change the password for the account "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_success
+      EventDescription: 'A process using a null session changed the password for the account "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_wmi_4723_An_attempt_was_made_to_change_an_account_s_password_nullses_failure
+      EventDescription: 'A process using a null session made an unsuccessful attempt to change the password for the account "{object.name}" on host {event_src.host}'

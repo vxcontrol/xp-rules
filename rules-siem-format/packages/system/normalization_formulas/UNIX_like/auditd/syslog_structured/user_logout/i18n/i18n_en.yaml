@@ -1,0 +1,10 @@
+Description: 'A user logged out of the system'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_logout_success
+      EventDescription: 'The user {subject.account.name} with UID {subject.account.id} logged out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_logout_failure
+      EventDescription: 'The user {subject.account.name} with UID {subject.account.id} failed to log out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_logout_success_null
+      EventDescription: 'The user with ID {subject.account.id} logged out of the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_logout_failure_null
+      EventDescription: 'The user with ID {subject.account.id} failed to log out of the system on host {event_src.host}'

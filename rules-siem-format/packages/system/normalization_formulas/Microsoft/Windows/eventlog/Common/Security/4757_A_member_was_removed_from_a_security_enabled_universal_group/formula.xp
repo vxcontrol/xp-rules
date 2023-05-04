@@ -1,0 +1,45 @@
+EVENTLOG = 'EventID="4757"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "modify"
+object = "user_group"
+status = "success"
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+object.name = lower($Data["TargetUserName"])
+object.type = "Security-enabled universal"
+object.domain = lower($Data["TargetDomainName"])
+object.id = $Data["TargetSid"]
+object.account.name = lower(substr($Data["MemberName"], 3, find_substr($Data["MemberName"], ',') - 3))
+object.account.id = $Data["MemberSid"]
+object.account.dn = $Data["MemberName"]
+object.account.domain = lower($Data["TargetDomainName"])
+
+object.state = "A member was removed"
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+importance = "medium"
+
+category.generic = "Group"
+category.high = "Users And Rights Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Directory service"
+
+id = "PT_Microsoft_Windows_eventlog_4757_A_member_was_removed_from_a_security_enabled_universal_group"
+

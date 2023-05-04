@@ -1,0 +1,4 @@
+Description: 'Successful account log in'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4624_An_account_was_successfully_logged_on
+      EventDescription: 'The user {subject.name} logged in to the system successfully on host {event_src.host}. Logon type: {datafield6}'

@@ -1,0 +1,9 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success
+      EventDescription: 'Kerberos-аутентификация пользователя {subject.account.name}, запрошенная с узла {src.host}, прошла успешно. Служба Kerberos на узле {event_src.host} выдала билет проверки подлинности Kerberos (TGT)'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure
+      EventDescription: 'Kerberos-аутентификация пользователя {subject.account.name}, запрошенная с узла {src.host}, завершилась ошибкой. Службе Kerberos на узле {event_src.host} не удалось выдать билет проверки подлинности Kerberos (TGT)'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success_null
+      EventDescription: 'Kerberos-аутентификация пользователя, запрошенная с узла {src.host}, прошла успешно. Служба Kerberos на узле {event_src.host} выдала билет проверки подлинности Kerberos (TGT)'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure_null
+      EventDescription: 'Kerberos-аутентификация пользователя, запрошенная с узла {src.host}, завершилась ошибкой. Службе Kerberos на узле {event_src.host} не удалось выдать билет проверки подлинности Kerberos (TGT)'

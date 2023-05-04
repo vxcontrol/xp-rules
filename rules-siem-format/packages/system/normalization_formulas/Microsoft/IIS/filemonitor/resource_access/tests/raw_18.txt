@@ -1,0 +1,1 @@
+2022-02-24 09:42:32 W3SVC1 exchange2 10.111.232.4 GET /autodiscover/autodiscover.xml &CorrelationID=<empty>;&cafeReqId=b1234566-111f-11d8-8aad-0d22c12345c1; 443 plat\AXjieev 10.158.11.56 HTTP/1.1 Mozilla/5.0 - - 10.158.11.56 401 1 1326 1178 10.158.3.2:48378

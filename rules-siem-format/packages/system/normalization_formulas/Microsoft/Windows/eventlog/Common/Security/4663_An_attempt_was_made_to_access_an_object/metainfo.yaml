@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object"
+        and object = "file_object"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_file
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object"
+        and object != "file_object"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_resource
+ObjectId: PT-NF-1834

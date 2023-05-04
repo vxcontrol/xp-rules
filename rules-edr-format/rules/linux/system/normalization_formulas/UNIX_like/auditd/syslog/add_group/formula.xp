@@ -1,0 +1,23 @@
+# Triggered when a user-space group is added.
+
+# <134>Oct 28 09:56:44 centos6 audispd: node=centos6 type=ADD_GROUP msg=audit(1446026204.056:543): user pid=1336 uid=0 auid=0 ses=3 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=adding group to /etc/group id=504 exe="/usr/sbin/groupadd" hostname=? addr=? terminal=pts/0 res=success'
+# <14>Apr 10 11:49:33 localhost audispd: node=localhost.localdomain type=ADD_GROUP msg=audit(1491803373.616:1038): pid=5640 uid=0 auid=1001 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-group id=1003 exe="/usr/sbin/groupadd" hostname=? addr=? terminal=pts/0 res=success'
+
+TEXT = '{"<"NUMBER">"?} {time=DATETIME} {event_src.ip=IPV4|event_src.ip=IPV6|event_src.hostname=HOSTNAME|"(none)"|} audispd:
+        node={HOSTNAME} type=ADD_GROUP msg={STRING} {"user"?} pid={NUMBER} uid={NUMBER} auid={subject.id=NUMBER} ses={NUMBER}
+        subj={STRING} msg={"\'"?}op={STRING+} id={object.id=NUMBER} exe={STRING} hostname={"?"|IPV4|IPV6|src.hostname=HOSTNAME|}
+        addr={"?"|src.ip=IPV4|src.ip=IPV6|} terminal={STRING} res=success{"\'"?}'
+
+subject = "account"
+object = "user_group"
+action = "create"
+status = "success"
+
+object.state = "New group was added"
+
+importance = "info"
+
+event_src.title = "unix_like"
+event_src.category = "Operating system"
+
+id = "PT_UNIX_like_auditd_syslog_add_group"

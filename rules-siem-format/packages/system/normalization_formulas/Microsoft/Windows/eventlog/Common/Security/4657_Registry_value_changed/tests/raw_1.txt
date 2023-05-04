@@ -1,0 +1,89 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4657",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12801",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-12-09T13:02:18.488432900Z"
+            },
+            "EventRecordID": "60689",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "2548"
+            },
+            "Channel": "Security",
+            "Computer": "8p1x64-Soft",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-863499019-2066412432-665365160-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "8p1x64-Soft",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0xa52480",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\REGISTRY\\MACHINE\\SYSTEM\\ControlSet001\\Services\\EventLog\\Security",
+                    "Name": "ObjectName"
+                },
+                {
+                    "text": "MaxSizeUpper",
+                    "Name": "ObjectValueName"
+                },
+                {
+                    "text": "0x14d0",
+                    "Name": "HandleId"
+                },
+                {
+                    "text": "%%1905",
+                    "Name": "OperationType"
+                },
+                {
+                    "text": "%%1876",
+                    "Name": "OldValueType"
+                },
+                {
+                    "text": "0",
+                    "Name": "OldValue"
+                },
+                {
+                    "text": "%%1876",
+                    "Name": "NewValueType"
+                },
+                {
+                    "text": "25",
+                    "Name": "NewValue"
+                },
+                {
+                    "text": "0x2bc",
+                    "Name": "ProcessID"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

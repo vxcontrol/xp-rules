@@ -1,0 +1,23 @@
+{
+    "action": "access",
+    "event_src.category": "Other",
+    "event_src.fqdn": "hostname.domain.com",
+    "event_src.hostname": "hostname",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_9_Raw_access_read",
+    "importance": "info",
+    "msgid": "9",
+    "object": "device",
+    "object.name": "\\Device\\HarddiskVolume2",
+    "reason": "raw access read",
+    "status": "success",
+    "subject": "process",
+    "subject.process.fullpath": "c:\\windows\\system32\\svchost.exe",
+    "subject.process.guid": "684DA293-FB46-5A2C-0000-0010EA250100",
+    "subject.process.id": "1012",
+    "subject.process.name": "svchost.exe",
+    "subject.process.path": "c:\\windows\\system32\\",
+    "time": "2017-12-21T10:53:31.965Z"
+}

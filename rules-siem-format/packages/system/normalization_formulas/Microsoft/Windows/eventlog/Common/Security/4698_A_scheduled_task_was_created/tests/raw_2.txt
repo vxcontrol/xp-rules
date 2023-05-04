@@ -1,0 +1,71 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4698",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-03-26T05:26:06.284059000Z"
+            },
+            "EventRecordID": "385134",
+            "Correlation": {
+                "ActivityID": "{19216fe1-d4a1-0002-5170-2119a1d4d401}"
+            },
+            "Execution": {
+                "ProcessID": "884",
+                "ThreadID": "13200"
+            },
+            "Channel": "Security",
+            "Computer": "comp_2.doma.in",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-31581",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "User2",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "HOME2",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x421920a0",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\OneDrive Standalone Update Task-S-1-5-21-1023191730-727829927-3985050192-31581",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Author>Microsoft Corporation</Author>\r\n    <URI>\\OneDrive Standalone Update Task-S-1-5-21-1023191730-727829927-3985050192-31581</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1992-05-01T08:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n      <Repetition>\r\n        <Interval>P1D</Interval>\r\n        <StopAtDurationEnd>false</StopAtDurationEnd>\r\n      </Repetition>\r\n      <RandomDelay>PT4H</RandomDelay>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>P1D</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>%localappdata%\\Microsoft\\OneDrive\\OneDriveStandaloneUpdater.exe</Command>\r\n      <Arguments />\r\n    </Exec>\r\n  </Actions>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>HOME2\\User2</UserId>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n</Task>",
+                    "Name": "TaskContent"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "A scheduled task was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-1023191730-727829927-3985050192-31581\r\n\tAccount Name:\t\tuser2\r\n\tAccount Domain:\t\tHOME\r\n\tLogon ID:\t\t0x421920A0\r\n\r\nTask Information:\r\n\tTask Name: \t\t\\OneDrive Standalone Update Task-S-1-5-21-1023191730-727829927-3985050192-31581\r\n\tTask Content: \t\t<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Author>Microsoft Corporation</Author>\r\n    <URI>\\OneDrive Standalone Update Task-S-1-5-21-1023191730-727829927-3985050192-31581</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>1992-05-01T08:00:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n      <Repetition>\r\n        <Interval>P1D</Interval>\r\n        <StopAtDurationEnd>false</StopAtDurationEnd>\r\n      </Repetition>\r\n      <RandomDelay>PT4H</RandomDelay>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>true</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>P1D</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>%localappdata%\\Microsoft\\OneDrive\\OneDriveStandaloneUpdater.exe</Command>\r\n      <Arguments />\r\n    </Exec>\r\n  </Actions>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>HOME2\\User2</UserId>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n</Task>",
+            "Level": "Information",
+            "Task": "Other Object Access Events",
+            "Opcode": "Info",
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": {
+                "Keyword": "Audit Success"
+            }
+        }
+    }
+}

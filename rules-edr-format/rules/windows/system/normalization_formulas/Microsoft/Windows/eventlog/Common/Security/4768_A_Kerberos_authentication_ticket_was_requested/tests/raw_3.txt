@@ -1,0 +1,84 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4768",
+			"Version": "0",
+			"Level": "0",
+			"Task": "14339",
+			"Opcode": "0",
+			"Keywords": "0x8010000000000000",
+			"TimeCreated": {
+				"SystemTime": "2017-03-20T12:24:02.493949800Z"
+			},
+			"EventRecordID": "255437",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "468",
+				"ThreadID": "2648"
+			},
+			"Channel": "Security",
+			"Computer": "CONTOSO-DC.contoso.com",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"Name": "TargetUserName",
+				"text": "administrator@contoso2.com"
+			},
+			{
+				"Name": "TargetDomainName",
+				"text": "CONTOSO.COM"
+			},
+			{
+				"Name": "TargetSid",
+				"text": "S-1-0-0"
+			},
+			{
+				"Name": "ServiceName",
+				"text": "krbtgt/CONTOSO.COM"
+			},
+			{
+				"Name": "ServiceSid",
+				"text": "S-1-0-0"
+			},
+			{
+				"Name": "TicketOptions",
+				"text": "0x40810010"
+			},
+			{
+				"Name": "Status",
+				"text": "0x6"
+			},
+			{
+				"Name": "TicketEncryptionType",
+				"text": "0xffffffff"
+			},
+			{
+				"Name": "PreAuthType",
+				"text": "-"
+			},
+			{
+				"Name": "IpAddress",
+				"text": "::1"
+			},
+			{
+				"Name": "IpPort",
+				"text": "0"
+			},
+			{
+				"Name": "CertIssuerName"
+			},
+			{
+				"Name": "CertSerialNumber"
+			},
+			{
+				"Name": "CertThumbprint"
+			}]
+		}
+	}
+}

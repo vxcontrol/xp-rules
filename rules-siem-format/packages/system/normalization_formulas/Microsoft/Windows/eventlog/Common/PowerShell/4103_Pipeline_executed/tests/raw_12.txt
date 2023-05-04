@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2023-02-16T06:39:26.0247803Z"
+            },
+            "EventRecordID": "868989",
+            "Correlation": {
+                "ActivityID": "{b10bf5d5-415d-0002-1c1a-0cb15d41d901}"
+            },
+            "Execution": {
+                "ProcessID": "5524",
+                "ThreadID": "8176"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "Test_w10x64-130.testlab.esc",
+            "Security": {
+                "UserID": "S-1-5-21-1129291328-2819992169-918366777-1223"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Severity = Informational\r\n        Host Name = ServerRemoteHost\r\n        Host Version = 1.0.0.0\r\n        Host ID = 7181337f-2e6a-489d-8da6-bad92b3fc0ef\r\n        Host Application = C:\\WINDOWS\\system32\\wsmprovhost.exe -Embedding\r\n        Engine Version = 5.1.19041.2364\r\n        Runspace ID = 9c0e47d6-0902-4f10-90eb-ffd0d101aa34\r\n        Pipeline ID = 5\r\n        Command Name = Invoke-Expression\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 26\r\n        User = TESTLAB\\danil\r\n        Connected User = TESTLAB\\danil\r\n        Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Invoke-Expression): \"Invoke-Expression\"\r\nParameterBinding(Invoke-Expression): name=\"Command\"; value=\"(get-location).path\nif (!$?) { if($LASTEXITCODE) { exit $LASTEXITCODE } else { exit 1 } }\"\r\nCommandInvocation(Out-String): \"Out-String\"\r\nParameterBinding(Out-String): name=\"Stream\"; value=\"True\"\r\nParameterBinding(Out-String): name=\"InputObject\"; value=\"C:\\Users\\danil\\Documents\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,4 @@
+Description: 'User account was created'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4720_A_user_account_was_created
+      EventDescription: 'The user {subject.name} created the user account "{object.name}" on host {event_src.host}'

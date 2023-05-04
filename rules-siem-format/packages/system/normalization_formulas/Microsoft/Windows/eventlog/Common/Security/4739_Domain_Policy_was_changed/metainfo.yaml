@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4739_Domain_Policy_was_changed"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4739_Domain_Policy_was_changed
+ObjectId: PT-NF-1877

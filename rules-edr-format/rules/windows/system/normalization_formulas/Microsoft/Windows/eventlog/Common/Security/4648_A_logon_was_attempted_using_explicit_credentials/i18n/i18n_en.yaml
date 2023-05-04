@@ -1,0 +1,10 @@
+Description: 'Successful explicit account log in'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null_src
+      EventDescription: 'The user {subject.name} attempted to log in to host {dst.host} with explicit {object.name} credentials'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null_src
+      EventDescription: 'The user attempted to log in to host {dst.host} with explicit {object.name} credentials'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null
+      EventDescription: 'The user {subject.name} attempted to log in to host {event_src.host} with explicit {object.name} credentials'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null
+      EventDescription: 'The user attempted to log in to host {event_src.host} with explicit {object.name} credentials'

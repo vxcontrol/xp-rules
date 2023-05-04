@@ -1,0 +1,10 @@
+Description: 'Credentials are refreshed'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_refr_login_ongoing
+      EventDescription: 'Credentials of the user {subject.account.name} are refreshed when the user was logging in to the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_refr_login_failure
+      EventDescription: 'Failed to refresh credentials of the user {subject.account.name} when the user was logging in to the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_refr_escalate_ongoing
+      EventDescription: 'Credentials of the user {object.account.name} are refreshed when the user was escalating privileges on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_refr_escalate_failure
+      EventDescription: 'Failed to refresh credentials of the user {object.account.name} when the user was escalating privileges on host {event_src.host}'

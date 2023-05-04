@@ -1,0 +1,93 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4688",
+            "Version": "2",
+            "Level": "0",
+            "Task": "13312",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-09-04T22:40:37.752367400Z"
+            },
+            "EventRecordID": "8479991",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "14376"
+            },
+            "Channel": "Security",
+            "Computer": "ab6-ccc-ddd-78.example.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "AB6-CCC-DDD-78$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "EXAMPLE",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "0x2d48",
+                    "Name": "NewProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\OpenSSH\\sshd.exe",
+                    "Name": "NewProcessName"
+                },
+                {
+                    "text": "%%1936",
+                    "Name": "TokenElevationType"
+                },
+                {
+                    "text": "0x3f10",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "\"C:\\WINDOWS\\System32\\OpenSSH\\sshd.exe\" \"-y\"",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "sshd_16144",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "VIRTUAL USERS",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x40c7bd8c",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\OpenSSH\\sshd.exe",
+                    "Name": "ParentProcessName"
+                },
+                {
+                    "text": "S-1-16-12288",
+                    "Name": "MandatoryLabel"
+                }
+            ]
+        }
+    }
+}

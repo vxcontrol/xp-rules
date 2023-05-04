@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4726_A_user_account_was_deleted
+      EventDescription: 'Пользователь {subject.name} удалил учетную запись {object.name} на узле {event_src.host}'

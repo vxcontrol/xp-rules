@@ -1,0 +1,11 @@
+{
+    "node": "10.10.193.10",
+    "timestamp": "1664974589",
+    "timestampfractional": "446",
+    "eventid": "99368503",
+    "items": {
+        "USER_START": [
+            "pid=2968862 uid=0 auid=1702616967 ses=6046 subj==unconfined msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_unix,pam_sss,pam_systemd,pam_mkhomedir,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct=\"domain\\userdtr\" exe=\"/usr/sbin/sshd\" hostname=10.0.72.12 addr=10.0.72.12 terminal=ssh res=success' UID=\"root\" AUID=\"userdtr@domain\""
+        ]
+    }
+}

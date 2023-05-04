@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_6005_Eventlog_service_started
+      EventDescription: 'Запущена служба журнала событий на узле {event_src.host}'

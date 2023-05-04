@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4725_A_user_account_was_disabled"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4725_A_user_account_was_disabled
+ObjectId: PT-NF-1864

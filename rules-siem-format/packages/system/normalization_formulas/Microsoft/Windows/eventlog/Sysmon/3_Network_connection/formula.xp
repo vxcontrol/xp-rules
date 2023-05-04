@@ -1,0 +1,83 @@
+EVENTLOG = 'EventID="3"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+subject = "rule"
+action = "detect"
+object = "connection"
+status = "success"
+
+subject.name = $Data["RuleName"]
+
+$user_name_domain = csv($Data["User"], "\\", "'")
+if length($user_name_domain) > 1 then
+    object.account.domain = lower($user_name_domain[0])
+    object.account.name = lower($user_name_domain[1])
+    object.account.id = "synthetic:" + object.account.name
+    if object.account.domain != null then
+        object.account.id = object.account.id + "@" + object.account.domain
+    endif
+elif $Data["User"] != '-' then
+    object.account.id = $Data["User"]
+endif
+
+object.process.id = $Data["ProcessId"]
+$process_fullpath = lower($Data["Image"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "'")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+object.process.name = $process_name
+if length($process_fullpath_csv) > 1 then
+    object.process.path = strip($process_fullpath, "", $process_name)
+endif
+object.process.fullpath = $process_fullpath
+object.process.guid = strip($Data['ProcessGuid'], "{", "}")
+
+src.ip = $Data["SourceIp"]
+
+if find_substr($Data["SourceHostname"], ".") != null then
+    src.fqdn = lower($Data["SourceHostname"])
+    src.hostname = lower(substr($Data["SourceHostname"], 0, find_substr($Data["SourceHostname"], '.')))
+else
+    src.hostname = lower($Data["SourceHostname"])
+endif
+
+src.port = $Data["SourcePort"]
+dst.ip = $Data["DestinationIp"]
+
+if find_substr($Data["DestinationHostname"], ".") != null then
+    dst.fqdn = lower($Data["DestinationHostname"])
+    dst.hostname = lower(substr($Data["DestinationHostname"], 0, find_substr($Data["DestinationHostname"], '.')))
+else
+    dst.hostname = lower($Data["DestinationHostname"])
+endif
+
+dst.port = $Data["DestinationPort"]
+direction = switch $Data["Initiated"]
+    case "false" "ingress"
+    case "true" "egress"
+endswitch
+
+protocol = $Data["Protocol"]
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Connection"
+category.high = "Network Interaction Management"
+category.low = "State"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_3_Network_connection"
+

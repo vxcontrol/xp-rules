@@ -1,0 +1,79 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4702",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-07-22T11:06:49.3467697Z"
+            },
+            "EventRecordID": "28046286",
+            "Correlation": {
+                "ActivityID": "{4fee1bba-9d86-0004-8b1c-ee4f869dd801}"
+            },
+            "Execution": {
+                "ProcessID": "1452",
+                "ThreadID": "1548"
+            },
+            "Channel": "Security",
+            "Computer": "someuser-nb.somedomain.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEUSER-NB$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SOMEDOMAIN",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Work",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.2\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <URI>\\Microsoft\\Windows\\UpdateOrchestrator\\Schedule Work</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <TimeTrigger>\r\n      <StartBoundary>2022-07-19T00:17:21+07:00</StartBoundary>\r\n      <Enabled>true</Enabled>\r\n    </TimeTrigger>\r\n  </Triggers>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>S-1-5-18</UserId>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Settings>\r\n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>\r\n    <DisallowStartIfOnBatteries>true</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>\r\n    <AllowHardTerminate>true</AllowHardTerminate>\r\n    <StartWhenAvailable>true</StartWhenAvailable>\r\n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>true</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n    <AllowStartOnDemand>true</AllowStartOnDemand>\r\n    <Enabled>false</Enabled>\r\n    <Hidden>false</Hidden>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <WakeToRun>false</WakeToRun>\r\n    <ExecutionTimeLimit>PT72H</ExecutionTimeLimit>\r\n    <Priority>7</Priority>\r\n  </Settings>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>%systemroot%\\system32\\usoclient.exe</Command>\r\n      <Arguments>StartWork</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+                    "Name": "TaskContentNew"
+                },
+                {
+                    "text": "50384020831209407",
+                    "Name": "ClientProcessStartKey"
+                },
+                {
+                    "text": "17596",
+                    "Name": "ClientProcessId"
+                },
+                {
+                    "text": "1444",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "0",
+                    "Name": "RpcCallClientLocality"
+                },
+                {
+                    "text": "someuser-nb.somedomain.ru",
+                    "Name": "FQDN"
+                }
+            ]
+        }
+    }
+}

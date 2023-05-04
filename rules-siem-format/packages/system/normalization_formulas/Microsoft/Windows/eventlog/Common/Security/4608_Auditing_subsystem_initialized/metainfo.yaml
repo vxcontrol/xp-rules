@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4608_Auditing_subsystem_initialized"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4608_Auditing_subsystem_initialized
+ObjectId: PT-NF-1814

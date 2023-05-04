@@ -1,0 +1,6 @@
+Description: 'Account used for logon'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon_success
+      EventDescription: 'NTLM authentication of the user {subject.name} requested on host {src.host} is successful on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4776_Account_used_for_logon_failure
+      EventDescription: 'NTLM authentication of the user {subject.name} requested on host {src.host} is unsuccessful on host {event_src.host}'

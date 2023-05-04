@@ -1,0 +1,10 @@
+Description: 'Установлены учетные данные пользователя'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_ongoing
+      EventDescription: 'Учетные данные пользователя {subject.account.name} установлены при входе пользователя в систему на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_failure
+      EventDescription: 'Не удалось установить учетные данные пользователя {subject.account.name} при входе пользователя в систему на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_ongoing
+      EventDescription: 'Учетные данные пользователя {object.account.name} установлены при повышении привилегий на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_failure
+      EventDescription: 'Не удалось установить учетные данные пользователя {object.account.name} при повышении привилегий на узле {event_src.host}'

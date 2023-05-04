@@ -1,0 +1,19 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_6006_Eventlog_service_stopped"
+      LocalizationId: PT_Microsoft_Windows_eventlog_6006_Eventlog_service_stopped
+
+########
+# raws: all
+# Context_Exception: No exceptions
+# Level1: Availability Management
+# Context: Штатный запуск и останов функционирования сущности (алгоритмов ее выполнения)
+# Level2_Group: Исполняемые сущности
+# Level2: Service
+# Level3: Control
+# Level3_Action: stop
+# Action_Status: success
+# Interaction_Schema: Implied Subject
+# Subject: no_subject
+# Network_Layout: event_src
+########
+ObjectId: PT-NF-6484

@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4703_A_user_right_was_adjusted
+      EventDescription: 'Права пользователя {object.account.domain}\{object.account.name} изменены по запросу от {subject.account.domain}\{subject.account.name}'

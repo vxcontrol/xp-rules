@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "success" and subject.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "failure" and subject.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "success" and subject.name = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success_null
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested"
+        and status = "failure" and subject.name = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure_null
+ObjectId: PT-NF-1904

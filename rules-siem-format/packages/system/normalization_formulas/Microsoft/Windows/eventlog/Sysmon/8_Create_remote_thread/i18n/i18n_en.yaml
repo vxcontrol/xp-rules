@@ -1,0 +1,4 @@
+Description: 'Create remote thread'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_8_Create_remote_thread
+      EventDescription: 'The process "{datafield4}" created a thread in the address space of the process "{object.process.name}" on host {event_src.host}'

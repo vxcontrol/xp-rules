@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5157_WFP_blocked_a_connection"
+      LocalizationId: PT_Microsoft_Windows_eventlog_5157_WFP_blocked_a_connection
+ObjectId: PT-NF-1977

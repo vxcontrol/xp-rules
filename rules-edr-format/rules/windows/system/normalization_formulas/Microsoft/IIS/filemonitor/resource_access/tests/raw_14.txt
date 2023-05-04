@@ -1,0 +1,1 @@
+2021-12-06 04:47:11 W3SVC1 dc1-01 10.10.20.109 GET /owa/auth/x.js - 443 - 64.62.197.201 HTTP/1.1 Mozilla/5.0+zgrab/0.x X-AnonResource=true;+X-AnonResource-Backend=localhost/ecp/default.flt?~3;+X-BEResource=localhost/owa/auth/logon.aspx?~3; - 81.27.243.36 404 0 2 177 -

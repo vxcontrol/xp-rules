@@ -1,0 +1,4 @@
+Description: 'Security Enabled Local group was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4735_A_security_enabled_local_group_was_changed
+      EventDescription: 'The user {subject.name} modified the group "{object.name}" on host {event_src.host}'

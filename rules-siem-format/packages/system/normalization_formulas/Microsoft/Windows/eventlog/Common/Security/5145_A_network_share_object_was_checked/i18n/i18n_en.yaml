@@ -1,0 +1,6 @@
+Description: 'A network share object was checked'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5145_A_network_share_object_was_checked_status_success
+      EventDescription: 'The user {subject.name} accessed the shared network object "{object.fullpath}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5145_A_network_share_object_was_checked_status_failure
+      EventDescription: 'The user {subject.name} failed to access the shared network object "{object.fullpath}" on host {event_src.host}'

@@ -1,0 +1,4 @@
+Description: 'Log was cleared'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_Common_System_104_Log_was_cleared
+      EventDescription: 'The user {subject.account.name} cleared the {object.name} log on host {event_src.host}'

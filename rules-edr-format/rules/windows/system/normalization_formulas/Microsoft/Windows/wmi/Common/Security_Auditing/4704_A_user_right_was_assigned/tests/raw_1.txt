@@ -1,0 +1,25 @@
+{
+  "Category": 10070,
+  "CategoryString": "-",
+  "ComputerName": "WIN-Q00000000AT.test.local",
+  "Data": null,
+  "EventCode": 4704,
+  "EventIdentifier": 4704,
+  "EventType": "4",
+  "InsertionStrings": [
+    "S-1-5-18",
+    "WIN-Q00000000AT$",
+    "TEST",
+    "0x3e7",
+    "S-1-5-21-1900000110-3000000022-2000000008-1105",
+    "SeLockMemoryPrivilege"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 35229,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2014-09-22 13:33:36",
+  "TimeWritten": "2014-09-22 13:33:36",
+  "Type": "Audit Success",
+  "User": null
+}

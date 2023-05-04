@@ -1,0 +1,14 @@
+Description: 'Управление криптографическими ключами'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_remove_host_key
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} удалил закрытый ключ сервера из памяти процесса на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_remove_session_key
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} удалил закрытый ключ сеанса из памяти процесса на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_create_ephemeral_key
+      EventDescription: 'Пользователь {subject.account.name} с ID {subject.account.id} создал эфемерный ключ сервера на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_remove_host_key_null
+      EventDescription: 'Пользователь с ID {subject.account.id} удалил закрытый ключ сервера из памяти процесса на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_remove_session_key_null
+      EventDescription: 'Пользователь с ID {subject.account.id} удалил закрытый ключ сеанса из памяти процесса на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_crypto_key_user_create_ephemeral_key_null
+      EventDescription: 'Пользователь с ID {subject.account.id} создал эфемерный ключ сервера на узле {event_src.host}'

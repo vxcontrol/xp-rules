@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4771_Kerberos_pre_authentication_failed
+      EventDescription: 'Kerberos-аутентификация пользователя {subject.account.name}, запрошенная с узла {src.host}, завершилась ошибкой. Службе Kerberos на узле {event_src.host} не удалось выдать билет проверки подлинности Kerberos (TGT)'

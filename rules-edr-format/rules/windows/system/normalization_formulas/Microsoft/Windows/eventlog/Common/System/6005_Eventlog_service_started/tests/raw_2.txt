@@ -1,0 +1,34 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "EventLog"
+            },
+            "EventID": {
+                "text": "6005",
+                "Qualifiers": "32768"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "0",
+            "Opcode": "0",
+            "Keywords": "0x80000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-08-16T07:20:53.7175803Z"
+            },
+            "EventRecordID": "46381",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "0",
+                "ThreadID": "0"
+            },
+            "Channel": "System",
+            "Computer": "somehost.somedomain.org",
+            "Security": null
+        },
+        "EventData": {
+            "Binary": "E507080001001000070014003500CD020000000000000000"
+        }
+    }
+}

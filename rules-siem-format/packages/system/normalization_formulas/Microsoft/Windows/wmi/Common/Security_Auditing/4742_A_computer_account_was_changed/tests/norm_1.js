@@ -1,0 +1,23 @@
+{
+    "action": "modify",
+    "datafield2": "ldap/2012-dc.ad2012.ru/ad2012.ruldap/2012-dc.ad2012.ruldap/2012-dcldap/2012-dc.ad2012.ru/ad2012ldap/187cbecd-8461-4d2d-a8fb-67b9838274c8._msdcs.ad2012.ruldap/2012-dc/ad2012e3514235-4b06-11d1-ab04-00c04fc2dcd2/187cbecd-8461-4d2d-a8fb-67b9838274c8/ad2012.ruhost/2012-dc.ad2012.ru/ad2012.ruhost/2012-dc.ad2012.ruhost/2012-dchost/2012-dc.ad2012.ru/ad2012host/2012-dc/ad2012rpc/187cbecd-8461-4d2d-a8fb-67b9838274c8._msdcs.ad2012.rurestrictedkrbhost/2012-dcrestrictedkrbhost/2012-dc.ad2012.rugc/2012-dc.ad2012.ru/ad2012.rudns/2012-dc.ad2012.rutermsrv/2012-dc.ad2012.rutermsrv/2012-dcldap/2012-dc.ad2012.ru/domaindnszones.ad2012.ruldap/2012-dc.ad2012.ru/forestdnszones.ad2012.rudfsr-12f9a27c-bf97-4787-9364-d31b6c55eb04/2012-dc.ad2012.rusmtpsvc/2012-dc.ad2012.rusmtpsvc/2012-dce3514235-4b06-11d1-ab04-00c04fc2dcd2-adam/2012-dc:50000e3514235-4b06-11d1-ab04-00c04fc2dcd2-adam/2012-dc.ad2012.ru:50000exchangeab/2012-dc.ad2012.ruexchangeab/2012-dcwsman/2012-dcwsman/2012-dc.ad2012.ruldap/2012-dc:50000ldap/2012-dc.ad2012.ru:50000",
+    "event_src.category": "Operating system",
+    "event_src.fqdn": "2012-dc.ad2012.ru",
+    "event_src.hostname": "2012-dc",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_wmi_4742_A_computer_account_was_changed",
+    "importance": "low",
+    "msgid": "4742",
+    "object": "computer",
+    "object.domain": "ad2012",
+    "object.id": "S-1-5-21-3725810923-1556733292-2669249330-1001",
+    "object.name": "2012-DC$",
+    "status": "success",
+    "subject": "account",
+    "subject.domain": "ad2012",
+    "subject.id": "S-1-5-21-3725810923-1556733292-2669249330-1001",
+    "subject.name": "2012-dc$",
+    "time": "2015-12-09T08:06:35.000Z"
+}

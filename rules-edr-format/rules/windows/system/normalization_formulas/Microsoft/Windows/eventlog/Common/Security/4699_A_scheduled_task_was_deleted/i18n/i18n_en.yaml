@@ -1,0 +1,4 @@
+Description: 'A task was deleted'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4699_A_scheduled_task_was_deleted
+      EventDescription: 'The user {subject.name} deleted the scheduled task {object.name} on host {event_src.host}'

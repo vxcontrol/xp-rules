@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4725_A_user_account_was_disabled
+      EventDescription: 'Пользователь {subject.name} отключил учетную запись {object.name} на узле {event_src.host}'

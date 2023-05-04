@@ -1,0 +1,97 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4656",
+            "Version": "1",
+            "Level": "0",
+            "Task": "10000",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-04-10T13:52:56.410500000Z"
+            },
+            "EventRecordID": "10811",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "516",
+                "ThreadID": "532"
+            },
+            "Channel": "Security",
+            "Computer": "WIN7X86",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-700000004-2600000030-4100000424-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WIN7X86",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x6442db",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "Security",
+                    "Name": "ObjectServer"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "C:\\test\\New Text Document - Copy (2).txt",
+                    "Name": "ObjectName"
+                },
+                {
+                    "text": "0xcf4",
+                    "Name": "HandleId"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "TransactionId"
+                },
+                {
+                    "text": "%%1537 %%4423",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "%%1537: %%1801 D:(A;ID;FA;;;BA) %%4423: %%1801 D:(A;ID;FA;;;BA)",
+                    "Name": "AccessReason"
+                },
+                {
+                    "text": "0x10080",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "0",
+                    "Name": "RestrictedSidCount"
+                },
+                {
+                    "text": "0xb38",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\explorer.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

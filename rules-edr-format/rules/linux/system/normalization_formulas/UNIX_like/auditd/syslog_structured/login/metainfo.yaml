@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_login" and status = "ongoing"
+        and subject.account.name = null
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_ongoing_null
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_login" and status = "failure"
+        and subject.account.name = null
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_failure_null
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_login" and status = "ongoing"
+        and subject.account.name != null
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_ongoing
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_login" and status = "failure"
+        and subject.account.name != null
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_login_failure
+ObjectId: PT-NF-6108

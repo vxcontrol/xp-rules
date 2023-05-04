@@ -1,0 +1,11 @@
+{
+    "eventid": "9866",
+    "items": {
+        "USER_AUTH": [
+            "pid=4624 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication acct=\"somename\" exe=\"/usr/sbin/sshd\" hostname=10.0.80.38 addr=10.0.80.38 terminal=ssh res=failed'"
+        ]
+    },
+    "node": "pewpew-pc",
+    "timestamp": "1558213868",
+    "timestampfractional": "297"
+}

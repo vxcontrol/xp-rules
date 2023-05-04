@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5156_WFP_has_permitted_connection"
+      LocalizationId: PT_Microsoft_Windows_eventlog_5156_WFP_has_permitted_connection
+ObjectId: PT-NF-1976

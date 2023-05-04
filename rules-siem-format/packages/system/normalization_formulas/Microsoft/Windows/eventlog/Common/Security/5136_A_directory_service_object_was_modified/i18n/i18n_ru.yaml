@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5136_A_directory_service_object_was_modified
+      EventDescription: 'Пользователь {subject.name} изменил объект службы каталогов на узле {event_src.host}'

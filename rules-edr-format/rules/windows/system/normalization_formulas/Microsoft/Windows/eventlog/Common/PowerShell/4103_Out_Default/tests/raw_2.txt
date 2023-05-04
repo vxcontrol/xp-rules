@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-02-17T05:59:16.737106400Z"
+            },
+            "EventRecordID": "380",
+            "Correlation": {
+                "ActivityID": "{80AEE8A8-E552-0001-C70C-AF8052E5D501}"
+            },
+            "Execution": {
+                "ProcessID": "4412",
+                "ThreadID": "4440"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "WIN-0D7RJEGCAJA",
+            "Security": {
+                "UserID": "S-1-5-21-1715035613-4047518378-244968182-1000"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Severity = Informational\r\n        Host Name = ConsoleHost\r\n        Host Version = 5.1.14393.0\r\n        Host ID = 5cca3add-bc69-40ca-ba59-afc6fa9962c3\r\n        Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n        Engine Version = 5.1.14393.0\r\n        Runspace ID = 5b2c3937-0a3d-4eaa-adaa-94276f1b5c30\r\n        Pipeline ID = 6\r\n        Command Name = \r\n        Command Type = Script\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 24\r\n        User = WIN-0D7RJEGCAJA\\igurakov\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Out-Default): \"Out-Default\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (ApplicationFrameHost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (conhost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (csrss)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (csrss)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (dllhost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (dllhost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (dwm)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (explorer)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (Idle)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (lsass)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (mmc)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (MpCmdRun)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (msdtc)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (MsMpEng)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (powershell)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (powershell_ise)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (RuntimeBroker)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (SearchUI)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (ServerManager)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (services)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (ShellExperienceHost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (sihost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (smss)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (spoolsv)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (svchost)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (System)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (taskhostw)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (VGAuthService)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (vm3dservice)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (vmtoolsd)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (vmtoolsd)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (wininit)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (winlogon)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (WmiPrvSE)\"\r\nParameterBinding(Out-Default): name=\"InputObject\"; value=\"System.Diagnostics.Process (WmiPrvSE)\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

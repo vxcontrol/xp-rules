@@ -1,0 +1,11 @@
+{
+    "eventid": "9859",
+    "items": {
+        "USER_END": [
+            "pid=4602 uid=0 auid=1000 ses=65 msg='op=PAM:session_close acct=\"odmin\" exe=\"/usr/sbin/sshd\" hostname=10.0.80.38 addr=10.0.80.38 terminal=ssh res=success'"
+        ]
+    },
+    "node": "pewpew-pc",
+    "timestamp": "1558213419",
+    "timestampfractional": "553"
+}

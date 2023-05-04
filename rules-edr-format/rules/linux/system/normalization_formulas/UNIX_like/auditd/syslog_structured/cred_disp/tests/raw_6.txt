@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1602834770",
+    "timestampfractional": "371",
+    "eventid": "792",
+    "items": {
+        "CRED_DISP": [
+            "pid=2302 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct=\"root\" exe=\"/usr/bin/su\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"jr\" AUID=\"jr\""
+        ]
+    }
+}

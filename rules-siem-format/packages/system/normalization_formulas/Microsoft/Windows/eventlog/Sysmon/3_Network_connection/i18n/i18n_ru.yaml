@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_3_Network_connection
+      EventDescription: 'На узле {event_src.host} открыто соединение по протоколу {protocol} с узла {src.host} на узел {dst.host}'

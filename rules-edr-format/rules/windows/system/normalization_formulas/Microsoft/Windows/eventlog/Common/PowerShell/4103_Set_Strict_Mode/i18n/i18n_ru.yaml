@@ -1,0 +1,6 @@
+Description: 'Изменен режим строгого ввода'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Set_Strict_Mode_On
+      EventDescription: 'Режим строгого ввода в PowerShell на узле {event_src.host} изменен на версию {object.version}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Set_Strict_Mode_Off
+      EventDescription: 'Режим строгого ввода в PowerShell выключен на узле {event_src.host}'

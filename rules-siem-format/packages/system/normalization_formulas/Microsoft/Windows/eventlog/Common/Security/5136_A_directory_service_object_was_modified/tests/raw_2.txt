@@ -1,0 +1,91 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "5136",
+			"Version": "0",
+			"Level": "0",
+			"Task": "14081",
+			"Opcode": "0",
+			"Keywords": "0x8020000000000000",
+			"TimeCreated": {
+				"SystemTime": "2018-01-24T13:03:21.206949300Z"
+			},
+			"EventRecordID": "4369",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "544",
+				"ThreadID": "3484"
+			},
+			"Channel": "Security",
+			"Computer": "AD2008R2.dom.dom",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "{B926411D-7482-4AE4-8602-960E6B9F4D30}",
+				"Name": "OpCorrelationID"
+			},
+			{
+				"text": "-",
+				"Name": "AppCorrelationID"
+			},
+			{
+				"text": "S-1-5-21-1097569155-1997863255-200351548-500",
+				"Name": "SubjectUserSid"
+			},
+			{
+				"text": "Administrator",
+				"Name": "SubjectUserName"
+			},
+			{
+				"text": "DOM",
+				"Name": "SubjectDomainName"
+			},
+			{
+				"text": "0x2df00",
+				"Name": "SubjectLogonId"
+			},
+			{
+				"text": "dom.dom",
+				"Name": "DSName"
+			},
+			{
+				"text": "%%14676",
+				"Name": "DSType"
+			},
+			{
+				"text": "DC=dom,DC=dom",
+				"Name": "ObjectDN"
+			},
+			{
+				"text": "{413FBC11-C110-40B7-A237-1BCDEAD4CC19}",
+				"Name": "ObjectGUID"
+			},
+			{
+				"text": "domainDNS",
+				"Name": "ObjectClass"
+			},
+			{
+				"text": "gPLink",
+				"Name": "AttributeLDAPDisplayName"
+			},
+			{
+				"text": "2.5.5.12",
+				"Name": "AttributeSyntaxOID"
+			},
+			{
+				"text": "[LDAP://cn={92D97D85-B675-4F77-A94D-15A62C2120AF},cn=policies,cn=system,DC=dom,DC=dom;0][LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=dom,DC=dom;0]",
+				"Name": "AttributeValue"
+			},
+			{
+				"text": "%%14675",
+				"Name": "OperationType"
+			}]
+		}
+	}
+}

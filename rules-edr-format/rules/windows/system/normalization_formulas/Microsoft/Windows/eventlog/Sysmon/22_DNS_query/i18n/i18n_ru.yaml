@@ -1,0 +1,6 @@
+Description: 'IP-адреса разрешены'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_22_DNS_query_success
+      EventDescription: 'Для узла {datafield1} разрешены IP-адреса на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_22_DNS_query_failure
+      EventDescription: 'Для узла {datafield1} не разрешены IP-адреса на узле {event_src.host}. Причина: {reason}.'

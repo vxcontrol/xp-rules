@@ -1,0 +1,44 @@
+EVENTLOG = 'EventID="4662"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "access"
+object = "ds_object"
+if $Keywords == "0x8020000000000000" then
+    status = "success"
+elif $Keywords == "0x8010000000000000" then
+    status = "failure"
+endif
+
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+object.name = strip($Data["ObjectName"], "%{", "}")
+object.type = strip($Data["ObjectType"], "%{", "}")
+
+datafield2 = $Data["Properties"]        
+datafield5 = $Data["AccessMask"]        
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "medium"
+
+category.high = "System Management"
+category.generic = "Directory Service Object"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4662_An_operation_was_performed_on_an_object"
+

@@ -1,0 +1,4 @@
+Description: 'Windows Filtering Platform has permitted connection'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5156_WFP_has_permitted_connection
+      EventDescription: 'Windows Filtering Platform permitted a connection on host {event_src.host}'

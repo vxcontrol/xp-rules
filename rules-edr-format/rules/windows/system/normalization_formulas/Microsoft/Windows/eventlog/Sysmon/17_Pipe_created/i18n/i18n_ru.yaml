@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_17_Pipe_created
+      EventDescription: 'Именованный канал создан на узле {event_src.host}'

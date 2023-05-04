@@ -1,0 +1,11 @@
+{
+    "eventid": "417",
+    "items": {
+        "USER_AUTH": [
+            "pid=2212 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct=\"jr\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"jr\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834540",
+    "timestampfractional": "889"
+}

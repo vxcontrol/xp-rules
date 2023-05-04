@@ -1,0 +1,113 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4624",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-08-25T09:09:30.010537900Z"
+            },
+            "EventRecordID": "190863",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "488",
+                "ThreadID": "536"
+            },
+            "Channel": "Security",
+            "Computer": "2008R2SP1-DC.AD2008R2.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-0-0",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-5-21-1743380172-4235219263-347487665-1106",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "MP-SIEM",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "AD2008R2",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0xca6c4c2",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "3",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "NtLmSsp ",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "NTLM",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "WIN-7UPIHC1G45I",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "NTLM V2",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "128",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "10.0.208.89",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "49706",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

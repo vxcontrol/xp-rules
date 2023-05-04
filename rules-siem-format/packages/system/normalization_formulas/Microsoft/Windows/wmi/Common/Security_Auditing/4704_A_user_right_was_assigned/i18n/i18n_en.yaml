@@ -1,0 +1,4 @@
+Description: 'A new right was assigned to user account'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4704_A_user_right_was_assigned
+      EventDescription: 'A user was assigned the right "{object.value}" on host {event_src.host}'

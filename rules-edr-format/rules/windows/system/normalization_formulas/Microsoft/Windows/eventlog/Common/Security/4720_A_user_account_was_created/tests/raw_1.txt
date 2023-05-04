@@ -1,0 +1,137 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4720",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10024",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-06-04T12:58:03.810866000Z"
+            },
+            "EventRecordID": "319729",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "524",
+                "ThreadID": "4684"
+            },
+            "Channel": "Security",
+            "Computer": "WIN7X86",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "xghfgh",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "WIN7X86",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-700000004-2600000030-4100000424-1002",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-21-700000004-2600000030-4100000424-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WIN7X86",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x1a0dc",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "xghfgh",
+                    "Name": "SamAccountName"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "DisplayName"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserPrincipalName"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "HomeDirectory"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "HomePath"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "ScriptPath"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "ProfilePath"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "UserWorkstations"
+                },
+                {
+                    "text": "%%1794",
+                    "Name": "PasswordLastSet"
+                },
+                {
+                    "text": "%%1794",
+                    "Name": "AccountExpires"
+                },
+                {
+                    "text": "513",
+                    "Name": "PrimaryGroupId"
+                },
+                {
+                    "text": "-",
+                    "Name": "AllowedToDelegateTo"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "OldUacValue"
+                },
+                {
+                    "text": "0x15",
+                    "Name": "NewUacValue"
+                },
+                {
+                    "text": "%%2080 %%2082 %%2084",
+                    "Name": "UserAccountControl"
+                },
+                {
+                    "text": "%%1793",
+                    "Name": "UserParameters"
+                },
+                {
+                    "text": "-",
+                    "Name": "SidHistory"
+                },
+                {
+                    "text": "%%1797",
+                    "Name": "LogonHours"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000625-5478-4994-A5BA-3E3B0000C30D}"
+            },
+            "EventID": "4770",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14337",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-02-02T14:18:54.751700600Z"
+            },
+            "EventRecordID": "2650397438",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "624",
+                "ThreadID": "4872"
+            },
+            "Channel": "Security",
+            "Computer": "dc0-dc0.anonim.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "anon@ANONIM.RU",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "ANONIM.RU",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "krbtgt",
+                    "Name": "ServiceName"
+                },
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-502",
+                    "Name": "ServiceSid"
+                },
+                {
+                    "text": "0x10002",
+                    "Name": "TicketOptions"
+                },
+                {
+                    "text": "0x12",
+                    "Name": "TicketEncryptionType"
+                },
+                {
+                    "text": "::ffff:10.0.81.40",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "53000",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_3_Network_connection"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_3_Network_connection
+ObjectId: PT-NF-2367

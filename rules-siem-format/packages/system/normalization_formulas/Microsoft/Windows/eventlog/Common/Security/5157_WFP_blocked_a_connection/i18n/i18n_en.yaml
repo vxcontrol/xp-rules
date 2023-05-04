@@ -1,0 +1,4 @@
+Description: 'Windows Filtering Platform blocked a connection'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5157_WFP_blocked_a_connection
+      EventDescription: 'Windows Filtering Platform blocked a connection on host {event_src.host}'

@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on"
+        and action = "login"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on_login
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on"
+        and action = "elevate"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on_escalate
+ObjectId: PT-NF-1820

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_13_Registry_value_changed"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_13_Registry_value_changed
+ObjectId: PT-NF-2365

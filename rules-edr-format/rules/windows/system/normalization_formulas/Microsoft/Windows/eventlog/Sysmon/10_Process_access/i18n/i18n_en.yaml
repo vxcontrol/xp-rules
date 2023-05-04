@@ -1,0 +1,4 @@
+Description: 'Process access'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_10_Process_access
+      EventDescription: 'The process "{subject.process.name}" accessed the process "{object.process.name}" on host {event_src.host}'

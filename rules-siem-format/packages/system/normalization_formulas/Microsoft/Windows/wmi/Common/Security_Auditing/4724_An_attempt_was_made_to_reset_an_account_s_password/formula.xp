@@ -1,0 +1,43 @@
+!JSON = "EventCode=4724"
+!COND = $Logfile=="Security" and $SourceName=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "modify"
+object = "account"
+if  $EventType == "4" then
+     status = "success"
+endif
+if  $EventType == "5" then
+     status = "failure"
+endif
+
+subject.id = $InsertionStrings[3]
+subject.name = lower($InsertionStrings[4])
+subject.domain = lower($InsertionStrings[5])
+
+object.id = $InsertionStrings[2]
+if length($InsertionStrings[0]) != 0 then
+    object.name = lower($InsertionStrings[0])
+endif
+object.property = "password"
+object.domain = lower($InsertionStrings[1])
+
+reason = "An attempt was made to reset an accounts password"
+
+time = $TimeGenerated
+msgid = $EventIdentifier
+
+importance = "medium"
+
+if find_substr($ComputerName, '.') != null then
+    event_src.fqdn = lower($ComputerName)
+    event_src.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    event_src.hostname = lower($ComputerName)
+endif
+event_src.subsys = $Logfile
+event_src.category = "Operating system"
+event_src.title = "windows"
+event_src.vendor = "microsoft"
+
+id = "PT_Microsoft_Windows_wmi_4724_An_attempt_was_made_to_reset_an_account_s_password"

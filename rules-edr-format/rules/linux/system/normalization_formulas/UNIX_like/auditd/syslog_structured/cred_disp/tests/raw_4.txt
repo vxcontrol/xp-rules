@@ -1,0 +1,12 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598384799",
+    "timestampfractional": "470",
+    "eventid": "5517",
+    "items": {
+        "CRED_DISP": [
+            "pid=2409 uid=0 auid=1000 ses=2 subj==unconfined msg='op=PAM:setcred grantors=pam_gnome_keyring,pam_unix acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\"",
+            "pid=2409 uid=0 auid=1000 ses=2 subj==unconfined msg='op=PAM:setcred grantors=pam_gnome_keyring,pam_unix acct=\"root\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

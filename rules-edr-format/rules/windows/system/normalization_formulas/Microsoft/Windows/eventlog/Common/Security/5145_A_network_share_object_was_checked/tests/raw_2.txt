@@ -1,0 +1,85 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-Security-Auditing",
+        "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+      },
+      "EventID": "5145",
+      "Version": "0",
+      "Level": "0",
+      "Task": "12811",
+      "Opcode": "0",
+      "Keywords": "0x8010000000000000",
+      "TimeCreated": {
+        "SystemTime": "2016-11-28T15:11:52.575632200Z"
+      },
+      "EventRecordID": "74302",
+      "Correlation": null,
+      "Execution": {
+        "ProcessID": "488",
+        "ThreadID": "496"
+      },
+      "Channel": "Security",
+      "Computer": "8p1x64-Soft.AD2012.ru",
+      "Security": null
+    },
+    "EventData": {
+      "Data": [
+        {
+          "Name": "SubjectUserSid",
+          "text": "S-1-5-21-863499019-2066412432-665365160-500"
+        },
+        {
+          "Name": "SubjectUserName",
+          "text": "Administrator"
+        },
+        {
+          "Name": "SubjectDomainName",
+          "text": "8p1x64-Soft"
+        },
+        {
+          "Name": "SubjectLogonId",
+          "text": "0xdf971b2"
+        },
+        {
+          "Name": "ObjectType",
+          "text": "File"
+        },
+        {
+          "Name": "IpAddress",
+          "text": "10.0.72.28"
+        },
+        {
+          "Name": "IpPort",
+          "text": "51027"
+        },
+        {
+          "Name": "ShareName",
+          "text": "\\\\*\\PerfLogs"
+        },
+        {
+          "Name": "ShareLocalPath",
+          "text": "\\??\\C:\\PerfLogs"
+        },
+        {
+          "Name": "RelativeTargetName",
+          "text": "\\"
+        },
+        {
+          "Name": "AccessMask",
+          "text": "0x80"
+        },
+        {
+          "Name": "AccessList",
+          "text": "%%4423"
+        },
+        {
+          "Name": "AccessReason",
+          "text": "%%4423:\t%%1805"
+        }
+      ]
+    }
+  }
+}

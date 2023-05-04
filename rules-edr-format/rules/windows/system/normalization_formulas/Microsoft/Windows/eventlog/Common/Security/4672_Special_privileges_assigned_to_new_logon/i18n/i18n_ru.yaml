@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4672_Special_privileges_assigned_to_new_logon
+      EventDescription: 'Пользователь {subject.name} с особыми правами, эквивалентными администратору, вошел в систему на {event_src.host}'

@@ -1,0 +1,4 @@
+Description: 'Network connection'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_3_Network_connection
+      EventDescription: 'A {protocol} connection from host {src.host} to host {dst.host} is opened on host {event_src.host}'

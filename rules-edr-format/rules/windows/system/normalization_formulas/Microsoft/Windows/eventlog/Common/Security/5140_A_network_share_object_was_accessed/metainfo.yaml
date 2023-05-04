@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed"
+        and status = "success" and subject.account.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_success_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed"
+        and status = "failure" and subject.account.name != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_failure_name
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed"
+        and status = "success" and subject.account.name = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_success_id
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed"
+        and status = "failure" and subject.account.name = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_5140_A_network_share_object_was_accessed_status_failure_id
+ObjectId: PT-NF-1968

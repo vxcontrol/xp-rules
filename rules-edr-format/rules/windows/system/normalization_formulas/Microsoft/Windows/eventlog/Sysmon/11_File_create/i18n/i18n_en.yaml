@@ -1,0 +1,4 @@
+Description: 'File creation'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_11_File_create
+      EventDescription: 'The process {datafield4} created the file {object.name} on host {event_src.host}'

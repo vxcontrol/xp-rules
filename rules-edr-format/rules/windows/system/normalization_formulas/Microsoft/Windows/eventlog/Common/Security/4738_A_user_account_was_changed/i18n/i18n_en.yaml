@@ -1,0 +1,6 @@
+Description: 'A user account was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed
+      EventDescription: 'The user {subject.name} successfully modified the user account "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed_nullses
+      EventDescription: 'The process that uses the null session successfully modified the user account "{object.name}" on host {event_src.host}'

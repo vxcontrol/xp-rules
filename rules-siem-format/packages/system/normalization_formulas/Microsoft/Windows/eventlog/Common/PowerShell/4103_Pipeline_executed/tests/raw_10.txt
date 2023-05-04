@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2021-10-06T08:04:30.0419510Z"
+            },
+            "EventRecordID": "6020347",
+            "Correlation": {
+                "ActivityID": "{344d7113-ba85-0004-a1a7-4d3485bad701}"
+            },
+            "Execution": {
+                "ProcessID": "724",
+                "ThreadID": "9132"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "adavadov-nb.domain.com",
+            "Security": {
+                "UserID": "S-1-5-21-1234567890-712345657-3456789122-12345"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Важность = Informational\r\n        Имя узла = ConsoleHost\r\n        Версия узла = 5.1.19041.1\r\n        ИД узла = 5d9f086a-4cdc-47c0-9f8a-bff4708e1e8f\r\n        Ведущее приложение = powershell.exe -NoProfile -NonInteractive -c  $ErrorActionPreference = 'SilentlyContinue'; [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8;  filter ArrayToHash {     begin { $hash = @{} }     process { $hash[$_.PackageFamilyName] = $_ }     end { return $hash } }  [string[]]$alreadyKnownAppIds = \"Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge\",\"Microsoft.Windows.SecHealthUI_cw5n1h2txyewy!SecHealthUI\",\"windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel\",\"Microsoft.549981C3F5F10_8wekyb3d8bbwe!App\",\"Microsoft.GetHelp_8wekyb3d8bbwe!App\",\"Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe!App\",\"Microsoft.MixedReality.Portal_8wekyb3d8bbwe!App\",\"Microsoft.ScreenSketch_8wekyb3d8bbwe!App\",\"Microsoft.Windows.Photos_8wekyb3d8bbwe!App\",\"Microsoft.WindowsCalculator_8wekyb3d8bbwe!App\",\"Microsoft.WindowsCamera_8wekyb3d8bbwe!App\",\"Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe!App\",\"Microsoft.WindowsStore_8wekyb3d8bbwe!App\",\"Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App\",\"Microsoft.YourPhone_8wekyb3d8bbwe!App\",\"AppUp.IntelGraphicsExperience_8j3eq9eme6ctt!App\",\"AppUp.ThunderboltControlCenter_8j3eq9eme6ctt!App\",\"AppUp.IntelOptaneMemoryandStorageManagement_8j3eq9eme6ctt!App\",\"Microsoft.WindowsTerminal_8wekyb3d8bbwe!App\",\"VideoLAN.VLC_paz6r1rewnh0a!App\",\"DellInc.DellSupportAssistforPCs_htrsf667h5kn2!App\"; $alreadyKnownAppIdsSet = New-Object System.Collections.Generic.HashSet[string] (,$alreadyKnownAppIds);  $currentStartApps = Get-StartApps | Where-Object { $_.AppID.Contains(\"!\") }; $currentStartAppIds = $currentStartApps | Select-Object -ExpandProperty AppID; $currentStartAppIdsSet = New-Object System.Collections.Generic.HashSet[string] (,[string[]]$currentStartAppIds); $newStartApps = $currentStartApps | Where-Object { -not $alreadyKnownAppIdsSet.Contains($_.AppID) }; $newStartAppIds = $newStartApps | Select-Object -ExpandProperty AppID; $newStartAppIdsSet = New-Object System.Collections.Generic.HashSet[string] (,[string[]]$newStartAppIds); $removedAppIds = $alreadyKnownAppIds | Where-Object { -not $currentStartAppIdsSet.Contains($_) }; if ($newStartApps.Count -eq 0) {     return [PSCustomObject]@{         NewApps = @();         RemovedAppIds = @($removedAppIds);     } | ConvertTo-Json }  function FindLogoFilePath {     param ([string]$logoFilePath)     if ([System.IO.File]::Exists($logoFilePath) -eq $true) {         return $logoFilePath;     }     $filePath = Get-ChildItem $logoFilePath.Replace(\".png\", \".scale-*.png\") |         Sort-Object -Property Name |         Select-Object -First 1 -ExpandProperty FullName;     if ($filePath -ne $null) {         $logoFilePath = $filePath;     }     if ([System.IO.File]::Exists($logoFilePath) -eq $true) {         return $logoFilePath;     }     $filePath = Get-ChildItem $logoFilePath.Replace(\".png\", \".targetsize-*.png\") |         Where-Object { ($_.Name -match \"targetsize-(\\d+)\\.png\") -and ($Matches[1] -ge 48) } |         Sort-Object -Property Name |         Select-Object -First 1 -ExpandProperty FullName;     if ($filePath -ne $null) {         $logoFilePath = $filePath;     }     if ([System.IO.File]::Exists($logoFilePath) -eq $true) {         return $logoFilePath;     }     $filePath = Get-ChildItem $logoFilePath.Replace(\".png\", \".targetsize-*.png\") |         Where-Object { ($_.Name -match \"targetsize-(\\d+).*\\.png\") -and ($Matches[1] -ge 48) } |         Sort-Object -Property Name |         Select-Object -First 1 -ExpandProperty FullName;     if ($filePath -ne $null) {         $logoFilePath = $filePath;     }     if ([System.IO.File]::Exists($logoFilePath) -eq $true) {         return $logoFilePath;     } else {         return $null;     } }  $packageFamilyNamesToPackages = Get-AppxPackage -PackageTypeFilter Main | ArrayToHash; $newApps = $newStartApps |     ForEach-Object {         $appId = $_.AppID.SubString($_.AppId.IndexOf(\"!\") + 1);         $packageFamilyName = $_.AppID.SubString(0, $_.AppId.IndexOf(\"!\"));         $package = $packageFamilyNamesToPackages[$packageFamilyName];         $packageFullName = $package.PackageFullName;         if ($packageFullName -ne $null) {             $manifest = Get-AppxPackageManifest $packageFullName;             $app = $manifest.Package.Applications.Application | Where-Object { $_.Id -eq $appId };             $logo = $app.VisualElements.Square44x44Logo;             if ($logo -eq $null) {                 $logo = $app.VisualElements.Square30x30Logo;             }             if ($logo -eq $null) {                 $logo = $app.VisualElements.Logo;             }             if ($logo -ne $null) {                 $logoFilePath = FindLogoFilePath (Join-Path $package.InstallLocation $logo);                 if ($logoFilePath -eq $null) {                     Write-Host (\"trying alternative location: \" + (Join-Path $package.InstallLocation \"images\" $logo));                     $logoFilePath = FindLogoFilePath ([IO.Path]::Combine($package.InstallLocation, \"images\", $logo));                 }                 if ($logoFilePath -ne $null) {                     $logoBytes = Get-Content -Encoding Byte -Path $logoFilePath;                     $logoBase64 = [Convert]::ToBase64String($logoBytes);                 } else {                     $logoBase64 = \"\";                 }             } else {                 $logoBase64 = \"\";             }             return [PSCustomObject]@{                 DisplayName = $_.Name;                 AppId = $_.AppID;                 LogoBase64 = $logoBase64;             }         }     }; return [PSCustomObject]@{     NewApps = @($newApps);     RemovedAppIds = @($removedAppIds); } | ConvertTo-Json\r\n        Версия модуля = 5.1.19041.1\r\n        ИД пространства выполнения = 72c76630-c7f3-43e2-a612-79bd9c12a765\r\n        ИД конвейера = 1\r\n        Имя команды = New-Object\r\n        Тип команды = Cmdlet\r\n        Имя сценария = \r\n        Путь команды = \r\n        Порядковый номер = 35\r\n        Пользователь = DOMAIN\\adavadov\r\n        Подключенный пользователь = \r\n        ИД оболочки = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(New-Object): \"New-Object\"\r\nParameterBinding(New-Object): имя=\"TypeName\"; значение=\"System.Collections.Generic.HashSet[string]\"\r\nParameterBinding(New-Object): имя=\"ArgumentList\"; значение=\"\"\r\nTerminatingError(New-Object): \"Обнаружено несколько неоднозначных перегрузок для \"HashSet`1\", число аргументов: \"1\".\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

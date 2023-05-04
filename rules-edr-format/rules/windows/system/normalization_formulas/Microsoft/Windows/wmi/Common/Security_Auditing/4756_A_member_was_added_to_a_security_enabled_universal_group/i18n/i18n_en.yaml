@@ -1,0 +1,4 @@
+Description: 'A member was added to a Security enabled universal group'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4756_A_member_was_added_to_a_security_enabled_universal_group
+      EventDescription: 'The user {subject.name} added a member to the {object.type} group "{object.name}" on host {event_src.host}'

@@ -1,0 +1,6 @@
+Description: 'Kerberos service ticket requested'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4769_Kerberos_service_ticket_requested_status_success
+      EventDescription: 'The Kerberos service on host {event_src.host} issued a session ticket, which is requested from host {src.host}, for the account {subject.name} to access the service {datafield3}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4769_Kerberos_service_ticket_requested_status_failure
+      EventDescription: 'The Kerberos service on host {event_src.host} failed to issue a session ticket, which is requested from host {src.host}, for the account {subject.name} to access the service {datafield3}'

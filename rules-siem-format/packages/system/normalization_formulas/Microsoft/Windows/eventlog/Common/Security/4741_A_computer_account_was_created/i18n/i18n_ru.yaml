@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4741_A_computer_account_was_created
+      EventDescription: 'Пользователь {subject.domain}\{subject.name} создал учетную запись компьютера на узле {event_src.hostname}'

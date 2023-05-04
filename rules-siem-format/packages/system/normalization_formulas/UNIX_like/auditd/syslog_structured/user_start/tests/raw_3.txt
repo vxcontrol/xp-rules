@@ -1,0 +1,11 @@
+{
+    "eventid": "679",
+    "items": {
+        "USER_START": [
+            "pid=1199 uid=0 auid=0 ses=1 subj=system_u:system_r:sshd_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct=\"root\" exe=\"/usr/sbin/sshd\" hostname=192.168.137.1 addr=192.168.137.1 terminal=ssh res=success' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1575628954",
+    "timestampfractional": "679"
+}

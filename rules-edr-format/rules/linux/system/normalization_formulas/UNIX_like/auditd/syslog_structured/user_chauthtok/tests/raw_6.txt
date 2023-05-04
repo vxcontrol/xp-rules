@@ -1,0 +1,11 @@
+{
+    "eventid": "738897170",
+    "timestampfractional": "697",
+    "timestamp": "1665504219",
+    "node": "10.20.17.90",
+    "items": {
+        "USER_CHAUTHTOK": [
+            "pid=121685 uid=0 auid=4294967295 ses=4294967295 msg='op=change max age id=102 exe=\"/usr/bin/chage\" hostname=runner-f8annqmm addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"unset\" ID=\"systemd-resolve\""
+        ]
+    }
+}

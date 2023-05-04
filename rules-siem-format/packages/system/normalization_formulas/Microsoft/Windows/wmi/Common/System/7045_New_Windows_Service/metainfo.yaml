@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_7045_New_Windows_Service"
+      LocalizationId: PT_Microsoft_Windows_wmi_7045_New_Windows_Service
+ObjectId: PT-NF-2707

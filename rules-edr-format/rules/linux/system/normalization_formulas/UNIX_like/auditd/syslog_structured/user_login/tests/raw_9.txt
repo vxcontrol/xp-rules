@@ -1,0 +1,11 @@
+{
+  "node": "host",
+  "timestamp": "1654009799",
+  "timestampfractional": "546",
+  "eventid": "16967031",
+  "items": {
+    "USER_LOGIN": [
+      "pid=37971 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='op=login acct=28696E76616C6964207573657229 exe=\"/usr/sbin/sshd\" hostname=? addr=1.1.1.1 terminal=sshd res=failed'"
+    ]
+  }
+}

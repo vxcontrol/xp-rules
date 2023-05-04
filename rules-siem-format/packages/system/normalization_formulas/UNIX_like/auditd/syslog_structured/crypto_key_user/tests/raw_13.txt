@@ -1,0 +1,12 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598384799",
+    "timestampfractional": "470",
+    "eventid": "5500",
+    "items": {
+        "CRYPTO_KEY_USER": [
+            "pid=2363 uid=0 auid=1000 ses=2 subj==unconfined msg='op=destroy kind=server fp=SHA256:71:94:b2:fc:80:71:67:43:24:d9:e8:6a:a9:3c:dc:b6:4b:29:83:ed:b7:74:2f:29:91:71:79:53:bf:7e:cb:72 direction=? spid=2368 suid=1000  exe=\"/usr/sbin/sshd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"jr\" SUID=\"jr\"",
+            "pid=2363 uid=0 auid=1000 ses=2 subj==unconfined msg='op=destroy kind=server fp=SHA256:71:94:b2:fc:80:71:67:43:24:d9:e8:6a:a9:3c:dc:b6:4b:29:83:ed:b7:74:2f:29:91:71:79:53:bf:7e:cb:72 direction=? spid=2368 suid=1000  exe=\"/usr/sbin/sshd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"jr\" SUID=\"jr\""
+        ]
+    }
+}

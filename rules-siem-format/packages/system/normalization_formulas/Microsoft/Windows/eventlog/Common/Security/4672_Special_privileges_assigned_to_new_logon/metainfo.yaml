@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4672_Special_privileges_assigned_to_new_logon"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4672_Special_privileges_assigned_to_new_logon
+ObjectId: PT-NF-1837

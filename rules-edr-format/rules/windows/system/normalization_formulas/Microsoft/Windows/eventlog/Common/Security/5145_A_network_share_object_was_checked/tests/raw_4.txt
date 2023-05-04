@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5145",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12811",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-10-01T12:45:56.946074500Z"
+            },
+            "EventRecordID": "72314",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "536",
+                "ThreadID": "544"
+            },
+            "Channel": "Security",
+            "Computer": "db.NewCo.hitb",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1028946041-3827956430-3322205331-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "NewCo",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x60beb",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "172.19.63.150",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "53976",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\C$",
+                    "Name": "ShareName"
+                },
+                {
+                    "text": "\\??\\C:\\",
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "WINDOWS\\TEMP\\FCEB918AB3F1DF3593FF05189FD04E194D33489D.STDOUT",
+                    "Name": "RelativeTargetName"
+                },
+                {
+                    "text": "0x10080",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%1537\r\n\t\t\t\t%%4423\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccessReason"
+                }
+            ]
+        }
+    }
+}

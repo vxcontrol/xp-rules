@@ -1,0 +1,6 @@
+Description: 'A service is started'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_start_success
+      EventDescription: 'The service "{object.name}" is started on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_start_failure
+      EventDescription: 'Failed to start the service "{object.name}" on host {event_src.host}'

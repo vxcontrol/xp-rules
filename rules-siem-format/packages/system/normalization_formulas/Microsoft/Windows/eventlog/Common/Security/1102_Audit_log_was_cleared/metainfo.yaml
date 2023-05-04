@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_1102_Audit_log_was_cleared"
+      LocalizationId: PT_Microsoft_Windows_eventlog_1102_Audit_log_was_cleared
+ObjectId: PT-NF-1810

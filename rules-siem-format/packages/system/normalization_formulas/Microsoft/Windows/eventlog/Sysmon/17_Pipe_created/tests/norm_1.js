@@ -1,0 +1,23 @@
+{
+    "action": "create",
+    "event_src.category": "Other",
+    "event_src.fqdn": "server16.server16.int",
+    "event_src.hostname": "server16",
+    "event_src.subsys": "Microsoft-Windows-Sysmon/Operational",
+    "event_src.title": "sysmon",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_Sysmon_17_Pipe_created",
+    "importance": "info",
+    "msgid": "17",
+    "object": "resource",
+    "object.name": "1a80.1d480a878f76b33-1758.1d480a87848e831",
+    "object.type": "pipe",
+    "status": "success",
+    "subject": "process",
+    "subject.process.fullpath": "c:\\windows\\system32\\mpsigstub.exe",
+    "subject.process.guid": "222467B7-C169-5BF3-0000-0010D8204B03",
+    "subject.process.id": "6784",
+    "subject.process.name": "mpsigstub.exe",
+    "subject.process.path": "c:\\windows\\system32\\",
+    "time": "2018-11-20T08:10:18.996Z"
+}

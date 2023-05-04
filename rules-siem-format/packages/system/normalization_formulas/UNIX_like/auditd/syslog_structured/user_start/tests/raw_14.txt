@@ -1,0 +1,11 @@
+{
+    "eventid": "1462",
+    "timestampfractional": "747",
+    "timestamp": "1663174651",
+    "node": "10.10.10.10",
+    "items": {
+        "USER_START": [
+            "pid=217604 uid=0 auid=1000 ses=171 msg='op=PAM:session_open grantors=pam_env,pam_env,pam_permit,pam_umask,pam_unix acct=\"tme_test\" exe=\"/usr/bin/sudo\" hostname=? addr=? terminal=/dev/pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

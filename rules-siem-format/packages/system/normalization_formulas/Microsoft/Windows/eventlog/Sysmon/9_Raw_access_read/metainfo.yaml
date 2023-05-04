@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_9_Raw_access_read"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_9_Raw_access_read
+ObjectId: PT-NF-2372

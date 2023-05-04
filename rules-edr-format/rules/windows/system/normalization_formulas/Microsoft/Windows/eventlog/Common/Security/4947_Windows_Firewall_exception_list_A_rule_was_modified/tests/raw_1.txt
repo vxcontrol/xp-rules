@@ -1,0 +1,45 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4947",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10071",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-09-26T04:37:29.678294100Z"
+            },
+            "EventRecordID": "419664",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "660",
+                "ThreadID": "1656"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "All",
+                    "Name": "ProfileChanged"
+                },
+                {
+                    "text": "{1600000C-A00B-4002-8006-900000000005}",
+                    "Name": "RuleId"
+                },
+                {
+                    "text": "Skype",
+                    "Name": "RuleName"
+                }
+            ]
+        }
+    }
+}

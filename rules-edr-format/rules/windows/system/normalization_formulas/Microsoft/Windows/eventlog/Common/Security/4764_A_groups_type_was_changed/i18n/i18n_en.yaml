@@ -1,0 +1,4 @@
+Description: 'A group type was changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4764_A_groups_type_was_changed
+      EventDescription: 'The user {subject.name} modified the group "{object.name}" on host {event_src.host}'

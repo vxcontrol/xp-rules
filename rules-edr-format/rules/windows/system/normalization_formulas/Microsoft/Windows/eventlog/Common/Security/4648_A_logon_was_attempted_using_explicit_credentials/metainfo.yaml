@@ -1,0 +1,14 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials"
+        and subject.name != null and dst.host != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null_src
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials"
+        and subject.name = null and dst.host != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null_src
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials"
+        and subject.name != null and dst.host = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_not_null
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials"
+        and subject.name = null and dst.host = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4648_A_logon_was_attempted_using_explicit_credentials_subject_name_null
+ObjectId: PT-NF-1826

@@ -1,0 +1,1 @@
+<134>Oct 28 08:48:43 centos6 audispd: node=centos6 type=USER_CMD msg=audit(1337674890.629:128): pid=0 uid=0 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/run/media/gene/VBOXADDITIONS_4.1.14_77440" cmd="./VBoxLinuxAdditions.run" terminal=pts/1 res=success'

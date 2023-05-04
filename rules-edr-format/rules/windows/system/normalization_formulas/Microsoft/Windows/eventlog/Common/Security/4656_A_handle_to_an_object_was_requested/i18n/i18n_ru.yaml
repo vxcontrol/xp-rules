@@ -1,0 +1,6 @@
+Description: 'Пользователь получил или не получил доступ к объекту'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4656_A_handle_to_an_object_was_requested_status_success
+      EventDescription: 'Пользователь {subject.domain}\{subject.name} получил доступ к объекту "{object.fullpath}"'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4656_A_handle_to_an_object_was_requested_status_failure
+      EventDescription: 'Пользователю {subject.domain}\{subject.name} не удалось получить доступ к объекту "{object.fullpath}"'

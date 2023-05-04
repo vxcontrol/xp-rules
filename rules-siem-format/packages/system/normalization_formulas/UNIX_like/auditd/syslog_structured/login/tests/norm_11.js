@@ -1,0 +1,23 @@
+{
+    "action": "login",
+    "category.generic": "Operating System",
+    "category.high": "Access Management",
+    "category.low": "Communication",
+    "chain_id": "188421",
+    "event_src.category": "Operating system",
+    "event_src.ip": "192.168.233.133",
+    "event_src.subsys": "auditd",
+    "event_src.title": "unix_like",
+    "id": "PT_UNIX_like_auditd_syslog_structured_login",
+    "importance": "low",
+    "labels": "node_contains_ext_ip",
+    "msgid": "LOGIN",
+    "object": "system",
+    "status": "ongoing",
+    "subject": "account",
+    "subject.account.id": "0",
+    "subject.account.session_id": "75",
+    "subject.process.id": "63782",
+    "subject.state": "changed-login-id-to",
+    "time": "2020-08-25T22:30:01.000Z"
+}

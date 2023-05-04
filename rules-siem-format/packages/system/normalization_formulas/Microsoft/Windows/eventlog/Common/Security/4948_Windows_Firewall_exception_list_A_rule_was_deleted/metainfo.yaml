@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4948_Windows_Firewall_exception_list_A_rule_was_deleted"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4948_Windows_Firewall_exception_list_A_rule_was_deleted
+ObjectId: PT-NF-1953

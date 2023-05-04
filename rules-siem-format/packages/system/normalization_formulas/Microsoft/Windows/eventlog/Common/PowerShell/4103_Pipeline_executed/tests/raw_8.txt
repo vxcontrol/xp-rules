@@ -1,0 +1,58 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-10-23T09:20:16.352973200Z"
+            },
+            "EventRecordID": "268926",
+            "Correlation": {
+                "ActivityID": "{A0CD7AB0-43F5-0001-6A5D-1AA1F543D601}"
+            },
+            "Execution": {
+                "ProcessID": "2720",
+                "ThreadID": "6856"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "XXX.ru",
+            "Security": {
+                "UserID": "S-1-5-xxxxx"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Severity = Informational\r\n        Host Name = Default Host\r\n        Host Version = 5.1.14393.3383\r\n        Host ID = b134680c-9b01-46c4-b7d5-9db94ae7306b\r\n        Host Application = C:\\Program Files\\Microsoft Azure AD Sync\\Bin\\miiserver.exe\r\n        Engine Version = 5.1.14393.3383\r\n        Runspace ID = 2403de73-157c-4997-8aff-8ddf2bfdb28c\r\n        Pipeline ID = 2\r\n        Command Name = Add-ADSyncGlobalSettingsParameter\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 4076840\r\n        User = NT SERVICE\\ADSync\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Add-ADSyncGlobalSettingsParameter): \"Add-ADSyncGlobalSettingsParameter\"\r\nParameterBinding(Add-ADSyncGlobalSettingsParameter): name=\"GlobalSettings\"; value=\"Microsoft.IdentityManagement.PowerShell.ObjectModel.GlobalSettings\"\r\nParameterBinding(Add-ADSyncGlobalSettingsParameter): name=\"ParameterValuesTable\"; value=\"System.Collections.Hashtable\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "CommandInvocation(Add-ADSyncGlobalSettingsParameter): \"Add-ADSyncGlobalSettingsParameter\"\r\nParameterBinding(Add-ADSyncGlobalSettingsParameter): name=\"GlobalSettings\"; value=\"Microsoft.IdentityManagement.PowerShell.ObjectModel.GlobalSettings\"\r\nParameterBinding(Add-ADSyncGlobalSettingsParameter): name=\"ParameterValuesTable\"; value=\"System.Collections.Hashtable\"\r\n\r\n\r\nContext:\r\n        Severity = Informational\r\n        Host Name = Default Host\r\n        Host Version = 5.1.14393.3383\r\n        Host ID = b134680c-9b01-46c4-b7d5-9db94ae7306b\r\n        Host Application = C:\\Program Files\\Microsoft Azure AD Sync\\Bin\\miiserver.exe\r\n        Engine Version = 5.1.14393.3383\r\n        Runspace ID = 2403de73-157c-4997-8aff-8ddf2bfdb28c\r\n        Pipeline ID = 2\r\n        Command Name = Add-ADSyncGlobalSettingsParameter\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 4076840\r\n        User = NT SERVICE\\ADSync\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n\r\n\r\nUser Data:\r\n\r\n",
+            "Level": "Information",
+            "Task": "Executing Pipeline",
+            "Opcode": "To be used when operation is just executing a method",
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Provider": null,
+            "Keywords": null
+        }
+    }
+}

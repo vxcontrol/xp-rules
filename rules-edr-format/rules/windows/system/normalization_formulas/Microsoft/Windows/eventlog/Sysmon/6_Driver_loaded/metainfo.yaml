@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded
+ObjectId: PT-NF-4945

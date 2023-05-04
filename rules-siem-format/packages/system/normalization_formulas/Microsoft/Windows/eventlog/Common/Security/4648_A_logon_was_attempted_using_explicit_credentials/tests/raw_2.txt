@@ -1,0 +1,89 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4648",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2016-05-26T12:54:38.848741300Z"
+            },
+            "EventRecordID": "360601744",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "684",
+                "ThreadID": "18936"
+            },
+            "Channel": "Security",
+            "Computer": "srv-tsod-ex1.ilp.loc",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SRV-TSOD-EX1$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ILP",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "HealthMailbox5fc61ff",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "ILP",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "{99C9BF6F-4A89-A173-06DF-ADAF65B99236}",
+                    "Name": "TargetLogonGuid"
+                },
+                {
+                    "text": "localhost",
+                    "Name": "TargetServerName"
+                },
+                {
+                    "text": "localhost",
+                    "Name": "TargetInfo"
+                },
+                {
+                    "text": "0x28ac",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Bin\\MSExchangeHMWorker.exe",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "-",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "-",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_5136_A_directory_service_object_was_modified"
+      LocalizationId: PT_Microsoft_Windows_eventlog_5136_A_directory_service_object_was_modified
+ObjectId: PT-NF-1964

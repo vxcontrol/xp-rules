@@ -1,0 +1,1 @@
+<134>Oct 28 10:12:48 centos6 audispd: node=centos6 type=SERVICE_STOP msg=audit(1337705959.402:56): pid=0 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg=' comm="sendmail" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'

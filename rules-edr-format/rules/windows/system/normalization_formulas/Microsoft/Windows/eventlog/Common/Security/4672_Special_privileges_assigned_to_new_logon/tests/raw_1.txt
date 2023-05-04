@@ -1,0 +1,53 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-1900000110-3000000022-2000000008-1105"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "testadmin"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x192cf0"
+                },
+                {
+                    "Name": "PrivilegeList",
+                    "text": "SeSecurityPrivilege\n\t\t\tSeTakeOwnershipPrivilege\n\t\t\tSeLoadDriverPrivilege\n\t\t\tSeBackupPrivilege\n\t\t\tSeRestorePrivilege\n\t\t\tSeDebugPrivilege\n\t\t\tSeSystemEnvironmentPrivilege\n\t\t\tSeEnableDelegationPrivilege\n\t\t\tSeImpersonatePrivilege"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q00000000AT.test.local",
+            "Correlation": null,
+            "EventID": "4672",
+            "EventRecordID": "2382",
+            "Execution": {
+                "ProcessID": "528",
+                "ThreadID": "3028"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10048",
+            "TimeCreated": {
+                "SystemTime": "2014-09-16T09:15:36.892145100Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

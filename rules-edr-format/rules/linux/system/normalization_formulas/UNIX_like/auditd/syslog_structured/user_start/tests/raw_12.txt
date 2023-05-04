@@ -1,0 +1,14 @@
+{
+    "eventid": "434",
+    "items": {
+        "USER_START": [
+            "pid=973 uid=0 auid=125 ses=1 msg='op=PAM:session_open grantors=pam_selinux,pam_selinux,pam_loginuid,pam_limits,pam_permit,pam_umask,pam_unix,pam_systemd acct=\"gdm\" exe=\"/usr/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"gdm\""
+        ],
+        "COMMENT": [
+            "Ubuntu Event"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834540",
+    "timestampfractional": "454"
+}

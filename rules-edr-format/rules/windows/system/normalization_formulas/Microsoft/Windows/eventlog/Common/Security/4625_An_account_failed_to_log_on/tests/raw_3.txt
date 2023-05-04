@@ -1,0 +1,114 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4625",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2017-03-21T08:48:17.280835600Z"
+            },
+            "EventRecordID": "20345",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "484",
+                "ThreadID": "724"
+            },
+            "Channel": "Security",
+            "Computer": "WIN-B1T161SQFDA.contoso2.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [{
+                "Name": "SubjectUserSid",
+                "text": "S-1-5-21-216805221-4090346551-3677312284-500"
+            },
+            {
+                "Name": "SubjectUserName",
+                "text": "administrator"
+            },
+            {
+                "Name": "SubjectDomainName",
+                "text": "CONTOSO2"
+            },
+            {
+                "Name": "SubjectLogonId",
+                "text": "0x39922"
+            },
+            {
+                "Name": "TargetUserSid",
+                "text": "S-1-0-0"
+            },
+            {
+                "Name": "TargetUserName",
+                "text": "administrator@contoso.com"
+            },
+            {
+                "Name": "TargetDomainName"
+            },
+            {
+                "Name": "Status",
+                "text": "0xc000006d"
+            },
+            {
+                "Name": "FailureReason",
+                "text": "%%2313"
+            },
+            {
+                "Name": "SubStatus",
+                "text": "0xc000006a"
+            },
+            {
+                "Name": "LogonType",
+                "text": "2"
+            },
+            {
+                "Name": "LogonProcessName",
+                "text": "seclogo"
+            },
+            {
+                "Name": "AuthenticationPackageName",
+                "text": "Negotiate"
+            },
+            {
+                "Name": "WorkstationName",
+                "text": "WIN-B1T161SQFDA"
+            },
+            {
+                "Name": "TransmittedServices",
+                "text": "-"
+            },
+            {
+                "Name": "LmPackageName",
+                "text": "-"
+            },
+            {
+                "Name": "KeyLength",
+                "text": "0"
+            },
+            {
+                "Name": "ProcessId",
+                "text": "0x388"
+            },
+            {
+                "Name": "ProcessName",
+                "text": "C:\\Windows\\System32\\svchost.exe"
+            },
+            {
+                "Name": "IpAddress",
+                "text": "::1"
+            },
+            {
+                "Name": "IpPort",
+                "text": "0"
+            }]
+        }
+    }
+}

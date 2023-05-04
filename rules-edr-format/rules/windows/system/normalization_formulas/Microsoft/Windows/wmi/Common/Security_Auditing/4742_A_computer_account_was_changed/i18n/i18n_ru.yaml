@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4742_A_computer_account_was_changed
+      EventDescription: 'В домене {object.domain} изменена учетная запись компьютера {object.name} с узла {event_src.hostname}'

@@ -1,0 +1,14 @@
+{
+    "eventid": "434",
+    "items": {
+        "USER_START": [
+            "pid=1412 uid=0 auid=1000 ses=2 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_selinux,pam_keyinit,pam_limits,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_systemd,pam_gnome_keyring acct=\"jr\" exe=\"/usr/lib/gdm3/gdm-session-worker\" hostname=jr-virtual-machine addr=? terminal=/dev/tty2 res=success' UID=\"root\" AUID=\"jr\""
+        ],
+        "COMMENT": [
+            "Log in GNOME Desktop Manager (Ubuntu)"
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834540",
+    "timestampfractional": "454"
+}

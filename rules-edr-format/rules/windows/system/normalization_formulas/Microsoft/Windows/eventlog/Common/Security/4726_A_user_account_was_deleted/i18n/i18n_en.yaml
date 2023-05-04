@@ -1,0 +1,4 @@
+Description: 'User Account was deleted'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4726_A_user_account_was_deleted
+      EventDescription: 'The user {subject.name} deleted the account "{object.name}" on host {event_src.host}'

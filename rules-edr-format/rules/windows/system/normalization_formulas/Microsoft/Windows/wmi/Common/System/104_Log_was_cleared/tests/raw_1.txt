@@ -1,0 +1,23 @@
+{
+    "Category": 104,
+    "CategoryString": "Log clear",
+    "ComputerName": "WIN-DGE9HAU611L",
+    "Data": null,
+    "EventCode": 104,
+    "EventIdentifier": 104,
+    "EventType": 3,
+    "InsertionStrings": [
+        "Administrator",
+        "WIN-DGE9HAU611L",
+        "Application",
+        ""
+    ],
+    "Logfile": "System",
+    "Message": "The Application log file was cleared.",
+    "RecordNumber": 39592,
+    "SourceName": "Microsoft-Windows-Eventlog",
+    "TimeGenerated": "2017-08-09 14:17:33",
+    "TimeWritten": "2017-08-09 14:17:33",
+    "Type": "Information",
+    "User": "WIN-DGE9HAU611L\\Administrator"
+}

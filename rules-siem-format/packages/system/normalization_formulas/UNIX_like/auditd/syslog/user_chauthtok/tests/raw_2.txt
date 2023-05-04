@@ -1,0 +1,1 @@
+<14>Apr 10 11:36:04 localhost audispd: node=localhost.localdomain type=USER_CHAUTHTOK msg=audit(1491802564.860:793): pid=4772 uid=0 auid=1001 ses=2 subj=unconfined_u:unconfined_r:passwd_t:s0-s0:c0.c1023 msg='op=PAM:chauthtok grantors=pam_pwquality,pam_unix acct="mark_hunt" exe="/usr/bin/passwd" hostname=? addr=? terminal=pts/0 res=success'

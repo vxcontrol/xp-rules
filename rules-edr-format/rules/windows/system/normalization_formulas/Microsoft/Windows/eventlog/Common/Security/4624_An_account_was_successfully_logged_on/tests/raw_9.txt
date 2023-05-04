@@ -1,0 +1,155 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4624",
+            "Version": "2",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-01-22T11:12:54.425634500Z"
+            },
+            "EventRecordID": "5577399",
+            "Correlation": {
+                "ActivityID": "{056e8011-e9bb-0001-3880-6e05bbe9d601}"
+            },
+            "Execution": {
+                "ProcessID": "704",
+                "ThreadID": "12296"
+            },
+            "Channel": "Security",
+            "Computer": "Win10x64-150.testlab.esc",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-2418237829-468669797-1489771779-1001",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "admin",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "WIN10X64-150",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x4acdb80",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-5-21-2418237829-468669797-1489771779-1001",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "admin",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "WIN10X64-150",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x5031c02",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "9",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "seclogo",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "Negotiate",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "-",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "0",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0xf20",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "::1",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "0",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "%%1833",
+                    "Name": "ImpersonationLevel"
+                },
+                {
+                    "text": "-",
+                    "Name": "RestrictedAdminMode"
+                },
+                {
+                    "text": "test-admin",
+                    "Name": "TargetOutboundUserName"
+                },
+                {
+                    "text": "testlab.esc",
+                    "Name": "TargetOutboundDomainName"
+                },
+                {
+                    "text": "%%1843",
+                    "Name": "VirtualAccount"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "TargetLinkedLogonId"
+                },
+                {
+                    "text": "%%1842",
+                    "Name": "ElevatedToken"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-2418237829-468669797-1489771779-1001\r\n\tAccount Name:\t\tadmin\r\n\tAccount Domain:\t\tWIN10X64-150\r\n\tLogon ID:\t\t0x4ACDB80\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t9\r\n\tRestricted Admin Mode:\t-\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-2418237829-468669797-1489771779-1001\r\n\tAccount Name:\t\tadmin\r\n\tAccount Domain:\t\tWIN10X64-150\r\n\tLogon ID:\t\t0x5031C02\r\n\tLinked Logon ID:\t\t0x0\r\n\tNetwork Account Name:\ttest-admin\r\n\tNetwork Account Domain:\ttestlab.esc\r\n\tLogon GUID:\t\t{00000000-0000-0000-0000-000000000000}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0xf20\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\t-\r\n\tSource Network Address:\t::1\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tseclogo\r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.",
+            "Level": "Information",
+            "Task": "Logon",
+            "Opcode": "Info",
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": {
+                "Keyword": "Audit Success"
+            }
+        }
+    }
+}

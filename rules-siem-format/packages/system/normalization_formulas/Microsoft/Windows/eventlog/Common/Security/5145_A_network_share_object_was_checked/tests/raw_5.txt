@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5145",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12811",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-03-30T14:13:07.665496700Z"
+            },
+            "EventRecordID": "29820224",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "468",
+                "ThreadID": "476"
+            },
+            "Channel": "Security",
+            "Computer": "s-ad-001.ptlab.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1429952499-3518759572-2917866074-1106",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "user",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "PTLAB",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x1105535c",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "10.125.4.11",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "56245",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\ADMIN$",
+                    "Name": "ShareName"
+                },
+                {
+                    "text": "\\??\\C:\\Windows",
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "PSEXESVC.exe",
+                    "Name": "RelativeTargetName"
+                },
+                {
+                    "text": "0x120196",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%1538\r\n\t\t\t\t%%1541\r\n\t\t\t\t%%4417\r\n\t\t\t\t%%4418\r\n\t\t\t\t%%4420\r\n\t\t\t\t%%4423\r\n\t\t\t\t%%4424\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccessReason"
+                }
+            ]
+        }
+    }
+}

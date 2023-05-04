@@ -1,0 +1,76 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "5140",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12808",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-02-16T07:57:15.370121200Z"
+            },
+            "EventRecordID": "96931",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "3524"
+            },
+            "Channel": "Security",
+            "Computer": "2012r2-dc.I2.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-730274280-2085475123-1874798716-1603",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "vasya",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "I2",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x8a3cb4",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "192.168.133.130",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "49497",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "\\\\*\\IPC$",
+                    "Name": "ShareName"
+                },
+                {
+                    "Name": "ShareLocalPath"
+                },
+                {
+                    "text": "0x1",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "%%4416\r\n\t\t\t\t",
+                    "Name": "AccessList"
+                }
+            ]
+        }
+    }
+}

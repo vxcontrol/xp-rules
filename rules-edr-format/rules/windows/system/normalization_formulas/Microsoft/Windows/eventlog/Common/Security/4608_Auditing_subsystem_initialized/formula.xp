@@ -1,0 +1,32 @@
+EVENTLOG = 'EventID="4608"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+action = "start"
+object = "process"
+status = "success"
+
+object.process.name = "lsass.exe"
+
+reason = "auditing subsystem initialized"
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+importance = "info"
+
+category.generic = "Process"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_eventlog_4608_Auditing_subsystem_initialized"
+

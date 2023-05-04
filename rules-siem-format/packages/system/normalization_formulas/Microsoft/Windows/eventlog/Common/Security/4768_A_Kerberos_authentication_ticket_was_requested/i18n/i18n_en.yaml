@@ -1,0 +1,10 @@
+Description: 'Kerberos authentication ticket was requested'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success
+      EventDescription: 'Kerberos authentication of the user {subject.account.name} requested from host {src.host} is successful. The Kerberos service on host {event_src.host} issued a ticket-granting ticket'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure
+      EventDescription: 'Kerberos authentication of the user {subject.account.name} requested from host {src.host} is unsuccessful. The Kerberos service on host {event_src.host} failed to issue a ticket-granting ticket'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_success_null
+      EventDescription: 'Kerberos authentication of the user requested from host {src.host} is successful. The Kerberos service on host {event_src.host} issued a ticket-granting ticket'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4768_A_Kerberos_authentication_ticket_was_requested_status_failure_null
+      EventDescription: 'Kerberos authentication of the user requested from host {src.host} is unsuccessful. The Kerberos service on host {event_src.host} failed to issue a ticket-granting ticket'

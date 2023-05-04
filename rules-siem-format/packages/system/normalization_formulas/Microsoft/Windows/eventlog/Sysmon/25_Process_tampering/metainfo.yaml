@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_25_Process_tampering"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_25_Process_tampering
+ObjectId: PT-NF-6269

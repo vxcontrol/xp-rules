@@ -1,0 +1,81 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4663",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10000",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-11-05T09:04:29.531645200Z"
+            },
+            "EventRecordID": "456967",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "56"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEONE$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ACME",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "Security",
+                    "Name": "ObjectServer"
+                },
+                {
+                    "text": "File",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "C:\\Windows\\rescache\\rc0013\\ResCache.dir",
+                    "Name": "ObjectName"
+                },
+                {
+                    "text": "0x194",
+                    "Name": "HandleId"
+                },
+                {
+                    "text": "%%1541",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "0x100000",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "0xcbc",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

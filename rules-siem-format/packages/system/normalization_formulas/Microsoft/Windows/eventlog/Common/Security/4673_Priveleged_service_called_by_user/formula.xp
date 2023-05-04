@@ -1,0 +1,58 @@
+EVENTLOG = 'EventID="4673"'
+
+COND = lower($Channel) == "security" and $Provider["Name"] == "Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "elevate"
+object = "process"
+
+status = switch $Keywords
+    case "0x8020000000000000" "success"
+    case "0x8010000000000000" "failure"
+endswitch
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+object.account.id = subject.account.id
+object.account.name = subject.account.name
+object.account.domain = subject.account.domain
+
+$process_fullpath = lower($Data["ProcessName"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+object.process.name = $process_name
+object.process.path = strip($process_fullpath, "", $process_name)
+object.process.fullpath = $process_fullpath
+
+object.property = "privilege list"
+object.value = $Data["PrivilegeList"]
+
+datafield2 = $Data["ObjectServer"]  # Name of the Windows subsystem calling the routine
+datafield3 = $Data["Service"]       # Name of the privileged subsystem service or function
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Process"
+category.high = "Users And Rights Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user"
+

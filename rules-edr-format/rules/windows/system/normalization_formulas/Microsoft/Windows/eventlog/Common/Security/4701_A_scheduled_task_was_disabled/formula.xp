@@ -1,0 +1,53 @@
+EVENTLOG = 'EventID="4701"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "disable"
+object = "task"
+status = "success"
+
+subject.account.name = if $Data["SubjectUserName"] != "-" then lower($Data["SubjectUserName"]) else null endif
+subject.account.domain = if $Data["SubjectDomainName"] != "-" then lower($Data["SubjectDomainName"]) else null endif
+subject.account.id = if $Data["SubjectUserSid"] != "S-1-0-0" then $Data["SubjectUserSid"] else null endif
+if subject.account.id == null and subject.account.name != null then
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+endif
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+subject.process.id = if $Data["ClientProcessId"] != "0" then $Data["ClientProcessId"] else null endif
+subject.process.parent.id = if $Data["ParentProcessId"] != "0" then $Data["ParentProcessId"] else null endif
+subject.process.guid = if $Data["ClientProcessStartKey"] != "0" then $Data["ClientProcessStartKey"] else null endif
+
+object.fullpath = $Data["TaskName"]
+$temp = csv($Data["TaskName"], "\\", "")
+object.name = $temp[length($temp) - 1]
+$path = strip(object.fullpath, "", object.name)
+if  $path != "\\" then
+    object.path = $path
+else
+    object.path = null
+endif
+object.type = "Scheduled"
+
+datafield2 = $Data["RpcCallClientLocality"]
+
+importance = "info"
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4701_A_scheduled_task_was_disabled"
+

@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4661_The_handle_to_an_object_was_requested_status_success
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} запросил дескриптор объекта на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4661_The_handle_to_an_object_was_requested_status_failure
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} не смог запросить дескриптор объекта на узле {event_src.host}'

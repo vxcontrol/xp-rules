@@ -1,0 +1,11 @@
+{
+    "eventid": "3797",
+    "items": {
+        "USER_LOGIN": [
+            "pid=2301 uid=0 auid=0 ses=11 subj==unconfined msg='op=login id=0 exe=\"/usr/sbin/sshd\" hostname=192.168.137.1 addr=192.168.137.1 terminal=/dev/pts/1 res=success' UID=\"root\" AUID=\"root\" ID=\"root\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575868411",
+    "timestampfractional": "897"
+}

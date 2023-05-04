@@ -1,0 +1,11 @@
+{
+    "eventid": "5664",
+    "items": {
+        "ADD_USER": [
+            "pid=1699 uid=0 auid=0 ses=2 subj==unconfined msg='op=adding user id=1001 exe=\"/usr/sbin/useradd\" hostname=debian10siem addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"root\" ID=\"new_test_user\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575617743",
+    "timestampfractional": "038"
+}

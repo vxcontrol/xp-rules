@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_user_chauthtok
+      EventDescription: 'Пользователь с UID {subject.id} изменил настройки учетной записи {object.name} на узле {event_src.host}'

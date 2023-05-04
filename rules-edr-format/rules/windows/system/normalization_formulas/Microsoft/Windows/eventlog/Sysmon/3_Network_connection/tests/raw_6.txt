@@ -1,0 +1,103 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "3",
+            "Version": "5",
+            "Level": "4",
+            "Task": "3",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2021-09-05T04:43:06.385703400Z"
+            },
+            "EventRecordID": "1071722082",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "1352",
+                "ThreadID": "3724"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "dc2-wedwde-11.domain.com",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2021-09-05 04:41:43.300",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "3816",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "<unknown process>",
+                    "Name": "Image"
+                },
+                {
+                    "Name": "User"
+                },
+                {
+                    "text": "tcp",
+                    "Name": "Protocol"
+                },
+                {
+                    "text": "true",
+                    "Name": "Initiated"
+                },
+                {
+                    "text": "false",
+                    "Name": "SourceIsIpv6"
+                },
+                {
+                    "text": "10.11.11.11",
+                    "Name": "SourceIp"
+                },
+                {
+                    "text": "dc2-wedwde-11.domain.com",
+                    "Name": "SourceHostname"
+                },
+                {
+                    "text": "55324",
+                    "Name": "SourcePort"
+                },
+                {
+                    "Name": "SourcePortName"
+                },
+                {
+                    "text": "false",
+                    "Name": "DestinationIsIpv6"
+                },
+                {
+                    "text": "10.11.12.32",
+                    "Name": "DestinationIp"
+                },
+                {
+                    "text": "dc8-gtr-ww-44.domain.com",
+                    "Name": "DestinationHostname"
+                },
+                {
+                    "text": "5061",
+                    "Name": "DestinationPort"
+                },
+                {
+                    "Name": "DestinationPortName"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,6 @@
+Description: 'A user accessed an object'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_file
+      EventDescription: 'The user {subject.name} accessed the file "{object.name}"'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_resource
+      EventDescription: 'The user {subject.name} accessed the object "{object.fullpath}"'

@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_create_delete"
+        and action = "create"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_create
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_create_delete"
+        and action = "remove"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_delete
+ObjectId: PT-NF-4934

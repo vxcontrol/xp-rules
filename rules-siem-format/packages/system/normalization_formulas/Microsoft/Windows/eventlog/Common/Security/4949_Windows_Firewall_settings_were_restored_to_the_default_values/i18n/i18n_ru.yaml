@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4949_Windows_Firewall_settings_were_restored_to_the_default_values
+      EventDescription: 'Восстановлены параметры по умолчанию для брандмауэра Windows на узле {event_src.host}'

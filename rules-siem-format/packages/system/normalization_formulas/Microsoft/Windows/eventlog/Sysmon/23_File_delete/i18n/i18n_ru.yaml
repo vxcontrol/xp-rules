@@ -1,0 +1,6 @@
+Description: 'Файл удален'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_executable_file
+      EventDescription: 'Процесс {datafield4} удалил исполняемый файл {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_not_executable_file
+      EventDescription: 'Процесс {datafield4} удалил файл {object.name} на узле {event_src.host}'

@@ -1,0 +1,81 @@
+EVENTLOG = 'EventID="13"'
+
+COND = $Provider["Name"] == "Microsoft-Windows-Sysmon"
+
+action = "modify"
+object = "reg_object"
+status = "success"
+
+subject.process.id = $Data["ProcessId"]
+$process_fullpath = lower($Data["Image"])
+$process_fullpath_csv = csv($process_fullpath, "\\", "'")
+$process_name = $process_fullpath_csv[length($process_fullpath_csv) - 1]
+subject.process.name = $process_name
+if strip($process_fullpath, "", $process_name) != '' then
+    subject.process.path = strip($process_fullpath, "", $process_name)
+endif
+subject.process.fullpath = $process_fullpath
+subject.process.guid = strip($Data['ProcessGuid'], '{', '}')
+
+$subject_name_domain = csv($Data["User"], "\\", "'")
+if length($subject_name_domain) > 1 then
+    subject.account.domain = lower($subject_name_domain[0])
+    subject.account.name = lower($subject_name_domain[1])
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+elif $Data["User"] != '-' then
+    subject.account.id = $Data["User"]
+endif
+
+$targetobject = lower($Data["TargetObject"])
+$temp = strip($targetobject, "hklm", "")  # hklm -> \registry\machine
+if $temp != $targetobject then
+    $targetobject = "\\registry\\machine" + $temp
+else
+    $temp = strip($targetobject, "hku", "")  # hku -> \registry\user
+    if $temp != $targetobject then
+        $targetobject = "\\registry\\user" + $temp
+    else
+        $temp = strip($targetobject, "hkcr", "")  # hkcr -> \registry\machine\software\classes
+        if $temp != $targetobject then
+            $targetobject = "\\registry\\machine\\software\\classes" + $temp
+        endif
+    endif
+endif
+
+$object_name_and_path = csv($targetobject, "\\", "'")
+object.name = $object_name_and_path[length($object_name_and_path) - 1]
+if find_substr($targetobject, "\\winlogon\\specialaccounts\\userlist") != null then
+    object.account.name = object.name
+endif
+if strip($targetobject, "", object.name) != '' then
+    object.path = strip($targetobject, "", object.name)
+endif
+object.fullpath = $targetobject
+object.property = "value"
+object.new_value = lower($Data["Details"])
+
+time = $Data["UtcTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Registry Object"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "sysmon"
+event_src.subsys = $Channel
+event_src.rule = $Data["RuleName"]
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Other"
+
+id = "PT_Microsoft_Windows_eventlog_Sysmon_13_Registry_value_changed"
+

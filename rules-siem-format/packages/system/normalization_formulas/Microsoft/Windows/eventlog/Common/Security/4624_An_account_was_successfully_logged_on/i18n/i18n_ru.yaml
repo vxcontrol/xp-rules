@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on_login
+      EventDescription: 'Пользователь {subject.account.name} осуществил успешный вход в систему на узле {event_src.host}. Тип входа: {datafield6}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4624_An_account_was_successfully_logged_on_escalate
+      EventDescription: 'Пользователь {subject.account.name} повысил свои привилегии до привилегий пользователя {object.account.name} на узле {event_src.host}'

@@ -1,0 +1,84 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4768",
+			"Version": "0",
+			"Level": "0",
+			"Task": "14339",
+			"Opcode": "0",
+			"Keywords": "0x8010000000000000",
+			"TimeCreated": {
+				"SystemTime": "2017-02-27T16:14:52.767792500Z"
+			},
+			"EventRecordID": "213524558",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "1000",
+				"ThreadID": "18532"
+			},
+			"Channel": "Security",
+			"Computer": "DC-marver.hunters.net",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "kolobok@hunt.net",
+				"Name": "TargetUserName"
+			},
+			{
+				"text": "hunters.net",
+				"Name": "TargetDomainName"
+			},
+			{
+				"text": "S-1-0-0",
+				"Name": "TargetSid"
+			},
+			{
+				"text": "krbtgt/hunters.net",
+				"Name": "ServiceName"
+			},
+			{
+				"text": "S-1-0-0",
+				"Name": "ServiceSid"
+			},
+			{
+				"text": "0x40810010",
+				"Name": "TicketOptions"
+			},
+			{
+				"text": "0x6",
+				"Name": "Status"
+			},
+			{
+				"text": "0xffffffff",
+				"Name": "TicketEncryptionType"
+			},
+			{
+				"text": "-",
+				"Name": "PreAuthType"
+			},
+			{
+				"text": "::ffff:10.62.98.35",
+				"Name": "IpAddress"
+			},
+			{
+				"text": "57345",
+				"Name": "IpPort"
+			},
+			{
+				"Name": "CertIssuerName"
+			},
+			{
+				"Name": "CertSerialNumber"
+			},
+			{
+				"Name": "CertThumbprint"
+			}]
+		}
+	}
+}

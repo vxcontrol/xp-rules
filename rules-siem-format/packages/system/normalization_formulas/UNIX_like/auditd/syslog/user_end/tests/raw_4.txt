@@ -1,0 +1,1 @@
+<14>Nov 19 19:10:01 as21481 audispd: node=as21481 type=USER_END msg=audit(1542640201.209:61744): user pid=11190 uid=0 auid=0 ses=4177 msg='op=PAM:session_close acct="root" exe="/usr/sbin/crond" hostname=? addr=? terminal=cron res=success'

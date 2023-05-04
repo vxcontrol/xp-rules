@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_8_Create_remote_thread"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_8_Create_remote_thread
+ObjectId: PT-NF-2371

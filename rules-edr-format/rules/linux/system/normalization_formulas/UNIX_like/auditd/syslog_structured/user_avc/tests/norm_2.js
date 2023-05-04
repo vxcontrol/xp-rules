@@ -1,0 +1,23 @@
+{
+    "action": "modify",
+    "chain_id": "5394",
+    "event_src.category": "Operating system",
+    "event_src.ip": "192.168.137.195",
+    "event_src.subsys": "auditd",
+    "event_src.title": "unix_like",
+    "id": "PT_UNIX_like_auditd_syslog_structured_user_avc",
+    "importance": "low",
+    "labels": "node_contains_ext_ip",
+    "msgid": "USER_AVC",
+    "object": "configuration",
+    "reason": "received policyload notice (seqno=3)",
+    "status": "success",
+    "subject": "process",
+    "subject.account.id": "81",
+    "subject.account.name": "dbus",
+    "subject.process.fullpath": "/usr/bin/dbus-daemon",
+    "subject.process.id": "734",
+    "subject.process.name": "dbus-daemon",
+    "subject.process.path": "/usr/bin/",
+    "time": "2019-12-06T10:35:54.000Z"
+}

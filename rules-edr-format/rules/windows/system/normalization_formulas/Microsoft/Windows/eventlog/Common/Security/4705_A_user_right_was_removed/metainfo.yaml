@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4705_A_user_right_was_removed"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4705_A_user_right_was_removed
+ObjectId: PT-NF-1850

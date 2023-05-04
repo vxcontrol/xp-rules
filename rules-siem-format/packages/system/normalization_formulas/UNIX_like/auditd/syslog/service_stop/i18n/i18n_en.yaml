@@ -1,0 +1,6 @@
+Description: 'UNIX-like service is disable on the host'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_service_stop_name
+      EventDescription: 'The user with UID {subject.id} stopped the service "{object.name}" on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_service_stop_not_name
+      EventDescription: 'The user with UID {subject.id} stopped a service on host {event_src.host}'

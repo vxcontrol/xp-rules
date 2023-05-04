@@ -1,0 +1,4 @@
+Description: 'Image loaded'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_7_Image_loaded
+      EventDescription: 'The process {datafield4} loaded the module {object.name} on host {event_src.host}'

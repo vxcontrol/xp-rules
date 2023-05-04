@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4700_A_scheduled_task_was_enabled"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4700_A_scheduled_task_was_enabled
+ObjectId: PT-NF-1846

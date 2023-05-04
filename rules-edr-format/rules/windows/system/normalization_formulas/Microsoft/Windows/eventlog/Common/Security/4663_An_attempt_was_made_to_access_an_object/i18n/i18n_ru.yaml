@@ -1,0 +1,6 @@
+Description: 'Пользователь получил доступ к объекту'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_file
+      EventDescription: 'Пользователь {subject.name} получил доступ к файлу "{object.name}"'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4663_An_attempt_was_made_to_access_an_object_resource
+      EventDescription: 'Пользователь {subject.name} получил доступ к объекту "{object.fullpath}"'

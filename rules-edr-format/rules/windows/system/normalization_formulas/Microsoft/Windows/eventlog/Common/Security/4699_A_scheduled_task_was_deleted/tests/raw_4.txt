@@ -1,0 +1,78 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4699",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-07-22T11:15:25.274474100Z"
+            },
+            "EventRecordID": "359213334",
+            "Correlation": {
+                "ActivityID": "{7329e9fd-681c-0003-1fea-29731c68d801}"
+            },
+            "Execution": {
+                "ProcessID": "920",
+                "ThreadID": "30260"
+            },
+            "Channel": "Security",
+            "Computer": "someuser.somedomain.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEUSER$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SOMEDOMAIN",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Windows\\UpdateOrchestrator\\Universal Orchestrator Start",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContent"
+                },
+                {
+                    "text": "20266198323167394",
+                    "Name": "ClientProcessStartKey"
+                },
+                {
+                    "text": "5952",
+                    "Name": "ClientProcessId"
+                },
+                {
+                    "text": "912",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "0",
+                    "Name": "RpcCallClientLocality"
+                },
+                {
+                    "text": "someuser.somedomain.ru",
+                    "Name": "FQDN"
+                }
+            ]
+        }
+    }
+}

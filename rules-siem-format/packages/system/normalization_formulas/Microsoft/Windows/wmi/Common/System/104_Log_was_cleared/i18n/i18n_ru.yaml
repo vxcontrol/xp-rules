@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_Common_System_104_Log_was_cleared
+      EventDescription: 'Пользователь {subject.account.name} очистил журнал {object.name} на узле {event_src.host}'

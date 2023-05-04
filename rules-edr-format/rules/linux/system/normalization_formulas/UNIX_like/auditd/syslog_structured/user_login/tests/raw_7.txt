@@ -1,0 +1,11 @@
+{
+    "eventid": "344",
+    "items": {
+        "USER_LOGIN": [
+            "pid=2130 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='uid=1000 exe=\"/usr/libexec/gdm-session-worker\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"jr\" UID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602686496",
+    "timestampfractional": "004"
+}

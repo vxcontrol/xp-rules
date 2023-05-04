@@ -1,0 +1,4 @@
+Description: 'A task was updated'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4702_A_scheduled_task_was_updated
+      EventDescription: 'The user {subject.name} updated the scheduled task {object.name} on host {event_src.host}'

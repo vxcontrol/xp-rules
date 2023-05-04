@@ -1,0 +1,1 @@
+<123>Sep 12 08:26:43 dhcp83-5 audispd: node=centos6 type=AVC msg=audit(1158064002.046:4): avc:  denied  { read } for  pid=2496 comm="bluez-pin" name=".gdm1K3IFT" dev=dm-0 ino=3601333 scontext=user_u:system_r:bluetooth_helper_t:s0-s0:c0 tcontext=system_u:object_r:xdm_tmp_t:s0 tclass=file

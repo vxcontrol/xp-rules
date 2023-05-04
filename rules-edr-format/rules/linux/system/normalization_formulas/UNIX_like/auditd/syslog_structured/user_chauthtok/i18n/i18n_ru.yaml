@@ -1,0 +1,6 @@
+Description: 'Изменен атрибут пользователя'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_chauthtok_success
+      EventDescription: 'Пользователь с ID {subject.account.id} изменил атрибут пользователя {object.account.name} на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_chauthtok_failure
+      EventDescription: 'Пользователь с ID {subject.account.id} не смог изменить атрибут пользователя {object.account.name} на узле {event_src.host}'

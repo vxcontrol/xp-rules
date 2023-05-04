@@ -1,0 +1,143 @@
+JSON = "EventCode=4771"
+
+COND = $Logfile == "Security" and $SourceName == "Microsoft-Windows-Security-Auditing" and $EventType == "5"
+
+subject = "account"
+action = "login"
+object = "system"
+status = "failure"
+
+subject.account.name = lower($InsertionStrings[0])
+subject.account.id = $InsertionStrings[1]
+
+$ip = strip($InsertionStrings[6], "::ffff:", "")
+if $ip == "::1" or $InsertionStrings[7] == 0 or in_subnet($ip, "127.0.0.0/8") then
+    src.hostname = "localhost"
+    src.ip = $ip
+else
+    src.ip = $ip
+endif
+
+src.port = $InsertionStrings[7]
+
+logon_type = $InsertionStrings[5]
+
+datafield2 = switch $InsertionStrings[5]                    
+    case "0" "Logon without Pre-Authentication"
+    case "2" "Standard password authentication"
+    case "11" "The ETYPE-INFO pre-authentication"
+    case "15" "Smart Card logon authentication"
+    case "16" "Request sent to KDC in Smart Card authentication scenarios"
+    case "17" "Smart Card logon authentication"
+    case "19" "The ETYPE-INFO2 pre-authentication"
+    case "20" "KDC Referrals tickets"
+    case "138" "Logon using Kerberos Armoring (FAST)"
+endswitch
+
+if find_substr($InsertionStrings[2], "/") != null then
+    $servicename = csv($InsertionStrings[2], "/", "")
+    logon_service = $servicename[0]
+    datafield5 = $servicename[1]
+else
+    logon_service = $InsertionStrings[2]
+endif
+
+datafield4 = switch lower($InsertionStrings[4])                                  
+    case "0x0" "No error"
+    case "0x1" "Client's entry in database has expired"
+    case "0x2" "Server's entry in database has expired"
+    case "0x3" "Requested protocol version number not supported"
+    case "0x4" "Client's key encrypted in old master key"
+    case "0x5" "Server's key encrypted in old master key"
+    case "0x6" "Client not found in Kerberos database"
+    case "0x7" "Server not found in Kerberos database"
+    case "0x8" "Multiple principal entries in database"
+    case "0x9" "The client or server has a null key"
+    case "0xa" "Ticket not eligible for postdating"
+    case "0xb" "Requested starttime is later than end time"
+    case "0xc" "KDC policy rejects request"
+    case "0xd" "KDC cannot accommodate requested option"
+    case "0xe" "KDC has no support for encryption type"
+    case "0xf" "KDC has no support for checksum type"
+    case "0x10" "KDC has no support for padata type"
+    case "0x11" "KDC has no support for transited type"
+    case "0x12" "Clients credentials have been revoked"
+    case "0x13" "Credentials for server have been revoked"
+    case "0x14" "TGT has been revoked"
+    case "0x15" "Client not yet valid; try again later"
+    case "0x16" "Server not yet valid; try again later"
+    case "0x17" "Password has expired; change password to reset"
+    case "0x18" "Pre-authentication information was invalid"
+    case "0x19" "Additional pre- authentication required"
+    case "0x1a" "Requested server and ticket don't match"
+    case "0x1b" "Server principal valid for user2user only"
+    case "0x1c" "KDC Policy rejects transited path"
+    case "0x1d" "A service is not available"
+    case "0x1f" "Integrity check on decrypted field failed"
+    case "0x20" "Ticket expired"
+    case "0x21" "Ticket not yet valid"
+    case "0x22" "Request is a replay"
+    case "0x23" "The ticket isn't for us"
+    case "0x24" "Ticket and authenticator don't match"
+    case "0x25" "Clock skew too great"
+    case "0x26" "Incorrect net address"
+    case "0x27" "Protocol version mismatch"
+    case "0x28" "Invalid msg type"
+    case "0x29" "Message stream modified"
+    case "0x2a" "Message out of order"
+    case "0x2c" "Specified version of key is not available"
+    case "0x2d" "Service key not available"
+    case "0x2e" "Mutual authentication failed"
+    case "0x2f" "Incorrect message direction"
+    case "0x30" "Alternative authentication method required"
+    case "0x31" "Incorrect sequence number in message"
+    case "0x32" "Inappropriate type of checksum in message"
+    case "0x33" "Policy rejects transited path"
+    case "0x34" "Response too big for UDP; retry with TCP"
+    case "0x3c" "Generic error (description in e-text)"
+    case "0x3d" "Field is too long for this implementation"
+    case "0x3e" "The client trust failed or is not implemented"
+    case "0x3f" "The KDC server trust failed or could not be verified"
+    case "0x40" "The signature is invalid"
+    case "0x41" "A higher encryption level is needed"
+    case "0x42" "User-to-user authorization is required"
+    case "0x43" "No TGT available to validate USER-TO-USER"
+    case "0x44" "Incorrect domain or principal"
+    case "0x45" "Ticket must be for USER-TO-USER"
+    case "0x46" "Reserved for PKINIT"
+    case "0x47" "Reserved for PKINIT"
+    case "0x48" "Reserved for PKINIT"
+    case "0x49" "Reserved for PKINIT"
+    case "0x4a" "Reserved for PKINIT"
+    case "0x4b" "Reserved for PKINIT"
+    case "0x4c" "Reserved for PKINIT"
+    case "0x80000001" "More data is available"
+    case "0x80000002" "The Kerberos service is not running"
+endswitch
+
+datafield8 = $InsertionStrings[3]                           
+
+reason = lower($InsertionStrings[4])
+time = $TimeGenerated
+msgid = $EventCode
+
+importance = "info"
+
+category.generic = "Operating System"
+category.high = "Access Management"
+category.low = "Communication"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Logfile
+if find_substr($ComputerName, '.') != null then
+    event_src.fqdn = lower($ComputerName)
+    event_src.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    event_src.hostname = lower($ComputerName)
+endif
+event_src.subsys = $Logfile
+event_src.category = "AAA"
+
+id = "PT_Microsoft_Windows_wmi_4771_Kerberos_pre_authentication_failed"
+

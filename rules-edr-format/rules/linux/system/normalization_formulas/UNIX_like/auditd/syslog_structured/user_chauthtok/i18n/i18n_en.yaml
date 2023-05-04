@@ -1,0 +1,6 @@
+Description: 'A user attribute is changed'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_chauthtok_success
+      EventDescription: 'The user with ID {subject.account.id} changed an attribute of the user {object.account.name} on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_chauthtok_failure
+      EventDescription: 'The user with ID {subject.account.id} failed to change an attribute of the user {object.account.name} on host {event_src.host}'

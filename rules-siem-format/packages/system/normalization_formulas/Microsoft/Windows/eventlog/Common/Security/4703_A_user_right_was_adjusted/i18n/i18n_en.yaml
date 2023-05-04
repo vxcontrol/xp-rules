@@ -1,0 +1,4 @@
+Description: 'User privileges are modified'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4703_A_user_right_was_adjusted
+      EventDescription: 'The privileges of the user {object.account.domain}\{object.account.name} are modified at a request from {subject.account.domain}\{subject.account.name}'

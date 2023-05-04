@@ -1,0 +1,58 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2021-08-13T08:32:21.0823478Z"
+            },
+            "EventRecordID": "589673",
+            "Correlation": {
+                "ActivityID": "{992116aa-8e21-0003-21a6-2599218ed701}"
+            },
+            "Execution": {
+                "ProcessID": "11696",
+                "ThreadID": "11932"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "Test_w10x64-132.testlab.esc",
+            "Security": {
+                "UserID": "S-1-5-21-2418237829-468669797-1489771779-1001"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "        Severity = Informational\r\n        Host Name = ConsoleHost\r\n        Host Version = 5.1.19041.1023\r\n        Host ID = c782a97f-9ca3-43ee-9c6f-010c1cec7d88\r\n        Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n\r\n        Engine Version = 5.1.19041.1023\r\n        Runspace ID = 98efb008-ae5c-4105-93dc-ea59a62f840f\r\n        Pipeline ID = \r\n        Command Name = Get-Command\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 481\r\n        User = TEST_W10X64-132\\admin\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Get-Command): \"Get-Command\"\r\nParameterBinding(Get-Command): name=\"ErrorAction\"; value=\"Ignore\"\r\nParameterBinding(Get-Command): name=\"Name\"; value=\".\\get-addefaultdomainpasswordpolicy\"\r\nNonTerminatingError(Get-Command): \"The term '.\\get-addefaultdomainpasswordpolicy' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.\"\r\nCommandInvocation(Get-Command): \"Get-Command\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "CommandInvocation(Get-Command): \"Get-Command\"\r\nParameterBinding(Get-Command): name=\"ErrorAction\"; value=\"Ignore\"\r\nParameterBinding(Get-Command): name=\"Name\"; value=\".\\get-addefaultdomainpasswordpolicy\"\r\nNonTerminatingError(Get-Command): \"The term '.\\get-addefaultdomainpasswordpolicy' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.\"\r\nCommandInvocation(Get-Command): \"Get-Command\"\r\n\r\n\r\nContext:\r\n        Severity = Informational\r\n        Host Name = ConsoleHost\r\n        Host Version = 5.1.19041.1023\r\n        Host ID = c782a97f-9ca3-43ee-9c6f-010c1cec7d88\r\n        Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n        Engine Version = 5.1.19041.1023\r\n        Runspace ID = 98efb008-ae5c-4105-93dc-ea59a62f840f\r\n        Pipeline ID = \r\n        Command Name = Get-Command\r\n        Command Type = Cmdlet\r\n        Script Name = \r\n        Command Path = \r\n        Sequence Number = 481\r\n        User = TEST_W10X64-132\\admin\r\n        Connected User = \r\n        Shell ID = Microsoft.PowerShell\r\n\r\n\r\nUser Data:\r\n\r\n",
+            "Level": "Information",
+            "Task": "Executing Pipeline",
+            "Opcode": "To be used when operation is just executing a method",
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Provider": null,
+            "Keywords": null
+        }
+    }
+}

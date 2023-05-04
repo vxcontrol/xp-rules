@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2019-12-25T06:39:59.783616100Z"
+            },
+            "EventRecordID": "3334",
+            "Correlation": {
+                "ActivityID": "{B9417DCB-A5CC-0002-D840-45B9CCA5D501}"
+            },
+            "Execution": {
+                "ProcessID": "2160",
+                "ThreadID": "7236"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-21-3500636268-2529342812-1271244175-500"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": " Severity = Informational\r\n Host Name = ConsoleHost\r\n Host Version = 5.1.14393.0\r\n Host ID = ff553896-ebd7-4e6c-b3ac-2fc878ac2224\r\n Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n Engine Version = 5.1.14393.0\r\n Runspace ID = e8e75cb7-9510-4d1b-aefb-a58814af8cf8\r\n Pipeline ID = 190\r\n Command Name = Get-Process\r\n Command Type = Cmdlet\r\n Script Name = \r\n Command Path = \r\n Sequence Number = 1052\r\n User = SERVER160\\Administrator\r\n Connected User = \r\n Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Get-Process): \"Get-Process\"\r\nParameterBinding(Get-Process): name=\"FileVersionInfo\"; value=\"True\"\r\nParameterBinding(Get-Process): name=\"Name\"; value=\"lsass\"\r\nCommandInvocation(findstr.exe): \"findstr.exe\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

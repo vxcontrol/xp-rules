@@ -1,0 +1,17 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598352934",
+    "timestampfractional": "236",
+    "eventid": "1489",
+    "items": {
+        "LOGIN": [
+            "pid=1768 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=4 res=1 UID=\"root\" OLD-AUID=\"unset\" AUID=\"jr\""
+        ],
+        "PROCTITLE": [
+            "proctitle=\"(systemd)\""
+        ],
+        "SYSCALL": [
+            "arch=c000003e syscall=1 success=yes exit=4 a0=7 a1=7ffdf69b28b0 a2=4 a3=7fe229448371 items=0 ppid=1 pid=1768 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4 comm=\"(systemd)\" exe=\"/usr/lib/systemd/systemd\" key=(null) ARCH=x86_64 SYSCALL=write AUID=\"jr\" UID=\"root\" GID=\"root\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"root\" SGID=\"root\" FSGID=\"root\""
+        ]
+    }
+}

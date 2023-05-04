@@ -1,0 +1,35 @@
+EVENTLOG = 'EventID="4725"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "disable"
+object = "account"
+status = "success"
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+
+object.account.name = lower($Data["TargetUserName"])
+object.account.domain = lower($Data["TargetDomainName"])
+object.account.id = $Data["TargetSid"]
+
+datafield1 = maybe_number16($Data["SubjectLogonId"])    
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_4725_A_user_account_was_disabled"
+importance = "medium"
+

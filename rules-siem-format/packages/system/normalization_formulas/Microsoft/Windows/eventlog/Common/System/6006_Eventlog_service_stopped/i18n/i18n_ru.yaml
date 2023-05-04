@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_6006_Eventlog_service_stopped
+      EventDescription: 'Остановлена служба журнала событий на узле {event_src.host}'

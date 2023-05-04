@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-ActiveDirectory_DomainService",
+                "Guid": "{0e8478c5-3605-4e8c-8497-1e730c959516}",
+                "EventSourceName": "NTDS General"
+            },
+            "EventID": {
+                "text": "1644",
+                "Qualifiers": "16384"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "15",
+            "Opcode": "0",
+            "Keywords": "0x8080000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-09-08T16:31:42.554344900Z"
+            },
+            "EventRecordID": "88679355",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "680",
+                "ThreadID": "5372"
+            },
+            "Channel": "Directory Service",
+            "Computer": "DC.testlab.local",
+            "Security": {
+                "UserID": "S-1-5-21-1129291328-2819992169-918366777-1201"
+            }
+        },
+        "EventData": {
+            "Data": [
+                "dc=testlab,dc=esc",
+                " (objectClass=*) ",
+                "8630",
+                "433",
+                "172.16.222.110:36366",
+                "subtree",
+                "[all]",
+                null,
+                "DNT_index:2460:N;",
+                "64688",
+                "1047",
+                "1182",
+                "0",
+                "0",
+                "4782",
+                "none",
+                "unavailable"
+            ]
+        }
+    }
+}

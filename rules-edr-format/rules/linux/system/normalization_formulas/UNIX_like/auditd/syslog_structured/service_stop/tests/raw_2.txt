@@ -1,0 +1,12 @@
+{
+    "eventid": "6697",
+    "items": {
+        "SERVICE_STOP": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='unit=anacron comm=\"systemd\" exe=\"/usr/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"unset\"",
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='unit=anacron comm=\"systemd\" exe=\"/usr/lib/systemd/systemd\" hostname=? addr=? terminal=? res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575621103",
+    "timestampfractional": "828"
+}

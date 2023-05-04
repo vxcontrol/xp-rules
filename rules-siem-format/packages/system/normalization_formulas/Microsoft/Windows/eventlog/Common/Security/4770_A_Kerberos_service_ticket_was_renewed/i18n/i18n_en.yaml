@@ -1,0 +1,4 @@
+Description: 'Kerberos service ticket was renewed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed
+      EventDescription: 'A Kerberos service ticket was renewed on {event_src.hostname}'

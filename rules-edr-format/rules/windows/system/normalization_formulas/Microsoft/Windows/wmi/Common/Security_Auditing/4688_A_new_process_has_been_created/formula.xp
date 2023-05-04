@@ -1,0 +1,90 @@
+!JSON = "EventCode=4688"
+!COND = $Logfile=="Security" and $SourceName=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "start"
+object = "process"
+status = "success"
+
+subject.account.name = if $InsertionStrings[1] != "-" then lower($InsertionStrings[1]) else null endif
+subject.account.domain = if $InsertionStrings[2] != "-" then lower($InsertionStrings[2]) else null endif
+subject.account.id = if $InsertionStrings[0] != "S-1-0-0" then $InsertionStrings[0] else null endif
+if subject.account.id == null and subject.account.name != null then
+    subject.account.id = "synthetic:" + subject.account.name
+    if subject.account.domain != null then
+        subject.account.id = subject.account.id + "@" + subject.account.domain
+    endif
+endif
+subject.account.session_id = maybe_number16($InsertionStrings[3])
+subject.account.privileges = switch $InsertionStrings[6]
+    case "%%1936" "TokenElevationTypeDefault"
+    case "%%1937" "TokenElevationTypeFull"
+    case "%%1938" "TokenElevationTypeLimited"
+endswitch
+
+if string(maybe_number16($Data["TargetLogonId"])) != "0" then
+    object.account.name = if $InsertionStrings[10] != "-" then lower($InsertionStrings[10]) else null endif
+    object.account.domain = if $InsertionStrings[11] != "-" then lower($InsertionStrings[11]) else null endif
+    object.account.id = if $InsertionStrings[9] != "S-1-0-0" then $InsertionStrings[9] else null endif
+    if object.account.id == null and object.account.name != null then
+        object.account.id = "synthetic:" + object.account.name
+        if object.account.domain != null then
+            object.account.id = object.account.id + "@" + object.account.domain
+        endif
+    endif
+    object.account.session_id = maybe_number16($InsertionStrings[12])
+else
+    object.account.name = subject.account.name
+    object.account.domain = subject.account.domain
+    object.account.id = subject.account.id
+    object.account.session_id = subject.account.session_id
+endif
+
+object.process.id = maybe_number16($InsertionStrings[4])
+object.process.fullpath = lower($InsertionStrings[5])
+$process_path = csv(object.process.fullpath, "\\", "")
+object.process.name = $process_path[length($process_path) - 1]
+if strip(object.process.fullpath, "", object.process.name) != '' then
+    object.process.path = strip(object.process.fullpath, "", object.process.name)
+endif
+object.process.cmdline = if $InsertionStrings[8] != "" then $InsertionStrings[8] else null endif
+
+object.process.parent.id = maybe_number16($InsertionStrings[7])
+object.process.parent.fullpath = lower($InsertionStrings[13])
+$process_parent_path = csv(object.process.parent.fullpath, "\\", "")
+object.process.parent.name = $process_parent_path[length($process_parent_path) - 1]
+if strip(object.process.parent.fullpath, "", object.process.parent.name) != '' then
+    object.process.parent.path = strip(object.process.parent.fullpath, "", object.process.parent.name)
+endif
+
+time = $TimeGenerated
+msgid = $EventIdentifier
+importance = "info"
+
+category.generic = "Process"
+category.high = "Availability Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Logfile
+if find_substr($ComputerName, '.') != null then
+    event_src.fqdn = lower($ComputerName)
+    event_src.hostname = lower(substr($ComputerName, 0, find_substr($ComputerName, '.')))
+else
+    event_src.hostname = lower($ComputerName)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_wmi_4688_A_new_process_has_been_created"
+
+if subject.account.name != null and object.account.name != null and subject.account.name != object.account.name then
+    subject.state = "on behalf" 
+elif subject.account.name != null and object.account.name != null and subject.account.name == object.account.name then
+    subject.state = "on behalf of oneself" 
+elif subject.account.name != null and object.account.name == null then
+    subject.state = "on behalf of oneself" 
+elif subject.account.name == null then
+    subject.state = "nameless" 
+endif
+

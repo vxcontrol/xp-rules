@@ -1,0 +1,11 @@
+{
+    "eventid": "568",
+    "items": {
+        "USER_AVC": [
+            "pid=1083 uid=105 auid=4294967295 ses=4294967295 msg='apparmor=\"DENIED\" operation=\"dbus_method_call\"  bus=\"system\" path=\"/\" interface=\"org.freedesktop.DBus.ObjectManager\" member=\"GetManagedObjects\" mask=\"send\" name=\"org.bluez\" pid=5289 label=\"snap.rocketchat-desktop.rocketchat-desktop\" peer_pid=1147 peer_label=\"unconfined\" exe=\"/usr/bin/dbus-daemon\" sauid=105 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1475497645",
+    "timestampfractional": "110"
+}

@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4946_Windows_Firewall_exception_list_A_rule_was_added
+      EventDescription: 'Изменен список исключений брандмауэра Windows. Добавлено правило {object.name} на узле {event_src.host}'

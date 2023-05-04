@@ -1,0 +1,62 @@
+EVENTLOG = 'EventID="5157"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "rule"
+action = "deny"
+object = "connection"
+status = "success"
+
+subject.id = $Data["FilterRTID"]
+
+object.process.id = $Data["ProcessID"]
+$name_and_path = csv($Data["Application"], "\\", "'")
+if $name_and_path[0] == $Data["Application"] then
+    object.process.name = $Data["Application"]
+else
+    object.process.name = $name_and_path[length($name_and_path) - 1]
+    object.process.path = strip($Data["Application"], "", object.process.name)
+    object.process.fullpath = $Data["Application"]
+endif
+
+object.property = "ALE layer"
+$object_value_raw = switch $Data["LayerName"]
+    case "%%14610" "Receive/Accept"
+    case "%%14611" "Connect"
+endswitch
+object.value = coalesce($object_value_raw, $Data["LayerName"])
+
+direction = switch $Data["Direction"]
+    case "%%14592" "ingress"
+    case "%%14593" "egress"
+endswitch
+
+src.ip = $Data["SourceAddress"]
+src.port = $Data["SourcePort"]
+dst.ip = $Data["DestAddress"]
+dst.port = $Data["DestPort"]
+
+protocol = $Data["Protocol"]
+
+datafield5 = $Data["LayerRTID"]     # layer id
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "info"
+
+category.generic = "Connection"
+category.high = "Network Interaction Management"
+category.low = "Control"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Operating system"
+
+id = "PT_Microsoft_Windows_eventlog_5157_WFP_blocked_a_connection"
+

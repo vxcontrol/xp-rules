@@ -1,0 +1,86 @@
+{
+	"Event": {
+		"xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+		"System": {
+			"Provider": {
+				"Name": "Microsoft-Windows-Security-Auditing",
+				"Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+			},
+			"EventID": "4648",
+			"Version": "0",
+			"Level": "0",
+			"Task": "12544",
+			"Opcode": "0",
+			"Keywords": "0x8020000000000000",
+			"TimeCreated": {
+				"SystemTime": "2017-02-16T14:06:37.130859300Z"
+			},
+			"EventRecordID": "9838",
+			"Correlation": null,
+			"Execution": {
+				"ProcessID": "448",
+				"ThreadID": "2184"
+			},
+			"Channel": "Security",
+			"Computer": "CORE-10",
+			"Security": null
+		},
+		"EventData": {
+			"Data": [{
+				"text": "S-1-0-0",
+				"Name": "SubjectUserSid"
+			},
+			{
+				"text": "-",
+				"Name": "SubjectUserName"
+			},
+			{
+				"text": "-",
+				"Name": "SubjectDomainName"
+			},
+			{
+				"text": "0x50c0",
+				"Name": "SubjectLogonId"
+			},
+			{
+				"text": "{00000000-0000-0000-0000-000000000000}",
+				"Name": "LogonGuid"
+			},
+			{
+				"text": "182E02FE9A4user24dbfBBE3F70E4495762F22DDFVVVb",
+				"Name": "TargetUserName"
+			},
+			{
+				"Name": "TargetDomainName"
+			},
+			{
+				"text": "{00000000-0000-0000-0000-000000000000}",
+				"Name": "TargetLogonGuid"
+			},
+			{
+				"text": "CORE-14",
+				"Name": "TargetServerName"
+			},
+			{
+				"text": "CORE-14",
+				"Name": "TargetInfo"
+			},
+			{
+				"text": "0x1c0",
+				"Name": "ProcessId"
+			},
+			{
+				"text": "C:\\Windows\\System32\\lsass.exe",
+				"Name": "ProcessName"
+			},
+			{
+				"text": "-",
+				"Name": "IpAddress"
+			},
+			{
+				"text": "-",
+				"Name": "IpPort"
+			}]
+		}
+	}
+}

@@ -1,0 +1,6 @@
+Description: 'Пользователь вызвал привилегированную службу'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_success
+      EventDescription: 'Пользователь {subject.account.name} вызвал привилегированную службу на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_failure
+      EventDescription: 'Пользователь {subject.account.name} не смог вызвать привилегированную службу на узле {event_src.host}'

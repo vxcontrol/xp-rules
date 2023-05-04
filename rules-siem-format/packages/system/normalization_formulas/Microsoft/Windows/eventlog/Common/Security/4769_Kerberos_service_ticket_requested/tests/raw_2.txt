@@ -1,0 +1,77 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "TargetUserName",
+                    "text": "nonexistent@i2.ru"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "i2.ru"
+                },
+                {
+                    "Name": "ServiceName",
+                    "text": "ldap/2012r2-dc.I2.ru"
+                },
+                {
+                    "Name": "ServiceSid",
+                    "text": "S-1-0-0"
+                },
+                {
+                    "Name": "TicketOptions",
+                    "text": "0x40810000"
+                },
+                {
+                    "Name": "TicketEncryptionType",
+                    "text": "0xffffffff"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "::ffff:192.168.133.130"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "49606"
+                },
+                {
+                    "Name": "Status",
+                    "text": "0x6"
+                },
+                {
+                    "Name": "LogonGuid",
+                    "text": "{00000000-0000-0000-0000-000000000000}"
+                },
+                {
+                    "Name": "TransmittedServices",
+                    "text": "-"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "2012r2-dc.I2.ru",
+            "Correlation": null,
+            "EventID": "4769",
+            "EventRecordID": "237608",
+            "Execution": {
+                "ProcessID": "492",
+                "ThreadID": "1360"
+            },
+            "Keywords": "0x8010000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "14337",
+            "TimeCreated": {
+                "SystemTime": "2018-03-07T05:33:01.845886800Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

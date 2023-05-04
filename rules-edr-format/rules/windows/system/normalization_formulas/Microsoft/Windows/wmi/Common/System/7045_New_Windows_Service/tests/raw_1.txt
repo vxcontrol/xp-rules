@@ -1,0 +1,24 @@
+{
+    "Category": 0,
+    "CategoryString": "-",
+    "ComputerName": "SOMEONE.acme.com",
+    "Data": null,
+    "EventCode": 7045,
+    "EventIdentifier": 7045,
+    "EventType": "-",
+    "InsertionStrings": [
+        "Microsoft Policy Platform Local Authority",
+        "C:\\Program Files\\Microsoft Policy Platform\\policyHost.exe",
+        "Slujba rejima polzovatelya",
+        "Vruchnuyu",
+        "LocalSystem"
+    ],
+    "Logfile": "System",
+    "Message": "-",
+    "RecordNumber": 107749,
+    "SourceName": "Service Control Manager",
+    "TimeGenerated": "2013-11-11 09:56:25",
+    "TimeWritten": "2013-11-11 09:56:25",
+    "Type": "0x8080000000000000",
+    "User": null
+}

@@ -1,0 +1,6 @@
+Description: 'Sysmon configuration is changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed_config_file
+      EventDescription: 'Sysmon configuration is changed using a configuration file on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_16_Sysmon_config_state_changed_command
+      EventDescription: 'Sysmon configuration is changed with a command on host {event_src.host}'

@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded
+      EventDescription: 'На узле {event_src.host} загружен драйвер'

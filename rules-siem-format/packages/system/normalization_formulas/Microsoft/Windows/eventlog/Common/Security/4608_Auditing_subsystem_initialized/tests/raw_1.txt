@@ -1,0 +1,40 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4608",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12288",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2017-11-17T19:10:03.151548600Z"
+            },
+            "EventRecordID": "807315",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "512",
+                "ThreadID": "508"
+            },
+            "Channel": "Security",
+            "Computer": "abcd.qwer.tyui.local",
+            "Security": null
+        },
+        "EventData": null,
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "Windows is starting up.\r\n\r\nThis event is logged when LSASS.EXE starts and the auditing subsystem is initialized.",
+            "Level": null,
+            "Task": "Security State Change",
+            "Opcode": null,
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": null
+        }
+    }
+}

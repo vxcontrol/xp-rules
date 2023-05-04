@@ -1,0 +1,4 @@
+Description: 'A task was created'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4698_A_scheduled_task_was_created
+      EventDescription: 'The user {subject.name} created the scheduled task {object.name} on host {event_src.host}'

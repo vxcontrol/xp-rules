@@ -1,0 +1,11 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created"
+        and subject.state = "on behalf"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_behalf
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created"
+        and subject.state = "on behalf of oneself"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_oneself
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created"
+        and subject.state = "nameless"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4688_A_new_process_has_been_created_nameless
+ObjectId: PT-NF-1841

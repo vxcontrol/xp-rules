@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4701_A_scheduled_task_was_disabled
+      EventDescription: 'Пользователь {subject.name} отключил запланированную задачу {object.name} на узле {event_src.host}'

@@ -1,0 +1,115 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "xml:lang": "ru-RU",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4624",
+            "Version": "2",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-10-18T13:05:30.336517300Z"
+            },
+            "EventRecordID": "877859161",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "620",
+                "ThreadID": "5712"
+            },
+            "Channel": "Security",
+            "Computer": "ab1-cd-11.domain.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [{
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                }, {
+                    "text": "AB1-CD-11$",
+                    "Name": "SubjectUserName"
+                }, {
+                    "text": "DOMAIN",
+                    "Name": "SubjectDomainName"
+                }, {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                }, {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-3462",
+                    "Name": "TargetUserSid"
+                }, {
+                    "text": "user211",
+                    "Name": "TargetUserName"
+                }, {
+                    "text": "DOMAIN",
+                    "Name": "TargetDomainName"
+                }, {
+                    "text": "0x14a6b991",
+                    "Name": "TargetLogonId"
+                }, {
+                    "text": "3",
+                    "Name": "LogonType"
+                }, {
+                    "text": "CHAP",
+                    "Name": "LogonProcessName"
+                }, {
+                    "text": "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0",
+                    "Name": "AuthenticationPackageName"
+                }, {
+                    "text": "-",
+                    "Name": "WorkstationName"
+                }, {
+                    "text": "{00000000-0000-0000-0000-000000000000}",
+                    "Name": "LogonGuid"
+                }, {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                }, {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                }, {
+                    "text": "0",
+                    "Name": "KeyLength"
+                }, {
+                    "text": "0x4c8",
+                    "Name": "ProcessId"
+                }, {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                }, {
+                    "text": "-",
+                    "Name": "IpAddress"
+                }, {
+                    "text": "-",
+                    "Name": "IpPort"
+                }, {
+                    "text": "%%1833",
+                    "Name": "ImpersonationLevel"
+                }, {
+                    "text": "-",
+                    "Name": "RestrictedAdminMode"
+                }, {
+                    "text": "-",
+                    "Name": "TargetOutboundUserName"
+                }, {
+                    "text": "-",
+                    "Name": "TargetOutboundDomainName"
+                }, {
+                    "text": "%%1843",
+                    "Name": "VirtualAccount"
+                }, {
+                    "text": "0x0",
+                    "Name": "TargetLinkedLogonId"
+                }, {
+                    "text": "%%1842",
+                    "Name": "ElevatedToken"
+                }
+            ]
+        }
+    }
+}

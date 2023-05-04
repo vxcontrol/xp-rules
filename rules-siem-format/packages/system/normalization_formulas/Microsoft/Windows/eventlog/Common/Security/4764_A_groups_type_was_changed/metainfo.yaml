@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4764_A_groups_type_was_changed"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4764_A_groups_type_was_changed
+ObjectId: PT-NF-1902

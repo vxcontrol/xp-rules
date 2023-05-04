@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4657_Registry_value_changed_status_success
+      EventDescription: 'Пользователь {subject.name} изменил значение ключа реестра на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4657_Registry_value_changed_status_failure
+      EventDescription: 'Пользователю {subject.name} не удалось изменить значение ключа реестра на узле {event_src.host}'

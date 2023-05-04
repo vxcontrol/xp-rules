@@ -1,0 +1,1 @@
+<14>Apr 10 11:36:04 localhost audispd: node=localhost.localdomain type=USER_END msg=audit(1491802564.865:795): pid=4771 uid=0 auid=1001 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'

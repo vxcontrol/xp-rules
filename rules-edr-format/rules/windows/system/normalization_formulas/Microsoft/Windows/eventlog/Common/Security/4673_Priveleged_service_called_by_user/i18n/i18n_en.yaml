@@ -1,0 +1,6 @@
+Description: 'A privileged service was called by user'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_success
+      EventDescription: 'The user {subject.account.name} called a privileged service on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_failure
+      EventDescription: 'The user {subject.account.name} failed to call a privileged service on host {event_src.host}'

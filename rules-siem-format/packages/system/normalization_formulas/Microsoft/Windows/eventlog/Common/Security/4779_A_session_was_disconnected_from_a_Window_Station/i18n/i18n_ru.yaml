@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4779_A_session_was_disconnected_from_a_Window_Station
+      EventDescription: 'Прерван сеанс "{object.name}" с IP-адреса {src.ip}'

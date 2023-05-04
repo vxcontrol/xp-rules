@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4946_Windows_Firewall_exception_list_A_rule_was_added"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4946_Windows_Firewall_exception_list_A_rule_was_added
+ObjectId: PT-NF-1951

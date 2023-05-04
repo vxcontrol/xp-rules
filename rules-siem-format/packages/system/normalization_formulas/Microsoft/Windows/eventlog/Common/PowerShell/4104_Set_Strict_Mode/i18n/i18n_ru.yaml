@@ -1,0 +1,6 @@
+Description: 'Попытка изменить строгий режим'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode_On
+      EventDescription: 'Система на узле {event_src.host} пытается изменить строгий режим ввода на версию {object.value}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Set_Strict_Mode_Off
+      EventDescription: 'Система на узле {event_src.host} пытается выключить строгий режим ввода'

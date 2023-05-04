@@ -1,0 +1,10 @@
+Description: 'Credentials are established'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_ongoing
+      EventDescription: 'Credentials of the user {subject.account.name} are established when the user was logging in to the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_login_failure
+      EventDescription: 'Failed to establish credentials of the user {subject.account.name} when the user was logging in to the system on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_ongoing
+      EventDescription: 'Credentials of the user {object.account.name} are established when the user was escalating privileges on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_cred_acq_escalate_failure
+      EventDescription: 'Failed to establish credentials of the user {object.account.name} when the user was escalating privileges on host {event_src.host}'

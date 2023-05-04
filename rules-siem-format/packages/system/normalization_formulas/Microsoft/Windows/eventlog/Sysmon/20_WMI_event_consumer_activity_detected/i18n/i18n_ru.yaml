@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_20_WMI_event_consumer_activity_detected
+      EventDescription: 'Обнаружена активность потребителя событий WMI на узле {event_src.host}'

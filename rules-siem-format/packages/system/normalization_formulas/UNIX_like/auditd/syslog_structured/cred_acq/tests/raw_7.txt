@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598355001",
+    "timestampfractional": "840",
+    "eventid": "2541",
+    "items": {
+        "CRED_ACQ": [
+            "pid=2422 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct=\"root\" exe=\"/usr/sbin/cron\" hostname=? addr=? terminal=cron res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    }
+}

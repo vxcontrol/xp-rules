@@ -1,0 +1,4 @@
+Description: 'Process tampering'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_25_Process_tampering
+      EventDescription: 'Tampering with a process with PID {object.id} is detected on host {event_src.host}. Reason: {reason}.'

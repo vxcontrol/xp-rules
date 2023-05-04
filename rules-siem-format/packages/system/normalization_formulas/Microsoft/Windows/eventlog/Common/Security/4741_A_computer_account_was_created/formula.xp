@@ -1,0 +1,65 @@
+EVENTLOG = 'EventID="4741"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+subject = "account"
+action = "create"
+object = "account"
+
+if $Keywords == "0x8020000000000000" then
+    status = "success"
+elif $Keywords == "0x8010000000000000" then
+    status = "failure"
+endif
+
+subject.account.id = $Data["SubjectUserSid"]
+subject.account.name = lower($Data["SubjectUserName"])
+subject.account.domain = lower($Data["SubjectDomainName"])
+subject.account.session_id = maybe_number16($Data["SubjectLogonId"])
+
+object.account.name = lower($Data["TargetUserName"])
+object.account.domain = lower($Data["TargetDomainName"])
+object.account.id = $Data["TargetSid"]
+
+if $Data["SamAccountName"] != "-" then 
+    datafield2 = $Data["SamAccountName"]
+endif
+if $Data["UserPrincipalName"] != "-" then 
+    datafield3 = $Data["UserPrincipalName"]
+endif
+if $Data["AllowedToDelegateTo"] != "-" then 
+    datafield4 = $Data["AllowedToDelegateTo"]
+endif
+if $Data["UserAccountControl"] != "-" then 
+    datafield5 = $Data["UserAccountControl"]
+endif
+if $Data["SidHistory"] != "-" then 
+    datafield6 = $Data["SidHistory"]
+endif
+if $Data["DnsHostName"] != "-" then 
+    datafield7 = $Data["DnsHostName"]
+endif
+if $Data["ServicePrincipalNames"] != "-" then 
+    datafield8 = $Data["ServicePrincipalNames"]
+endif
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID
+importance = "medium"
+
+category.generic = "Account"
+category.high = "Users And Rights Management"
+category.low = "Manipulation"
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.category = "Directory service"
+
+id = "PT_Microsoft_Windows_eventlog_4741_A_computer_account_was_created"
+

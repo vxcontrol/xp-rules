@@ -1,0 +1,4 @@
+Description: 'A PowerShell pipeline is executed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_pipeline_executed
+      EventDescription: 'A PowerShell pipeline is executed on host {event_src.host}'

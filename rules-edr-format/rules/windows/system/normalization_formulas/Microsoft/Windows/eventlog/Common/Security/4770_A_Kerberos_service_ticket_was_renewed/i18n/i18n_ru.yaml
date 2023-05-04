@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4770_A_Kerberos_service_ticket_was_renewed
+      EventDescription: 'Билет службы Kerberos обновлен успешно на {event_src.hostname}'

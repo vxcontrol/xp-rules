@@ -1,0 +1,81 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4663",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12801",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2017-11-12T07:06:11.276308700Z"
+            },
+            "EventRecordID": "990408",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "64"
+            },
+            "Channel": "Security",
+            "Computer": "computername.dnssuffix.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-3228627042-334194140-788599944-1000",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "username",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "computername.dnssuffix.ru",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3d738",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "Security",
+                    "Name": "ObjectServer"
+                },
+                {
+                    "text": "Key",
+                    "Name": "ObjectType"
+                },
+                {
+                    "text": "\\REGISTRY\\MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\CustomLocale",
+                    "Name": "ObjectName"
+                },
+                {
+                    "text": "0x110",
+                    "Name": "HandleId"
+                },
+                {
+                    "text": "%%4432\\r\\n\\t\\t\\t\\t",
+                    "Name": "AccessList"
+                },
+                {
+                    "text": "0x1",
+                    "Name": "AccessMask"
+                },
+                {
+                    "text": "0x904",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\regedit.exe",
+                    "Name": "ProcessName"
+                }
+            ]
+        }
+    }
+}

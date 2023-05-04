@@ -1,0 +1,11 @@
+{
+    "node": "10.10.193.10",
+    "timestamp": "1664973830",
+    "timestampfractional": "617",
+    "eventid": "99353893",
+    "items": {
+        "USER_START": [
+            "pid=2967406 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='op=PAM:session_open grantors=pam_permit,pam_unix,pam_sss,pam_systemd,pam_mkhomedir acct=\"userdtr@domain\" exe=\"/usr/sbin/xrdp-sesman\" hostname=? addr=? terminal=:22 res=success' UID=\"root\" AUID=\"unset\""
+        ]
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4698",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-03-26T12:44:48.623690100Z"
+            },
+            "EventRecordID": "417551",
+            "Correlation": {
+                "ActivityID": "{1dcfa302-dd5c-0002-2da3-cf1d5cddd401}"
+            },
+            "Execution": {
+                "ProcessID": "872",
+                "ThreadID": "8524"
+            },
+            "Channel": "Security",
+            "Computer": "comp_5.doma.in",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-31520",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "User5",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "HOME5",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x2921f2b8",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Обновление Браузера Яндекс",
+                    "Name": "TaskName"
+                },
+                {
+                    "text": "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.1\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Author>HOME5\\User5</Author>\r\n    <Description>Обновление Браузера Яндекс</Description>\r\n    <URI>\\Обновление Браузера Яндекс</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <CalendarTrigger>\r\n      <Enabled>true</Enabled>\r\n      <Repetition>\r\n        <Interval>PT6H</Interval>\r\n        <Duration>P1D</Duration>\r\n        <StopAtDurationEnd>false</StopAtDurationEnd>\r\n      </Repetition>\r\n      <StartBoundary>2019-03-26T03:44:00</StartBoundary>\r\n      <ScheduleByDay>\r\n        <DaysInterval>1</DaysInterval>\r\n      </ScheduleByDay>\r\n    </CalendarTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <Enabled>true</Enabled>\r\n    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>\r\n    <Hidden>false</Hidden>\r\n    <WakeToRun>false</WakeToRun>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <Priority>5</Priority>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>false</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n  </Settings>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>HOME5\\User5</UserId>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>C:\\Users\\User5\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe</Command>\r\n      <Arguments>--background-update --noerrdialogs</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+                    "Name": "TaskContent"
+                }
+            ]
+        },
+        "RenderingInfo": {
+            "Culture": "en-US",
+            "Message": "A scheduled task was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-1023191730-727829927-3985050192-31520\r\n\tAccount Name:\t\tUser5\r\n\tAccount Domain:\t\tHOME5\r\n\tLogon ID:\t\t0x2921F2B8\r\n\r\nTask Information:\r\n\tTask Name: \t\t\\Обновление Браузера Яндекс\r\n\tTask Content: \t\t<?xml version=\"1.0\" encoding=\"UTF-16\"?>\r\n<Task version=\"1.1\" xmlns=\"http://schemas.microsoft.com/windows/2004/02/mit/task\">\r\n  <RegistrationInfo>\r\n    <Author>HOME5\\User5</Author>\r\n    <Description>Обновление Браузера Яндекс</Description>\r\n    <URI>\\Обновление Браузера Яндекс</URI>\r\n  </RegistrationInfo>\r\n  <Triggers>\r\n    <CalendarTrigger>\r\n      <Enabled>true</Enabled>\r\n      <Repetition>\r\n        <Interval>PT6H</Interval>\r\n        <Duration>P1D</Duration>\r\n        <StopAtDurationEnd>false</StopAtDurationEnd>\r\n      </Repetition>\r\n      <StartBoundary>2019-03-26T03:44:00</StartBoundary>\r\n      <ScheduleByDay>\r\n        <DaysInterval>1</DaysInterval>\r\n      </ScheduleByDay>\r\n    </CalendarTrigger>\r\n  </Triggers>\r\n  <Settings>\r\n    <Enabled>true</Enabled>\r\n    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>\r\n    <Hidden>false</Hidden>\r\n    <WakeToRun>false</WakeToRun>\r\n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>\r\n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>\r\n    <RunOnlyIfIdle>false</RunOnlyIfIdle>\r\n    <Priority>5</Priority>\r\n    <IdleSettings>\r\n      <Duration>PT10M</Duration>\r\n      <WaitTimeout>PT1H</WaitTimeout>\r\n      <StopOnIdleEnd>false</StopOnIdleEnd>\r\n      <RestartOnIdle>false</RestartOnIdle>\r\n    </IdleSettings>\r\n  </Settings>\r\n  <Principals>\r\n    <Principal id=\"Author\">\r\n      <UserId>HOME5\\User5</UserId>\r\n      <LogonType>InteractiveToken</LogonType>\r\n      <RunLevel>LeastPrivilege</RunLevel>\r\n    </Principal>\r\n  </Principals>\r\n  <Actions Context=\"Author\">\r\n    <Exec>\r\n      <Command>C:\\Users\\User5\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe</Command>\r\n      <Arguments>--background-update --noerrdialogs</Arguments>\r\n    </Exec>\r\n  </Actions>\r\n</Task>",
+            "Level": "Information",
+            "Task": "Other Object Access Events",
+            "Opcode": "Info",
+            "Channel": "Security",
+            "Provider": "Microsoft Windows security auditing.",
+            "Keywords": {
+                "Keyword": "Audit Success"
+            }
+        }
+    }
+}

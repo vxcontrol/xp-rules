@@ -1,0 +1,23 @@
+{
+    "action": "enable",
+    "datafield1": "999",
+    "event_src.category": "Operating system",
+    "event_src.fqdn": "someone.acme.com",
+    "event_src.hostname": "someone",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4722_A_user_account_was_enabled",
+    "importance": "medium",
+    "msgid": "4722",
+    "object": "account",
+    "object.account.domain": "someone",
+    "object.account.id": "S-1-5-21-3000000076-810000008-1900000808-1089",
+    "object.account.name": "avastsoftwareupdater",
+    "status": "success",
+    "subject": "account",
+    "subject.account.domain": "acme",
+    "subject.account.id": "S-1-5-18",
+    "subject.account.name": "someone$",
+    "time": "2013-11-01T04:14:59.769Z"
+}

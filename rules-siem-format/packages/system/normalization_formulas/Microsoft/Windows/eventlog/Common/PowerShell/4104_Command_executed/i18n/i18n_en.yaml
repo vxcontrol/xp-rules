@@ -1,0 +1,4 @@
+Description: 'A PowerShell command is executed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4104_Command_executed
+      EventDescription: 'A PowerShell command is executed on host {event_src.host}. Creating Scriptblock text ({numfield1} of {numfield2}).'

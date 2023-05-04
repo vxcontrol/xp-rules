@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete" and object.type
+        = "executable"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_executable_file
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete" and object.type
+        != "executable"
+      LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_23_File_delete_not_executable_file
+ObjectId: PT-NF-6267

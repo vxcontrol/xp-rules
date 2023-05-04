@@ -1,0 +1,25 @@
+EVENTLOG = 'EventID="4949"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+object = "policy"
+action = "restore"
+status = "success"
+
+object.type = "Firewall settings"
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+	event_src.fqdn = lower($Computer)
+	event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+	event_src.hostname = lower($Computer)
+endif
+event_src.category = "Firewall"
+
+id = "PT_Microsoft_Windows_eventlog_4949_Windows_Firewall_settings_were_restored_to_the_default_values"
+importance = "medium"

@@ -1,0 +1,7 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_name
+      EventDescription: 'Пользователь {subject.account.name} запустил процесс {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_id
+      EventDescription: 'Пользователь {subject.account.id} запустил процесс {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_1_Process_creation_no_id_no_name
+      EventDescription: 'Процесс {object.name} запущен на узле {event_src.host}'

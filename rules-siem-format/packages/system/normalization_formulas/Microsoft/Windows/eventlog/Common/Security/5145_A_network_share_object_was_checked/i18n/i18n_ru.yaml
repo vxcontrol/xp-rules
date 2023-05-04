@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5145_A_network_share_object_was_checked_status_success
+      EventDescription: 'Пользователь {subject.name} получил доступ к объекту общего сетевого ресурса "{object.fullpath}" на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_5145_A_network_share_object_was_checked_status_failure
+      EventDescription: 'Пользователь {subject.name} не смог получить доступ к объекту общего сетевого ресурса "{object.fullpath}" на узле {event_src.host}'

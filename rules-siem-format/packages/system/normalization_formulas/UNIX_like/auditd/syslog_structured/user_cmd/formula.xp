@@ -1,0 +1,77 @@
+JSON = ''
+COND = (
+    $eventid != null and
+    $node != null and
+    $timestamp != null and
+    $items["USER_CMD"] != null
+)
+
+$kv_main = keyvalue($items["USER_CMD"][0], " ", "=", "'")
+$kv_msg = keyvalue($kv_main['msg'], ' ', '=', '"')
+
+subject = "account"
+action = "execute"
+object = "command"
+
+if $kv_msg["res"] == "success" then
+    status = "success"
+else
+    status = "failure"
+endif
+
+$auid_list = csv(strip($kv_main["AUID"], '"', '"'), "@", "")
+
+subject.account.id = $kv_main["auid"]
+subject.account.name = $auid_list[0]
+subject.account.domain = $auid_list[1]
+
+subject.account.session_id = $kv_main["ses"]
+subject.account.privileges = $kv_main["uid"]
+
+$cmd = strip($kv_msg["cmd"], '"', '"')
+if $cmd == $kv_msg["cmd"] then
+    $cmd = hex_to_string($kv_msg["cmd"])
+endif
+
+object.process.cmdline = $cmd
+object.process.cwd = $kv_msg["cwd"]
+
+if $kv_msg["terminal"] != "?" then
+    logon_service = replace(strip($kv_msg["terminal"], "/dev/", ""), "", "/")
+endif
+
+chain_id = $eventid  # AuditD Event ID
+
+time = epoch_to_datetime(number($timestamp))
+msgid = "USER_CMD"
+importance = "low"
+
+category.generic = "Command"
+category.high = "System Management"
+category.low = "Manipulation"
+
+event_src.title = "unix_like"
+event_src.subsys = "auditd"
+event_src.category = "Operating system"
+
+if $node != "" then
+    if maybe_ipv4($node) != null or maybe_ipv6($node) != null then
+        if (in_subnet($node, "127.0.0.0/8") == False and $node != "::1") then
+            event_src.ip = $node
+            labels = "node_contains_ext_ip"
+        endif
+    else
+        $first_dot = find_substr($node, ".")
+        if $first_dot != null then
+            event_src.fqdn = $node
+            event_src.hostname = substr($node, 0, $first_dot)
+        else
+            event_src.hostname = $node
+        endif
+    endif
+else
+    event_src.ip = recv_ipv4
+endif
+
+id = "PT_UNIX_like_auditd_syslog_structured_user_cmd"
+

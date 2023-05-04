@@ -1,0 +1,27 @@
+EVENTLOG = 'EventID="4950"'
+COND = lower($Channel)=="security" and $Provider["Name"]=="Microsoft-Windows-Security-Auditing"
+
+object = "profile"
+action = "modify"
+status = "success"
+
+msgid = $EventID
+time = $TimeCreated["SystemTime"]
+
+event_src.vendor = "microsoft"
+event_src.title = "windows"
+event_src.subsys = $Channel
+if find_substr($Computer, '.') != null then
+	event_src.fqdn = lower($Computer)
+	event_src.hostname = lower(substr($Computer, 0, find_substr($Computer, '.')))
+else
+	event_src.hostname = lower($Computer)
+endif
+event_src.category = "Firewall"
+
+object.name = $Data["ProfileChanged"]
+object.type = $Data["SettingType"]
+object.value = $Data["SettingValue"]
+
+id = "PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed"
+importance = "medium"

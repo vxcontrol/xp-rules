@@ -1,0 +1,6 @@
+Description: 'Служба запущена'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_start_success
+      EventDescription: 'Служба "{object.name}" запущена на узле {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_start_failure
+      EventDescription: 'Не удалось запустить службу "{object.name}" на узле {event_src.host}'

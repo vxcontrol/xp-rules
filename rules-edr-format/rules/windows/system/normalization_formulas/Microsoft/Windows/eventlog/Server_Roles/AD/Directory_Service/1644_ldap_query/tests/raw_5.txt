@@ -1,0 +1,56 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-ActiveDirectory_DomainService",
+                "Guid": "{0e8478c5-3605-4e8c-8497-1e730c959516}",
+                "EventSourceName": "NTDS General"
+            },
+            "EventID": {
+                "text": "1644",
+                "Qualifiers": "16384"
+            },
+            "Version": "0",
+            "Level": "4",
+            "Task": "15",
+            "Opcode": "0",
+            "Keywords": "0x8080000000000000",
+            "TimeCreated": {
+                "SystemTime": "2023-02-21T02:18:05.823073800Z"
+            },
+            "EventRecordID": "40772507",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "668",
+                "ThreadID": "4880"
+            },
+            "Channel": "Directory Service",
+            "Computer": "DC01.plat.form",
+            "Security": {
+                "UserID": "S-1-5-21-1260549424-181218984-3392690056-1202"
+            }
+        },
+        "EventData": {
+            "Data": [
+                "CN=checkpoint_admin,OU=Services,OU=Workers,DC=plat,DC=form",
+                " (objectClass=user) ",
+                "1",
+                "1",
+                "10.125.1.90:63727",
+                "base",
+                "sAMAccountName,pwdLastSet,userAccountControl,accountExpires",
+                null,
+                null,
+                "10",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "none",
+                "CN=checkpoint_admin,OU=Services,OU=Workers,DC=plat,DC=form"
+            ]
+        }
+    }
+}

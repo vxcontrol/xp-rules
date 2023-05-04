@@ -1,0 +1,118 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+            },
+            "EventID": "1",
+            "Version": "5",
+            "Level": "4",
+            "Task": "1",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-06-28T10:08:22.993442300Z"
+            },
+            "EventRecordID": "11998861",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "2228",
+                "ThreadID": "3852"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "WIN1",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2019-06-28 10:08:22.992",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{BCCC0811-E716-5D15-0000-001013EA8300}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "6460",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Users\\Public\\Documents\\svchost.exe",
+                    "Name": "Image"
+                },
+                {
+                    "text": "4.7.2046.0 built by: NET47REL1",
+                    "Name": "FileVersion"
+                },
+                {
+                    "text": "MSBuild.exe",
+                    "Name": "Description"
+                },
+                {
+                    "text": "MicrosoftÂ® .NET Framework",
+                    "Name": "Product"
+                },
+                {
+                    "text": "Microsoft Corporation",
+                    "Name": "Company"
+                },
+                {
+                    "text": "\"C:\\Users\\Public\\Documents\\svchost.exe\" C:\\Users\\Public\\Documents\\trusteddata.xml",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "C:\\AD\\",
+                    "Name": "CurrentDirectory"
+                },
+                {
+                    "text": "WIN1\\apo",
+                    "Name": "User"
+                },
+                {
+                    "text": "{BCCC0811-9140-5D14-0000-002029EC0700}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "0x7ec29",
+                    "Name": "LogonId"
+                },
+                {
+                    "text": "1",
+                    "Name": "TerminalSessionId"
+                },
+                {
+                    "text": "High",
+                    "Name": "IntegrityLevel"
+                },
+                {
+                    "text": "MD5=8E1FF76DC2A1323FA8C06F5EF7561D32",
+                    "Name": "Hashes"
+                },
+                {
+                    "text": "{BCCC0811-E715-5D15-0000-00103AD68300}",
+                    "Name": "ParentProcessGuid"
+                },
+                {
+                    "text": "5900",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\rundll32.exe",
+                    "Name": "ParentImage"
+                },
+                {
+                    "text": "C:\\WINDOWS\\sysnative\\rundll32.exe",
+                    "Name": "ParentCommandLine"
+                }
+            ]
+        }
+    }
+}

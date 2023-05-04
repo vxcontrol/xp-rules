@@ -1,0 +1,108 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4702",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10004",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-06-26T04:06:25.127415200Z"
+            },
+            "EventRecordID": "500196",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "880",
+                "ThreadID": "11516"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEONE$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ACME",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Adobe Flash Player Updater",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContentNew",
+                    "Task": {
+                        "version": "1.1",
+                        "xmlns": "http://schemas.microsoft.com/windows/2004/02/mit/task",
+                        "RegistrationInfo": {
+                            "Author": "Adobe Systems Incorporated",
+                            "Description": "This task supports the relevance of install Adobe Flash Player"
+                        },
+                        "Triggers": {
+                            "CalendarTrigger": {
+                                "Enabled": "true",
+                                "Repetition": {
+                                    "Interval": "PT3600S",
+                                    "Duration": "PT86400S",
+                                    "StopAtDurationEnd": "false"
+                                },
+                                "StartBoundary": "2000-01-01T03:05:00",
+                                "ScheduleByDay": {
+                                    "DaysInterval": "1"
+                                }
+                            }
+                        },
+                        "Settings": {
+                            "Enabled": "true",
+                            "ExecutionTimeLimit": "PT259200S",
+                            "Hidden": "false",
+                            "WakeToRun": "false",
+                            "DisallowStartIfOnBatteries": "false",
+                            "StopIfGoingOnBatteries": "true",
+                            "RunOnlyIfIdle": "false",
+                            "Priority": "9",
+                            "IdleSettings": {
+                                "Duration": "PT600S",
+                                "WaitTimeout": "PT3600S",
+                                "StopOnIdleEnd": "true",
+                                "RestartOnIdle": "false"
+                            }
+                        },
+                        "Principals": {
+                            "Principal": {
+                                "id": "Author",
+                                "UserId": "System",
+                                "LogonType": "InteractiveTokenOrPassword",
+                                "RunLevel": "LeastPrivilege"
+                            }
+                        },
+                        "Actions": {
+                            "Context": "Author",
+                            "Exec": {
+                                "Command": "C:\\Windows\\SysWOW64\\Macromed\\Flash\\FlashPlayerUpdateService.exe"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

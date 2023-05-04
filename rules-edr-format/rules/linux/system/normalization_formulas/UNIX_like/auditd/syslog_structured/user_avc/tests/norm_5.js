@@ -1,0 +1,23 @@
+{
+    "action": "execute",
+    "category.generic": "Command",
+    "category.high": "System Management",
+    "category.low": "Manipulation",
+    "chain_id": "1675435",
+    "event_src.category": "Operating system",
+    "event_src.ip": "192.168.137.195",
+    "event_src.subsys": "auditd",
+    "event_src.title": "unix_like",
+    "id": "PT_UNIX_like_auditd_syslog_structured_user_avc",
+    "importance": "low",
+    "labels": "node_contains_ext_ip",
+    "msgid": "USER_AVC",
+    "object": "command",
+    "object.value": "send dbus_method_call(Ping)",
+    "reason": "DENIED",
+    "status": "failure",
+    "subject": "process",
+    "subject.privileges": "snap.shairport-sync.shairport-sync",
+    "subject.process.id": "3965241",
+    "time": "2020-05-18T03:58:07.000Z"
+}

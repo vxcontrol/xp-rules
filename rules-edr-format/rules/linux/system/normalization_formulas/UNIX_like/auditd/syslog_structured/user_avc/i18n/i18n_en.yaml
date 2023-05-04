@@ -1,0 +1,12 @@
+Description: 'An LSM message'
+EventDescriptions:
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_modify_configuration
+      EventDescription: 'The user with ID {subject.account.id} changed LSM configuration on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_account_execute_success
+      EventDescription: 'The user with ID {subject.account.id} executed the operation "{object.value}" on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_account_execute_failure
+      EventDescription: 'The user with ID {subject.account.id} failed to execute the operation "{object.value}" on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_process_execute_success
+      EventDescription: 'The process with PID {subject.process.id} executed the operation "{object.value}" on host {event_src.host}'
+    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_avc_process_execute_failure
+      EventDescription: 'The process with PID {subject.process.id} failed to execute the operation "{object.value}" on host {event_src.host}'

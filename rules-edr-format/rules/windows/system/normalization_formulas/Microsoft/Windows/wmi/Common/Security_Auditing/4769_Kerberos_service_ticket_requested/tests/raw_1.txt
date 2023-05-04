@@ -1,0 +1,30 @@
+{
+  "Category": 14337,
+  "CategoryString": "-",
+  "ComputerName": "2008R2SP1-DC.AD2008R2.ru",
+  "Data": null,
+  "EventCode": 4769,
+  "EventIdentifier": 4769,
+  "EventType": "4",
+  "InsertionStrings": [
+    "2008R2SP1-DC$@AD2008R2.RU",
+    "AD2008R2.RU",
+    "2008R2SP1-DC$",
+    "S-1-5-21-1743380172-4235219263-347487665-1000",
+    "0x40810000",
+    "0x12",
+    "::1",
+    "0",
+    "0x2",
+    "{7A090E47-D1AF-04B3-BAAC-09C0D332D842}",
+    "-"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 9713,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2015-09-01 10:31:28",
+  "TimeWritten": "2015-09-01 10:31:28",
+  "Type": "Audit Success",
+  "User": null
+}

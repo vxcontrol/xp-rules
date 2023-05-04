@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user"
+        and status = "success"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_success
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user"
+        and status = "failure"
+      LocalizationId: PT_Microsoft_Windows_eventlog_4673_Priveleged_service_called_by_user_status_failure
+ObjectId: PT-NF-1838

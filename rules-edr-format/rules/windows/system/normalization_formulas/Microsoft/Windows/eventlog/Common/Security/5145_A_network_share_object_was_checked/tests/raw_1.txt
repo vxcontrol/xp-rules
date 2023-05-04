@@ -1,0 +1,85 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-1912387110-3170147922-2054567208-1000"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "admin"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x43b7d"
+                },
+                {
+                    "Name": "ObjectType",
+                    "text": "File"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "192.168.171.130"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "62118"
+                },
+                {
+                    "Name": "ShareName",
+                    "text": "\\\\*\\SYSVOL"
+                },
+                {
+                    "Name": "ShareLocalPath",
+                    "text": "\\??\\C:\\Windows\\SYSVOL\\sysvol"
+                },
+                {
+                    "Name": "RelativeTargetName",
+                    "text": "\\"
+                },
+                {
+                    "Name": "AccessMask",
+                    "text": "0x100081"
+                },
+                {
+                    "Name": "AccessList",
+                    "text": "%%1541\n\t\t\t\t%%4416\n\t\t\t\t%%4423"
+                },
+                {
+                    "Name": "AccessReason",
+                    "text": "%%1541:\t%%1801\tD:(A;;0x1200a9;;;WD)\n\t\t\t\t%%4416:\t%%1801\tD:(A;;0x1200a9;;;WD)\n\t\t\t\t%%4423:\t%%1801\tD:(A;;0x1200a9;;;WD)"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q4ONQJG2QAT.test.local",
+            "Correlation": null,
+            "EventID": "5145",
+            "EventRecordID": "35866",
+            "Execution": {
+                "ProcessID": "520",
+                "ThreadID": "536"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "12811",
+            "TimeCreated": {
+                "SystemTime": "2014-09-25T14:25:34.032024200Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

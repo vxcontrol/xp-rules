@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1608656143",
+    "timestampfractional": "897",
+    "eventid": "11671",
+    "items": {
+        "USER_ACCT": [
+            "pid=4357 uid=0 auid=1000 ses=2 msg='op=changing /etc/gshadow; group test111, new name: test1, new password acct=\"test111\" exe=\"/usr/sbin/groupmod\" hostname=jr-virtual-machine addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    }
+}

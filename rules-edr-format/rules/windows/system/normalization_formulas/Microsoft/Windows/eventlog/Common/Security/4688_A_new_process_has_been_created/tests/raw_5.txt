@@ -1,0 +1,93 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4688",
+            "Version": "2",
+            "Level": "0",
+            "Task": "13312",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-04-29T07:13:07.236983800Z"
+            },
+            "EventRecordID": "439761",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "704"
+            },
+            "Channel": "Security",
+            "Computer": "server16.server16.int",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SERVER16$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SERVER160",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "0x7ec",
+                    "Name": "NewProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\dllhost.exe",
+                    "Name": "NewProcessName"
+                },
+                {
+                    "text": "%%1936",
+                    "Name": "TokenElevationType"
+                },
+                {
+                    "text": "0x328",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\system32\\DllHost.exe /Processid:{E10F6C3A-F1AE-4ADC-AA9D-2FE65525666E}",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ParentProcessName"
+                },
+                {
+                    "text": "S-1-16-16384",
+                    "Name": "MandatoryLabel"
+                }
+            ]
+        }
+    }
+}

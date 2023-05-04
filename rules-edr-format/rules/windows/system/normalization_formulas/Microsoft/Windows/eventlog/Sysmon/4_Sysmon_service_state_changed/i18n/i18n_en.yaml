@@ -1,0 +1,6 @@
+Description: 'Sysmon service state changed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_start
+      EventDescription: 'Sysmon service is started on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_4_Sysmon_service_state_changed_stop
+      EventDescription: 'Sysmon service is stopped on host {event_src.host}'

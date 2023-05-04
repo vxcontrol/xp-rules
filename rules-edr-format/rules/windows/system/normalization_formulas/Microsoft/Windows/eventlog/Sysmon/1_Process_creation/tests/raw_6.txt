@@ -1,0 +1,123 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Sysmon",
+                "Guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"
+            },
+            "EventID": "1",
+            "Version": "5",
+            "Level": "4",
+            "Task": "1",
+            "Opcode": "0",
+            "Keywords": "0x8000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-07-18T09:34:34.7968934Z"
+            },
+            "EventRecordID": "54962163",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "3068",
+                "ThreadID": "5108"
+            },
+            "Channel": "Microsoft-Windows-Sysmon/Operational",
+            "Computer": "ADemidova.plat.form",
+            "Security": {
+                "UserID": "S-1-5-18"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "RuleName"
+                },
+                {
+                    "text": "2022-07-18 09:34:34.780",
+                    "Name": "UtcTime"
+                },
+                {
+                    "text": "{e5e214b7-292a-62d5-7138-86d200000000}",
+                    "Name": "ProcessGuid"
+                },
+                {
+                    "text": "9992",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\WinSxS\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.19041.1022_none_7e372e9e7c6ecccb\\TiWorker.exe",
+                    "Name": "Image"
+                },
+                {
+                    "text": "10.0.19041.1022 (WinBuild.160101.0800)",
+                    "Name": "FileVersion"
+                },
+                {
+                    "text": "Windows Modules Installer Worker",
+                    "Name": "Description"
+                },
+                {
+                    "text": "Microsoft® Windows® Operating System",
+                    "Name": "Product"
+                },
+                {
+                    "text": "Microsoft Corporation",
+                    "Name": "Company"
+                },
+                {
+                    "text": "TiWorker.exe",
+                    "Name": "OriginalFileName"
+                },
+                {
+                    "text": "C:\\WINDOWS\\winsxs\\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.19041.1022_none_7e372e9e7c6ecccb\\TiWorker.exe -Embedding",
+                    "Name": "CommandLine"
+                },
+                {
+                    "text": "C:\\WINDOWS\\system32\\",
+                    "Name": "CurrentDirectory"
+                },
+                {
+                    "text": "NT AUTHORITY\\SYSTEM",
+                    "Name": "User"
+                },
+                {
+                    "text": "{e5e214b7-c810-6281-e703-000000000000}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "LogonId"
+                },
+                {
+                    "text": "0",
+                    "Name": "TerminalSessionId"
+                },
+                {
+                    "text": "System",
+                    "Name": "IntegrityLevel"
+                },
+                {
+                    "text": "MD5=7D0C2A24DCA67DDE6D573E23871F5F0B,SHA256=18A56C58B18030C70492189D7DE2D1813E363B1FB6C59756B4E81E1071492A0E,IMPHASH=7F8A93C920350BE0FB69B884A1C86D70",
+                    "Name": "Hashes"
+                },
+                {
+                    "text": "{e5e214b7-c814-6281-10c5-000000000000}",
+                    "Name": "ParentProcessGuid"
+                },
+                {
+                    "text": "816",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ParentImage"
+                },
+                {
+                    "text": "C:\\WINDOWS\\system32\\svchost.exe -k DcomLaunch -p",
+                    "Name": "ParentCommandLine"
+                }
+            ]
+        }
+    }
+}

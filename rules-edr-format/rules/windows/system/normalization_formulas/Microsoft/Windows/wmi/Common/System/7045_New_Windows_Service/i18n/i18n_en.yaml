@@ -1,0 +1,4 @@
+Description: 'New service was installed'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_7045_New_Windows_Service
+      EventDescription: 'The new {object.type} service "{object.name}" is created on host {event_src.host}'

@@ -1,0 +1,78 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}"
+            },
+            "EventID": "4699",
+            "Version": "1",
+            "Level": "0",
+            "Task": "12804",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2022-07-22T11:07:13.2582494Z"
+            },
+            "EventRecordID": "22685",
+            "Correlation": {
+                "ActivityID": "{4fb99b62-9de5-0002-c19b-b94fe59dd801}"
+            },
+            "Execution": {
+                "ProcessID": "872",
+                "ThreadID": "904"
+            },
+            "Channel": "Security",
+            "Computer": "NB-R914VKNL.somedomain.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "NB-R914VKNL$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SOMEDOMAIN",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Windows\\RetailDemo\\CleanupOfflineContent",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContent"
+                },
+                {
+                    "text": "7881299347898613",
+                    "Name": "ClientProcessStartKey"
+                },
+                {
+                    "text": "10996",
+                    "Name": "ClientProcessId"
+                },
+                {
+                    "text": "1052",
+                    "Name": "ParentProcessId"
+                },
+                {
+                    "text": "0",
+                    "Name": "RpcCallClientLocality"
+                },
+                {
+                    "text": "NB-R914VKNL.somedomain.ru",
+                    "Name": "FQDN"
+                }
+            ]
+        }
+    }
+}

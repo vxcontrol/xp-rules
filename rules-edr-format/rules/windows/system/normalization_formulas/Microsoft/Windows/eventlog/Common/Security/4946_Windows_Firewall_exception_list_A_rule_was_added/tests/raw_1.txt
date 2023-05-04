@@ -1,0 +1,45 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4946",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10071",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-10-23T09:24:26.516157600Z"
+            },
+            "EventRecordID": "431893",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "672",
+                "ThreadID": "744"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "Domain",
+                    "Name": "ProfileChanged"
+                },
+                {
+                    "text": "{2300000E-A00A-400C-8009-A000000000B4}",
+                    "Name": "RuleId"
+                },
+                {
+                    "text": "@FirewallAPI.dll,-28550",
+                    "Name": "RuleName"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eventid": "487",
+    "items": {
+        "USER_END": [
+            "pid=2266 uid=0 auid=0 ses=2 subj=system_u:system_r:crond_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_loginuid,pam_keyinit,pam_limits,pam_systemd acct=\"root\" exe=\"/usr/sbin/crond\" hostname=? addr=? terminal=cron res=success' UID=\"root\" AUID=\"root\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834601",
+    "timestampfractional": "553"
+}

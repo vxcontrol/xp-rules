@@ -1,0 +1,30 @@
+{
+  "Category": 14339,
+  "CategoryString": "-",
+  "ComputerName": "DC1.domainname.ru",
+  "Data": null,
+  "EventCode": 4771,
+  "EventIdentifier": 4771,
+  "EventType": "5",
+  "InsertionStrings": [
+    "username",
+    "S-1-5-21-1023191730-727829927-3985050192-14613",
+    "krbtgt/domainname",
+    "0x40810010",
+    "0x18",
+    "2",
+    "::ffff:10.0.76.40",
+    "61495",
+    "",
+    "",
+    ""
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 3094821870,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2015-09-25 07:49:54",
+  "TimeWritten": "2015-09-25 07:49:54",
+  "Type": "Audit Failure",
+  "User": null
+}

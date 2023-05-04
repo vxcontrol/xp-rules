@@ -1,0 +1,11 @@
+{
+    "eventid": "468",
+    "items": {
+        "USER_AUTH": [
+            "pid=2260 uid=1000 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=? acct=\"root\" exe=\"/usr/bin/su\" hostname=centos.local addr=? terminal=pts/0 res=failed' UID=\"jr\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834589",
+    "timestampfractional": "889"
+}

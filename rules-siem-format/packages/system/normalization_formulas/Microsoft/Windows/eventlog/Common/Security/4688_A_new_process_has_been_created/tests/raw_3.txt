@@ -1,0 +1,69 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-5-21-1023191730-727829927-3985050192-16353"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "AIvanov"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "ROGAKOPYTA"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0xe4716"
+                },
+                {
+                    "Name": "NewProcessId",
+                    "text": "0x75c"
+                },
+                {
+                    "Name": "NewProcessName",
+                    "text": "C:\\Windows\\System32\\mmc.exe"
+                },
+                {
+                    "Name": "TokenElevationType",
+                    "text": "%%1938"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "0x1508"
+                },
+                {
+                    "Name": "CommandLine",
+                    "text": "\"C:\\Windows\\system32\\mmc.exe\" \"C:\\Windows\\system32\\eventvwr.msc\" /s"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "AIVANOV.rogakopyta.ru",
+            "Correlation": null,
+            "EventID": "4688",
+            "EventRecordID": "346323651",
+            "Execution": {
+                "ProcessID": "4",
+                "ThreadID": "60"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "13312",
+            "TimeCreated": {
+                "SystemTime": "2017-08-23T17:30:36.940680200Z"
+            },
+            "Version": "1"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4768",
+            "Version": "0",
+            "Level": "0",
+            "Task": "14339",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2017-03-02T23:01:03.977869500Z"
+            },
+            "EventRecordID": "1094424895",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "660",
+                "ThreadID": "2916"
+            },
+            "Channel": "Security",
+            "Computer": "dcmain.bababa.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [{
+                "text": "X509N:<S>C=RU,S=Babababababab,L=Uuu,O=Babababababab,OU=DIT,CN=1C-Tech,E=AaaaaaaaaaAA@babababababab.ru",
+                "Name": "TargetUserName"
+            },
+            {
+                "text": "BABABA.RU",
+                "Name": "TargetDomainName"
+            },
+            {
+                "text": "S-1-0-0",
+                "Name": "TargetSid"
+            },
+            {
+                "text": "krkrkr/BABABA.RU",
+                "Name": "ServiceName"
+            },
+            {
+                "text": "S-1-0-0",
+                "Name": "ServiceSid"
+            },
+            {
+                "text": "0x40810010",
+                "Name": "TicketOptions"
+            },
+            {
+                "text": "0x6",
+                "Name": "Status"
+            },
+            {
+                "text": "0xffffffff",
+                "Name": "TicketEncryptionType"
+            },
+            {
+                "text": "-",
+                "Name": "PreAuthType"
+            },
+            {
+                "text": "::ffff:10.62.7.93",
+                "Name": "IpAddress"
+            },
+            {
+                "text": "63042",
+                "Name": "IpPort"
+            },
+            {
+                "Name": "CertIssuerName"
+            },
+            {
+                "Name": "CertSerialNumber"
+            },
+            {
+                "Name": "CertThumbprint"
+            }]
+        }
+    }
+}

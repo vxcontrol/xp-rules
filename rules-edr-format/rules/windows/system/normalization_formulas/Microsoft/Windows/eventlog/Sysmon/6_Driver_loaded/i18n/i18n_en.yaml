@@ -1,0 +1,4 @@
+Description: 'Driver loaded'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_6_Driver_loaded
+      EventDescription: 'A driver is loaded on host {event_src.host}'

@@ -1,0 +1,143 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4624",
+            "Version": "2",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-04-29T07:13:07.051376600Z"
+            },
+            "EventRecordID": "439759",
+            "Correlation": {
+                "ActivityID": "{B808C383-1D40-0003-8CC3-08B8401DD601}"
+            },
+            "Execution": {
+                "ProcessID": "620",
+                "ThreadID": "304"
+            },
+            "Channel": "Security",
+            "Computer": "server16.server16.int",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-21-3500636268-2529342812-1271244175-500",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "Administrator",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "SERVER160",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x12a83d",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-5-21-3500636268-2529342812-1271244175-1103",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "a1",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "SERVER160",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0xf61bdd",
+                    "Name": "TargetLogonId"
+                },
+                {
+                    "text": "2",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "seclogo",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "Negotiate",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "SERVER16",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "{4D6AD7F8-FFA5-6E32-469C-9E2F0ECE9184}",
+                    "Name": "LogonGuid"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "0",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0x584",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "C:\\Windows\\System32\\svchost.exe",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "::1",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "0",
+                    "Name": "IpPort"
+                },
+                {
+                    "text": "%%1833",
+                    "Name": "ImpersonationLevel"
+                },
+                {
+                    "text": "-",
+                    "Name": "RestrictedAdminMode"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetOutboundUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "TargetOutboundDomainName"
+                },
+                {
+                    "text": "%%1843",
+                    "Name": "VirtualAccount"
+                },
+                {
+                    "text": "0xf61bf4",
+                    "Name": "TargetLinkedLogonId"
+                },
+                {
+                    "text": "%%1842",
+                    "Name": "ElevatedToken"
+                }
+            ]
+        }
+    }
+}

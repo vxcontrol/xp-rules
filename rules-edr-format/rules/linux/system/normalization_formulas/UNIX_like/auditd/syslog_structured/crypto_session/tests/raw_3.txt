@@ -1,0 +1,11 @@
+{
+    "node": "10.1.76.35",
+    "timestamp": "1598367249",
+    "timestampfractional": "999",
+    "eventid": "1919",
+    "items": {
+        "CRYPTO_SESSION": [
+            "pid=2227 uid=0 auid=4294967295 ses=4294967295 msg='op=start direction=from-server cipher=aes256-ctr ksize=256 mac=hmac-sha2-256 pfs=curve25519-sha256@libssh.org spid=2228 suid=74 rport=60541 laddr=192.168.206.129 lport=22  exe=\"/usr/sbin/sshd\" hostname=? addr=192.168.206.1 terminal=? res=success' UID=\"root\" AUID=\"unset\" SUID=\"sshd\""
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eventid": "4380",
+    "items": {
+        "USER_LOGIN": [
+            "pid=2396 uid=0 auid=4294967295 ses=4294967295 subj==unconfined msg='op=login acct=\"root\" exe=\"/usr/sbin/sshd\" hostname=? addr=192.168.137.1 terminal=sshd res=failed' UID=\"root\" AUID=\"unset\""
+        ]
+    },
+    "node": "192.168.137.192",
+    "timestamp": "1575868681",
+    "timestampfractional": "236"
+}

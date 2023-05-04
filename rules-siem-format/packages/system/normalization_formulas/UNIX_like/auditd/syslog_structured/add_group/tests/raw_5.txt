@@ -1,0 +1,11 @@
+{
+    "eventid": "589",
+    "items": {
+        "ADD_GROUP": [
+            "pid=2362 uid=0 auid=1000 ses=1 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-group acct=\"test1\" exe=\"/usr/sbin/useradd\" hostname=centos.local addr=? terminal=pts/0 res=success' UID=\"root\" AUID=\"jr\""
+        ]
+    },
+    "node": "10.1.76.35",
+    "timestamp": "1602834764",
+    "timestampfractional": "121"
+}

@@ -1,0 +1,49 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "PackageName",
+                    "text": "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0"
+                },
+                {
+                    "Name": "TargetUserName",
+                    "text": "test_siem11"
+                },
+                {
+                    "Name": "Workstation",
+                    "text": "\\\\10.60.80.100"
+                },
+                {
+                    "Name": "Status",
+                    "text": "0xc000006a"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "DC.acme.com",
+            "Correlation": null,
+            "EventID": "4776",
+            "EventRecordID": "215480979",
+            "Execution": {
+                "ProcessID": "1000",
+                "ThreadID": "15912"
+            },
+            "Keywords": "0x8010000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "14336",
+            "TimeCreated": {
+                "SystemTime": "2017-03-20T15:11:57.540653400Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

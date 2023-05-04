@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed
+      EventDescription: 'Пользователь {subject.name} изменил учетную запись {object.name} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4738_A_user_account_was_changed_nullses
+      EventDescription: 'Процесс, использующий пустой сеанс, изменил учетную запись {object.name} на узле {event_src.host}'

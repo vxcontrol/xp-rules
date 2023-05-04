@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2019-12-20T09:10:03.553581100Z"
+            },
+            "EventRecordID": "2490",
+            "Correlation": {
+                "ActivityID": "{B9417DCB-A5CC-0003-CC87-46B9CCA5D501}"
+            },
+            "Execution": {
+                "ProcessID": "1924",
+                "ThreadID": "7716"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-21-3500636268-2529342812-1271244175-500"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": " Severity = Informational\r\n Host Name = ConsoleHost\r\n Host Version = 5.1.14393.0\r\n Host ID = 9a90585e-1049-4748-b919-d3ed5201037c\r\n Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\n Engine Version = 5.1.14393.0\r\n Runspace ID = 7c1e6153-db48-45ad-9dc0-e6eafb463946\r\n Pipeline ID = 132\r\n Command Name = Set-StrictMode\r\n Command Type = Cmdlet\r\n Script Name = C:\\Program Files\\WindowsPowerShell\\Modules\\PSReadline\\1.2\\PSReadLine.psm1\r\n Command Path = \r\n Sequence Number = 480\r\n User = SERVER160\\Administrator\r\n Connected User = \r\n Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Set-StrictMode): \"Set-StrictMode\"\r\nParameterBinding(Set-StrictMode): name=\"Off\"; value=\"True\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

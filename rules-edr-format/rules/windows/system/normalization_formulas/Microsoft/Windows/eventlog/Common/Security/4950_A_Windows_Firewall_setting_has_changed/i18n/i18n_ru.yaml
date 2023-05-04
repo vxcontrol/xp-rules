@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed_object_value_not_null
+      EventDescription: 'Изменен параметр сетевого экрана Windows на узле {event_src.host}. Измененный профиль: {object.name}. Тип параметра: {object.type}. Значение параметра: {object.value}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed_action_object_value_null
+      EventDescription: 'Изменен параметр сетевого экрана Windows на узле {event_src.host}. Измененный профиль: {object.name}. Тип параметра: {object.type}'

@@ -1,0 +1,21 @@
+{
+    "action": "modify",
+    "datafield1": "999",
+    "event_src.category": "Operating system",
+    "event_src.fqdn": "win-q00000000at.test.local",
+    "event_src.hostname": "win-q00000000at",
+    "event_src.subsys": "Security",
+    "event_src.title": "windows",
+    "event_src.vendor": "microsoft",
+    "id": "PT_Microsoft_Windows_eventlog_4739_Domain_Policy_was_changed",
+    "importance": "medium",
+    "msgid": "4739",
+    "object": "policy",
+    "object.name": "Password Policy",
+    "status": "success",
+    "subject": "account",
+    "subject.account.domain": "test",
+    "subject.account.id": "S-1-5-18",
+    "subject.account.name": "win-q00000000at$",
+    "time": "2014-09-22T09:01:06.281Z"
+}

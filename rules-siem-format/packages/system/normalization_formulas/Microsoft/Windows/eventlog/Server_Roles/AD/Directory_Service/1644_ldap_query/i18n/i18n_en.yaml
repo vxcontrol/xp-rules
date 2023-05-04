@@ -1,0 +1,6 @@
+Description: 'LDAP query'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_not_null
+      EventDescription: 'A user from host {src.host} sent an LDAP request on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_1644_ldap_query_src_host_null
+      EventDescription: 'An LDAP request is sent on host {event_src.host}'

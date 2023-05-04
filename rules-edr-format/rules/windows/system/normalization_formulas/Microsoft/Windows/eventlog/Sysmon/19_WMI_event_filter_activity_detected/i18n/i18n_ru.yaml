@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_19_WMI_event_filter_activity_detected
+      EventDescription: 'Обнаружена активность фильтра событий WMI на узле {event_src.host}'

@@ -1,0 +1,27 @@
+{
+  "Category": 10012,
+  "CategoryString": "-",
+  "ComputerName": "SOMEONE.acme.com",
+  "Data": null,
+  "EventCode": 4688,
+  "EventIdentifier": 4688,
+  "EventType": "4",
+  "InsertionStrings": [
+    "S-1-5-18",
+    "SOMEONE$",
+    "ACME",
+    "0x3e7",
+    "0x22bc",
+    "C:\\Windows\\System32\\SearchFilterHost.exe",
+    "%%1936",
+    "0x568"
+  ],
+  "Logfile": "Security",
+  "Message": "-",
+  "RecordNumber": 452753,
+  "SourceName": "Microsoft-Windows-Security-Auditing",
+  "TimeGenerated": "2013-10-23 10:11:57",
+  "TimeWritten": "2013-10-23 10:11:57",
+  "Type": "Audit Success",
+  "User": null
+}

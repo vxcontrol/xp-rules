@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_23_Windows_successfully_uninstalled_the_following_update"
+      LocalizationId: PT_Microsoft_Windows_eventlog_23_Windows_successfully_uninstalled_the_following_update
+ObjectId: PT-NF-2011

@@ -1,0 +1,8 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed"
+        and object.value != null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed_object_value_not_null
+    - Criteria: id = "PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed"
+        and object.value = null
+      LocalizationId: PT_Microsoft_Windows_eventlog_4950_A_Windows_Firewall_setting_has_changed_action_object_value_null
+ObjectId: PT-NF-1955

@@ -1,0 +1,6 @@
+Description: 'IP addresses are resolved'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_22_DNS_query_success
+      EventDescription: 'IP addresses are resolved for host {datafield1} on host {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_22_DNS_query_failure
+      EventDescription: 'IP addresses are not resolved for host {datafield1} on host {event_src.host}. Reason: {reason}.'

@@ -1,0 +1,4 @@
+Description: 'User account was enabled'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4722_A_user_account_was_enabled
+      EventDescription: 'The user {subject.name} enabled the user account "{object.name}" on host {event_src.host}'

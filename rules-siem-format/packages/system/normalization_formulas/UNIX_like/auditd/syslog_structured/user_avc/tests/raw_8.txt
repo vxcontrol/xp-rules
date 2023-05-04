@@ -1,0 +1,11 @@
+{
+    "eventid": "2656",
+    "items": {
+        "USER_AVC": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='avc:  denied  { enable } for auid=0 uid=0 gid=0 path=\"/dev/null\" cmdline=\"systemctl unmask tmp.mount\" scontext=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 tcontext=system_u:object_r:null_device_t:s0 tclass=service  exe=\"/usr/lib/systemd/systemd\" sauid=0 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1475497680",
+    "timestampfractional": "110"
+}

@@ -1,0 +1,47 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                "DC=contoso,DC=com",
+                " ( & (sAMAccountType=805306368) ) ",
+                "5",
+                "5",
+                "192.168.133.131:51463",
+                "subtree",
+                "[all]",
+                null
+            ]
+        },
+        "System": {
+            "Channel": "Directory Service",
+            "Computer": "2008r2-dc.contoso.com",
+            "Correlation": null,
+            "EventID": {
+                "Qualifiers": "16384",
+                "text": "1644"
+            },
+            "EventRecordID": "18831",
+            "Execution": {
+                "ProcessID": "464",
+                "ThreadID": "1172"
+            },
+            "Keywords": "0x8080000000000000",
+            "Level": "4",
+            "Opcode": "0",
+            "Provider": {
+                "EventSourceName": "NTDS General",
+                "Guid": "{0e8478c5-3605-4e8c-8497-1e730c959516}",
+                "Name": "Microsoft-Windows-ActiveDirectory_DomainService"
+            },
+            "Security": {
+                "UserID": "S-1-5-21-3440260057-1941375189-3629431495-1115"
+            },
+            "Task": "15",
+            "TimeCreated": {
+                "SystemTime": "2018-02-14T09:18:35.815075100Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

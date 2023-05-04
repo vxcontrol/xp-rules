@@ -1,0 +1,11 @@
+EventDescriptions:
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_add_group" and status
+        = "success"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_group_success
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_add_group" and status
+        = "failure"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_group_failure
+    - Criteria: id = "PT_UNIX_like_auditd_syslog_structured_add_group" and status
+        = "ongoing"
+      LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_group_ongoing
+ObjectId: PT-NF-5536

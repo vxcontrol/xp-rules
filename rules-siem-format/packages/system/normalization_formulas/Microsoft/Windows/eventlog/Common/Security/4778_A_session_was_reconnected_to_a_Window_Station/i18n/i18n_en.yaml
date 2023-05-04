@@ -1,0 +1,4 @@
+Description: 'Session was reconnected to a Windows Station'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4778_A_session_was_reconnected_to_a_Window_Station
+      EventDescription: 'The session "{object.name}" is initiated from IP {src.ip}'

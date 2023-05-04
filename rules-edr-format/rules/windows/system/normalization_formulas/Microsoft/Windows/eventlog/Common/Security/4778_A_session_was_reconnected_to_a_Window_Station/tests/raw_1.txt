@@ -1,0 +1,57 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "AccountName",
+                    "text": "testadmin"
+                },
+                {
+                    "Name": "AccountDomain",
+                    "text": "TEST"
+                },
+                {
+                    "Name": "LogonID",
+                    "text": "0x192d05"
+                },
+                {
+                    "Name": "SessionName",
+                    "text": "RDP-Tcp#0"
+                },
+                {
+                    "Name": "ClientName",
+                    "text": "SOMEONE"
+                },
+                {
+                    "Name": "ClientAddress",
+                    "text": "192.168.193.63"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "WIN-Q00000000AT.test.local",
+            "Correlation": null,
+            "EventID": "4778",
+            "EventRecordID": "2461",
+            "Execution": {
+                "ProcessID": "528",
+                "ThreadID": "272"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "10051",
+            "TimeCreated": {
+                "SystemTime": "2014-09-16T09:23:01.414925800Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

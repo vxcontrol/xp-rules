@@ -1,0 +1,48 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-PowerShell",
+                "Guid": "{A0C1853B-5C40-4B15-8766-3CF1C58F985A}"
+            },
+            "EventID": "4103",
+            "Version": "1",
+            "Level": "4",
+            "Task": "106",
+            "Opcode": "20",
+            "Keywords": "0x0",
+            "TimeCreated": {
+                "SystemTime": "2020-01-09T08:42:03.117886700Z"
+            },
+            "EventRecordID": "4873",
+            "Correlation": {
+                "ActivityID": "{67FFECC3-C6A6-0002-402C-0068A6C6D501}"
+            },
+            "Execution": {
+                "ProcessID": "3136",
+                "ThreadID": "6368"
+            },
+            "Channel": "Microsoft-Windows-PowerShell/Operational",
+            "Computer": "server16.server16.int",
+            "Security": {
+                "UserID": "S-1-5-21-3500636268-2529342812-1271244175-500"
+            }
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": " Severity = Informational\r\n Host Name = ConsoleHost\r\n Host Version = 5.1.14393.0\r\n Host ID = f9150370-a4a1-41a5-93b0-1797b0b73078\r\n Host Application = powershell -command get-process\r\n Engine Version = 5.1.14393.0\r\n Runspace ID = 39c3ba79-d9bb-45a5-91d6-c12bb6631000\r\n Pipeline ID = 1\r\n Command Name = Get-Process\r\n Command Type = Cmdlet\r\n Script Name = \r\n Command Path = \r\n Sequence Number = 16\r\n User = SERVER160\\Administrator\r\n Connected User = \r\n Shell ID = Microsoft.PowerShell\r\n",
+                    "Name": "ContextInfo"
+                },
+                {
+                    "Name": "UserData"
+                },
+                {
+                    "text": "CommandInvocation(Get-Process): \"Get-Process\"\r\n",
+                    "Name": "Payload"
+                }
+            ]
+        }
+    }
+}

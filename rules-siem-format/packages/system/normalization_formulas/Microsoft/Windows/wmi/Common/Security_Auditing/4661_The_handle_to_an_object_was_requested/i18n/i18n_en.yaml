@@ -1,0 +1,4 @@
+Description: 'The handle to an object was requested'
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_wmi_4661_The_handle_to_an_object_was_requested
+      EventDescription: 'The user {subject.account.domain}\{subject.account.name} requested the handle to an object on host {event_src.hostname}'

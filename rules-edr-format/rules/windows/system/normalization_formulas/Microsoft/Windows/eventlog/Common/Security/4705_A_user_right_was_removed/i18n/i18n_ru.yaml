@@ -1,0 +1,3 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_4705_A_user_right_was_removed
+      EventDescription: 'Пользователь лишился привилегии {object.value} на узле {event_src.host}'

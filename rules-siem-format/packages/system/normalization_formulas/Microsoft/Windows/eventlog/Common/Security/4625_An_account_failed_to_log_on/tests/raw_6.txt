@@ -1,0 +1,116 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4625",
+            "Version": "0",
+            "Level": "0",
+            "Task": "12544",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2018-11-18T15:29:12.020112500Z"
+            },
+            "EventRecordID": "25459535",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "500",
+                "ThreadID": "488"
+            },
+            "Channel": "Security",
+            "Computer": "test-dc1-w12r2.testlab.esc",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-0-0",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "-",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "S-1-0-0",
+                    "Name": "TargetUserSid"
+                },
+                {
+                    "text": "administrator",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "0xc000006d",
+                    "Name": "Status"
+                },
+                {
+                    "text": "%%2313",
+                    "Name": "FailureReason"
+                },
+                {
+                    "text": "0xc000006a",
+                    "Name": "SubStatus"
+                },
+                {
+                    "text": "3",
+                    "Name": "LogonType"
+                },
+                {
+                    "text": "NtLmSsp ",
+                    "Name": "LogonProcessName"
+                },
+                {
+                    "text": "NTLM",
+                    "Name": "AuthenticationPackageName"
+                },
+                {
+                    "text": "\\\\10.0.80.31",
+                    "Name": "WorkstationName"
+                },
+                {
+                    "text": "-",
+                    "Name": "TransmittedServices"
+                },
+                {
+                    "text": "-",
+                    "Name": "LmPackageName"
+                },
+                {
+                    "text": "0",
+                    "Name": "KeyLength"
+                },
+                {
+                    "text": "0x0",
+                    "Name": "ProcessId"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProcessName"
+                },
+                {
+                    "text": "10.0.80.31",
+                    "Name": "IpAddress"
+                },
+                {
+                    "text": "38370",
+                    "Name": "IpPort"
+                }
+            ]
+        }
+    }
+}

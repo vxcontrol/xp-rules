@@ -1,0 +1,149 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{54849625-5478-4994-A5BA-3E3B0328C30D}"
+            },
+            "EventID": "4742",
+            "Version": "0",
+            "Level": "0",
+            "Task": "13825",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2015-12-09T08:06:35.195357300Z"
+            },
+            "EventRecordID": "808599",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "524",
+                "ThreadID": "2556"
+            },
+            "Channel": "Security",
+            "Computer": "2012-DC.AD2012.ru",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "-",
+                    "Name": "ComputerAccountChange"
+                },
+                {
+                    "text": "2012-DC$",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "AD2012",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-3725810923-1556733292-2669249330-1001",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-21-3725810923-1556733292-2669249330-1001",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "2012-DC$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "AD2012",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x14e04af",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                },
+                {
+                    "text": "-",
+                    "Name": "SamAccountName"
+                },
+                {
+                    "text": "-",
+                    "Name": "DisplayName"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserPrincipalName"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomeDirectory"
+                },
+                {
+                    "text": "-",
+                    "Name": "HomePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ScriptPath"
+                },
+                {
+                    "text": "-",
+                    "Name": "ProfilePath"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserWorkstations"
+                },
+                {
+                    "text": "-",
+                    "Name": "PasswordLastSet"
+                },
+                {
+                    "text": "-",
+                    "Name": "AccountExpires"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrimaryGroupId"
+                },
+                {
+                    "text": "-",
+                    "Name": "AllowedToDelegateTo"
+                },
+                {
+                    "text": "-",
+                    "Name": "OldUacValue"
+                },
+                {
+                    "text": "-",
+                    "Name": "NewUacValue"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserAccountControl"
+                },
+                {
+                    "text": "-",
+                    "Name": "UserParameters"
+                },
+                {
+                    "text": "-",
+                    "Name": "SidHistory"
+                },
+                {
+                    "text": "-",
+                    "Name": "LogonHours"
+                },
+                {
+                    "text": "-",
+                    "Name": "DnsHostName"
+                },
+                {
+                    "text": "\r\n\t\tldap/2012-DC.AD2012.ru/AD2012.ru\r\n\t\tldap/2012-DC.AD2012.ru\r\n\t\tldap/2012-DC\r\n\t\tldap/2012-DC.AD2012.ru/AD2012\r\n\t\tldap/187cbecd-8461-4d2d-a8fb-67b9838274c8._msdcs.AD2012.ru\r\n\t\tldap/2012-DC/AD2012\r\n\t\tE3514235-4B06-11D1-AB04-00C04FC2DCD2/187cbecd-8461-4d2d-a8fb-67b9838274c8/AD2012.ru\r\n\t\tHOST/2012-DC.AD2012.ru/AD2012.ru\r\n\t\tHOST/2012-DC.AD2012.ru\r\n\t\tHOST/2012-DC\r\n\t\tHOST/2012-DC.AD2012.ru/AD2012\r\n\t\tHOST/2012-DC/AD2012\r\n\t\tRPC/187cbecd-8461-4d2d-a8fb-67b9838274c8._msdcs.AD2012.ru\r\n\t\tRestrictedKrbHost/2012-DC\r\n\t\tRestrictedKrbHost/2012-DC.AD2012.ru\r\n\t\tGC/2012-DC.AD2012.ru/AD2012.ru\r\n\t\tDNS/2012-DC.AD2012.ru\r\n\t\tTERMSRV/2012-DC.AD2012.ru\r\n\t\tTERMSRV/2012-DC\r\n\t\tldap/2012-DC.AD2012.ru/DomainDnsZones.AD2012.ru\r\n\t\tldap/2012-DC.AD2012.ru/ForestDnsZones.AD2012.ru\r\n\t\tDfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/2012-DC.AD2012.ru\r\n\t\tSMTPSVC/2012-DC.AD2012.ru\r\n\t\tSMTPSVC/2012-DC\r\n\t\tE3514235-4B06-11D1-AB04-00C04FC2DCD2-ADAM/2012-DC:50000\r\n\t\tE3514235-4B06-11D1-AB04-00C04FC2DCD2-ADAM/2012-DC.AD2012.ru:50000\r\n\t\texchangeAB/2012-DC.AD2012.ru\r\n\t\texchangeAB/2012-DC\r\n\t\tWSMAN/2012-DC\r\n\t\tWSMAN/2012-DC.AD2012.ru\r\n\t\tldap/2012-DC:50000\r\n\t\tldap/2012-DC.AD2012.ru:50000",
+                    "Name": "ServicePrincipalNames"
+                }
+            ]
+        }
+    }
+}

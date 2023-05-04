@@ -1,0 +1,110 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4699",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10004",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-05-29T04:17:15.238011300Z"
+            },
+            "EventRecordID": "495430",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "884",
+                "ThreadID": "7104"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEONE$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ACME",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Windows Defender\\MP Scheduled Scan",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContent",
+                    "Task": {
+                        "version": "1.3",
+                        "xmlns": "http://schemas.microsoft.com/windows/2004/02/mit/task",
+                        "RegistrationInfo": {
+                            "Description": "Scheduled Scan"
+                        },
+                        "Triggers": {
+                            "CalendarTrigger": {
+                                "StartBoundary": "2000-01-01T02:49:03",
+                                "EndBoundary": "2100-01-01T00:00:00",
+                                "Enabled": "true",
+                                "ScheduleByDay": {
+                                    "DaysInterval": "1"
+                                }
+                            }
+                        },
+                        "Principals": {
+                            "Principal": {
+                                "id": "LocalSystem",
+                                "UserId": "S-1-5-18",
+                                "RunLevel": "HighestAvailable"
+                            }
+                        },
+                        "Settings": {
+                            "MultipleInstancesPolicy": "IgnoreNew",
+                            "DisallowStartIfOnBatteries": "true",
+                            "StopIfGoingOnBatteries": "false",
+                            "AllowHardTerminate": "true",
+                            "StartWhenAvailable": "true",
+                            "RunOnlyIfNetworkAvailable": "false",
+                            "IdleSettings": {
+                                "Duration": "PT0H1M0S",
+                                "WaitTimeout": "PT4H0M0S",
+                                "StopOnIdleEnd": "false",
+                                "RestartOnIdle": "false"
+                            },
+                            "AllowStartOnDemand": "true",
+                            "Enabled": "true",
+                            "Hidden": "true",
+                            "RunOnlyIfIdle": "true",
+                            "DisallowStartOnRemoteAppSession": "false",
+                            "UseUnifiedSchedulingEngine": "true",
+                            "WakeToRun": "false",
+                            "ExecutionTimeLimit": "PT72H",
+                            "Priority": "7"
+                        },
+                        "Actions": {
+                            "Context": "LocalSystem",
+                            "Exec": {
+                                "Command": "c:\\program files\\windows defender\\MpCmdRun.exe",
+                                "Arguments": "Scan -ScheduleJob -WinTask -RestrictPrivilegesScan"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eventid": "763",
+    "items": {
+        "USER_AVC": [
+            "pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='avc:  denied  { start } for auid=n/a uid=0 gid=0 path=\"/run/systemd/system/session-4.scope\" cmdline=\"/usr/lib/systemd/systemd-logind\" scontext=system_u:system_r:systemd_logind_t:s0 tcontext=system_u:object_r:systemd_unit_file_t:s0 tclass=service  exe=\"/usr/lib/systemd/systemd\" sauid=0 hostname=? addr=? terminal=?'"
+        ]
+    },
+    "node": "192.168.137.195",
+    "timestamp": "1442602150",
+    "timestampfractional": "110"
+}

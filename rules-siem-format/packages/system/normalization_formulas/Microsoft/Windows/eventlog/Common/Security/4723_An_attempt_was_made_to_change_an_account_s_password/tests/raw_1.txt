@@ -1,0 +1,65 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4723",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10024",
+            "Opcode": "0",
+            "Keywords": "0x8010000000000000",
+            "TimeCreated": {
+                "SystemTime": "2013-10-14T12:48:57.803968400Z"
+            },
+            "EventRecordID": "429162",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "676",
+                "ThreadID": "720"
+            },
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "chu",
+                    "Name": "TargetUserName"
+                },
+                {
+                    "text": "SomeOne",
+                    "Name": "TargetDomainName"
+                },
+                {
+                    "text": "S-1-5-21-3000000076-810000008-1900000808-1079",
+                    "Name": "TargetSid"
+                },
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEONE$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "ACME",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "-",
+                    "Name": "PrivilegeList"
+                }
+            ]
+        }
+    }
+}

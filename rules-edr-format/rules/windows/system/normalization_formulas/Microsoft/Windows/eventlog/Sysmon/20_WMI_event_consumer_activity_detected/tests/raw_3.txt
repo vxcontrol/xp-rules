@@ -1,0 +1,77 @@
+{
+  "Event": {
+    "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+    "System": {
+      "Provider": {
+        "Name": "Microsoft-Windows-Sysmon",
+        "Guid": "{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"
+      },
+      "EventID": "20",
+      "Version": "3",
+      "Level": "4",
+      "Task": "20",
+      "Opcode": "0",
+      "Keywords": "0x8000000000000000",
+      "TimeCreated": {
+        "SystemTime": "2021-08-20T17:01:35.025151500Z"
+      },
+      "EventRecordID": "3723850",
+      "Correlation": null,
+      "Execution": {
+        "ProcessID": "1244",
+        "ThreadID": "1340"
+      },
+      "Channel": "Microsoft-Windows-Sysmon/Operational",
+      "Computer": "RDS.testlab.esc",
+      "Security": {
+        "UserID": "S-1-5-18"
+      }
+    },
+    "EventData": {
+      "Data": [
+        {
+          "text": "-",
+          "Name": "RuleName"
+        },
+        {
+          "text": "WmiConsumerEvent",
+          "Name": "EventType"
+        },
+        {
+          "text": "2021-08-20 17:01:35.025",
+          "Name": "UtcTime"
+        },
+        {
+          "text": "Created",
+          "Name": "Operation"
+        },
+        {
+          "text": "-",
+          "Name": "User"
+        },
+        {
+          "text": " \"pt_CommandLineConsumerCreation_consumer\"",
+          "Name": "Name"
+        },
+        {
+          "text": "Event Log",
+          "Name": "Type"
+        },
+        {
+          "text": " \"PT_WMI_subscriptions\"",
+          "Name": "Destination"
+        }
+      ]
+    },
+    "RenderingInfo": {
+      "Culture": "en-US",
+      "Message": "WmiEventConsumer activity detected:\r\nRuleName: -\r\nEventType: WmiConsumerEvent\r\nUtcTime: 2021-08-20 17:01:35.025\r\nOperation: Created\r\nUser: -\r\nName:  \"pt_CommandLineConsumerCreation_consumer\"\r\nType: Event Log\r\nDestination:  \"PT_WMI_subscriptions\"",
+      "Level": "Information",
+      "Task": "WmiEventConsumer activity detected (rule: WmiEvent)",
+      "Opcode": "Info",
+      "Channel": null,
+      "Provider": null,
+      "Keywords": null
+    }
+  }
+}

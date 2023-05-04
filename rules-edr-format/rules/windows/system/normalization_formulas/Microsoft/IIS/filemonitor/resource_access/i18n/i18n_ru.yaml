@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_IIS_filemonitor_resource_access_success
+      EventDescription: 'Предоставлен доступ к ресурсу {object.path} с кодом: {object.state} на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_IIS_filemonitor_resource_access_failure
+      EventDescription: 'Ошибка доступа к ресурсу {object.path} на узле {event_src.host}. Причина: {reason}'

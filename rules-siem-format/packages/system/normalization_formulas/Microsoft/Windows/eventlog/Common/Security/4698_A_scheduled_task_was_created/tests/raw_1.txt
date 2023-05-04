@@ -1,0 +1,107 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-Security-Auditing",
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}"
+            },
+            "EventID": "4698",
+            "Version": "0",
+            "Level": "0",
+            "Task": "10004",
+            "Opcode": "0",
+            "Keywords": "0x8020000000000000",
+            "TimeCreated": {
+                "SystemTime": "2014-05-28T11:40:37.423531300Z"
+            },
+            "EventRecordID": "495266",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "880",
+                "ThreadID": "17760"
+            },
+            "Channel": "Security",
+            "Computer": "comp_1.doma.in",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                {
+                    "text": "S-1-5-18",
+                    "Name": "SubjectUserSid"
+                },
+                {
+                    "text": "SOMEONE$",
+                    "Name": "SubjectUserName"
+                },
+                {
+                    "text": "HOME1",
+                    "Name": "SubjectDomainName"
+                },
+                {
+                    "text": "0x3e7",
+                    "Name": "SubjectLogonId"
+                },
+                {
+                    "text": "\\Microsoft\\Configuration Manager\\Configuration Manager Health Evaluation",
+                    "Name": "TaskName"
+                },
+                {
+                    "Name": "TaskContent",
+                    "Task": {
+                        "version": "1.2",
+                        "xmlns": "http://schemas.microsoft.com/windows/2004/02/mit/task",
+                        "RegistrationInfo": {
+                            "Author": "Microsoft"
+                        },
+                        "Triggers": {
+                            "CalendarTrigger": {
+                                "id": "Daily Evaluation Trigger",
+                                "StartBoundary": "2014-05-28T00:05:08",
+                                "Enabled": "true",
+                                "ScheduleByDay": {
+                                    "DaysInterval": "1"
+                                }
+                            }
+                        },
+                        "Settings": {
+                            "MultipleInstancesPolicy": "IgnoreNew",
+                            "DisallowStartIfOnBatteries": "false",
+                            "StopIfGoingOnBatteries": "false",
+                            "AllowHardTerminate": "true",
+                            "StartWhenAvailable": "true",
+                            "RunOnlyIfNetworkAvailable": "false",
+                            "IdleSettings": {
+                                "Duration": "PT10M",
+                                "WaitTimeout": "PT1H",
+                                "StopOnIdleEnd": "true",
+                                "RestartOnIdle": "false"
+                            },
+                            "AllowStartOnDemand": "true",
+                            "Enabled": "true",
+                            "Hidden": "false",
+                            "RunOnlyIfIdle": "false",
+                            "WakeToRun": "false",
+                            "ExecutionTimeLimit": "PT72H",
+                            "Priority": "7"
+                        },
+                        "Actions": {
+                            "Context": "Author",
+                            "Exec": {
+                                "Command": "C:\\Windows\\CCM\\ccmeval.exe"
+                            }
+                        },
+                        "Principals": {
+                            "Principal": {
+                                "id": "Author",
+                                "UserId": "SYSTEM",
+                                "RunLevel": "LeastPrivilege"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

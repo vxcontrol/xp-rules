@@ -1,0 +1,5 @@
+EventDescriptions:
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_create
+      EventDescription: 'Процесс "{datafield4}" создал объект "{object.name}" в реестре на узле {event_src.host}'
+    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_12_Registry_object_delete
+      EventDescription: 'Процесс "{datafield4}" удалил объект "{object.name}" в реестре на узле {event_src.host}'

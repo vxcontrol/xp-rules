@@ -1,0 +1,112 @@
+{
+    "Event": {
+        "EventData": {
+            "Data": [
+                {
+                    "Name": "SubjectUserSid",
+                    "text": "S-1-0-0"
+                },
+                {
+                    "Name": "SubjectUserName",
+                    "text": "-"
+                },
+                {
+                    "Name": "SubjectDomainName",
+                    "text": "-"
+                },
+                {
+                    "Name": "SubjectLogonId",
+                    "text": "0x0"
+                },
+                {
+                    "Name": "TargetUserSid",
+                    "text": "S-1-5-21-1000000030-700000027-3900000002-18209"
+                },
+                {
+                    "Name": "TargetUserName",
+                    "text": "DC1-KAV-01$"
+                },
+                {
+                    "Name": "TargetDomainName",
+                    "text": "ACME"
+                },
+                {
+                    "Name": "TargetLogonId",
+                    "text": "0x7e31b06"
+                },
+                {
+                    "Name": "LogonType",
+                    "text": "3"
+                },
+                {
+                    "Name": "LogonProcessName",
+                    "text": "Kerberos"
+                },
+                {
+                    "Name": "AuthenticationPackageName",
+                    "text": "Kerberos"
+                },
+                {
+                    "Name": "WorkstationName"
+                },
+                {
+                    "Name": "LogonGuid",
+                    "text": "{FB000002-1001-200A-600A-E7FF11FF1149}"
+                },
+                {
+                    "Name": "TransmittedServices",
+                    "text": "-"
+                },
+                {
+                    "Name": "LmPackageName",
+                    "text": "-"
+                },
+                {
+                    "Name": "KeyLength",
+                    "text": "0"
+                },
+                {
+                    "Name": "ProcessId",
+                    "text": "0x0"
+                },
+                {
+                    "Name": "ProcessName",
+                    "text": "-"
+                },
+                {
+                    "Name": "IpAddress",
+                    "text": "fe80::de5:f739:aaad:affc"
+                },
+                {
+                    "Name": "IpPort",
+                    "text": "62033"
+                }
+            ]
+        },
+        "System": {
+            "Channel": "Security",
+            "Computer": "SOMEONE.acme.com",
+            "Correlation": null,
+            "EventID": "4624",
+            "EventRecordID": "430520",
+            "Execution": {
+                "ProcessID": "664",
+                "ThreadID": "3768"
+            },
+            "Keywords": "0x8020000000000000",
+            "Level": "0",
+            "Opcode": "0",
+            "Provider": {
+                "Guid": "{50000005-5008-4004-A0BA-3E0B0000C00D}",
+                "Name": "Microsoft-Windows-Security-Auditing"
+            },
+            "Security": null,
+            "Task": "12544",
+            "TimeCreated": {
+                "SystemTime": "2013-10-17T15:45:19.401995400Z"
+            },
+            "Version": "0"
+        },
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event"
+    }
+}

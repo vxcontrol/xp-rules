@@ -1,0 +1,4 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_Windows_wmi_4661_The_handle_to_an_object_was_requested"
+      LocalizationId: PT_Microsoft_Windows_wmi_4661_The_handle_to_an_object_was_requested
+ObjectId: PT-NF-2537
