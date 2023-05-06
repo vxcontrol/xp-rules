@@ -1,1 +1,0 @@
-<14>Apr 10 12:54:10 localhost audispd: node=localhost.localdomain type=USER_AUTH msg=audit(1491807250.743:5321): pid=11047 uid=1001 auid=1000 ses=12 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=? acct="vasya" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/1 res=failed'

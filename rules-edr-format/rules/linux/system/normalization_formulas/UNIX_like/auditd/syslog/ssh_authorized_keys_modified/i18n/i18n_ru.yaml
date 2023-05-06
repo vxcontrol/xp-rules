@@ -1,5 +1,0 @@
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_success
-      EventDescription: 'На узле {event_src.host} была изменена конфигурация ключей для аутентификации по SSH'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_failure
-      EventDescription: 'Неудачная попытка изменить конфигурацию ключей для авторизации по SSH на узле {event_src.host}'

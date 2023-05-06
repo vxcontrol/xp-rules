@@ -1,1 +1,0 @@
-<134>Oct 28 10:30:08 centos6 audispd: node=centos6 type=USER_CHAUTHTOK msg=audit(1446028208.085:909): user pid=1497 uid=0 auid=0 ses=3 subj=unconfined_u:unconfined_r:passwd_t:s0-s0:c0.c1023 msg='op=PAM:chauthtok acct="test123" exe="/usr/bin/passwd" hostname=? addr=? terminal=pts/0 res=success'

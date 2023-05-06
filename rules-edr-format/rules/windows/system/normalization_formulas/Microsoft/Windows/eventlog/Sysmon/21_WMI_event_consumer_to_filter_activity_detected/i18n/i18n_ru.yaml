@@ -1,3 +1,0 @@
-EventDescriptions:
-    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_21_WMI_event_consumer_to_filter_activity_detected
-      EventDescription: 'Обнаружены действия потребителя событий WMI с фильтром на узле {event_src.host}'

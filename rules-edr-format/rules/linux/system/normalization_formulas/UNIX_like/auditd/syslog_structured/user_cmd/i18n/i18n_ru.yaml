@@ -1,6 +1,0 @@
-Description: 'Выполнена команда'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_cmd_success
-      EventDescription: 'Пользователь с ID {subject.account.id} выполнил команду на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_user_cmd_failure
-      EventDescription: 'Пользователь с ID {subject.account.id} не смог выполнить команду на узле {event_src.host}'

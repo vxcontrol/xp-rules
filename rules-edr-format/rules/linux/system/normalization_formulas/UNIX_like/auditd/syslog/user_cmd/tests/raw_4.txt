@@ -1,1 +1,0 @@
-<14>Feb  1 18:11:23 pt-ucs-testuser audispd: node=pt-ucs-testuser type=USER_CMD msg=audit(1549033883.642:15882): pid=31711 uid=1000 auid=1000 ses=1699 msg='cwd="/home/mpx" cmd=7375202D terminal=pts/2 res=success'

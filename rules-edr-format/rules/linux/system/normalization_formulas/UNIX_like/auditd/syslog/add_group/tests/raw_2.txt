@@ -1,1 +1,0 @@
-<14>Apr 10 11:49:33 localhost audispd: node=localhost.localdomain type=ADD_GROUP msg=audit(1491803373.616:1038): pid=5640 uid=0 auid=1001 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-group id=1003 exe="/usr/sbin/groupadd" hostname=? addr=? terminal=pts/0 res=success'

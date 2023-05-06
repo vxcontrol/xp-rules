@@ -1,6 +1,0 @@
-EventDescriptions:
-    - Criteria: id = "PT_UNIX_like_auditd_syslog_user_cmd" and status = "success"
-      LocalizationId: PT_UNIX_like_auditd_syslog_user_cmd_success
-    - Criteria: id = "PT_UNIX_like_auditd_syslog_user_cmd" and status = "failure"
-      LocalizationId: PT_UNIX_like_auditd_syslog_user_cmd_failure
-ObjectId: PT-NF-4353

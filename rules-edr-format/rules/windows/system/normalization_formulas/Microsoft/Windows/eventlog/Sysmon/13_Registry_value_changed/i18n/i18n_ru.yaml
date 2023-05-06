@@ -1,3 +1,0 @@
-EventDescriptions:
-    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_13_Registry_value_changed
-      EventDescription: 'Процесс {datafield4} изменил значение ключа реестра на узле {event_src.host}'

@@ -1,1 +1,0 @@
-<134>Oct 27 13:39:14 centos6 audispd: node=centos6 type=AVC msg=audit(1446713197.129:203): avc:  denied  { open } for  pid=1563 comm="httpd" name="index.html" dev=dm-0 ino=264033 scontext=unconfined_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:var_t:s0 tclass=file

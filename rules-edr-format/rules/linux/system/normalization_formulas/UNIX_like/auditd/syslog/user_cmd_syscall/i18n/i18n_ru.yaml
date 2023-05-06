@@ -1,5 +1,0 @@
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_user_cmd_syscall_success
-      EventDescription: 'Пользователь с UID {subject.id} выполнил команду "{object.value}" на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_user_cmd_syscall_failure
-      EventDescription: 'Пользователю с UID {subject.id} не удалось выполнить команду "{object.value}" на узле {event_src.host}'

@@ -1,8 +1,0 @@
-Description: 'Создан пользователь'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_success
-      EventDescription: 'Пользователь с ID {subject.account.id} создал пользователя {object.account.name} на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_failure
-      EventDescription: 'Пользователь с ID {subject.account.id} не смог создать пользователя {object.account.name} на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_ongoing
-      EventDescription: 'Пользователь с ID {subject.account.id} создает пользователя {object.account.name} на узле {event_src.host}'

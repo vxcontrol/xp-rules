@@ -1,8 +1,0 @@
-Description: 'Удалена группа'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_group_success
-      EventDescription: 'Пользователь с ID {subject.account.id} удалил группу "{object.name}" на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_group_failure
-      EventDescription: 'Пользователь с ID {subject.account.id} не смог удалить группу "{object.name}" на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_group_ongoing
-      EventDescription: 'Пользователь с ID {subject.account.id} удаляет группу "{object.name}" на узле {event_src.host}'

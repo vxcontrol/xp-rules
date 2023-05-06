@@ -1,1 +1,0 @@
-<134>Oct 28 09:56:44 centos6 audispd: node=centos6 type=ADD_GROUP msg=audit(1446026204.056:543): user pid=1336 uid=0 auid=0 ses=3 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=adding group to /etc/group id=504 exe="/usr/sbin/groupadd" hostname=? addr=192.168.56.1 terminal=pts/0 res=success'

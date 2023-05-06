@@ -1,4 +1,0 @@
-Description: 'A new user group was created on host'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_add_group
-      EventDescription: 'The user with UID {subject.id} created a user group with GID {object.id} on host {event_src.host}'

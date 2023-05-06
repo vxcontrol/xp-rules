@@ -1,0 +1,11 @@
+Filter:
+    Name:
+        ru: 'Проверка, что событие является нормализованным'
+        en: 'Check if event normalized'
+    Description: {}
+    UseAsEventName: true
+Args: {}
+Tags:
+    - event
+    - normalized
+ObjectId: LOC-RF-35030

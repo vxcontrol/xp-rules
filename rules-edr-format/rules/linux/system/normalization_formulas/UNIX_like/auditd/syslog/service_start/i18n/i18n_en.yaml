@@ -1,6 +1,0 @@
-Description: 'UNIX-like service is enable on the host'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_service_start_name
-      EventDescription: 'The user with UID {subject.id} started the service "{object.name}" on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_service_start_not_name
-      EventDescription: 'The user with UID {subject.id} started a service on host {event_src.host}'

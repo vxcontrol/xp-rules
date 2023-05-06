@@ -1,8 +1,0 @@
-Description: 'A user is removed'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_user_success
-      EventDescription: 'The user with ID {subject.account.id} removed the user {object.account.name} on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_user_failure
-      EventDescription: 'The user with ID {subject.account.id} failed to remove the user {object.account.name} on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_del_user_ongoing
-      EventDescription: 'The user with ID {subject.account.id} is removing the user {object.account.name} on host {event_src.host}'

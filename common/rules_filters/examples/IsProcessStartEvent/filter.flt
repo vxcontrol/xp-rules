@@ -1,0 +1,6 @@
+filter IsProcessStartEvent(string $name) {
+    filter::IsNormalizedEvent() and
+    object == "process" and
+    action == "start" and
+    match(object.name, $name)
+} 

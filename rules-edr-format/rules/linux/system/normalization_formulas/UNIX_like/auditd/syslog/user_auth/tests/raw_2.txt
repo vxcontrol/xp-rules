@@ -1,1 +1,0 @@
-<123>Oct 28 10:35:46 centos6 audispd: node=centos6 type=USER_AUTH msg=audit(1446028546.281:1012): user pid=1541 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:authentication acct="test123" exe="/bin/login" hostname=? addr=? terminal=tty1 res=success'

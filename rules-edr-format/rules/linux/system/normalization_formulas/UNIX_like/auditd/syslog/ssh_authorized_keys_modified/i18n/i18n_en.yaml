@@ -1,6 +1,0 @@
-Description: 'Ssh authorized keys modified'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_success
-      EventDescription: 'Сonfiguration of SSL keys used for authentication changed on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_ssh_authorized_keys_modified_failure
-      EventDescription: 'Unsuccessful attempt to change the SSH authorized key configuration on host {event_src.host}'

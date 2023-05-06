@@ -1,3 +1,0 @@
-EventDescriptions:
-    - LocalizationId: PT_Microsoft_Windows_eventlog_1102_Audit_log_was_cleared
-      EventDescription: 'Пользователь {subject.account.name} очистил журнал {object.name} на узле {event_src.host}'

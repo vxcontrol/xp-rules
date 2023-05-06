@@ -1,6 +1,0 @@
-Description: 'Служба остановлена'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_success
-      EventDescription: 'Служба "{object.name}" остановлена на узле {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_service_stop_status_failure
-      EventDescription: 'Не удалось остановить службу "{object.name}" на узле {event_src.host}'

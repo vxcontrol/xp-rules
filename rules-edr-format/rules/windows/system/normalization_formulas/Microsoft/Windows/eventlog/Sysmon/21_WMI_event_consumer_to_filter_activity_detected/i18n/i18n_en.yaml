@@ -1,4 +1,0 @@
-Description: 'WMI event consumer to filter activity detected'
-EventDescriptions:
-    - LocalizationId: PT_Microsoft_Windows_eventlog_Sysmon_21_WMI_event_consumer_to_filter_activity_detected
-      EventDescription: 'Actions of WMI event consumer with a filter are detected on host {event_src.host}'

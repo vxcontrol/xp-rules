@@ -1,4 +1,0 @@
-Description: 'Проверена политика выполнения команд PowerShell'
-EventDescriptions:
-    - LocalizationId: PT_Microsoft_Windows_eventlog_Common_PowerShell_4103_Get_Execution_Policy
-      EventDescription: 'Проверена политика выполнения команд PowerShell на узле {event_src.host}'

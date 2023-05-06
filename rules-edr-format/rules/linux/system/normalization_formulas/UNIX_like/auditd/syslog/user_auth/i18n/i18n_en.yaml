@@ -1,6 +1,0 @@
-Description: 'User login or failed to login on host'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_user_auth_success
-      EventDescription: 'User {subject.name} logged in to the system on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_user_auth_failed
-      EventDescription: 'User {subject.name} failed to login to the system on host {event_src.host}'

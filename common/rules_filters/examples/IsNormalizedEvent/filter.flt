@@ -1,0 +1,5 @@
+filter::IsNormalizedEvent(){
+    correlation_name = null
+    and
+    normalized = true
+} 

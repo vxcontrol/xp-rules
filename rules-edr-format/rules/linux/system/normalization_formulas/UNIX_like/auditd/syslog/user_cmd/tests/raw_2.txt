@@ -1,1 +1,0 @@
-<123>Oct 27 11:14:59 centos6 audispd: node=centos6 type=USER_CMD msg=audit(1445944499.866:12023): user pid=11689 uid=0 auid=0 ses=104 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root" cmd="/bin/bash" terminal=pts/0 res=success'

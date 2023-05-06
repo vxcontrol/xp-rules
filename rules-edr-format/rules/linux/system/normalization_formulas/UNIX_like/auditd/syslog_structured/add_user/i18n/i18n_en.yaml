@@ -1,8 +1,0 @@
-Description: 'A user is created'
-EventDescriptions:
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_success
-      EventDescription: 'The user with ID {subject.account.id} created the user {object.account.name} on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_failure
-      EventDescription: 'The user with ID {subject.account.id} failed to create the user {object.account.name} on host {event_src.host}'
-    - LocalizationId: PT_UNIX_like_auditd_syslog_structured_add_user_ongoing
-      EventDescription: 'The user with ID {subject.account.id} is creating the user {object.account.name} on host {event_src.host}'

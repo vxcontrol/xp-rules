@@ -1,1 +1,0 @@
-<14>Apr 10 14:49:33 localhost audispd: node=localhost.localdomain type=ADD_USER msg=audit(1491814173.751:13392): pid=17359 uid=0 auid=1000 ses=12 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=add-user id=1002 exe="/usr/sbin/useradd" hostname=? addr=? terminal=pts/1 res=success'
