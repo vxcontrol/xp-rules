@@ -1,0 +1,31 @@
+ContentAutoName: Schtasks_Commandline
+ExpertContext:
+    Created: 12.05.2023
+    Updated: 12.05.2023
+    Usecases:
+        - Атакующие могут изменить или создать задачи для исполнения команд или закрепления на системе, с помощью schtasks.exe
+        - Атакующие могут изменить или создать задачи для исполнения команд или закрепления на системе, с помощью комадлетов Powershell
+    References:
+        - https://docs.microsoft.com/en-us/powershell/module/scheduledtasks/?view=windowsserver2019-ps
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4688
+        - Provider: Microsoft-Windows-Sysmon
+          EventID:
+              - 1
+        - Provider: Microsoft-Windows-PowerShell
+          EventID:
+              - 4103
+              - 4104
+ObjectId: LOC-CR-152436010
+EventDescriptions:
+    - Criteria: correlation_name = "Schtasks_Commandline"
+      LocalizationId: corrname_Schtasks_Commandline
+ContentRelations:
+    Implements:
+        ATTACK:
+            execution:
+                - T1059
+            persistence:
+                - T1053.005
