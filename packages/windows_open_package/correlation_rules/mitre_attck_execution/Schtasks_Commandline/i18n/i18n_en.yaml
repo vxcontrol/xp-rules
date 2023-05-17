@@ -1,0 +1,4 @@
+Description: 'An attempt to manage a scheduled task using the command line or PowerShell is detected'
+EventDescriptions:
+    - LocalizationId: corrname_Schtasks_Commandline
+      EventDescription: 'An attempt to manage a scheduled task using the command line or PowerShell is detected on host {event_src.host}'

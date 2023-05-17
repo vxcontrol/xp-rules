@@ -1,0 +1,236 @@
+event Run_Schtasks_in_Cmd:
+    key:
+        event_src.host
+    filter {
+        correlation_name == null
+        and 
+        (
+            (
+                msgid == "4688"
+                and event_src.title == "windows"
+            )
+            or (
+                msgid == "1"
+                and event_src.title == "sysmon"
+            )
+        )
+        and (
+            match(lower(object.process.name), "schtasks.exe")
+            or match(lower(object.process.original_name), "schtasks.exe")
+        )
+        and regex(lower(object.process.cmdline), "(\/|-)(create|change|run|delete|end)\\s+", 0) != null
+    }
+
+event Run_Schtasks_in_Powershell_Pipeline:
+    key:
+        event_src.host
+    filter {
+        correlation_name == null
+        and msgid == "4103"
+        and action == "execute"
+        and object == "command"
+        and event_src.title == "windows"
+        and regex(lower(object.process.cmdline), "\\b((register|new|set|start|stop|unregister)-scheduledtask(principal)?|registertaskdefinition)\\s+", 0) != null
+    }
+
+event Run_Schtasks_in_Powershell_Command:
+    key:
+        event_src.host, object.id
+    filter {
+        correlation_name == null
+        and msgid == "4104"
+        and action == "execute"
+        and object == "command"
+        and event_src.title == "windows"
+        and regex(lower(object.process.cmdline), "schtasks.*?(\/|-)(create|change|run|delete|end)\\s+|\\b((register|new|set|start|stop|unregister)-scheduledtask(principal)?|registertaskdefinition)\\s+", 0) != null
+    }
+
+rule Schtasks_Commandline: Run_Schtasks_in_Cmd or Run_Schtasks_in_Powershell_Pipeline or (Run_Schtasks_in_Powershell_Command+ timer 1s)
+
+    init {
+        $first_event = true
+    }
+
+    on Run_Schtasks_in_Cmd {
+        $object = object
+
+        $object.name = strip(regex(lower(object.process.cmdline), "(\/|-)tn\s+(\".*?\"|\S+)", 2), '"', '"')
+
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.fullname = subject.account.fullname
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+        $subject.account.privileges = subject.account.privileges
+
+        $object.account.session_id = object.account.session_id
+        $object.account.name = object.account.name
+        $object.account.domain = object.account.domain
+        $object.account.fullname = object.account.fullname
+        $object.account.id = object.account.id
+
+        $object.process.id = object.process.id
+        $object.process.name = object.process.name
+        $object.process.path = object.process.path
+        $object.process.fullpath = object.process.fullpath
+        $object.process.hash = object.process.hash
+        $object.process.version = object.process.version
+        $object.process.cmdline = object.process.cmdline
+        $object.process.guid = object.process.guid
+        $object.process.meta = object.process.meta
+        $object.process.original_name = object.process.original_name
+        $object.process.cwd = object.process.cwd
+        $object.process.chain = object.process.chain 
+ 
+        $datafield18 = datafield18  # цепочка процесса-субъекта с идентификаторами
+        $datafield19 = datafield19  # цепочка процесса-объекта с идентификаторами
+
+        $object.process.parent.id = object.process.parent.id
+        $object.process.parent.name = object.process.parent.name
+        $object.process.parent.path = object.process.parent.path
+        $object.process.parent.fullpath = object.process.parent.fullpath
+        $object.process.parent.guid = object.process.parent.guid
+        $object.process.parent.cmdline = object.process.parent.cmdline
+
+        $datafield6 = datafield6    # Идентификатор сессии в формате UUID
+
+        $event_src.host = event_src.host
+        $event_src.fqdn = event_src.fqdn
+        $event_src.hostname = event_src.hostname
+        $event_src.ip = event_src.ip
+        $event_src.asset = event_src.asset
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.category = event_src.category
+
+        $alert.key = lower(object.process.cmdline)
+    }
+
+    on Run_Schtasks_in_Powershell_Pipeline {
+
+        $object = object
+        if object.name == null then
+            $object.name = strip(regex(lower(object.process.cmdline), "-(task)?name\s+(\".*?\"|\S+)", 2), '"', '"')
+        endif
+
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.fullname = subject.account.fullname
+        $subject.account.id = subject.account.id
+
+        $object.account.name = object.account.name
+        $object.account.domain = object.account.domain
+        $object.account.fullname = object.account.fullname
+        $object.account.id = object.account.id
+
+        $object.process.cmdline = object.process.cmdline
+        $object.process.name = object.process.name
+
+        $object.process.parent.id = object.process.parent.id
+        $object.process.parent.path = object.process.parent.path
+        $object.process.parent.name = object.process.parent.name
+        $object.process.parent.fullpath = object.process.parent.fullpath
+        $object.process.parent.guid = object.process.parent.guid
+        $object.process.parent.cmdline = object.process.parent.cmdline
+
+        $object.path = object.path
+        $object.fullpath = object.fullpath
+        $object.value = object.value
+
+        $datafield8 = datafield8  # версия модуля
+
+        $chain_id = chain_id
+
+        $event_src.host = event_src.host
+        $event_src.fqdn = event_src.fqdn
+        $event_src.hostname = event_src.hostname
+        $event_src.ip = event_src.ip
+        $event_src.asset = event_src.asset
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.category = event_src.category
+
+        $alert.key = lower(object.process.cmdline)
+    }
+
+    on Run_Schtasks_in_Powershell_Command {
+
+        if $first_event then
+            $object = object
+        
+            $subject.account.name = subject.account.name
+            $subject.account.domain = subject.account.domain
+            $subject.account.fullname = subject.account.fullname
+            $subject.account.session_id = subject.account.session_id
+            $subject.account.privileges = subject.account.privileges
+            $subject.account.id = subject.account.id
+
+            $object.account.name = object.account.name
+            $object.account.domain = object.account.domain
+            $object.account.fullname = object.account.fullname
+            $object.account.session_id = object.account.session_id
+            $object.account.privileges = object.account.privileges
+            $object.account.id = object.account.id
+
+            $object.value = object.value
+            $object.process.cmdline = object.process.cmdline
+            $object.process.id = object.process.id
+            
+            $object.name = strip(regex(lower(object.process.cmdline), "((\/|-)tn|-(task)?name)\s+(\".*?\"|\S+)", 4), '"', '"')
+            $object.id = object.id
+            $object.path = object.path
+            $object.fullpath = object.fullpath
+
+            $event_src.host = event_src.host
+            $event_src.fqdn = event_src.fqdn
+            $event_src.hostname = event_src.hostname
+            $event_src.ip = event_src.ip
+            $event_src.asset = event_src.asset
+            $event_src.vendor = event_src.vendor
+            $event_src.title = event_src.title
+            $event_src.subsys = event_src.subsys
+            $event_src.category = event_src.category
+
+            $alert.key = lower(object.process.cmdline)
+            
+            $first_event = false
+        endif
+    }
+
+emit {
+    if regex(lower($alert.key), "(\\b(new|register)-scheduledtask|(\/|-)create|\\bregistertaskdefinition)\\b", 0) != null then
+        $action = "create"
+    elif regex(lower($alert.key), "(\\bstart-scheduledtask|(\/|-)run)\\b", 0) != null then
+        $action = "start"
+    elif regex(lower($alert.key), "(\\bset-scheduledtask|(\/|-)change)\\b", 0) != null then
+        $action = "modify"
+    elif regex(lower($alert.key), "(\\bunregister-scheduledtask|(\/|-)delete)\\b", 0) != null then
+        $action = "remove"
+    elif regex(lower($alert.key), "(\\bstop-scheduledtask|(\/|-)end)\\b", 0) != null then
+        $action = "stop"
+    endif
+
+    $alert.context = $action + " the task: " + $object.name + "|regex_match: " + regex(lower($alert.key), "schtasks.*?(\/|-)(create|change|run|delete|end)\\b|\\b((register|new|set|start|stop|unregister)-scheduledtask(principal)?|registertaskdefinition)\\b", 0)
+
+    if in_list(["create", "modify"], $action) then
+        $importance = "high"
+    else
+        $importance = "medium"
+    endif
+
+    $correlation_type = "event"
+
+    $subject = "account"
+    $status = "success"
+
+    $category.generic = "Attack"
+    $category.high = "Execution"
+    $category.low = "Scheduled Task"
+
+    $incident.aggregation.key = join([$correlation_name, $event_src.host, $subject.account.id, $subject.account.name, $action], "|")
+    $incident.severity = "high"
+    $incident.category = "Undefined"
+    $incident.aggregation.timeout = 2h
+}
