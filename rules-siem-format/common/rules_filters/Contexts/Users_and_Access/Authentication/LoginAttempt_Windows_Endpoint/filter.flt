@@ -1,0 +1,10 @@
+filter LoginAttempt_Windows_Endpoint() {
+    filter::NotFromCorrelator()
+    and event_src.title == "windows"
+    and category.high == "Access Management"
+    and category.low == "Communication"
+    and action == "login"
+    and event_src.vendor == "microsoft"
+    and filter::UserAccount_Windows(subject.account.name, subject.account.id)
+    and dst.host != null
+}

@@ -1,0 +1,13 @@
+Filter:
+    Name:
+        ru: 'Вход в систему на конечном узле (ОС Windows)'
+        en: 'Login on an endpoint host (Windows OS)'
+    Description:
+        ru: 'Пользователь вошел в систему на конечном узле с ОС Windows'
+        en: 'A user logged in to the system on an endpoint host running Windows OS'
+    UseAsEventName: true
+Tags:
+    - users_and_access
+    - login
+    - windows
+ObjectId: PT-RF-64

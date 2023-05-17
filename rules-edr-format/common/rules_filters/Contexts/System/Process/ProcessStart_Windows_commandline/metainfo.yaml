@@ -1,0 +1,27 @@
+Filter:
+    Name:
+        ru: 'Запущен процесс (ОС Windows)'
+        en: 'Process is started (Windows OS)'
+    Description:
+        ru: 'Процесс с указанным именем исполняемого файла и командной строкой процесса запущен на узле с ОС Windows'
+        en: 'A process with the specified executable file name or process command line is started on a host running Windows OS'
+    UseAsEventName: true
+Args:
+    name:
+        Type: String
+        Name:
+            ru: 'Шаблон, соответствующий имени исполняемого файла процесса'
+            en: 'Template that matches the name of a process executable file'
+        Default:
+    commandline_regex:
+        Type: String
+        Name:
+            ru: 'Регулярное выражение, соответствующее командной строке процесса'
+            en: 'Regular expression that matches a process command line'
+        Default:
+Tags:
+    - system
+    - process
+    - windows
+    - property
+ObjectId: PT-RF-40

@@ -1,0 +1,13 @@
+Filter:
+    Name:
+        ru: 'Создан файл (ОС Windows)'
+        en: 'File is created (Windows OS)'
+    Description:
+        ru: 'Создан файл на узле с ОС Windows'
+        en: 'A file is created on a host running Windows OS'
+    UseAsEventName: true
+Tags:
+    - system
+    - file
+    - windows
+ObjectId: PT-RF-25

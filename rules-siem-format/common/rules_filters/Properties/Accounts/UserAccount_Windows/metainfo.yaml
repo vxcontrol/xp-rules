@@ -1,0 +1,26 @@
+Filter:
+    Name:
+        ru: 'Учетная запись пользователя'
+        en: 'User account'
+    Description:
+        ru: 'Учетная запись относится к типу "Пользователь" в терминологии ОС Windows'
+        en: 'An account is the "User account" in the Windows terminology'
+    UseAsEventName: false
+Args:
+    name:
+        Type: String
+        Name:
+            ru: 'Имя учетной записи'
+            en: 'Account name'
+        Default:
+    id:
+        Type: String
+        Name:
+            ru: 'Идентификатор учетной записи'
+            en: 'Account SID'
+        Default:
+Tags:
+    - account
+    - windows
+    - property
+ObjectId: PT-RF-12

@@ -1,0 +1,13 @@
+filter ProcessStart_Windows_any() {
+    (
+        (
+            in_list(["4688", "592"], msgid)
+            and event_src.title == "windows"
+        )
+        or
+        (
+            msgid == "1"
+            and event_src.title == "sysmon"
+        )
+    )
+}

@@ -1,0 +1,16 @@
+filter FileCreate_Windows() {
+    (
+        action == "access"
+        and (
+            reason == "WriteData"
+            or datafield5 == "0x2"
+        )
+        and event_src.vendor == "microsoft"
+        and event_src.title == "windows"
+    )
+    or (
+        msgid == "11"
+        and event_src.vendor == "microsoft"
+        and event_src.title == "sysmon"
+    )
+}

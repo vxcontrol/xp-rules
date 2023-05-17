@@ -1,0 +1,17 @@
+filter ProcessStart_Windows_commandline(string $name, string $commandline_regex) {
+    (
+        (
+            msgid == "4688"
+            and event_src.title == "windows"
+        )
+        or (
+            msgid == "1"
+            and event_src.title == "sysmon"
+        )
+    )
+    and (
+        match(lower(object.process.name), lower($name))
+        or match(lower(object.process.original_name), lower($name))
+    )
+    and regex(lower(object.process.cmdline), $commandline_regex, 0) != null
+}
