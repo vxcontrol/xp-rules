@@ -1,0 +1,3 @@
+filter NotFromCorrelator() {
+    correlation_name == null
+}

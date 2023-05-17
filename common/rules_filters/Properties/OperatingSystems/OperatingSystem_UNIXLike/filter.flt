@@ -1,0 +1,13 @@
+filter OperatingSystem_UNIXLike() {
+    in_list([
+        "hp_ux",
+        "aix",
+        "astra_linux",
+        "debian",
+        "freebsd",
+        "solaris",
+        "rhel",
+        "suse",
+        "unix_like"
+    ], event_src.title)
+}

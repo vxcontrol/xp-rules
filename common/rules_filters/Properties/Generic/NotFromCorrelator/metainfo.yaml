@@ -1,0 +1,11 @@
+Filter:
+    Name:
+        ru: 'Событие не является скоррелированным'
+        en: 'Event is not from correlator'
+    Description:
+        ru: 'Событие не является результатом корреляции иных событий'
+        en: 'Event is not a result of correlation of other events'
+    UseAsEventName: false
+Tags:
+    - property
+ObjectId: PT-RF-14
