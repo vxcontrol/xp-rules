@@ -2,18 +2,8 @@ event Run_Schtasks_in_Cmd:
     key:
         event_src.host
     filter {
-        correlation_name == null
-        and 
-        (
-            (
-                msgid == "4688"
-                and event_src.title == "windows"
-            )
-            or (
-                msgid == "1"
-                and event_src.title == "sysmon"
-            )
-        )
+        filter::NotFromCorrelator()
+        and filter::ProcessStart_Windows_any()
         and (
             match(lower(object.process.name), "schtasks.exe")
             or match(lower(object.process.original_name), "schtasks.exe")
@@ -25,7 +15,7 @@ event Run_Schtasks_in_Powershell_Pipeline:
     key:
         event_src.host
     filter {
-        correlation_name == null
+        filter::NotFromCorrelator()
         and msgid == "4103"
         and action == "execute"
         and object == "command"
@@ -37,7 +27,7 @@ event Run_Schtasks_in_Powershell_Command:
     key:
         event_src.host, object.id
     filter {
-        correlation_name == null
+        filter::NotFromCorrelator()
         and msgid == "4104"
         and action == "execute"
         and object == "command"
