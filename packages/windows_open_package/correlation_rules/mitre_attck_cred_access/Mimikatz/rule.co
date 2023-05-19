@@ -5,7 +5,7 @@ event Process_Start:
         filter::NotFromCorrelator()
         and filter::ProcessStart_Windows_any()
         and (
-            regex(lower(object.process.fullpath), ".*mimikatz.*\.exe", 0) != null
+            regex(lower(object.process.fullpath), ".*mimikatz.*\.exe$", 0) != null
             or
             regex(lower(object.process.meta), "\b(mimikatz|gentilkiwi|benjamin\s+delpy)\b", 0) != null
             or
