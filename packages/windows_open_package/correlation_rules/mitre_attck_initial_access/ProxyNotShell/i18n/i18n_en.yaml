@@ -1,0 +1,6 @@
+Description: 'The ProxyNotShell vulnerability can be used by an attacker to initially penetrate the infrastructure through vulnerable Exchange servers'
+EventDescriptions:
+    - LocalizationId: 'corrname_ProxyNotShell'
+      EventDescription: 'ProxyNotShell exploitation detected on host {event_src.host} by user {subject.account.name} from host {src.ip}'
+    - LocalizationId: 'corrname_ProxyNotShell_2'
+      EventDescription: 'ProxyNotShell exploitation detected on host {event_src.host} by user {subject.account.name} from host {src.ip} ({src.host})'

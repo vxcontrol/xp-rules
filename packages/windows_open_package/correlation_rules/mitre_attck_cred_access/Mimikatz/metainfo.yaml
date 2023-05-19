@@ -1,0 +1,26 @@
+ContentAutoName: Mimikatz
+ExpertContext:
+    Created: 15.05.2023
+    Updated: 19.05.2023
+    Usecases:
+        - Выявление запуска mimikatz.exe по подстроке mimikatz в пути к exe-файлу
+        - Выявление запуска mimikatz.exe по метаданных файла (original_name, description, product, company)
+        - Выявление запуска mimikatz.exe по используемым параметрам
+    References:
+        - https://github.com/gentilkiwi/mimikatz
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4688
+        - Provider: Microsoft-Windows-Sysmon
+          EventID:
+              - 1
+ObjectId: LOC-CR-121752854
+EventDescriptions:
+    - Criteria: correlation_name = "Mimikatz"
+      LocalizationId: corrname_Mimikatz
+ContentRelations:
+    Implements:
+        ATTACK:
+            credential_access:
+                - T1003

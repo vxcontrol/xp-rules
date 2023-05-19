@@ -1,0 +1,4 @@
+Description: 'Detects the launch of the Mimikatz tool, which allows you to attack the credentials of users of the Windows OS family'
+EventDescriptions:
+    - LocalizationId: 'corrname_Mimikatz'
+      EventDescription: 'Detected running by user {subject.account.name} Mimikatz with parameters {object.process.cmdline} on host {event_src.host}'

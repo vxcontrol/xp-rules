@@ -1,0 +1,4 @@
+Description: 'Обнаруживает запуск инструмента Mimikatz, позволяющего проводить атаки на учетные данные пользователей ОС семейства Windows'
+EventDescriptions:
+    - LocalizationId: 'corrname_Mimikatz'
+      EventDescription: 'Обнаружен запуск пользователем {subject.account.name} Mimikatz с параметрами {object.process.cmdline} на узле {event_src.host}'
