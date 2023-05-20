@@ -1,0 +1,34 @@
+ContentAutoName: Named_Pipe_Inpersonation_PrivEsc
+ExpertContext:
+    Created: 20.05.2023
+    Updated: 20.05.2023
+    KnowledgeHolders:
+        - Yuliya Fomina
+        - Dmitry Fedosov
+    Usecases:
+        - Named Pipe Impersonation (In Memory/Admin)
+        - Named Pipe Impersonation (Dropper/Admin)
+        - Named Pipe Impersonation (RPCSS variant)
+    References:
+        - https://docs.rapid7.com/metasploit/meterpreter-getsystem/
+    Improvements:
+        - Named Pipe Impersonation (PrintSpooler variant)
+        - Named Pipe Impersonation (EFSRPC variant - AKA EfsPotato)
+    DataSources:
+        - Provider: Microsoft-Windows-Sysmon
+          EventID:
+              - 17
+              - 18
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 7045
+              - 5145
+ObjectId: LOC-CR-180323302
+EventDescriptions:
+    - Criteria: correlation_name = "Named_Pipe_Inpersonation_PrivEsc"
+      LocalizationId: corrname_Named_Pipe_Inpersonation_PrivEsc
+ContentRelations:
+    Implements:
+        ATTACK:
+            privilege_escalation:
+                - T1134.001

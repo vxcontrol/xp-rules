@@ -1,0 +1,135 @@
+event Pipe_Created:
+    key:
+        event_src.host, object.name
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "sysmon"
+        and msgid == "17"
+        and lower(subject.account.name) != "system"
+    }
+
+event Service_Create:
+    key:
+        event_src.host, object.name
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "windows"
+        and msgid == "7045"
+        # cmd.exe /c echo fkkgxm >\\\\.\\pipe\\fkkgxm
+        # rundll32.exe C:\\Users\\yfomina\\AppData\\Local\\Temp\\pdxxuf.dll,a /p:pdxxuf
+        and regex(lower(object.process.cmdline), "cmd\.exe.*?>\\\\\\\\\.\\\\pipe\\\\|rundll32\.exe.*?\.dll,[a-z]\s\/p:[a-z]+", 0) != null
+    }
+
+event IPC_Access:
+    key:
+        event_src.host, object.storage.name
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "windows"
+        and msgid == "5145"
+        and in_list(["127.0.0.1", "::1"], src.ip)
+    }
+
+event Pipe_Connected:
+    key:
+        event_src.host, object.name
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "sysmon"
+        and msgid == "18"
+        and in_list(["cmd.exe", "rundll32.exe", "system"], lower(subject.process.name))
+    }
+
+rule Named_Pipe_Inpersonation_PrivEsc: (Pipe_Created and (Service_Create or IPC_Access) and Pipe_Connected) within 10s
+
+    on Pipe_Created {
+        $subject.account.name = subject.account.name
+        $subject.account.fullname = subject.account.fullname
+        $subject.account.domain = subject.account.domain
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+        $subject.account.privileges = subject.account.privileges
+
+        $subject.process.id = subject.process.id
+        $subject.process.name = subject.process.name
+        $subject.process.path = subject.process.path
+        $subject.process.fullpath = subject.process.fullpath
+        $subject.process.hash = subject.process.hash
+        $subject.process.version = subject.process.version
+        $subject.process.cmdline = subject.process.cmdline
+        $subject.process.guid = subject.process.guid
+        $subject.process.meta = subject.process.meta
+        $subject.process.original_name = subject.process.original_name
+        $subject.process.cwd = subject.process.cwd
+        
+        $subject.process.parent.id = subject.process.parent.id
+        $subject.process.parent.name = subject.process.parent.name
+        $subject.process.parent.path = subject.process.parent.path
+        $subject.process.parent.fullpath = subject.process.parent.fullpath
+        $subject.process.parent.cmdline = subject.process.parent.cmdline
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.vendor = event_src.vendor
+        $event_src.category = event_src.category
+        $event_src.rule = event_src.rule
+
+        $alert.key = subject.process.fullpath
+        $alert.context = subject.account.name + " -> " + $alert.contect
+    }
+
+    on Service_Create {
+        $object.name = object.name
+        $object.path = object.path
+        $object.fullpath = object.fullpath
+        $object.type = object.type
+        $object.property = object.property
+        $object.value = object.value
+        $object.new_value = object.new_value
+        $object.query = object.query
+    }
+
+    on IPC_Access {
+        $object.storage.fullpath = object.storage.fullpath
+        $object.storage.path = object.storage.path
+        $object.storage.name = object.storage.name
+        $object.storage.id = object.storage.id
+    }
+
+    on Pipe_Connected {
+        $object.account.name = subject.account.name
+        $object.account.fullname = subject.account.fullname
+        $object.account.domain = subject.account.domain
+        $object.account.session_id = subject.account.session_id
+        $object.account.id = subject.account.id
+        $object.account.privileges = subject.account.privileges
+
+        $alert.context = $alert.context + $object.account.name
+
+        if lower(subject.process.name) == "cmd.exe" then
+            $reason = 'Named Pipe Impersonation (In Memory/Admin)'
+        elif lower(subject.process.name) == "rundll32.exe" then
+            $reason = 'Named Pipe Impersonation (Dropper/Admin)'
+        elif lower(subject.process.name) == "system" then
+            $reason = 'Named Pipe Impersonation (RPCSS variant)'
+        endif
+    }
+
+emit {
+    $correlation_type = "incident"
+    $importance = "high"
+
+    $subject = "account"
+    $action = "escalate"
+    $object = "session"
+    $status = "success"
+
+    $category.generic = "Attack"
+    $category.high = "Privilege Escalation"
+    $category.low = "Token Impersonation/Theft"
+}
+
