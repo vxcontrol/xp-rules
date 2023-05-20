@@ -1,0 +1,4 @@
+Description: 'Privilege Escalation via Named Pipe Impersonation'
+EventDescriptions:
+    - LocalizationId: 'corrname_Named_Pipe_Inpersonation_PrivEsc'
+      EventDescription: 'User {subject.account.name} ran exploit {subject.process.name} and elevated privileges to {object.account.name}'
