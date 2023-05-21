@@ -1,4 +1,4 @@
-Description: 'Повышение привилегий через именованный канал'
+Description: 'Повышение привилегий через имперсонацию через именованный канал'
 EventDescriptions:
-    - LocalizationId: 'corrname_Named_Pipe_Inpersonation_PrivEsc'
+    - LocalizationId: 'corrname_Named_Pipe_Impersonation_PrivEsc'
       EventDescription: 'Пользователь {subject.account.name} запустил эксплоит {subject.process.name} и повысил свои привилегии до прав {object.account.name}'

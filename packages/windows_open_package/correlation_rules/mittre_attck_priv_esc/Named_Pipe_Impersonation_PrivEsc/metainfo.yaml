@@ -1,7 +1,7 @@
-ContentAutoName: Named_Pipe_Inpersonation_PrivEsc
+ContentAutoName: Named_Pipe_Impersonation_PrivEsc
 ExpertContext:
     Created: 20.05.2023
-    Updated: 20.05.2023
+    Updated: 21.05.2023
     KnowledgeHolders:
         - Yuliya Fomina
         - Dmitry Fedosov
@@ -25,8 +25,8 @@ ExpertContext:
               - 5145
 ObjectId: LOC-CR-180323302
 EventDescriptions:
-    - Criteria: correlation_name = "Named_Pipe_Inpersonation_PrivEsc"
-      LocalizationId: corrname_Named_Pipe_Inpersonation_PrivEsc
+    - Criteria: correlation_name = "Named_Pipe_Impersonation_PrivEsc"
+      LocalizationId: corrname_Named_Pipe_Impersonation_PrivEsc
 ContentRelations:
     Implements:
         ATTACK:

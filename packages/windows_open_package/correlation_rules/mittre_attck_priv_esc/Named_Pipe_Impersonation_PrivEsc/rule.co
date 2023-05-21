@@ -40,7 +40,7 @@ event Pipe_Connected:
         and in_list(["cmd.exe", "rundll32.exe", "system"], lower(subject.process.name))
     }
 
-rule Named_Pipe_Inpersonation_PrivEsc: (Pipe_Created and (Service_Create or IPC_Access) and Pipe_Connected) within 10s
+rule Named_Pipe_Impersonation_PrivEsc: (Pipe_Created and (Service_Create or IPC_Access) and Pipe_Connected) within 10s
 
     on Pipe_Created {
         $subject.account.name = subject.account.name
