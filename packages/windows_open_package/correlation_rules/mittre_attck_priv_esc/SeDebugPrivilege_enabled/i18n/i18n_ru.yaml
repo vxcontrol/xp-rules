@@ -1,0 +1,4 @@
+Description: 'Процесс включил привилегию SeDebugPrivilege'
+EventDescriptions:
+    - LocalizationId: 'corrname_SeDebugPrivilege_enabled'
+      EventDescription: 'Процесс {subject.process.name} включил привилегию {object.value}'
