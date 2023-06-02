@@ -1,0 +1,4 @@
+Description: 'The user cleared one of the Windows event logs.'
+EventDescriptions:
+    - LocalizationId: 'corrname_Clearing_eventlog'
+      EventDescription: 'User {subject.account.domain}\{subject.account.name} clean {object.name} log at host {event_src.host}'

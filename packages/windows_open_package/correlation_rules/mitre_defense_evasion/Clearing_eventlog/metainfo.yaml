@@ -1,0 +1,28 @@
+Name: Tasks_actions
+ObjectId: LOC-CR-284318162
+ContentAutoName: Tasks_actions
+ExpertContext:
+    Created: 01.06.2023
+    Updated: 02.06.2023
+    KnowledgeHolders:
+        - Vadim Varganov (d3f0x0)
+    Usecases:
+        - Attackers want to hide traces of their activity in the system
+    Falsepositives:
+        - Administrative action
+    Improvements:
+        - Add detection clear log via utils
+    DataSources:
+        - Provider: Microsoft-Windows-Eventlog
+          EventID:
+              - 104
+    References:
+        - https://car.mitre.org/analytics/CAR-2016-04-002/
+ContentRelations:
+    Implements:
+        ATTACK:
+            defense-evasion:
+                - T1070.001
+EventDescriptions:
+    - Criteria: correlation_name = "Clearing_eventlog"
+      LocalizationId: corrname_Clearing_eventlog

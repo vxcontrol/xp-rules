@@ -1,0 +1,4 @@
+Description: 'Пользователь очистил один из журналов событий Windows.'
+EventDescriptions:
+    - LocalizationId: 'corrname_Clearing_eventlog'
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} очистил журнал событий {object.name} на узле {event_src.host}'
