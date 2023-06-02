@@ -79,7 +79,7 @@ rule Named_Pipe_Impersonation_PrivEsc: (Pipe_Created and (Service_Create or IPC_
         $event_src.rule = event_src.rule
 
         $alert.key = subject.process.fullpath
-        $alert.context = subject.account.name + " -> " + $alert.contect
+        $alert.context = subject.account.name + " -> " + $alert.context
     }
 
     on Service_Create {
