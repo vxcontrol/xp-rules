@@ -1,0 +1,4 @@
+Description: 'DCShadow attack detection'
+EventDescriptions:
+    - LocalizationId: 'corrname_DCShadow_Attack'
+      EventDescription: 'DCShadow attack detected on host {event_src.host}, executed by user {subject.account.domain}\{subject.account.name} using account {object.account.domain}\{object.account.name}.'
