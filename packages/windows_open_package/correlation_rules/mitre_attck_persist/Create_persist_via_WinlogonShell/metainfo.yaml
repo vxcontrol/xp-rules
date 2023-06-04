@@ -1,0 +1,8 @@
+ObjectId: LOC-CR-58748064
+ContentAutoName: Create_persist_via_WinlogonShell
+ExpertContext:
+    Created: 02.06.2023
+    Updated: 02.06.2023
+EventDescriptions:
+    - Criteria: correlation_name = "Create_persist_via_WinlogonShell"
+      LocalizationId: corrname_Create_persist_via_WinlogonShell

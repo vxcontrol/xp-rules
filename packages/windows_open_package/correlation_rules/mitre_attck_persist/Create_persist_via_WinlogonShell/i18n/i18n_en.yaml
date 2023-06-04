@@ -1,0 +1,4 @@
+Description: 'Detect persistance using Winlogon Helper DLL'
+EventDescriptions:
+    - LocalizationId: 'corrname_Create_persist_via_WinlogonShell'
+      EventDescription: 'Process {subject.process.name} was modified Shell'

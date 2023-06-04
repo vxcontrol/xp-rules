@@ -1,0 +1,86 @@
+event Process_Start:
+    key:
+        event_src.host, object.account.session_id
+    filter {
+        filter::NotFromCorrelator() and
+        in_list(["1","4688"], msgid) and
+        lower(object) == "process" and
+        lower(action) == "start" and
+        lower(object.process.parent.name) == "userinit.exe" and
+        lower(object.process.name) != "explorer.exe"
+    }
+
+rule Use_persist_Start_process_via_WinlogonShell: Process_Start
+
+    init {
+        $labels = "w_auto"
+    }
+
+    on Process_Start {
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.fullname = subject.account.fullname
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+        $subject.account.privileges = subject.account.privileges
+
+        $object.account.name = object.account.name
+        $object.account.domain = object.account.domain
+        $object.account.fullname = object.account.fullname
+        $object.account.session_id = object.account.session_id
+        $object.account.id = object.account.id
+
+        $object.process.id = object.process.id
+        $object.process.name = object.process.name
+        $object.process.path = object.process.path
+        $object.process.fullpath = object.process.fullpath
+        $object.process.hash = object.process.hash
+        $object.process.hash.md5 = object.process.hash.md5
+        $object.process.hash.sha1 = object.process.hash.sha1
+        $object.process.hash.sha256 = object.process.hash.sha256
+        $object.process.version = object.process.version
+        $object.process.cmdline = object.process.cmdline
+        $object.process.meta = object.process.meta
+        $object.process.original_name = object.process.original_name
+        $object.process.cwd = object.process.cwd
+        $object.process.chain = object.process.chain
+
+        $object.process.parent.id = object.process.parent.id
+        $object.process.parent.name = object.process.parent.name
+        $object.process.parent.path = object.process.parent.path
+        $object.process.parent.fullpath = object.process.parent.fullpath
+        $object.process.parent.cmdline = object.process.parent.cmdline
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.fqdn = event_src.fqdn
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.rule = event_src.rule
+    }
+
+emit {
+    $correlation_name = "Use_persist_Start_process_via_WinlogonShell"
+    $correlation_type = "incident"
+
+    $subject = "process"
+    $action = "start"
+    $object = "process"
+    $status = "success"
+
+    $importance = "medium"
+
+    $category.generic = "Persistence"
+    $category.high = "Boot or Logon Autostart Execution"
+    $category.low = "Winlogon Helper DLL"
+
+    $incident.aggregation.key = join([$correlation_name, lower($event_src.host), lower($subject.account.id)], "|")
+    $incident.aggregation.timeout = 2h
+
+    $incident.severity = $importance
+    $incident.category = "Undefined"
+    $incident.type = "SoftwareSuspiciousActivity"
+}

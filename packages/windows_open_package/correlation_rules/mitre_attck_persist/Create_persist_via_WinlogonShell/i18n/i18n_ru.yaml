@@ -1,0 +1,4 @@
+Description: 'Обнаружено закрепление с помощью Winlogon Helper DLL'
+EventDescriptions:
+    - LocalizationId: 'corrname_Create_persist_via_WinlogonShell'
+      EventDescription: 'Процесс {subject.process.name} модифицировал загружаемый Shell'

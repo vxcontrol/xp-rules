@@ -1,0 +1,8 @@
+ObjectId: LOC-CR-823326244
+ContentAutoName: Use_persist_Start_process_via_WinlogonShell
+ExpertContext:
+    Created: 02.06.2023
+    Updated: 02.06.2023
+EventDescriptions:
+    - Criteria: correlation_name = "Use_persist_Start_process_via_WinlogonShell"
+      LocalizationId: corrname_Use_persist_Start_process_via_WinlogonShell
