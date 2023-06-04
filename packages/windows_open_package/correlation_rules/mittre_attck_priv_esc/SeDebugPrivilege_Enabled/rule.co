@@ -1,0 +1,69 @@
+event AdjustTokenPrivileges:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator() and
+        msgid == "4703" and
+        object.property == "privileges" and 
+        find_substr(lower(object.value),"sedebugprivilege") != null
+    }
+
+rule SeDebugPrivilege_Enabled: AdjustTokenPrivileges
+
+    init {
+        $labels = "w_auto"
+    }
+
+    on AdjustTokenPrivileges {
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.id = subject.account.id
+        $subject.account.session_id = subject.account.session_id
+
+        $subject.process.id = subject.process.id
+        $subject.process.name = subject.process.name
+        $subject.process.path = subject.process.path
+        $subject.process.fullpath = subject.process.fullpath
+        
+        $object.account.name = object.account.name
+        $object.account.domain = object.account.domain
+        $object.account.id = object.account.id
+        $object.account.session_id = object.account.session_id
+        
+        $object.property = object.property
+        $object.value = object.value
+
+        # event src host
+        $event_src.host = event_src.host
+        $event_src.fqdn = event_src.fqdn
+        $event_src.hostname = event_src.hostname
+        $event_src.ip = event_src.ip
+        $event_src.asset = event_src.asset
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.category = event_src.category
+    }
+
+emit {
+    $correlation_name = "SeDebugPrivilege_Enabled"
+    $correlation_type = "incident"
+
+    $importance = "medium"
+
+    $subject = "process"
+    $action = "modify"
+    $object = "account"
+    $status = "success"
+
+    $category.generic = "Privilege Escalation"
+    $category.high = "Access Token Manipulation"
+    $category.low = "Adjust Token Privileges"
+
+    $incident.aggregation.key = join([$correlation_name, lower($event_src.host), lower($subject.account.id)], "|")
+    $incident.aggregation.timeout = 2h
+
+    $incident.severity = "medium"
+    $incident.category = "Undefined"
+    $incident.type = "SoftwareSuspiciousActivity"
+}

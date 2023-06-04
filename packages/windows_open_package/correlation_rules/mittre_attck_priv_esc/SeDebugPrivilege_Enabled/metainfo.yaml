@@ -1,0 +1,9 @@
+Updated: 26.12.2022
+ObjectId: LOC-CR-909630006
+ContentAutoName: SeDebugPrivilege_Enabled
+ExpertContext:
+    Created: 01.06.2023
+    Updated: 02.06.2023
+EventDescriptions:
+    - Criteria: correlation_name = "SeDebugPrivilege_Enabled"
+      LocalizationId: corrname_SeDebugPrivilege_Enabled

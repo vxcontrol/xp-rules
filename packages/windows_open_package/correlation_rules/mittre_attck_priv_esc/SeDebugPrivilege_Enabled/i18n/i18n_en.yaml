@@ -1,0 +1,4 @@
+Description: 'SeDebugPrivilege enabled for user by process'
+EventDescriptions:
+    - LocalizationId: 'corrname_SeDebugPrivilege_Enabled'
+      EventDescription: '{object.value} enabled for user {subject.account.domain}\{subject.account.name} by process {subject.process.name} at host {event_src.host}'
