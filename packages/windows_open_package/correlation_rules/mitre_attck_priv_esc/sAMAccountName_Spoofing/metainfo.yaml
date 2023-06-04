@@ -1,0 +1,24 @@
+ObjectId: LOC-CR-193677244
+ContentAutoName: sAMAccountName_Spoofing
+ExpertContext:
+    Created: 04.06.2023
+    Updated: 04.06.2023
+    KnowledgeHolders:
+        - Yuliya Fomina
+    Usecases:
+        - Изменение машинной УЗ (без $ на конце) и последующий запрос TGT
+    References:
+        - https://www.thehacker.recipes/ad/movement/kerberos/samaccountname-spoofing
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4768
+              - 4742
+EventDescriptions:
+    - Criteria: correlation_name = "sAMAccountName_Spoofing"
+      LocalizationId: corrname_sAMAccountName_Spoofing
+ContentRelations:
+    Implements:
+        ATTACK:
+            privilege-escalation:
+                - T1068

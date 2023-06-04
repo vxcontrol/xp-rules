@@ -1,0 +1,4 @@
+Description: 'Domain privilege escalation via sAMAccountName spoofing'
+EventDescriptions:
+    - LocalizationId: 'corrname_sAMAccountName_Spoofing'
+      EventDescription: 'The user {subject.account.name} got computer account {object.account.name}$ with sAMAccountName spoofing technique'

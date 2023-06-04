@@ -1,0 +1,4 @@
+Description: 'Повышенние привилегий в домене с помощью техники sAMAccountName spoofing'
+EventDescriptions:
+    - LocalizationId: 'corrname_sAMAccountName_Spoofing'
+      EventDescription: 'Пользователь {subject.account.name} захватил машинную учетную запись {object.account.name}$ с помощью техники sAMAccountName spoofing'
