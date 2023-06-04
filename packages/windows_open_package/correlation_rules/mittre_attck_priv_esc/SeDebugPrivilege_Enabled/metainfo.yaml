@@ -3,7 +3,22 @@ ObjectId: LOC-CR-909630006
 ContentAutoName: SeDebugPrivilege_Enabled
 ExpertContext:
     Created: 01.06.2023
-    Updated: 02.06.2023
+    Updated: 04.06.2023
+    KnowledgeHolders:
+        - driverenok
+    Usecases:
+        - Атакующе могут включать SeDebugPrivilege привилегию для доступа к другим процессам (н-р для получения доступа к памяти процесса lsass, либо для манипуляций с Access Token-ами)
+    References:
+        - https://attack.mitre.org/techniques/T1134/
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4703
 EventDescriptions:
     - Criteria: correlation_name = "SeDebugPrivilege_Enabled"
       LocalizationId: corrname_SeDebugPrivilege_Enabled
+ContentRelations:
+    Implements:
+        ATTACK:
+            privilege-escalation:
+                - T1134
