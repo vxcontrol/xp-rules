@@ -1,0 +1,4 @@
+Description: 'Детект на потенциальное использование утилиты BloodHound'
+EventDescriptions:
+    - LocalizationId: 'corrname_Bloodhound'
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} обратился к именнованным пайпам {alert.key} в сетевой папке {object.storage.id} на узле {event_src.host} с хоста {src.ip}. Данная активность может свидетельствовать об использовании утилиты разведки AD BloodHound.'

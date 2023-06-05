@@ -1,0 +1,4 @@
+Description: 'BloodHound tool possible detection'
+EventDescriptions:
+    - LocalizationId: 'corrname_Bloodhound'
+      EventDescription: 'User {subject.account.domain}\{subject.account.name} opened {alert.key} named pipes in {object.storage.id} network share on host {event_src.host} from {src.ip}. This activity may indicate the usage of AD recon utility BloodHound.'

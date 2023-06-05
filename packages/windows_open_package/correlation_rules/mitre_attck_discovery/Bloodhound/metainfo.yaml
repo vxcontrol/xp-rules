@@ -1,0 +1,31 @@
+ObjectId: LOC-CR-224304134
+ContentAutoName: Bloodhound
+ExpertContext:
+    Created: 02.06.2023
+    Updated: 03.06.2023
+    KnowledgeHolders:
+        - "@artemcun"
+    Usecases:
+        - Выявить использование утилиты BloodHound, используемой для сбора и анализа данных Active Directory
+    References:
+        - https://github.com/BloodHoundAD/BloodHound
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 5145
+EventDescriptions:
+    - Criteria: correlation_name = "Bloodhound"
+      LocalizationId: corrname_Bloodhound
+ContentRelations:
+    Implements:
+        ATTACK:
+            discovery:
+                - T1087.001
+                - T1087.002
+                - T1482
+                - T1615
+                - T1201
+                - T1069.001
+                - T1069.002
+                - T1018
+                - T1033

@@ -1,0 +1,4 @@
+Description: 'Детект атаки DCShadow'
+EventDescriptions:
+    - LocalizationId: 'corrname_DCShadow_Attack'
+      EventDescription: 'На узле {event_src.host} зафиксирована атака DCShadow, произведенная пользователем {subject.account.domain}\{subject.account.name} с помощью учетной записи {object.account.domain}\{object.account.name}.'

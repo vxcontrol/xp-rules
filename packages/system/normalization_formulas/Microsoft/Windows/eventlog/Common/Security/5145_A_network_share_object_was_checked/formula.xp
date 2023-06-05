@@ -69,6 +69,55 @@ endif
 
 datafield6 = $Data["AccessMask"]
 
+$accessList = $Data["AccessList"]
+$accessList = replace($accessList, "|", " ")
+if find_substr($accessList,"%%4416") != null then
+    $accessList = replace($accessList, "ReadData (or ListDirectory)", "%%4416")
+endif
+if find_substr($accessList,"%%4417") != null then
+    $accessList = replace($accessList, "WriteData (or AddFile)", "%%4417")
+endif
+if find_substr($accessList,"%%4418") != null then
+    $accessList = replace($accessList, "AppendData (or AddSubdirectory or CreatePipeInstance)", "%%4418")
+endif
+if find_substr($accessList,"%%4419") != null then
+    $accessList = replace($accessList, "ReadEA", "%%4419")
+endif
+if find_substr($accessList,"%%4420") != null then
+    $accessList = replace($accessList, "WriteEA", "%%4420")
+endif
+if find_substr($accessList,"%%4421") != null then
+    $accessList = replace($accessList, "Execute/Traverse", "%%4421")
+endif
+if find_substr($accessList,"%%4422") != null then
+    $accessList = replace($accessList, "DeleteChild", "%%4422")
+endif
+if find_substr($accessList,"%%4423") != null then
+    $accessList = replace($accessList, "ReadAttributes", "%%4423")
+endif
+if find_substr($accessList,"%%4424") != null then
+    $accessList = replace($accessList, "WriteAttributes", "%%4424")
+endif
+if find_substr($accessList,"%%1537") != null then
+    $accessList = replace($accessList, "DELETE", "%%1537")
+endif
+if find_substr($accessList,"%%1538") != null then
+    $accessList = replace($accessList, "READ_CONTROL", "%%1538")
+endif
+if find_substr($accessList,"%%1539") != null then
+    $accessList = replace($accessList, "WRITE_DAC", "%%1539")
+endif
+if find_substr($accessList,"%%1540") != null then
+    $accessList = replace($accessList, "WRITE_OWNER", "%%1540")
+endif
+if find_substr($accessList,"%%1541") != null then
+    $accessList = replace($accessList, "SYNCHRONIZE", "%%1541")
+endif
+if find_substr($accessList,"%%1542") != null then
+    $accessList = replace($accessList, "ACCESS_SYS_SEC", "%%1542")
+endif
+datafield9 = $accessList
+
 time = $TimeCreated["SystemTime"]
 msgid = $EventID
 importance = "medium"
