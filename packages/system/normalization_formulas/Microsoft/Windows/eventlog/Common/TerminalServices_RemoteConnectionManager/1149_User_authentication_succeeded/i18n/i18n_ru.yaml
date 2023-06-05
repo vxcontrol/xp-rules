@@ -1,0 +1,4 @@
+Description: 'Служба удаленного рабочего стола: Аутентификация пользователя прошла успешно'
+EventDescriptions:
+    - LocalizationId: 'LOC_Microsoft_Title_eventlog_event_name_1'
+      EventDescription: 'Пользователь {subject.account.domain}\{subject.account.name} аутентифицировался на узле {event_src.host} с помощью службы удаленного рабочего стола.'

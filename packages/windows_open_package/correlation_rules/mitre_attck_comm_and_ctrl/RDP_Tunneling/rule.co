@@ -1,0 +1,105 @@
+event RDP_User_Login_From_Loopback:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator() and
+        event_src.title == "windows" and
+        msgid == "4624" and
+        logon_type == 10 and 
+        (in_subnet(src.ip, "127.0.0.0/8") or src.ip == "::1")
+    }
+
+event TerminalServices_User_Auth_From_Loopback:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator() and
+        event_src.title == "windows" and
+        event_src.category == "Terminal services" and
+        msgid == "1149" and
+        (in_subnet(src.ip, "127.0.0.0/8") or src.ip == "::1")
+    }
+
+rule RDP_Tunneling: RDP_User_Login_From_Loopback or TerminalServices_User_Auth_From_Loopback
+
+    on RDP_User_Login_From_Loopback {
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+        $subject.account.privileges = subject.account.privileges
+
+        $subject.process.id = subject.process.id
+        $subject.process.name = subject.process.name
+        $subject.process.path = subject.process.path
+        $subject.process.fullpath = subject.process.fullpath
+
+        $logon_type = logon_type
+        $logon_service = logon_service
+        $logon_auth_method = logon_auth_method
+        
+        $src.asset = src.asset
+        $src.host = src.host
+        $src.ip = src.ip
+        $src.hostname = src.hostname
+        $src.fqdn = src.fqdn
+        $src.port = src.port
+
+        $dst.asset = dst.asset
+        $dst.host = dst.host
+        $dst.ip = dst.ip
+        $dst.hostname = dst.hostname
+        $dst.fqdn = dst.fqdn
+        $dst.port = dst.port
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.host = event_src.host
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.category = event_src.category
+        $event_src.rule = event_src.rule
+    }
+
+    on TerminalServices_User_Auth_From_Loopback {
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        
+        $src.asset = src.asset
+        $src.host = src.host
+        $src.ip = src.ip
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.host = event_src.host
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.category = event_src.category
+        $event_src.rule = event_src.rule
+    }
+
+emit {
+    $correlation_type = "incident"
+
+    $subject = "account"
+    $action = "login"
+    $object = "system"
+    $status = "success"
+
+    $importance = "medium"
+
+    $category.generic = "Attack"
+    $category.high = "Command and Control"
+    $category.low = "Protocol Tunneling"
+
+    $incident.severity = "medium"
+    $incident.category = "Undefined"
+}

@@ -1,0 +1,26 @@
+ObjectId: LOC-CR-143879217
+ContentAutoName: RDP_Tunneling
+ExpertContext:
+    Created: 05.06.2023
+    Updated: 05.06.2023
+    KnowledgeHolders:
+        - "@artemcun"
+    Usecases:
+        - Детект потенциального RDP-туннелирования на хосте
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4624
+        - Provider: Microsoft-Windows-TerminalServices-RemoteConnectionManager
+          EventID:
+              - 1149
+EventDescriptions:
+    - Criteria: correlation_name = "RDP_Tunneling" and event_src.category != "Terminal services"
+      LocalizationId: corrname_RDP_Tunneling
+    - Criteria: correlation_name = "RDP_Tunneling" and event_src.category = "Terminal services"
+      LocalizationId: corrname_RDP_Tunneling_2
+ContentRelations:
+    Implements:
+        ATTACK:
+            command-and-control:
+                - T1572

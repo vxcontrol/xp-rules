@@ -1,0 +1,40 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "Microsoft-Windows-TerminalServices-RemoteConnectionManager",
+                "Guid": "{c76baa63-ae81-421c-b425-340b4b24157f}"
+            },
+            "EventID": "1149",
+            "Version": "0",
+            "Level": "4",
+            "Task": "104",
+            "Opcode": "0",
+            "Keywords": "0x1000000000000000",
+            "TimeCreated": {
+                "SystemTime": "2019-02-13T18:04:57.4523864Z"
+            },
+            "EventRecordID": "228",
+            "Correlation": null,
+            "Execution": {
+                "ProcessID": "1280",
+                "ThreadID": "2748"
+            },
+            "Channel": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational",
+            "Computer": "PC01.example.corp",
+            "Security": {
+                "UserID": "S-1-5-20"
+            }
+        },
+        "UserData": {
+            "EventXML": {
+                "xmlns:auto-ns2": "http://schemas.microsoft.com/win/2004/08/events",
+				"xmlns": "Event_NS",
+                "Param1": "admin01",
+                "Param2": "example",
+                "Param3": "127.0.0.1"
+            }
+        }
+    }
+}

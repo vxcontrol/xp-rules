@@ -1,0 +1,9 @@
+EventDescriptions:
+    - Criteria: id = "1149_User_authentication_succeeded"
+      LocalizationId: LOC_Microsoft_Title_eventlog_event_name_1
+ExpertContext:
+    Created: 05.06.2023
+    Updated: 05.06.2023
+    KnowledgeHolders:
+        - "@artemcun"
+ObjectId: LOC-NF-186348571

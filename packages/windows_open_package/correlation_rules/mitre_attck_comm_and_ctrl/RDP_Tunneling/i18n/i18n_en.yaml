@@ -1,0 +1,6 @@
+Description: 'Potential RDP tunneling detection.'
+EventDescriptions:
+    - LocalizationId: 'corrname_RDP_Tunneling'
+      EventDescription: 'RDP login of user {subject.account.domain}\{subject.account.name} from loopback interface {src.ip}:{src.port} was detected on host {event_src.host}. This activity may indicate RDP tunneling.'
+    - LocalizationId: 'corrname_RDP_Tunneling_2'
+      EventDescription: 'User {subject.account.domain}\{subject.account.name} has successfully authenticated on host {event_src.host} using Remote Desktop Service from loopback interface {src.ip}. This activity may indicate RDP tunneling.'

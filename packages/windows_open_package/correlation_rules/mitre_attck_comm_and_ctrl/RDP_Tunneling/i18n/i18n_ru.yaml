@@ -1,0 +1,6 @@
+Description: 'Детект на потенциально использование RDP-туннелирования.'
+EventDescriptions:
+    - LocalizationId: 'corrname_RDP_Tunneling'
+      EventDescription: 'На узле {event_src.host} зафиксирован RDP-вход пользователя {subject.account.domain}\{subject.account.name} с loopback-интерфейса {src.ip}:{src.port}. Данная активность может свидетельствовать о RDP-туннелировании.'
+    - LocalizationId: 'corrname_RDP_Tunneling_2'
+      EventDescription: 'На узле {event_src.host} зафиксирована успешная аутентификация пользователя {subject.account.domain}\{subject.account.name} с помощью службы удаленного стола с loopback-интерфейса {src.ip}. Данная активность может свидетельствовать о RDP-туннелировании.'

@@ -1,0 +1,4 @@
+Description: 'Remote Desktop Services: User authentication succeeded'
+EventDescriptions:
+    - LocalizationId: 'LOC_Microsoft_Title_eventlog_event_name_1'
+      EventDescription: 'User {subject.account.domain}\{subject.account.name} authenticated on host {event_src.host} with Remote Desktop Services.'
