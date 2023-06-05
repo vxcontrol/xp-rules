@@ -1,0 +1,38 @@
+EVENTLOG = 'EventID.text="15457"'
+
+COND = (find_substr($Provider["Name"], "MSSQL$") != null or $Provider["Name"] == 'MSSQLSERVER')
+
+subject = "account"
+action = "modify"
+object = "configuration"
+status = "success"
+
+object.property = "parameter"
+object.value = $Data[0]
+if $Data[1] == "0" and $Data[2] == "1" then
+    reason = "parameter enabled"
+elif $Data[1] == "1" and $Data[2] == "0" then
+    reason = "parameter disabled"
+else 
+    reason = "unknown"
+endif
+
+time = $TimeCreated["SystemTime"]
+msgid = $EventID["text"]
+
+importance = "low"
+
+event_src.vendor = "microsoft"
+event_src.title = "sql_server"
+
+$first_dot = find_substr($Computer, '.')
+if $first_dot != null then
+    event_src.fqdn = lower($Computer)
+    event_src.hostname = lower(substr($Computer, 0, $first_dot))
+else
+    event_src.hostname = lower($Computer)
+endif
+event_src.subsys = $Channel
+event_src.category = "Database server"
+
+id = "PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled"

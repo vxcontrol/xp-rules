@@ -1,0 +1,5 @@
+EventDescriptions:
+    - Criteria: id = "PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled"
+      LocalizationId: PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled
+ObjectId: PT-NF-5594
+ContentAutoName: PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled

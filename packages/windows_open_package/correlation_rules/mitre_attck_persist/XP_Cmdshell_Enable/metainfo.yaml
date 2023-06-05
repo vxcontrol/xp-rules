@@ -1,0 +1,26 @@
+ObjectId: ESC-CR-446260832
+ContentAutoName: XP_Cmdshell_Enable
+ExpertContext:
+    Created: 05.06.2023
+    Updated: 05.06.2023
+    KnowledgeHolders:
+        - Kirill Kiryanov
+    Usecases:
+        - Атакующие могут включить опцию "xp_cmdshell" для закрепления или исполнения на узле с MSSQL
+        - xp_cmdshell можно включить после включения опции "show advanced options"
+    References:
+        - https://attack.mitre.org/techniques/T1505/001/
+    DataSources:
+        - Provider: Microsoft-WIndows-MSSQL
+          EventID:
+              - 15457
+ContentRelations:
+    Implements:
+        ATTACK:
+            persistence:
+                - T1505.001
+EventDescriptions:
+    - Criteria: correlation_name = "XP_Cmdshell_Enable" and alert.context == null
+      LocalizationId: corrname_XP_Cmdshell_Enable
+    - Criteria: correlation_name = "XP_Cmdshell_Enable" and alert.context != null
+      LocalizationId: corrname_XP_Cmdshell_Enable_2

@@ -1,0 +1,4 @@
+Description: 'На сервере активирован параметр'
+EventDescriptions:
+    - LocalizationId: 'PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled'
+      EventDescription: 'На сервере {event_src.host} активирован параметр {object.value}'

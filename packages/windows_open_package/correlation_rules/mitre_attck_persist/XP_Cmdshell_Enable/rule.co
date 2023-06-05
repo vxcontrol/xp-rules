@@ -1,0 +1,67 @@
+event XP_Cmdshell_Enable:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "sql_server"
+        and msgid == "15457"
+        and reason == "parameter enabled"
+        and lower(object.value) == "xp_cmdshell"
+    }
+
+event Advanced_Options_Enable:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "sql_server"
+        and msgid == "15457"
+        and reason == "parameter enabled"
+        and lower(object.value) == "show advanced options"
+    }
+
+rule XP_Cmdshell_Enable: (XP_Cmdshell_Enable and Advanced_Options_Enable?) timer 5m
+
+    on XP_Cmdshell_Enable {
+        $object.property = object.property
+        $object.value = object.value
+
+        $reason = reason
+
+        # event src host
+        $event_src.host = event_src.host
+        $event_src.fqdn = event_src.fqdn
+        $event_src.hostname = event_src.hostname
+        $event_src.ip = event_src.ip
+        $event_src.asset = event_src.asset
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.category = event_src.category
+
+        # other
+        $alert.key = join([event_src.host, lower(object.value)], "|") 
+    }
+
+    on Advanced_Options_Enable {
+        $alert.context = "previously show advanced options was enabled"
+    }
+
+emit {
+    $correlation_type = "event"
+    $importance = "high"
+
+    $subject = "account"
+    $action = "modify"
+    $object = "configuration"
+    $status = "success"
+
+    $category.generic = "Attack"
+    $category.high = "Persistence"
+    $category.low = "Server Software Component: SQL Stored Procedures"
+
+    $incident.aggregation.key = join([$correlation_name, lower($event_src.host)], "|")
+    $incident.severity = "high"
+    $incident.category = "Undefined"
+    $incident.aggregation.timeout = 2h
+}

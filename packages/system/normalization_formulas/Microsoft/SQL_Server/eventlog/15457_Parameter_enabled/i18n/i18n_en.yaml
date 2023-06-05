@@ -1,0 +1,4 @@
+Description: 'A parameter is activated on a server'
+EventDescriptions:
+    - LocalizationId: 'PT_Microsoft_SQL_Server_eventlog_15457_Parameter_enabled'
+      EventDescription: 'The {object.value} parameter is activated on a server {event_src.host}'

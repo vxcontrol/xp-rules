@@ -1,0 +1,32 @@
+{
+    "Event": {
+        "xmlns": "http://schemas.microsoft.com/win/2004/08/events/event",
+        "System": {
+            "Provider": {
+                "Name": "MSSQLSERVER"
+            },
+            "EventID": {
+                "text": "15457",
+                "Qualifiers": "16384"
+            },
+            "Level": "4",
+            "Task": "2",
+            "Keywords": "0x80000000000000",
+            "TimeCreated": {
+                "SystemTime": "2020-01-31T13:53:36.479982500Z"
+            },
+            "EventRecordID": "1867",
+            "Channel": "Application",
+            "Computer": "DESKTOP-GB13G7P",
+            "Security": null
+        },
+        "EventData": {
+            "Data": [
+                "cross db ownership chaining",
+                "0",
+                "1"
+            ],
+            "Binary": "613C00000A000000100000004400450053004B0054004F0050002D0047004200310033004700370050000000070000005400650073007400440042000000"
+        }
+    }
+}

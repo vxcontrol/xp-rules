@@ -1,0 +1,6 @@
+Description: 'Правило обнаруживает включение опции "xp_cmdshell" для MSSQL'
+EventDescriptions:
+    - LocalizationId: 'corrname_XP_Cmdshell_Enable'
+      EventDescription: 'Была включена опция {object.value} на узле {event_src.host}'
+    - LocalizationId: 'corrname_XP_Cmdshell_Enable_2'
+      EventDescription: 'Была включена опция {object.value} c предварительным включением опции "show advanced options" на узле {event_src.host}'

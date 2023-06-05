@@ -1,0 +1,6 @@
+Description: 'The rule detects the inclusion of the "xp_cmdshell" option for MSSQL'
+EventDescriptions:
+    - LocalizationId: 'corrname_XP_Cmdshell_Enable'
+      EventDescription: 'The {object.value} option was enabled on the {event_src.host} host'
+    - LocalizationId: 'corrname_XP_Cmdshell_Enable_2'
+      EventDescription: 'The {object.value} option has been enabled, pre-enabling the "show advanced options" option on the {event_src.host} node'
