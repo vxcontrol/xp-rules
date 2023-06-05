@@ -1,0 +1,4 @@
+Description: 'The user has cleared the Security event log.'
+EventDescriptions:
+    - LocalizationId: 'corrname_Security_log_clear'
+      EventDescription: 'User {subject.account.domain}\{subject.account.name} clean {object.name} log at host {event_src.host}'

@@ -1,0 +1,30 @@
+ObjectId: LOC-CR-264799724
+ContentAutoName: Security_log_clear
+ExpertContext:
+    Created: 01.06.2023
+    Updated: 02.06.2023
+    KnowledgeHolders:
+        - Vadim Varganov (d3f0x0)
+    Usecases:
+        - Attackers want to hide traces of their activity in the system
+    Falsepositives:
+        - Administrative action
+    Improvements:
+        - Add detection clear log via utils
+        - Merge with Clearing_eventlog
+        - Add EventID 1104
+    DataSources:
+        - Provider: Microsoft-Windows-Eventlog
+          EventID:
+              - 1102
+    References:
+        - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102
+        - https://car.mitre.org/analytics/CAR-2016-04-002/
+ContentRelations:
+    Implements:
+        ATTACK:
+            defense-evasion:
+                - T1070.001
+EventDescriptions:
+    - Criteria: correlation_name = "Security_log_clear"
+      LocalizationId: corrname_Security_log_clear
