@@ -1,0 +1,23 @@
+ObjectId: ESC-CR-205336157
+ContentAutoName: Suspicious_Explorer_Injection
+ExpertContext:
+    Created: 05.06.2023
+    Updated: 05.06.2023
+    KnowledgeHolders:
+        - Kirill Kiryanov
+    Usecases:
+        - Атакующие могут внедрится в память процесса explorer.exe для дальнейшей эксплуатации и сокрытия своих действий
+    References:
+        - https://attack.mitre.org/techniques/T1055/
+    DataSources:
+        - Provider: Microsoft-Windows-Sysmon
+          EventID:
+              - 8
+ContentRelations:
+    Implements:
+        ATTACK:
+            defense-evasion:
+                - T1055
+EventDescriptions:
+    - Criteria: correlation_name = "Suspicious_Explorer_Injection"
+      LocalizationId: corrname_Suspicious_Explorer_Injection

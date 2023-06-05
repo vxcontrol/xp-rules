@@ -1,0 +1,4 @@
+Description: 'The rule detects the creation of a remote thread in the explorer.exe process'
+EventDescriptions:
+    - LocalizationId: 'corrname_Suspicious_Explorer_Injection'
+      EventDescription: 'Detected creation of remote thread by process {subject.process.name} in process {object.process.name} on host {event_src.host}'

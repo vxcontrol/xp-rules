@@ -1,0 +1,4 @@
+Description: 'Правило обнаруживает создание удаленного потока в процессе explorer.exe'
+EventDescriptions:
+    - LocalizationId: 'corrname_Suspicious_Explorer_Injection'
+      EventDescription: 'Обнаружено создание удаленного потока процессом {subject.process.name} в процессе {object.process.name} на узле {event_src.host}'
