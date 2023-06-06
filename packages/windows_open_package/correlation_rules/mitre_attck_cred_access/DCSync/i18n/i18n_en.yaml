@@ -1,0 +1,4 @@
+Description: 'Detect DCSync Attack'
+EventDescriptions:
+    - LocalizationId: 'corrname_DCSync'
+      EventDescription: 'Detected running by user {subject.account.name} Mimikatz with parameters {object.process.cmdline} on host {event_src.host}'

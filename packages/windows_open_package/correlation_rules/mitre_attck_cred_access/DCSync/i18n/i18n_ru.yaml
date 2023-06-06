@@ -1,0 +1,4 @@
+Description: 'Обнаружение атаки DCSync'
+EventDescriptions:
+    - LocalizationId: 'corrname_DCSync'
+      EventDescription: 'Обнаружена атака DCSync из под учетной записи {subject.account.name} на хосте {event_src.host}'

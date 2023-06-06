@@ -1,0 +1,32 @@
+ObjectId: LOC-CR-176126000
+ContentAutoName: DCSync
+ExpertContext:
+    Created: 05.06.2023
+    Updated: 05.06.2023
+ExpertContext:
+    Created: 06.06.2023
+    Updated: 06.06.2023
+    KnowledgeHolders:
+        - @username_changed
+    Usecases:
+        - использование обычного привилегированного аккаунта (не машинного аккаунта и не *MSA аккаунта) (тесты 1-3)
+        - использование локальной system-сессии на контроллере домена (тесты 4-6)
+        
+    References:
+        - https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-DRSR/%5bMS-DRSR%5d.pdf
+        - https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-DRSR/%5bMS-SRPL%5d.pdf#Section_ec69eea50d5e428ab5bc66732aaeb866
+        - https://threathunterplaybook.com/library/windows/active_directory_replication.html
+
+    Improvements:
+        - для обычного привилегированного аккаунта коррелировать с 4624, чтобы знать с какого src_ip он может запускать репликацию
+        - для *msa-аккаунта коррелировать с 4624, чтобы знать с какого src_ip он может запускать репликацию
+        - для machineaccount$ аккаунта коррелировать с 4624, чтобы знать с какого src_ip (ip of dc) он может запускать репликацию
+        - выделить попытку неуспешной репликации (когда не хватило прав)
+        - добавить детект на основе сигнатуры IDS
+        - а можно ли проводить атаку через SMTP-site-links?
+        
+
+    DataSources:
+        - Provider: Microsoft-Windows-Security-Auditing
+          EventID:
+              - 4662

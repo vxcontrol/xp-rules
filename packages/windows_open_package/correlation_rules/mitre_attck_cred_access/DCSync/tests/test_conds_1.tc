@@ -1,0 +1,2 @@
+#1131f6ad-9c07-11d1-f79f-00c04fc2dcd2 with user account
+expect 1 {"correlation_name": "DCSync", "subject.account.name": "administrator"}

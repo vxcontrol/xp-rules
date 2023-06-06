@@ -1,0 +1,147 @@
+event ADDS_Replication_With_UserAccount:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "windows"
+        and msgid == "4662" #An_operation_was_performed_on_an_object
+        and object.type == "19195a5b-6da0-11d0-afd3-00c04fd930c9" # AD object class
+        and datafield5 == "0x100" # Control AccessMask
+        and ( 
+            find_substr(datafield2, "1131f6ad-9c07-11d1-f79f-00c04fc2dcd2") != null or
+            find_substr(datafield2, "1131f6aa-9c07-11d1-f79f-00c04fc2dcd2") != null  or
+            find_substr(datafield2, "89e95b76-444d-4c62-991a-0facbeda640c") != null 
+        )
+        # We should have there the table list with privileged user accounts allowed for replication
+        # by the way, *MSA accounts with $ like machine accounts https://learn.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview
+        and find_substr(subject.account.name, "$") == null #not machine account
+
+    }
+
+event ADDS_Replication_With_LocalSystemAccount:
+    key:
+        event_src.host
+    filter {
+        filter::NotFromCorrelator()
+        and event_src.title == "windows"
+        and msgid == "4662" #An_operation_was_performed_on_an_object
+        and object.type == "19195a5b-6da0-11d0-afd3-00c04fd930c9" # AD object class
+        and datafield5 == "0x100" # Control AccessMask
+        and ( 
+            find_substr(datafield2, "1131f6ad-9c07-11d1-f79f-00c04fc2dcd2") != null or
+            find_substr(datafield2, "1131f6aa-9c07-11d1-f79f-00c04fc2dcd2") != null  or
+            find_substr(datafield2, "89e95b76-444d-4c62-991a-0facbeda640c") != null 
+        )
+        # dcsync with local system account
+        and subject.account.id == "S-1-5-18"
+
+    }
+
+rule DCSync: ADDS_Replication_With_UserAccount or ADDS_Replication_With_LocalSystemAccount
+
+    on ADDS_Replication_With_UserAccount {
+
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+
+        
+        $src.asset = src.asset
+        $src.host = src.host
+        $src.ip = src.ip
+        $src.hostname = src.hostname
+        $src.fqdn = src.fqdn
+
+        $dst.asset = dst.asset
+        $dst.host = dst.host
+        $dst.ip = dst.ip
+        $dst.hostname = dst.hostname
+        $dst.fqdn = dst.fqdn
+
+        $datafield2 = datafield2 # properties
+        $datafield5 = datafield5 # AccessMask
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.host = event_src.host
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.category = event_src.category
+        $event_src.rule = event_src.rule
+
+        #$alert.key = 
+        #$alert.context = 
+    }
+
+    on ADDS_Replication_With_LocalSystemAccount {
+
+        $subject.account.name = subject.account.name
+        $subject.account.domain = subject.account.domain
+        $subject.account.session_id = subject.account.session_id
+        $subject.account.id = subject.account.id
+
+        
+        $src.asset = src.asset
+        $src.host = src.host
+        $src.ip = src.ip
+        $src.hostname = src.hostname
+        $src.fqdn = src.fqdn
+
+        $dst.asset = dst.asset
+        $dst.host = dst.host
+        $dst.ip = dst.ip
+        $dst.hostname = dst.hostname
+        $dst.fqdn = dst.fqdn
+
+        $datafield2 = datafield2 # properties
+        $datafield5 = datafield5 # AccessMask
+
+        $event_src.ip = event_src.ip
+        $event_src.hostname = event_src.hostname
+        $event_src.host = event_src.host
+        $event_src.asset = event_src.asset
+        $event_src.host = event_src.host
+        $event_src.title = event_src.title
+        $event_src.subsys = event_src.subsys
+        $event_src.vendor = event_src.vendor
+        $event_src.title = event_src.title
+        $event_src.category = event_src.category
+        $event_src.rule = event_src.rule
+
+        #$alert.key = 
+        #$alert.context = 
+    }
+
+# schema https://help.ptsecurity.com/projects/siem/7.2/ru-RU/help/2203906443
+# enums https://help.ptsecurity.com/projects/siem/7.2/ru-RU/help/1084849419
+# event category https://help.ptsecurity.com/projects/siem/7.2/ru-RU/help/1084831115
+# categories https://help.ptsecurity.com/projects/siem/7.2/ru-RU/help/1084763531
+# category & type https://help.ptsecurity.com/projects/siem/7.2/ru-RU/help/2079369739
+emit {
+    $correlation_type = "incident"
+
+    $subject = "account"
+    $action = "sync"
+    $object = "account"
+    $status = "success"
+
+    $importance = "high"
+
+    $category.generic = "Attacks & Recon"
+    $category.high = "Attack"
+    $category.low = "Complex Attack"
+
+    $incident.aggregation.key = join([$correlation_name, $event_src.hostname, $subject.account.name], "|")
+    $incident.severity = "high"
+    $incident.category = "Undefined"
+    $incident.aggregation.timeout = 10m
+
+    #$dst.fqdn = $event_src.fqdn
+    #$dst.hostname = $event_src.hostname
+    
+}
